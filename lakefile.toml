@@ -14,6 +14,7 @@ defaultTargets = [
   "Test.RingedSpacePullback", "Test.RingedSpacePullbackAxioms",
   "Test.RingedSpacePullbackConcrete", "Test.RingedSpacePullbackLegacy",
   "Test.RingedSpacePullbackLegacyAxioms", "Test.RingedSpacePullbackRootCoexist",
+  "Test.RingedSpaceBaseChange",
   "Test.RingedSpacePushforward", "Test.RingedSpacePushforwardAxioms",
   "Test.RingedSpacePushforwardConcrete", "Test.RingedSpacePushforwardLegacy",
   "Test.RingedSpacePushforwardRootCoexist", "Test.Root", "Test.SheafInverseImage",

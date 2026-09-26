@@ -61,6 +61,11 @@ contributors behind those names:
 | Full ringed-space pushforward comparison (mathematical precursor, notice repair by Atlas; bounded preparation accepted September 26, 2026) | `hive-request-1851085fe7b35662d923a451caba91e82427e7c6` | `65354068-4250-4472-ae04-fbda63a4074a` |
 | Explicit full ringed-space right-tensor pullback and adjunction (bounded preparation accepted September 26, 2026) | `hive-request-fc2cfe5450b0e4cddf69b3f460f342adcb40c54b` | `7d5af61a-1416-4194-9676-723f77b26c14` |
 | Coherent sheaf/full-morphism root exports, complete defaults, root-only client and reader reconciliation, not new library mathematics (combined candidate assembled September 26, 2026) | `hive-request-0179a299c52c1f49a9763bece89e0fa96c822a36` | `7194f9b4-2354-4f6a-a0b4-92cbc42c5eda` |
+| Module pullback coherence source prototype | `hive-request-d5dc5696c1acb75caa28a8ed50cbb8b8bc304d00` | `670015e4-3827-48e8-acc7-be2d6f758eb1` |
+| Square-mate and non-Cartesian empty-corner source prototypes | `hive-request-d2ec8864379e910d5a7d9997da5e9b0dc357f7a8` | `98fc3c95-98fd-4be6-b8b7-45e415272181` |
+| Reusable module coherence, square mate and incubator client (original `8fa29a4e5f5447fae3578bbc04487d25855d6484`; successor `93a5cfd0bfefac803b66fbd21aff7b346ad7fa54` accepted and integrated September 26, 2026) | `hive-request-9b96dab56bf41ce7554f74026cc8603719e3384c` | `8d01f604-2c37-4eee-ba00-733cf8b4f2d4` |
+| Independent destination transfer, root/client assembly and reader documentation, not mathematical authorship of the origin | `hive-request-9ba8c100c88f6cb8d75c1f208a34c55974589c18` | `c17170b6-00a3-498c-9c19-d86aa575e29a` |
+| Destination release-readiness prose and candidate preparation, not new library mathematics | `hive-request-409eb80a69cf8f493b7d4e2a405a5f1d3dd6a1b1` | `a9c7f24c-3c44-4b03-895d-9a870fb6a16c` |
 
 Earlier source-repository research precursors, distinct from direct production
 authorship, were contributed by Tasks
@@ -83,8 +88,11 @@ research and `hive-request-73dc549815be100a03dd91d507a98ee9f7e396cd`
 source-research precursors, not direct authorship of the new library leaves;
 their ideas and proofs were adapted to an independent library. No source PDF
 or scan is bundled. The direct-import native mathematics and prior reader
-documentation received separate bounded owner preparation acceptances. Those
-decisions do not themselves establish acceptance of the combined root/default-target
-assembly, its integration, release or source coverage; these stages have separate
-revision-specific decisions. Atlas subsequently corrected this assembly's status
-language without changing its mathematical library content.
+documentation received separate bounded owner preparation acceptances. The
+earlier combined root/default-target assembly was subsequently accepted and
+published in a separate official release; its bounded preparation alone did
+not establish that outcome. The module-coherence destination transfer at
+`20890358aa62cfbccaeb2a75fbac105fa2e469a3` received independent review
+3551, distinct from owner destination or release acceptance. Atlas previously
+corrected the assembly's status language without changing its mathematical
+library content. None of these records establishes source coverage.

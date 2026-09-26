@@ -17,6 +17,8 @@ public import RingedSpaces.Modules.SheafInverseImage
 public import RingedSpaces.Modules.SheafInverseImageHom
 public import RingedSpaces.Modules.RingedSpacePushforward
 public import RingedSpaces.Modules.RingedSpacePullback
+public import RingedSpaces.Modules.PullbackCoherence
+public import RingedSpaces.Modules.BaseChange
 
 /-!
 # Ringed spaces
@@ -33,4 +35,6 @@ comparison with underlying additive pullback and the bundled two-sided Hom
 adjunction to module-sheaf pushforward. For arbitrary full ringed-space morphisms,
 it also exports the original structure-map pushforward and the explicit sheafified
 right-tensor pullback, their adjunction and comparison with native pullback.
+It further exports coherent identity/composition isomorphisms for these actual
+module functors and the push–pull mate of any commutative full-morphism square.
 -/

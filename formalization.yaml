@@ -8,7 +8,9 @@ project:
     module-presheaf Hom adjunction for arbitrary continuous maps; and root-exported
     continuous module-sheaf inverse image with a bundled linear Hom adjunction;
     and root-exported full-morphism module pushforward and explicit sheafified
-    right-tensor pullback with their adjunction and native comparison.
+    right-tensor pullback with their adjunction and native comparison; and
+    identity/composition coherence and commutative-square push-pull mates for
+    those actual module functors.
   authors:
     - Formal Frontier Agents
   license: Apache-2.0
@@ -53,9 +55,13 @@ review:
     artifact. Release review, rights clearance and proof-integrity checks are
     distinct from a successful build. The module-sheaf and full-morphism
     mathematical leaves received bounded owner acceptance as preparation.
-    The combined root/default-target assembly has a distinct review boundary;
-    prior preparation alone does not certify its integration, release or a
-    source-coverage decision.
+    The earlier combined root/default-target assembly was accepted and published
+    under its separate release record; bounded preparation alone did not certify
+    that outcome. The originating incubator module-coherence and square-mate
+    implementation was accepted and integrated on September 26, 2026. Its
+    destination transfer at 20890358aa62cfbccaeb2a75fbac105fa2e469a3
+    received exact-revision independent review 3551, not owner destination or
+    release acceptance. Neither preparation nor that review decides source coverage.
 
 fidelity:
   divergences: >-
