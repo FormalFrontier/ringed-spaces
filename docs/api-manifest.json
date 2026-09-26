@@ -1,0 +1,1940 @@
+{
+  "analyzed_source_revision": "fc4581c6b42eb3b2c3dbeb714a8c76c51934d4fb",
+  "analyzed_source_tree": "c330aa042beae57328c5428193f2bfa5c4ff336d",
+  "api_sha256": "31abe5d797e950a0d6df5bc08167634abf872964723c03c85616f417972d0ade",
+  "docgen_revision": "97d4ecdfc8e09e7f511724c25e303d448de6a3db",
+  "format": 1,
+  "generator": "scripts/generate_api.py",
+  "generator_sha256": "0af0294487bf5c5a3b92870b4e8e69d63872cc4754ac4523dbf2d22e24e6bf1a",
+  "inputs": {
+    "RingedSpaces.lean": "0cc3005889c910f266cb00dafedf5522f15509ca188d33eeb4fcdd39e5be9a16",
+    "RingedSpaces/InverseImage.lean": "92344f1cb3fa80edd789b4d500fa9252582748ec0e5fb58a516bb7d79109884c",
+    "RingedSpaces/Modules/PresheafChangeOfRings.lean": "e7e75df5c0f06178b69ed08ec2e120e21d18023237b64b5bfec04ce518f1503e",
+    "RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean": "2685650df72d9694fc76c7bf4e107efed4dfce6d870b4b95a7676b66687ca690",
+    "RingedSpaces/Modules/PresheafInverseImage.lean": "5a5a38bf15ee086fb9e9b3fe2c3101152e514cdb5098a6975abe8c8dce32effc",
+    "RingedSpaces/Modules/PresheafInverseImageHom.lean": "95cdad3451866b273bcfde92a8cb4ea7d61d06fffb2cdb7a6fb25140299cd528",
+    "RingedSpaces/Modules/SheafChangeOfRings.lean": "b0d9e82d96625b4dd824c30200df655e88e7808326e046275e712bf07ae5a5ed",
+    "RingedSpaces/Modules/SheafChangeOfRingsSymmetry.lean": "fc15e4a2834450189d587848ea9a8e6810ecb99eabe0b277776cebcec71fd06b",
+    "RingedSpaces/OpenCover.lean": "982b05933d81f79fc2146539c6aaf29212e5e91707bffe8d14fb6d251ab43bcd",
+    "RingedSpaces/Restriction.lean": "ab65ea09820fe73dfe2d6dade0ed743fbcefdfaa8a085df3632a60d094cfc218",
+    "RingedSpacesExamples.lean": "30b6e20c2473a59b71151ea02703dce09efa05e5603203847ac6ddff9553e0f3",
+    "Test/Axioms.lean": "aa4929cb1333ef3da23a8a76fb245d57bafbdbe4a1a7c7f408ce543b11e62bf0",
+    "Test/ChangeOfRingsSymmetry.lean": "f58b3241a0f6e3d8207c2e72dd5f126e81ce4199db94e66a4f6966fbf6c8c1fb",
+    "Test/ChangeOfRingsSymmetryAxioms.lean": "911e8d0a85491cf3154ad6fd2640bea34bb528b113fddf966ad5b07f555b3157",
+    "Test/ChangeOfRingsSymmetryFixture.lean": "b12ff08a863ae9a4d486a426d8f30302da473375bc50f57da5647d0742aebc34",
+    "Test/ChangeOfRingsSymmetryRoot.lean": "fdd52d5d35ba4548c6ddf3180dc1974498e48f03d27ceb6397a828ff277011cf",
+    "Test/InverseImage.lean": "a08ee847742a0e509271ca749709373c789c8344c7c50a302112c8c0a9b5a6bc",
+    "Test/ModuleChangeOfRings.lean": "9672a928dc86940cd3cdb7377f2670a635f7f50d492736474ad5396b55a63460",
+    "Test/ModuleChangeOfRingsAxioms.lean": "2eef84279e6ca841cd0d0b3b5e43ee0c8e0cf90a6f1ecce8636806155497189e",
+    "Test/ModuleChangeOfRingsRoot.lean": "83305ae6cadddbe6fcb6acbd7f6bc34fcdc97522b711822fc9212d574da55e13",
+    "Test/OpenCover.lean": "b98659f66dc3294110c321abc0765ead096bc98fc7875a1dde74bb6d6dff11b0",
+    "Test/PresheafInverseImage.lean": "f8d9d546620b8becb1edcb0dea9d1b358397502c3b445ded783a7c7fb7834511",
+    "Test/PresheafInverseImageAxioms.lean": "04fb7e612bc8a9fa994e8f5209572099eb0416f6bf88040b59763d6012f8b1c6",
+    "Test/PresheafInverseImageConcrete.lean": "aaf6b5b6513a262462a6ab46ab85bbedf9f5b120e4fb67bb1beb12a964f993df",
+    "Test/PresheafInverseImageHom.lean": "c73f7f83bbe856016c325bb3a7525f06345ab4e1cc3e82d7ff9394f5fe256512",
+    "Test/PresheafInverseImageHomAxioms.lean": "13b8032982b44e9e69326d352d03b4af70b705d7cbb905999a385e61196b5c49",
+    "Test/PresheafInverseImageHomConcrete.lean": "d0f548e24327af17e22b8b1d76ee689da8897c65f17dd7cc48a6fe881997c757",
+    "Test/PresheafInverseImageHomRoot.lean": "1330cb182d2fc94f15e5033c67f44e16e8810e975c85322c1c705aed375c2a9d",
+    "Test/PresheafInverseImageLegacyAggregate.lean": "6d354c8f7b44cc4e154698745f63cd3e7af61ba30a28f89b819d367ca356fb9a",
+    "Test/PresheafInverseImageNativeDirect.lean": "59f63770c8a9546aeba82d628619274d89e67efd7444a12c279d58f5b8868b3c",
+    "Test/PresheafInverseImageRoot.lean": "5df2c88bb6db693ea679f4313390a6b1dd55f0a768a1f410f170452ed678f207",
+    "Test/Restriction.lean": "77e60af6d0f28a48ac6d9dd41b434dbdf0453e66b2d65b1c4b2dc9cd41270b34",
+    "Test/Root.lean": "08f2d9d523f63867100b143e99550ceea363660606109aa262fdd839d03132de",
+    "lake-manifest.json": "67c536b678c7e2e90dc8f331c94dd44ed6f1b6e2b29202057a13593df2a79801",
+    "lakefile.toml": "695d19219cf9b1192a73fc9f16afc575881af60d90f2888f8eb5b9d4472b83b3",
+    "lean-toolchain": "8190e75a201741065fe508b28955dd64dd72d090babe5f70ce6848879d68ae88"
+  },
+  "loaded_public": {
+    "AlgebraicGeometry.RingedSpace.OpenCover": {
+      "kind": "inductive",
+      "module": "RingedSpaces.OpenCover",
+      "range": "42:0-50:32"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.J": {
+      "kind": "definition",
+      "module": "RingedSpaces.OpenCover",
+      "range": "46:2-46:3"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.U": {
+      "kind": "definition",
+      "module": "RingedSpaces.OpenCover",
+      "range": "48:2-48:3"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.covers": {
+      "kind": "theorem",
+      "module": "RingedSpaces.OpenCover",
+      "range": "50:2-50:8"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.existsUnique_gluing": {
+      "kind": "theorem",
+      "module": "RingedSpaces.OpenCover",
+      "range": "545:0-557:30"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.existsUnique_gluing_of_intersection": {
+      "kind": "theorem",
+      "module": "RingedSpaces.OpenCover",
+      "range": "581:0-589:80"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.glueMorphisms": {
+      "kind": "definition",
+      "module": "RingedSpaces.OpenCover",
+      "range": "302:0-508:57"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.hom_ext": {
+      "kind": "theorem",
+      "module": "RingedSpaces.OpenCover",
+      "range": "531:0-543:38"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.mk": {
+      "kind": "constructor",
+      "module": "RingedSpaces.OpenCover",
+      "range": "44:10-44:19"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.obj": {
+      "kind": "definition",
+      "module": "RingedSpaces.OpenCover",
+      "range": "56:0-58:36"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.pullback_compatibility_iff_intersection": {
+      "kind": "theorem",
+      "module": "RingedSpaces.OpenCover",
+      "range": "559:0-579:41"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.rec": {
+      "kind": "recursor",
+      "module": "RingedSpaces.OpenCover",
+      "range": "42:0-50:32"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.ι": {
+      "kind": "definition",
+      "module": "RingedSpaces.OpenCover",
+      "range": "60:0-62:38"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.ι_glueMorphisms": {
+      "kind": "theorem",
+      "module": "RingedSpaces.OpenCover",
+      "range": "518:0-528:31"
+    },
+    "AlgebraicGeometry.RingedSpace.OpenCover.ι_glueMorphisms_assoc": {
+      "kind": "theorem",
+      "module": "RingedSpaces.OpenCover",
+      "range": "519:2-519:9"
+    },
+    "AlgebraicGeometry.RingedSpace.inverseImage": {
+      "kind": "definition",
+      "module": "RingedSpaces.InverseImage",
+      "range": "39:0-43:70"
+    },
+    "AlgebraicGeometry.RingedSpace.inverseImageMap": {
+      "kind": "definition",
+      "module": "RingedSpaces.InverseImage",
+      "range": "74:0-78:72"
+    },
+    "AlgebraicGeometry.RingedSpace.inverseImageMap_unit": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "80:0-88:34"
+    },
+    "AlgebraicGeometry.RingedSpace.inverseImageMap_unit_app": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "102:0-109:58"
+    },
+    "AlgebraicGeometry.RingedSpace.inverseImageMap_unit_components": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "111:0-117:30"
+    },
+    "AlgebraicGeometry.RingedSpace.inverseImageMap_unit_hom": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "90:0-100:13"
+    },
+    "AlgebraicGeometry.RingedSpace.inverseImage_carrier": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "45:0-46:68"
+    },
+    "AlgebraicGeometry.RingedSpace.inverseImage_sheaf": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "48:0-50:64"
+    },
+    "AlgebraicGeometry.RingedSpace.isPullback_restrictInf": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Restriction",
+      "range": "93:0-141:61"
+    },
+    "AlgebraicGeometry.RingedSpace.ofInverseImage": {
+      "kind": "definition",
+      "module": "RingedSpaces.InverseImage",
+      "range": "52:0-57:22"
+    },
+    "AlgebraicGeometry.RingedSpace.ofInverseImage_base": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "59:0-60:70"
+    },
+    "AlgebraicGeometry.RingedSpace.ofInverseImage_c": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "62:0-65:5"
+    },
+    "AlgebraicGeometry.RingedSpace.ofInverseImage_c_app": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "67:0-70:33"
+    },
+    "AlgebraicGeometry.RingedSpace.restrictMap": {
+      "kind": "definition",
+      "module": "RingedSpaces.Restriction",
+      "range": "49:0-56:95"
+    },
+    "AlgebraicGeometry.RingedSpace.restrictMap_base": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Restriction",
+      "range": "69:0-76:11"
+    },
+    "AlgebraicGeometry.RingedSpace.restrictMap_comp": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Restriction",
+      "range": "78:0-84:52"
+    },
+    "AlgebraicGeometry.RingedSpace.restrictMap_comp_assoc": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Restriction",
+      "range": "79:2-79:9"
+    },
+    "AlgebraicGeometry.RingedSpace.restrictMap_id": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Restriction",
+      "range": "86:0-90:54"
+    },
+    "AlgebraicGeometry.RingedSpace.restrictMap_ofRestrict": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Restriction",
+      "range": "62:0-67:79"
+    },
+    "AlgebraicGeometry.RingedSpace.restrictMap_ofRestrict_assoc": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Restriction",
+      "range": "63:2-63:24"
+    },
+    "AlgebraicGeometry.RingedSpace.toInverseImage": {
+      "kind": "definition",
+      "module": "RingedSpaces.InverseImage",
+      "range": "119:0-124:69"
+    },
+    "AlgebraicGeometry.RingedSpace.toInverseImage_base": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "126:0-127:81"
+    },
+    "AlgebraicGeometry.RingedSpace.toInverseImage_c": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "129:0-132:72"
+    },
+    "AlgebraicGeometry.RingedSpace.toInverseImage_c_app": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "134:0-137:82"
+    },
+    "AlgebraicGeometry.RingedSpace.toInverseImage_c_app_eq": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "139:0-143:5"
+    },
+    "AlgebraicGeometry.RingedSpace.toInverseImage_ofInverseImage": {
+      "kind": "theorem",
+      "module": "RingedSpaces.InverseImage",
+      "range": "145:0-155:5"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.adjunction": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "351:0-366:48"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.backward": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "165:0-194:25"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.backward_forward": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "233:0-254:5"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.backward_naturality_left": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "371:0-379:54"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.backward_naturality_right": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "381:0-390:55"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.backward_smul": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "203:0-212:37"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.backward_ι": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "214:0-222:34"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.counit_app_eq": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "404:0-409:74"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.counit_naturality": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "432:0-440:38"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.counit_ι": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "411:0-422:5"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.forward": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "136:0-157:62"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.forward_apply": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "224:0-231:35"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.forward_backward": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "256:0-276:5"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.forward_naturality_left": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "278:0-301:12"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.forward_naturality_right": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "303:0-321:30"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.forward_underlying_additive": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "443:0-486:61"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.group_map_ι": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "225:0-235:5"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.homEquiv": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "323:0-332:35"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.index": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "32:0-34:43"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.inverseImageFunctor": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "384:0-395:35"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.inverseImageMap": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "343:0-348:53"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.inverseImageModule": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "274:0-284:55"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "298:0-314:7"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_comp": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "363:0-382:49"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_id": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "350:0-361:73"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_smul": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "328:0-341:5"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_unit": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "397:0-408:5"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_ι": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "316:0-326:5"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseModule": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "134:0-175:76"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseSmul": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "420:0-427:13"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseSmul_eq": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "429:0-437:39"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseToPullback": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "286:0-296:45"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseToPullback_fac": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "410:0-418:53"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwise_jointly_surjective": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "237:0-256:47"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.pointwise_smul_ι": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "181:0-212:14"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.restriction_smul": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "258:0-272:70"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.ring_map_ι": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "214:0-223:5"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.underlyingComparison": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "450:0-477:50"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.unit_app_eq": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "392:0-395:62"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.unit_apply": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "397:0-402:5"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.unit_naturality": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImageHom",
+      "range": "424:0-430:36"
+    },
+    "RingedSpaces.Modules.PresheafInverseImage.unit_smul": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafInverseImage",
+      "range": "439:0-447:59"
+    },
+    "RingedSpaces.Modules.Presheaves": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "39:0-41:35"
+    },
+    "RingedSpaces.Modules.Sheaves": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "50:0-51:80"
+    },
+    "RingedSpaces.Modules.leftPure": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "90:0-98:40"
+    },
+    "RingedSpaces.Modules.leftPure_eq_smul_unit": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "230:0-250:14"
+    },
+    "RingedSpaces.Modules.moduleSheafification": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "56:0-61:62"
+    },
+    "RingedSpaces.Modules.moduleSheafificationAdjunction": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "63:0-69:72"
+    },
+    "RingedSpaces.Modules.opensRightSheafNatIso": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRingsSymmetry",
+      "range": "58:0-64:34"
+    },
+    "RingedSpaces.Modules.opensTensorSheafAdjunction": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "260:0-269:39"
+    },
+    "RingedSpaces.Modules.opensWEqualsLocallyBijective": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "255:0-258:16"
+    },
+    "RingedSpaces.Modules.opensWeakSheafify": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "250:0-253:16"
+    },
+    "RingedSpaces.Modules.oppositeMap_pure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "383:0-398:64"
+    },
+    "RingedSpaces.Modules.oppositeRestriction_pure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "270:0-297:5"
+    },
+    "RingedSpaces.Modules.presheafTensorUnit": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "277:0-286:59"
+    },
+    "RingedSpaces.Modules.restrictionUnit": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "90:0-135:9"
+    },
+    "RingedSpaces.Modules.restrictionUnit_apply": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "145:0-147:88"
+    },
+    "RingedSpaces.Modules.rightASmul_pure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "156:0-171:38"
+    },
+    "RingedSpaces.Modules.rightBalance_pure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "173:0-186:37"
+    },
+    "RingedSpaces.Modules.rightFactor": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "32:0-38:68"
+    },
+    "RingedSpaces.Modules.rightModule": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "62:0-65:47"
+    },
+    "RingedSpaces.Modules.rightPresheaf": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "328:0-369:62"
+    },
+    "RingedSpaces.Modules.rightPresheafFunctor": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "469:0-497:47"
+    },
+    "RingedSpaces.Modules.rightPresheafIso": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "371:0-375:61"
+    },
+    "RingedSpaces.Modules.rightPresheafMap": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "377:0-381:38"
+    },
+    "RingedSpaces.Modules.rightPresheafMap_pure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "417:0-421:46"
+    },
+    "RingedSpaces.Modules.rightPresheafMap_restriction": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "423:0-427:78"
+    },
+    "RingedSpaces.Modules.rightPresheafNatIso": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "499:0-507:24"
+    },
+    "RingedSpaces.Modules.rightPresheafUnit": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "445:0-451:40"
+    },
+    "RingedSpaces.Modules.rightPresheafUnit_pure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "453:0-456:45"
+    },
+    "RingedSpaces.Modules.rightPure": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "79:0-88:40"
+    },
+    "RingedSpaces.Modules.rightRestriction": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "252:0-260:41"
+    },
+    "RingedSpaces.Modules.rightRestriction_comm": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "262:0-268:41"
+    },
+    "RingedSpaces.Modules.rightRestriction_pure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "299:0-307:53"
+    },
+    "RingedSpaces.Modules.rightRestriction_semilinear": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "309:0-326:9"
+    },
+    "RingedSpaces.Modules.rightSection": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "40:0-49:30"
+    },
+    "RingedSpaces.Modules.rightSectionAddEquiv": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "51:0-60:51"
+    },
+    "RingedSpaces.Modules.rightSectionCat": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "67:0-71:45"
+    },
+    "RingedSpaces.Modules.rightSectionIso": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "73:0-77:84"
+    },
+    "RingedSpaces.Modules.rightSectionIso_inv_tmul": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "116:0-131:33"
+    },
+    "RingedSpaces.Modules.rightSectionIso_pure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "100:0-114:33"
+    },
+    "RingedSpaces.Modules.rightSectionMap": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "400:0-405:39"
+    },
+    "RingedSpaces.Modules.rightSectionMap_pure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "407:0-415:45"
+    },
+    "RingedSpaces.Modules.rightSectionSmul": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "133:0-137:38"
+    },
+    "RingedSpaces.Modules.rightSheafFunctor": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRingsSymmetry",
+      "range": "33:0-36:71"
+    },
+    "RingedSpaces.Modules.rightSheafNatIso": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRingsSymmetry",
+      "range": "38:0-43:75"
+    },
+    "RingedSpaces.Modules.rightSheafificationUnit_naturality": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.SheafChangeOfRingsSymmetry",
+      "range": "45:0-56:54"
+    },
+    "RingedSpaces.Modules.rightUnitSection": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "429:0-436:41"
+    },
+    "RingedSpaces.Modules.rightUnitSection_pure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "438:0-443:23"
+    },
+    "RingedSpaces.Modules.ringMap": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "35:0-37:62"
+    },
+    "RingedSpaces.Modules.ringPresheaf": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "31:0-33:37"
+    },
+    "RingedSpaces.Modules.ringSheaf": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "42:0-44:58"
+    },
+    "RingedSpaces.Modules.ringSheafMap": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "46:0-48:38"
+    },
+    "RingedSpaces.Modules.smul_pure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "139:0-154:49"
+    },
+    "RingedSpaces.Modules.tensorPresheaf": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "175:0-203:34"
+    },
+    "RingedSpaces.Modules.tensorPresheafAdjunction": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "403:0-423:68"
+    },
+    "RingedSpaces.Modules.tensorPresheafAdjunction_counit": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "437:0-452:5"
+    },
+    "RingedSpaces.Modules.tensorPresheafAdjunction_unit": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "425:0-433:5"
+    },
+    "RingedSpaces.Modules.tensorPresheafFunctor": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "248:0-275:7"
+    },
+    "RingedSpaces.Modules.tensorPresheafHomDown": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "288:0-302:88"
+    },
+    "RingedSpaces.Modules.tensorPresheafHomDown_naturality_left": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "363:0-383:5"
+    },
+    "RingedSpaces.Modules.tensorPresheafHomDown_naturality_right": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "385:0-400:5"
+    },
+    "RingedSpaces.Modules.tensorPresheafHomEquiv": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "343:0-361:76"
+    },
+    "RingedSpaces.Modules.tensorPresheafHomUp": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "304:0-323:54"
+    },
+    "RingedSpaces.Modules.tensorPresheafHomUp_smul": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "326:0-341:5"
+    },
+    "RingedSpaces.Modules.tensorPresheafMap": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "228:0-246:53"
+    },
+    "RingedSpaces.Modules.tensorRestriction": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "137:0-143:78"
+    },
+    "RingedSpaces.Modules.tensorRestriction_smul": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "164:0-173:5"
+    },
+    "RingedSpaces.Modules.tensorRestriction_unit": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "149:0-161:10"
+    },
+    "RingedSpaces.Modules.tensorSection": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "43:0-48:73"
+    },
+    "RingedSpaces.Modules.tensorSectionHomEquiv": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "60:0-67:89"
+    },
+    "RingedSpaces.Modules.tensorSectionHomEquiv_apply": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "69:0-75:61"
+    },
+    "RingedSpaces.Modules.tensorSectionHomEquiv_symm_unit": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "77:0-88:64"
+    },
+    "RingedSpaces.Modules.tensorSectionMap": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "205:0-210:79"
+    },
+    "RingedSpaces.Modules.tensorSectionMap_smul": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "219:0-226:38"
+    },
+    "RingedSpaces.Modules.tensorSectionMap_unit": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "212:0-216:5"
+    },
+    "RingedSpaces.Modules.tensorSheaf": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "71:0-73:75"
+    },
+    "RingedSpaces.Modules.tensorSheafAdjunction": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "157:0-172:66"
+    },
+    "RingedSpaces.Modules.tensorSheafAdjunction_counit": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "221:0-248:77"
+    },
+    "RingedSpaces.Modules.tensorSheafAdjunction_unit": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "175:0-187:71"
+    },
+    "RingedSpaces.Modules.tensorSheafFunctor": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "75:0-78:72"
+    },
+    "RingedSpaces.Modules.tensorSheafHomEquiv": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "80:0-88:94"
+    },
+    "RingedSpaces.Modules.tensorSheafHomEquiv_apply": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "99:0-120:24"
+    },
+    "RingedSpaces.Modules.tensorSheafHomEquiv_naturality_left": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "122:0-138:73"
+    },
+    "RingedSpaces.Modules.tensorSheafHomEquiv_naturality_right": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "140:0-155:80"
+    },
+    "RingedSpaces.Modules.tensorSheafHomEquiv_val": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.SheafChangeOfRings",
+      "range": "90:0-96:66"
+    },
+    "RingedSpaces.Modules.tensorUnitSection": {
+      "kind": "definition",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRings",
+      "range": "50:0-58:13"
+    },
+    "RingedSpaces.Modules.theta_smul": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "195:0-223:66"
+    },
+    "RingedSpaces.Modules.theta_smul_pure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "188:0-193:52"
+    },
+    "RingedSpaces.Modules.unit_eq_leftPure": {
+      "kind": "theorem",
+      "module": "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+      "range": "225:0-228:5"
+    },
+    "Test.ChangeOfRingsSymmetry.actualArrowRestriction": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "55:0-63:50"
+    },
+    "Test.ChangeOfRingsSymmetry.arbitraryCoefficients": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "31:0-34:31"
+    },
+    "Test.ChangeOfRingsSymmetry.arbitraryMorphismNaturality": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "65:0-74:49"
+    },
+    "Test.ChangeOfRingsSymmetry.arbitraryTensorCompatibility": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "41:0-45:30"
+    },
+    "Test.ChangeOfRingsSymmetry.balanceForFullMap": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "36:0-39:39"
+    },
+    "Test.ChangeOfRingsSymmetry.comparisonBothDirections": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "47:0-53:47"
+    },
+    "Test.ChangeOfRingsSymmetry.emptySiteComparison": {
+      "kind": "definition",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "143:0-147:31"
+    },
+    "Test.ChangeOfRingsSymmetry.homFormulaViaComparison": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "112:0-123:52"
+    },
+    "Test.ChangeOfRingsSymmetry.rightFunctorLaws": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "76:0-88:50"
+    },
+    "Test.ChangeOfRingsSymmetry.rightIdentityOnPure": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "90:0-96:5"
+    },
+    "Test.ChangeOfRingsSymmetry.sheafificationComparisonSquare": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "170:0-179:48"
+    },
+    "Test.ChangeOfRingsSymmetry.unitAndComparison": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "98:0-109:49"
+    },
+    "Test.ChangeOfRingsSymmetry.zeroRingArrowComparison": {
+      "kind": "definition",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "153:0-157:27"
+    },
+    "Test.ChangeOfRingsSymmetry.zeroRingPresheaf": {
+      "kind": "definition",
+      "module": "Test.ChangeOfRingsSymmetry",
+      "range": "149:0-151:60"
+    },
+    "Test.ChangeOfRingsSymmetryFixture.changingRing": {
+      "kind": "definition",
+      "module": "Test.ChangeOfRingsSymmetryFixture",
+      "range": "29:0-85:77"
+    },
+    "Test.ChangeOfRingsSymmetryFixture.constantIntegers": {
+      "kind": "definition",
+      "module": "Test.ChangeOfRingsSymmetryFixture",
+      "range": "87:0-89:50"
+    },
+    "Test.ChangeOfRingsSymmetryFixture.integerInclusion": {
+      "kind": "definition",
+      "module": "Test.ChangeOfRingsSymmetryFixture",
+      "range": "91:0-119:67"
+    },
+    "Test.ChangeOfRingsSymmetryFixture.integerInclusionNotSurjective": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetryFixture",
+      "range": "134:0-146:40"
+    },
+    "Test.ChangeOfRingsSymmetryFixture.nonidentityComponentOnTwo": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetryFixture",
+      "range": "127:0-132:6"
+    },
+    "Test.ChangeOfRingsSymmetryFixture.nontrivialTwoCoefficientRestriction": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetryFixture",
+      "range": "148:0-170:5"
+    },
+    "Test.ChangeOfRingsSymmetryRoot.rootComparisonOnArbitraryCoefficient": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetryRoot",
+      "range": "28:0-32:40"
+    },
+    "Test.ChangeOfRingsSymmetryRoot.rootNonidentityDiagram": {
+      "kind": "theorem",
+      "module": "Test.ChangeOfRingsSymmetryRoot",
+      "range": "34:0-54:75"
+    },
+    "Test.InverseImage.arbitraryContinuous": {
+      "kind": "theorem",
+      "module": "Test.InverseImage",
+      "range": "27:0-37:74"
+    },
+    "Test.InverseImage.arbitraryFull": {
+      "kind": "theorem",
+      "module": "Test.InverseImage",
+      "range": "46:0-56:88"
+    },
+    "Test.InverseImage.componentOnOpen": {
+      "kind": "theorem",
+      "module": "Test.InverseImage",
+      "range": "58:0-75:41"
+    },
+    "Test.InverseImage.emptyCarrier": {
+      "kind": "theorem",
+      "module": "Test.InverseImage",
+      "range": "94:0-99:45"
+    },
+    "Test.InverseImage.identity": {
+      "kind": "theorem",
+      "module": "Test.InverseImage",
+      "range": "88:0-92:49"
+    },
+    "Test.InverseImage.nonidentityFull": {
+      "kind": "theorem",
+      "module": "Test.InverseImage",
+      "range": "116:0-134:79"
+    },
+    "Test.InverseImage.sectionMaps": {
+      "kind": "theorem",
+      "module": "Test.InverseImage",
+      "range": "77:0-86:92"
+    },
+    "Test.InverseImage.unitOnOpen": {
+      "kind": "theorem",
+      "module": "Test.InverseImage",
+      "range": "39:0-44:40"
+    },
+    "Test.InverseImage.zeroRing": {
+      "kind": "theorem",
+      "module": "Test.InverseImage",
+      "range": "108:0-114:45"
+    },
+    "Test.InverseImage.zeroRingSpace": {
+      "kind": "definition",
+      "module": "Test.InverseImage",
+      "range": "101:0-106:62"
+    },
+    "Test.ModuleChangeOfRings.adjunctionCounitOnScalars": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "93:0-100:78"
+    },
+    "Test.ModuleChangeOfRings.adjunctionUnitOnSections": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "87:0-91:74"
+    },
+    "Test.ModuleChangeOfRings.emptySiteAdjunction": {
+      "kind": "definition",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "134:0-139:57"
+    },
+    "Test.ModuleChangeOfRings.emptySpaceAdjunction": {
+      "kind": "definition",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "247:0-252:59"
+    },
+    "Test.ModuleChangeOfRings.fullRingNaturality": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "30:0-32:72"
+    },
+    "Test.ModuleChangeOfRings.homInverses": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "58:0-68:83"
+    },
+    "Test.ModuleChangeOfRings.homNaturalityLeft": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "70:0-76:80"
+    },
+    "Test.ModuleChangeOfRings.homNaturalityRight": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "78:0-85:83"
+    },
+    "Test.ModuleChangeOfRings.nontrivialArrowRestriction": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "34:0-39:69"
+    },
+    "Test.ModuleChangeOfRings.sheafAdjunctionCounitNaturality": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "235:0-245:80"
+    },
+    "Test.ModuleChangeOfRings.sheafAdjunctionUnitNaturality": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "225:0-233:74"
+    },
+    "Test.ModuleChangeOfRings.sheafCounitGenerator": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "164:0-177:75"
+    },
+    "Test.ModuleChangeOfRings.sheafHomInverses": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "179:0-190:80"
+    },
+    "Test.ModuleChangeOfRings.sheafHomNaturalityLeft": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "205:0-212:80"
+    },
+    "Test.ModuleChangeOfRings.sheafHomNaturalityRight": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "214:0-223:81"
+    },
+    "Test.ModuleChangeOfRings.sheafHomOnGenerator": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "192:0-203:74"
+    },
+    "Test.ModuleChangeOfRings.sheafUnitGenerator": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "153:0-161:71"
+    },
+    "Test.ModuleChangeOfRings.tensorFunctorIdentityComposition": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "48:0-56:72"
+    },
+    "Test.ModuleChangeOfRings.tensorMapArbitraryScalar": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "41:0-46:68"
+    },
+    "Test.ModuleChangeOfRings.topologicalAdjunction": {
+      "kind": "definition",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "147:0-151:59"
+    },
+    "Test.ModuleChangeOfRings.zeroRingPresheaf": {
+      "kind": "definition",
+      "module": "Test.ModuleChangeOfRings",
+      "range": "120:0-122:60"
+    },
+    "Test.ModuleChangeOfRingsRoot.scalarRestriction": {
+      "kind": "theorem",
+      "module": "Test.ModuleChangeOfRingsRoot",
+      "range": "23:0-33:52"
+    },
+    "Test.ModuleChangeOfRingsRoot.topologicalSheafAdjunction": {
+      "kind": "definition",
+      "module": "Test.ModuleChangeOfRingsRoot",
+      "range": "35:0-40:59"
+    },
+    "Test.OpenCover.arbitraryFamily": {
+      "kind": "theorem",
+      "module": "Test.OpenCover",
+      "range": "26:0-34:85"
+    },
+    "Test.OpenCover.emptyCover": {
+      "kind": "definition",
+      "module": "Test.OpenCover",
+      "range": "36:0-41:35"
+    },
+    "Test.OpenCover.emptyFamily": {
+      "kind": "theorem",
+      "module": "Test.OpenCover",
+      "range": "43:0-49:19"
+    },
+    "Test.OpenCover.infiniteCover": {
+      "kind": "definition",
+      "module": "Test.OpenCover",
+      "range": "51:0-55:28"
+    },
+    "Test.OpenCover.infiniteFamily": {
+      "kind": "theorem",
+      "module": "Test.OpenCover",
+      "range": "57:0-63:40"
+    },
+    "Test.PresheafInverseImage.actualUnitAction": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "116:0-121:23"
+    },
+    "Test.PresheafInverseImage.actualUnitNaturality": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "123:0-128:23"
+    },
+    "Test.PresheafInverseImage.additiveComparisonNatural": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "130:0-135:45"
+    },
+    "Test.PresheafInverseImage.additiveComparisonUnit": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "137:0-141:38"
+    },
+    "Test.PresheafInverseImage.generatorAction": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "36:0-43:32"
+    },
+    "Test.PresheafInverseImage.inducedFunctorLaws": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "108:0-114:78"
+    },
+    "Test.PresheafInverseImage.inducedMapArbitraryScalar": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "89:0-97:35"
+    },
+    "Test.PresheafInverseImage.inducedMapGenerator": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "81:0-87:26"
+    },
+    "Test.PresheafInverseImage.inducedMapNaturality": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "99:0-106:74"
+    },
+    "Test.PresheafInverseImage.moduleRestrictionGenerator": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "53:0-59:25"
+    },
+    "Test.PresheafInverseImage.restrictionArbitraryScalar": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "61:0-69:36"
+    },
+    "Test.PresheafInverseImage.restrictionIdentityComposition": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "71:0-79:57"
+    },
+    "Test.PresheafInverseImage.ringRestrictionGenerator": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "45:0-51:22"
+    },
+    "Test.PresheafInverseImage.simultaneousGenerators": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImage",
+      "range": "28:0-34:42"
+    },
+    "Test.PresheafInverseImageHom.actualCounitGenerator": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHom",
+      "range": "90:0-98:22"
+    },
+    "Test.PresheafInverseImageHom.actualUnitCounitNaturalities": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHom",
+      "range": "100:0-113:50"
+    },
+    "Test.PresheafInverseImageHom.actualUnitSection": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHom",
+      "range": "85:0-88:22"
+    },
+    "Test.PresheafInverseImageHom.bothHomDirections": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHom",
+      "range": "56:0-62:65"
+    },
+    "Test.PresheafInverseImageHom.bothTriangleIdentities": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHom",
+      "range": "115:0-126:54"
+    },
+    "Test.PresheafInverseImageHom.descentArbitraryScalar": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHom",
+      "range": "47:0-54:27"
+    },
+    "Test.PresheafInverseImageHom.descentGenerator": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHom",
+      "range": "38:0-45:24"
+    },
+    "Test.PresheafInverseImageHom.forwardSection": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHom",
+      "range": "30:0-36:25"
+    },
+    "Test.PresheafInverseImageHom.ordinaryAdditiveTranspose": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHom",
+      "range": "128:0-137:35"
+    },
+    "Test.PresheafInverseImageHom.sourceNaturality": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHom",
+      "range": "64:0-70:69"
+    },
+    "Test.PresheafInverseImageHom.targetNaturality": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHom",
+      "range": "72:0-83:71"
+    },
+    "Test.PresheafInverseImageHomRoot.actualAdjunction": {
+      "kind": "definition",
+      "module": "Test.PresheafInverseImageHomRoot",
+      "range": "30:0-34:16"
+    },
+    "Test.PresheafInverseImageHomRoot.additiveComparison": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHomRoot",
+      "range": "36:0-45:35"
+    },
+    "Test.PresheafInverseImageHomRoot.completeHomEquivalence": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageHomRoot",
+      "range": "25:0-28:31"
+    },
+    "Test.PresheafInverseImageRoot.actualUnit": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageRoot",
+      "range": "36:0-41:23"
+    },
+    "Test.PresheafInverseImageRoot.additiveUnitComparison": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageRoot",
+      "range": "50:0-54:38"
+    },
+    "Test.PresheafInverseImageRoot.arbitraryScalarRestriction": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageRoot",
+      "range": "26:0-34:30"
+    },
+    "Test.PresheafInverseImageRoot.fullUnderlyingIso": {
+      "kind": "theorem",
+      "module": "Test.PresheafInverseImageRoot",
+      "range": "43:0-48:73"
+    },
+    "Test.Restriction.composedRestriction": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "39:0-43:42"
+    },
+    "Test.Restriction.emptyCoverLiteral": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "112:0-120:19"
+    },
+    "Test.Restriction.emptyIntersection": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "79:0-85:40"
+    },
+    "Test.Restriction.fullFactorization": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "45:0-49:42"
+    },
+    "Test.Restriction.identityRestriction": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "34:0-37:30"
+    },
+    "Test.Restriction.infiniteCoverLiteral": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "122:0-132:74"
+    },
+    "Test.Restriction.literalInclusion": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "29:0-32:38"
+    },
+    "Test.Restriction.literalProjectionLeft": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "66:0-71:62"
+    },
+    "Test.Restriction.literalProjectionRight": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "73:0-77:62"
+    },
+    "Test.Restriction.literalPullback": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "58:0-64:40"
+    },
+    "Test.Restriction.literalToPullback": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "97:0-103:53"
+    },
+    "Test.Restriction.pullbackToLiteral": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "89:0-95:52"
+    },
+    "Test.Restriction.sheafComponent": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "51:0-56:60"
+    },
+    "Test.Restriction.uniqueLiteralExtension": {
+      "kind": "theorem",
+      "module": "Test.Restriction",
+      "range": "105:0-110:43"
+    },
+    "Test.Root.gluing": {
+      "kind": "theorem",
+      "module": "Test.Root",
+      "range": "22:0-28:28"
+    },
+    "Test.Root.inverseImageContinuous": {
+      "kind": "theorem",
+      "module": "Test.Root",
+      "range": "50:0-58:40"
+    },
+    "Test.Root.inverseImageFull": {
+      "kind": "theorem",
+      "module": "Test.Root",
+      "range": "44:0-48:82"
+    },
+    "Test.Root.inverseImageSections": {
+      "kind": "theorem",
+      "module": "Test.Root",
+      "range": "60:0-72:87"
+    },
+    "Test.Root.literalGluing": {
+      "kind": "theorem",
+      "module": "Test.Root",
+      "range": "30:0-38:52"
+    }
+  },
+  "missing_docstrings": [
+    "AlgebraicGeometry.RingedSpace.toInverseImage_c_app",
+    "AlgebraicGeometry.RingedSpace.toInverseImage_base",
+    "AlgebraicGeometry.RingedSpace.ofInverseImage_c_app",
+    "AlgebraicGeometry.RingedSpace.ofInverseImage_c",
+    "AlgebraicGeometry.RingedSpace.ofInverseImage_base",
+    "AlgebraicGeometry.RingedSpace.inverseImage_sheaf",
+    "AlgebraicGeometry.RingedSpace.inverseImage_carrier",
+    "RingedSpaces.Modules.tensorPresheafHomDown_naturality_right",
+    "RingedSpaces.Modules.tensorPresheafHomDown_naturality_left",
+    "RingedSpaces.Modules.tensorSectionMap_unit",
+    "RingedSpaces.Modules.tensorRestriction_unit",
+    "RingedSpaces.Modules.restrictionUnit_apply",
+    "RingedSpaces.Modules.tensorSectionHomEquiv_symm_unit",
+    "RingedSpaces.Modules.tensorSectionHomEquiv_apply",
+    "RingedSpaces.Modules.rightPresheafUnit_pure",
+    "RingedSpaces.Modules.rightUnitSection_pure",
+    "RingedSpaces.Modules.rightPresheafMap_restriction",
+    "RingedSpaces.Modules.rightPresheafMap_pure",
+    "RingedSpaces.Modules.rightSectionMap_pure",
+    "RingedSpaces.Modules.oppositeMap_pure",
+    "RingedSpaces.Modules.rightRestriction_semilinear",
+    "RingedSpaces.Modules.rightRestriction_pure",
+    "RingedSpaces.Modules.oppositeRestriction_pure",
+    "RingedSpaces.Modules.rightRestriction_comm",
+    "RingedSpaces.Modules.leftPure_eq_smul_unit",
+    "RingedSpaces.Modules.unit_eq_leftPure",
+    "RingedSpaces.Modules.theta_smul_pure",
+    "RingedSpaces.Modules.rightBalance_pure",
+    "RingedSpaces.Modules.rightASmul_pure",
+    "RingedSpaces.Modules.smul_pure",
+    "RingedSpaces.Modules.rightSectionIso_inv_tmul",
+    "RingedSpaces.Modules.rightSectionIso_pure",
+    "RingedSpaces.Modules.PresheafInverseImage.unit_smul",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseSmul_eq",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseToPullback_fac",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_unit",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_comp",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_id",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_smul",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_ι",
+    "RingedSpaces.Modules.PresheafInverseImage.restriction_smul",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwise_jointly_surjective",
+    "RingedSpaces.Modules.PresheafInverseImage.group_map_ι",
+    "RingedSpaces.Modules.PresheafInverseImage.ring_map_ι",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwise_smul_ι",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseModule",
+    "RingedSpaces.Modules.PresheafInverseImage.counit_naturality",
+    "RingedSpaces.Modules.PresheafInverseImage.unit_naturality",
+    "RingedSpaces.Modules.PresheafInverseImage.counit_ι",
+    "RingedSpaces.Modules.PresheafInverseImage.unit_apply",
+    "RingedSpaces.Modules.PresheafInverseImage.forward_backward",
+    "RingedSpaces.Modules.PresheafInverseImage.backward_forward",
+    "RingedSpaces.Modules.PresheafInverseImage.forward_apply",
+    "RingedSpaces.Modules.PresheafInverseImage.backward_ι",
+    "RingedSpaces.Modules.tensorSheafHomEquiv_naturality_right",
+    "RingedSpaces.Modules.tensorSheafHomEquiv_naturality_left",
+    "AlgebraicGeometry.RingedSpace.OpenCover.mk",
+    "Test.ChangeOfRingsSymmetry.sheafificationComparisonSquare",
+    "Test.ChangeOfRingsSymmetry.homFormulaViaComparison",
+    "Test.ChangeOfRingsSymmetry.unitAndComparison",
+    "Test.ChangeOfRingsSymmetry.rightIdentityOnPure",
+    "Test.ChangeOfRingsSymmetry.rightFunctorLaws",
+    "Test.ChangeOfRingsSymmetry.arbitraryMorphismNaturality",
+    "Test.ChangeOfRingsSymmetry.actualArrowRestriction",
+    "Test.ChangeOfRingsSymmetry.comparisonBothDirections",
+    "Test.ChangeOfRingsSymmetry.arbitraryTensorCompatibility",
+    "Test.ChangeOfRingsSymmetry.balanceForFullMap",
+    "Test.ChangeOfRingsSymmetry.arbitraryCoefficients",
+    "Test.ChangeOfRingsSymmetryFixture.nontrivialTwoCoefficientRestriction",
+    "Test.ChangeOfRingsSymmetryFixture.nonidentityComponentOnTwo",
+    "Test.ChangeOfRingsSymmetryRoot.rootNonidentityDiagram",
+    "Test.ChangeOfRingsSymmetryRoot.rootComparisonOnArbitraryCoefficient",
+    "Test.ModuleChangeOfRings.sheafAdjunctionCounitNaturality",
+    "Test.ModuleChangeOfRings.sheafAdjunctionUnitNaturality",
+    "Test.ModuleChangeOfRings.sheafHomNaturalityRight",
+    "Test.ModuleChangeOfRings.sheafHomNaturalityLeft",
+    "Test.ModuleChangeOfRings.sheafHomOnGenerator",
+    "Test.ModuleChangeOfRings.sheafHomInverses",
+    "Test.ModuleChangeOfRings.sheafCounitGenerator",
+    "Test.ModuleChangeOfRings.sheafUnitGenerator",
+    "Test.ModuleChangeOfRings.adjunctionCounitOnScalars",
+    "Test.ModuleChangeOfRings.adjunctionUnitOnSections",
+    "Test.ModuleChangeOfRings.homNaturalityRight",
+    "Test.ModuleChangeOfRings.homNaturalityLeft",
+    "Test.ModuleChangeOfRings.homInverses",
+    "Test.ModuleChangeOfRings.tensorFunctorIdentityComposition",
+    "Test.ModuleChangeOfRings.tensorMapArbitraryScalar",
+    "Test.ModuleChangeOfRings.nontrivialArrowRestriction",
+    "Test.ModuleChangeOfRings.fullRingNaturality",
+    "Test.ModuleChangeOfRingsRoot.scalarRestriction",
+    "Test.PresheafInverseImage.additiveComparisonUnit",
+    "Test.PresheafInverseImage.additiveComparisonNatural",
+    "Test.PresheafInverseImage.actualUnitNaturality",
+    "Test.PresheafInverseImage.actualUnitAction",
+    "Test.PresheafInverseImage.inducedFunctorLaws",
+    "Test.PresheafInverseImage.inducedMapNaturality",
+    "Test.PresheafInverseImage.inducedMapArbitraryScalar",
+    "Test.PresheafInverseImage.inducedMapGenerator",
+    "Test.PresheafInverseImage.restrictionIdentityComposition",
+    "Test.PresheafInverseImage.restrictionArbitraryScalar",
+    "Test.PresheafInverseImage.moduleRestrictionGenerator",
+    "Test.PresheafInverseImage.ringRestrictionGenerator",
+    "Test.PresheafInverseImage.generatorAction",
+    "Test.PresheafInverseImage.simultaneousGenerators",
+    "Test.PresheafInverseImageHom.ordinaryAdditiveTranspose",
+    "Test.PresheafInverseImageHom.bothTriangleIdentities",
+    "Test.PresheafInverseImageHom.actualUnitCounitNaturalities",
+    "Test.PresheafInverseImageHom.actualCounitGenerator",
+    "Test.PresheafInverseImageHom.actualUnitSection",
+    "Test.PresheafInverseImageHom.targetNaturality",
+    "Test.PresheafInverseImageHom.sourceNaturality",
+    "Test.PresheafInverseImageHom.bothHomDirections",
+    "Test.PresheafInverseImageHom.descentArbitraryScalar",
+    "Test.PresheafInverseImageHom.descentGenerator",
+    "Test.PresheafInverseImageHom.forwardSection",
+    "Test.PresheafInverseImageHomRoot.additiveComparison",
+    "Test.PresheafInverseImageHomRoot.completeHomEquivalence",
+    "Test.PresheafInverseImageRoot.additiveUnitComparison",
+    "Test.PresheafInverseImageRoot.fullUnderlyingIso",
+    "Test.PresheafInverseImageRoot.actualUnit",
+    "Test.PresheafInverseImageRoot.arbitraryScalarRestriction",
+    "Test.Restriction.literalProjectionRight"
+  ],
+  "missing_module_docs": [],
+  "missing_native_name": "AlgebraicGeometry.RingedSpace.OpenCover.rec",
+  "modules": [
+    "RingedSpaces",
+    "RingedSpaces.InverseImage",
+    "RingedSpaces.Modules.PresheafChangeOfRings",
+    "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry",
+    "RingedSpaces.Modules.PresheafInverseImage",
+    "RingedSpaces.Modules.PresheafInverseImageHom",
+    "RingedSpaces.Modules.SheafChangeOfRings",
+    "RingedSpaces.Modules.SheafChangeOfRingsSymmetry",
+    "RingedSpaces.OpenCover",
+    "RingedSpaces.Restriction",
+    "RingedSpacesExamples",
+    "Test.Axioms",
+    "Test.ChangeOfRingsSymmetry",
+    "Test.ChangeOfRingsSymmetryAxioms",
+    "Test.ChangeOfRingsSymmetryFixture",
+    "Test.ChangeOfRingsSymmetryRoot",
+    "Test.InverseImage",
+    "Test.ModuleChangeOfRings",
+    "Test.ModuleChangeOfRingsAxioms",
+    "Test.ModuleChangeOfRingsRoot",
+    "Test.OpenCover",
+    "Test.PresheafInverseImage",
+    "Test.PresheafInverseImageAxioms",
+    "Test.PresheafInverseImageConcrete",
+    "Test.PresheafInverseImageHom",
+    "Test.PresheafInverseImageHomAxioms",
+    "Test.PresheafInverseImageHomConcrete",
+    "Test.PresheafInverseImageHomRoot",
+    "Test.PresheafInverseImageLegacyAggregate",
+    "Test.PresheafInverseImageNativeDirect",
+    "Test.PresheafInverseImageRoot",
+    "Test.Restriction",
+    "Test.Root"
+  ],
+  "native_record_sha256": {
+    "RingedSpaces": "d3d4910fca938181f4cb7b68b31135ce81e4824ecfe6afb167a26ba454640049",
+    "RingedSpaces.InverseImage": "ae01b15b6ff5e8c1a7aba093aba3edf13c702957c60bc82d43b97af7b7d9ee07",
+    "RingedSpaces.Modules.PresheafChangeOfRings": "5e9231dadce0bf903c660fa071fe52584eeea0168980f0a569a253e26832dae6",
+    "RingedSpaces.Modules.PresheafChangeOfRingsSymmetry": "a2e5ff56cd3ec45f6d7412cf1fb8b0812dc899fd112c669fc784fef8860a06da",
+    "RingedSpaces.Modules.PresheafInverseImage": "f3e119055327f823d6d2d092f6b1b1bf5ee08ed8e54331a9e50ddcbd9243ab7a",
+    "RingedSpaces.Modules.PresheafInverseImageHom": "f3d3761668a051836cf53f825f6bb0ba08e472095fcec608ae9fc92eb4e7d518",
+    "RingedSpaces.Modules.SheafChangeOfRings": "f318f9777928ce5b3265b057171933705c7b1a729c47a486cab54635f882e031",
+    "RingedSpaces.Modules.SheafChangeOfRingsSymmetry": "b4b9e25508716f417c61e089500713f7e8bbe14d07ebd7f67092828862557fb4",
+    "RingedSpaces.OpenCover": "551186a9224eb4df22e827782835bbd25594e42b8b41cb91a810b1965ff8ebfe",
+    "RingedSpaces.Restriction": "ee3de1a2b435b7922b08a60422eab5999281662de9fd6bbdfe3000dd48e01a94",
+    "RingedSpacesExamples": "55d51aef34ce6c4767ec60d4e526883c88ff360bf0fa39901278342e304c493e",
+    "Test.Axioms": "cb34ddc29a6e56f54be6974640d67a819f89210068a5d2f55d322ca7d5c8d547",
+    "Test.ChangeOfRingsSymmetry": "a23f828c30caae0347aaaa91659fa977e1ae418ce6b1920e325094c88cc350d5",
+    "Test.ChangeOfRingsSymmetryAxioms": "a2db79561171cdb7a4478f030be55473420a142fa09fb1fa67da8db86ad4c600",
+    "Test.ChangeOfRingsSymmetryFixture": "4a5b9a0483da2688e0644ddcc07182493b5270cdd0d48ee41491c0d68812a156",
+    "Test.ChangeOfRingsSymmetryRoot": "15f8e4710933496b9241b56fdff63937b12b8b81efb1584d5ec38a75d251dda9",
+    "Test.InverseImage": "40a0cedc518c4810af0a285fa7499e7bbbfd485d929dcfae9a37fae96ceb17d3",
+    "Test.ModuleChangeOfRings": "6d32735376894aa03b3a4baeb58b9057a16dceda4d2162230b4f04841cdf4b74",
+    "Test.ModuleChangeOfRingsAxioms": "3027933b6f116d05e6867e09ed5958c95715974d7ad0234d6b1ca93809d49178",
+    "Test.ModuleChangeOfRingsRoot": "3f5167c109af078e9d1d4d29f21bbd482104c9bd24c9e811dbe6bc2cc575ae46",
+    "Test.OpenCover": "ed7cb82e417207d686368e656cf9f24e27b19be1cc2cf3c5ef5835474ba6215f",
+    "Test.PresheafInverseImage": "a6413b73777491e9cf40940143aedde22c4d3ace637cf47a505c2d4acb29ffb0",
+    "Test.PresheafInverseImageAxioms": "a110348531a70df7d8b38c15e150f97702f608a713d3fc748b8f5c69b5824fb3",
+    "Test.PresheafInverseImageConcrete": "9c92d949c34f1f078bb77c19e6557afa169d5e3e74c087db256bacb2c2769d6e",
+    "Test.PresheafInverseImageHom": "8297f3697890ebaf8e0899ac8ebad0cb9f5105e0a4a3bda1b51d8b170e2b7058",
+    "Test.PresheafInverseImageHomAxioms": "22d92680aa9b8417dbd8d9d6bd5376148a5526501828ef93ca02dd84fe6ef9e5",
+    "Test.PresheafInverseImageHomConcrete": "fa16099035449e9084b29d114629cc175e0d79c848b7cce73d3db11a9b93dc34",
+    "Test.PresheafInverseImageHomRoot": "c799de171f01b403fa2c45dbbbec7628934df27aada7bca9b22a1865f50d1e2e",
+    "Test.PresheafInverseImageLegacyAggregate": "24d3048fc744c26d6c9cc803ae91f0ae8491ad12ad40a692fb9e57fa76e16637",
+    "Test.PresheafInverseImageNativeDirect": "c833e256bd7471a10b5cda648872ffe2a7eb6fa4858b0f273e09054a4e466d61",
+    "Test.PresheafInverseImageRoot": "cb8fe6a4220d98be01926d57f497a0cfcaad8a707e283087507756d074606b1c",
+    "Test.Restriction": "cc183a1ad6c7eb7d443e6d56366dec563cb8c9a362515688200a404de8ed3104",
+    "Test.Root": "42cd4b1e421d5726e666f69fcb65740c5b3c300c8efaef230ffc595d3dc6cae5"
+  },
+  "proof_certification": false,
+  "public_declarations": [
+    "AlgebraicGeometry.RingedSpace.toInverseImage_ofInverseImage",
+    "AlgebraicGeometry.RingedSpace.toInverseImage_c_app_eq",
+    "AlgebraicGeometry.RingedSpace.toInverseImage_c_app",
+    "AlgebraicGeometry.RingedSpace.toInverseImage_c",
+    "AlgebraicGeometry.RingedSpace.toInverseImage_base",
+    "AlgebraicGeometry.RingedSpace.toInverseImage",
+    "AlgebraicGeometry.RingedSpace.inverseImageMap_unit_components",
+    "AlgebraicGeometry.RingedSpace.inverseImageMap_unit_app",
+    "AlgebraicGeometry.RingedSpace.inverseImageMap_unit_hom",
+    "AlgebraicGeometry.RingedSpace.inverseImageMap_unit",
+    "AlgebraicGeometry.RingedSpace.inverseImageMap",
+    "AlgebraicGeometry.RingedSpace.ofInverseImage_c_app",
+    "AlgebraicGeometry.RingedSpace.ofInverseImage_c",
+    "AlgebraicGeometry.RingedSpace.ofInverseImage_base",
+    "AlgebraicGeometry.RingedSpace.ofInverseImage",
+    "AlgebraicGeometry.RingedSpace.inverseImage_sheaf",
+    "AlgebraicGeometry.RingedSpace.inverseImage_carrier",
+    "AlgebraicGeometry.RingedSpace.inverseImage",
+    "RingedSpaces.Modules.tensorPresheafAdjunction_counit",
+    "RingedSpaces.Modules.tensorPresheafAdjunction_unit",
+    "RingedSpaces.Modules.tensorPresheafAdjunction",
+    "RingedSpaces.Modules.tensorPresheafHomDown_naturality_right",
+    "RingedSpaces.Modules.tensorPresheafHomDown_naturality_left",
+    "RingedSpaces.Modules.tensorPresheafHomEquiv",
+    "RingedSpaces.Modules.tensorPresheafHomUp_smul",
+    "RingedSpaces.Modules.tensorPresheafHomUp",
+    "RingedSpaces.Modules.tensorPresheafHomDown",
+    "RingedSpaces.Modules.presheafTensorUnit",
+    "RingedSpaces.Modules.tensorPresheafFunctor",
+    "RingedSpaces.Modules.tensorPresheafMap",
+    "RingedSpaces.Modules.tensorSectionMap_smul",
+    "RingedSpaces.Modules.tensorSectionMap_unit",
+    "RingedSpaces.Modules.tensorSectionMap",
+    "RingedSpaces.Modules.tensorPresheaf",
+    "RingedSpaces.Modules.tensorRestriction_smul",
+    "RingedSpaces.Modules.tensorRestriction_unit",
+    "RingedSpaces.Modules.restrictionUnit_apply",
+    "RingedSpaces.Modules.tensorRestriction",
+    "RingedSpaces.Modules.restrictionUnit",
+    "RingedSpaces.Modules.tensorSectionHomEquiv_symm_unit",
+    "RingedSpaces.Modules.tensorSectionHomEquiv_apply",
+    "RingedSpaces.Modules.tensorSectionHomEquiv",
+    "RingedSpaces.Modules.tensorUnitSection",
+    "RingedSpaces.Modules.tensorSection",
+    "RingedSpaces.Modules.Presheaves",
+    "RingedSpaces.Modules.ringMap",
+    "RingedSpaces.Modules.ringPresheaf",
+    "RingedSpaces.Modules.rightPresheafNatIso",
+    "RingedSpaces.Modules.rightPresheafFunctor",
+    "RingedSpaces.Modules.rightPresheafUnit_pure",
+    "RingedSpaces.Modules.rightPresheafUnit",
+    "RingedSpaces.Modules.rightUnitSection_pure",
+    "RingedSpaces.Modules.rightUnitSection",
+    "RingedSpaces.Modules.rightPresheafMap_restriction",
+    "RingedSpaces.Modules.rightPresheafMap_pure",
+    "RingedSpaces.Modules.rightSectionMap_pure",
+    "RingedSpaces.Modules.rightSectionMap",
+    "RingedSpaces.Modules.oppositeMap_pure",
+    "RingedSpaces.Modules.rightPresheafMap",
+    "RingedSpaces.Modules.rightPresheafIso",
+    "RingedSpaces.Modules.rightPresheaf",
+    "RingedSpaces.Modules.rightRestriction_semilinear",
+    "RingedSpaces.Modules.rightRestriction_pure",
+    "RingedSpaces.Modules.oppositeRestriction_pure",
+    "RingedSpaces.Modules.rightRestriction_comm",
+    "RingedSpaces.Modules.rightRestriction",
+    "RingedSpaces.Modules.leftPure_eq_smul_unit",
+    "RingedSpaces.Modules.unit_eq_leftPure",
+    "RingedSpaces.Modules.theta_smul",
+    "RingedSpaces.Modules.theta_smul_pure",
+    "RingedSpaces.Modules.rightBalance_pure",
+    "RingedSpaces.Modules.rightASmul_pure",
+    "RingedSpaces.Modules.smul_pure",
+    "RingedSpaces.Modules.rightSectionSmul",
+    "RingedSpaces.Modules.rightSectionIso_inv_tmul",
+    "RingedSpaces.Modules.rightSectionIso_pure",
+    "RingedSpaces.Modules.leftPure",
+    "RingedSpaces.Modules.rightPure",
+    "RingedSpaces.Modules.rightSectionIso",
+    "RingedSpaces.Modules.rightSectionCat",
+    "RingedSpaces.Modules.rightModule",
+    "RingedSpaces.Modules.rightSectionAddEquiv",
+    "RingedSpaces.Modules.rightSection",
+    "RingedSpaces.Modules.rightFactor",
+    "RingedSpaces.Modules.PresheafInverseImage.underlyingComparison",
+    "RingedSpaces.Modules.PresheafInverseImage.unit_smul",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseSmul_eq",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseSmul",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseToPullback_fac",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_unit",
+    "RingedSpaces.Modules.PresheafInverseImage.inverseImageFunctor",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_comp",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_id",
+    "RingedSpaces.Modules.PresheafInverseImage.inverseImageMap",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_smul",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_ι",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseMap",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseToPullback",
+    "RingedSpaces.Modules.PresheafInverseImage.inverseImageModule",
+    "RingedSpaces.Modules.PresheafInverseImage.restriction_smul",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwise_jointly_surjective",
+    "RingedSpaces.Modules.PresheafInverseImage.group_map_ι",
+    "RingedSpaces.Modules.PresheafInverseImage.ring_map_ι",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwise_smul_ι",
+    "RingedSpaces.Modules.PresheafInverseImage.pointwiseModule",
+    "RingedSpaces.Modules.PresheafInverseImage.index",
+    "RingedSpaces.Modules.PresheafInverseImage.forward_underlying_additive",
+    "RingedSpaces.Modules.PresheafInverseImage.counit_naturality",
+    "RingedSpaces.Modules.PresheafInverseImage.unit_naturality",
+    "RingedSpaces.Modules.PresheafInverseImage.counit_ι",
+    "RingedSpaces.Modules.PresheafInverseImage.counit_app_eq",
+    "RingedSpaces.Modules.PresheafInverseImage.unit_apply",
+    "RingedSpaces.Modules.PresheafInverseImage.unit_app_eq",
+    "RingedSpaces.Modules.PresheafInverseImage.backward_naturality_right",
+    "RingedSpaces.Modules.PresheafInverseImage.backward_naturality_left",
+    "RingedSpaces.Modules.PresheafInverseImage.adjunction",
+    "RingedSpaces.Modules.PresheafInverseImage.homEquiv",
+    "RingedSpaces.Modules.PresheafInverseImage.forward_naturality_right",
+    "RingedSpaces.Modules.PresheafInverseImage.forward_naturality_left",
+    "RingedSpaces.Modules.PresheafInverseImage.forward_backward",
+    "RingedSpaces.Modules.PresheafInverseImage.backward_forward",
+    "RingedSpaces.Modules.PresheafInverseImage.forward_apply",
+    "RingedSpaces.Modules.PresheafInverseImage.backward_ι",
+    "RingedSpaces.Modules.PresheafInverseImage.backward_smul",
+    "RingedSpaces.Modules.PresheafInverseImage.backward",
+    "RingedSpaces.Modules.PresheafInverseImage.forward",
+    "RingedSpaces.Modules.opensTensorSheafAdjunction",
+    "RingedSpaces.Modules.opensWEqualsLocallyBijective",
+    "RingedSpaces.Modules.opensWeakSheafify",
+    "RingedSpaces.Modules.tensorSheafAdjunction_counit",
+    "RingedSpaces.Modules.tensorSheafAdjunction_unit",
+    "RingedSpaces.Modules.tensorSheafAdjunction",
+    "RingedSpaces.Modules.tensorSheafHomEquiv_naturality_right",
+    "RingedSpaces.Modules.tensorSheafHomEquiv_naturality_left",
+    "RingedSpaces.Modules.tensorSheafHomEquiv_apply",
+    "RingedSpaces.Modules.tensorSheafHomEquiv_val",
+    "RingedSpaces.Modules.tensorSheafHomEquiv",
+    "RingedSpaces.Modules.tensorSheafFunctor",
+    "RingedSpaces.Modules.tensorSheaf",
+    "RingedSpaces.Modules.moduleSheafificationAdjunction",
+    "RingedSpaces.Modules.moduleSheafification",
+    "RingedSpaces.Modules.Sheaves",
+    "RingedSpaces.Modules.ringSheafMap",
+    "RingedSpaces.Modules.ringSheaf",
+    "RingedSpaces.Modules.opensRightSheafNatIso",
+    "RingedSpaces.Modules.rightSheafificationUnit_naturality",
+    "RingedSpaces.Modules.rightSheafNatIso",
+    "RingedSpaces.Modules.rightSheafFunctor",
+    "AlgebraicGeometry.RingedSpace.OpenCover.existsUnique_gluing_of_intersection",
+    "AlgebraicGeometry.RingedSpace.OpenCover.pullback_compatibility_iff_intersection",
+    "AlgebraicGeometry.RingedSpace.OpenCover.existsUnique_gluing",
+    "AlgebraicGeometry.RingedSpace.OpenCover.hom_ext",
+    "AlgebraicGeometry.RingedSpace.OpenCover.ι_glueMorphisms_assoc",
+    "AlgebraicGeometry.RingedSpace.OpenCover.ι_glueMorphisms",
+    "AlgebraicGeometry.RingedSpace.OpenCover.glueMorphisms",
+    "AlgebraicGeometry.RingedSpace.OpenCover.ι",
+    "AlgebraicGeometry.RingedSpace.OpenCover.obj",
+    "AlgebraicGeometry.RingedSpace.OpenCover.covers",
+    "AlgebraicGeometry.RingedSpace.OpenCover.U",
+    "AlgebraicGeometry.RingedSpace.OpenCover.J",
+    "AlgebraicGeometry.RingedSpace.OpenCover.mk",
+    "AlgebraicGeometry.RingedSpace.OpenCover",
+    "AlgebraicGeometry.RingedSpace.isPullback_restrictInf",
+    "AlgebraicGeometry.RingedSpace.restrictMap_id",
+    "AlgebraicGeometry.RingedSpace.restrictMap_comp_assoc",
+    "AlgebraicGeometry.RingedSpace.restrictMap_comp",
+    "AlgebraicGeometry.RingedSpace.restrictMap_base",
+    "AlgebraicGeometry.RingedSpace.restrictMap_ofRestrict_assoc",
+    "AlgebraicGeometry.RingedSpace.restrictMap_ofRestrict",
+    "AlgebraicGeometry.RingedSpace.restrictMap",
+    "Test.ChangeOfRingsSymmetry.sheafificationComparisonSquare",
+    "Test.ChangeOfRingsSymmetry.zeroRingArrowComparison",
+    "Test.ChangeOfRingsSymmetry.zeroRingPresheaf",
+    "Test.ChangeOfRingsSymmetry.emptySiteComparison",
+    "Test.ChangeOfRingsSymmetry.homFormulaViaComparison",
+    "Test.ChangeOfRingsSymmetry.unitAndComparison",
+    "Test.ChangeOfRingsSymmetry.rightIdentityOnPure",
+    "Test.ChangeOfRingsSymmetry.rightFunctorLaws",
+    "Test.ChangeOfRingsSymmetry.arbitraryMorphismNaturality",
+    "Test.ChangeOfRingsSymmetry.actualArrowRestriction",
+    "Test.ChangeOfRingsSymmetry.comparisonBothDirections",
+    "Test.ChangeOfRingsSymmetry.arbitraryTensorCompatibility",
+    "Test.ChangeOfRingsSymmetry.balanceForFullMap",
+    "Test.ChangeOfRingsSymmetry.arbitraryCoefficients",
+    "Test.ChangeOfRingsSymmetryFixture.nontrivialTwoCoefficientRestriction",
+    "Test.ChangeOfRingsSymmetryFixture.integerInclusionNotSurjective",
+    "Test.ChangeOfRingsSymmetryFixture.nonidentityComponentOnTwo",
+    "Test.ChangeOfRingsSymmetryFixture.integerInclusion",
+    "Test.ChangeOfRingsSymmetryFixture.constantIntegers",
+    "Test.ChangeOfRingsSymmetryFixture.changingRing",
+    "Test.ChangeOfRingsSymmetryRoot.rootNonidentityDiagram",
+    "Test.ChangeOfRingsSymmetryRoot.rootComparisonOnArbitraryCoefficient",
+    "Test.InverseImage.nonidentityFull",
+    "Test.InverseImage.zeroRing",
+    "Test.InverseImage.zeroRingSpace",
+    "Test.InverseImage.emptyCarrier",
+    "Test.InverseImage.identity",
+    "Test.InverseImage.sectionMaps",
+    "Test.InverseImage.componentOnOpen",
+    "Test.InverseImage.arbitraryFull",
+    "Test.InverseImage.unitOnOpen",
+    "Test.InverseImage.arbitraryContinuous",
+    "Test.ModuleChangeOfRings.emptySpaceAdjunction",
+    "Test.ModuleChangeOfRings.sheafAdjunctionCounitNaturality",
+    "Test.ModuleChangeOfRings.sheafAdjunctionUnitNaturality",
+    "Test.ModuleChangeOfRings.sheafHomNaturalityRight",
+    "Test.ModuleChangeOfRings.sheafHomNaturalityLeft",
+    "Test.ModuleChangeOfRings.sheafHomOnGenerator",
+    "Test.ModuleChangeOfRings.sheafHomInverses",
+    "Test.ModuleChangeOfRings.sheafCounitGenerator",
+    "Test.ModuleChangeOfRings.sheafUnitGenerator",
+    "Test.ModuleChangeOfRings.topologicalAdjunction",
+    "Test.ModuleChangeOfRings.emptySiteAdjunction",
+    "Test.ModuleChangeOfRings.zeroRingPresheaf",
+    "Test.ModuleChangeOfRings.adjunctionCounitOnScalars",
+    "Test.ModuleChangeOfRings.adjunctionUnitOnSections",
+    "Test.ModuleChangeOfRings.homNaturalityRight",
+    "Test.ModuleChangeOfRings.homNaturalityLeft",
+    "Test.ModuleChangeOfRings.homInverses",
+    "Test.ModuleChangeOfRings.tensorFunctorIdentityComposition",
+    "Test.ModuleChangeOfRings.tensorMapArbitraryScalar",
+    "Test.ModuleChangeOfRings.nontrivialArrowRestriction",
+    "Test.ModuleChangeOfRings.fullRingNaturality",
+    "Test.ModuleChangeOfRingsRoot.topologicalSheafAdjunction",
+    "Test.ModuleChangeOfRingsRoot.scalarRestriction",
+    "Test.OpenCover.infiniteFamily",
+    "Test.OpenCover.infiniteCover",
+    "Test.OpenCover.emptyFamily",
+    "Test.OpenCover.emptyCover",
+    "Test.OpenCover.arbitraryFamily",
+    "Test.PresheafInverseImage.additiveComparisonUnit",
+    "Test.PresheafInverseImage.additiveComparisonNatural",
+    "Test.PresheafInverseImage.actualUnitNaturality",
+    "Test.PresheafInverseImage.actualUnitAction",
+    "Test.PresheafInverseImage.inducedFunctorLaws",
+    "Test.PresheafInverseImage.inducedMapNaturality",
+    "Test.PresheafInverseImage.inducedMapArbitraryScalar",
+    "Test.PresheafInverseImage.inducedMapGenerator",
+    "Test.PresheafInverseImage.restrictionIdentityComposition",
+    "Test.PresheafInverseImage.restrictionArbitraryScalar",
+    "Test.PresheafInverseImage.moduleRestrictionGenerator",
+    "Test.PresheafInverseImage.ringRestrictionGenerator",
+    "Test.PresheafInverseImage.generatorAction",
+    "Test.PresheafInverseImage.simultaneousGenerators",
+    "Test.PresheafInverseImageHom.ordinaryAdditiveTranspose",
+    "Test.PresheafInverseImageHom.bothTriangleIdentities",
+    "Test.PresheafInverseImageHom.actualUnitCounitNaturalities",
+    "Test.PresheafInverseImageHom.actualCounitGenerator",
+    "Test.PresheafInverseImageHom.actualUnitSection",
+    "Test.PresheafInverseImageHom.targetNaturality",
+    "Test.PresheafInverseImageHom.sourceNaturality",
+    "Test.PresheafInverseImageHom.bothHomDirections",
+    "Test.PresheafInverseImageHom.descentArbitraryScalar",
+    "Test.PresheafInverseImageHom.descentGenerator",
+    "Test.PresheafInverseImageHom.forwardSection",
+    "Test.PresheafInverseImageHomRoot.additiveComparison",
+    "Test.PresheafInverseImageHomRoot.actualAdjunction",
+    "Test.PresheafInverseImageHomRoot.completeHomEquivalence",
+    "Test.PresheafInverseImageRoot.additiveUnitComparison",
+    "Test.PresheafInverseImageRoot.fullUnderlyingIso",
+    "Test.PresheafInverseImageRoot.actualUnit",
+    "Test.PresheafInverseImageRoot.arbitraryScalarRestriction",
+    "Test.Restriction.infiniteCoverLiteral",
+    "Test.Restriction.emptyCoverLiteral",
+    "Test.Restriction.uniqueLiteralExtension",
+    "Test.Restriction.literalToPullback",
+    "Test.Restriction.pullbackToLiteral",
+    "Test.Restriction.emptyIntersection",
+    "Test.Restriction.literalProjectionRight",
+    "Test.Restriction.literalProjectionLeft",
+    "Test.Restriction.literalPullback",
+    "Test.Restriction.sheafComponent",
+    "Test.Restriction.fullFactorization",
+    "Test.Restriction.composedRestriction",
+    "Test.Restriction.identityRestriction",
+    "Test.Restriction.literalInclusion",
+    "Test.Root.inverseImageSections",
+    "Test.Root.inverseImageContinuous",
+    "Test.Root.inverseImageFull",
+    "Test.Root.literalGluing",
+    "Test.Root.gluing"
+  ],
+  "source_identifier": "git-source:fc4581c6b42eb3b2c3dbeb714a8c76c51934d4fb"
+}

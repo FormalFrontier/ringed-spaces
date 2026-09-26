@@ -1,0 +1,63 @@
+version: "v0.4"
+
+project:
+  name: Ringed Spaces
+  description: >-
+    Full ringed-space restriction, open-cover gluing and inverse-image factorization;
+    scalar extension of module presheaves and sheaves; and a concrete inverse-image
+    module-presheaf Hom adjunction for arbitrary continuous maps.
+  authors:
+    - Formal Frontier Agents
+  license: Apache-2.0
+
+sources:
+  - title: Ringed-space restrictions, gluing and module change of rings
+    type: original-proof
+    relationship: formalizes
+    authors:
+      - Atlas (Formal Frontier mathematical author)
+      - Formal Frontier Agents
+    note: >-
+      Original formal proofs and mathematical development in this library, using
+      mathlib's categories, sites, sheaves and Kan extensions. The project adapts
+      the separately credited gluing transition construction below; it does not
+      assert that every prerequisite or mathematical idea originated here.
+  - title: Mathlib algebraic-geometric gluing transition construction
+    type: other
+    relationship: adapts
+    authors:
+      - Andrew Yang
+    id: https://github.com/leanprover-community/mathlib4/blob/83abb3e776bdefcbc447a1e44d0debe4010039e5/Mathlib/AlgebraicGeometry/Gluing.lean
+    license: Apache-2.0
+    note: >-
+      The generic transition-map portion is adapted in RingedSpaces/OpenCover.lean;
+      the upstream attribution and license notice remain in that file.
+
+automation:
+  methods:
+    - method: agent
+      framework: Codex CLI and Hive
+      tool_setup: >-
+        Agent-assisted Lean development with the repository-pinned Lean and mathlib
+        revisions, independently reviewed mathematical contributions and kernel
+        checking. Mathematical statements and acceptance remain subject to review.
+
+review:
+  status: self-assessed
+  notes: >-
+    The repository includes independently reviewed mathematical contributions;
+    this metadata does not certify independent acceptance of a complete release
+    artifact. Release review, rights clearance and proof-integrity checks are
+    distinct from a successful build.
+
+fidelity:
+  divergences: >-
+    Results are stated for full ringed-space morphisms and arbitrary indicated
+    continuous maps, rather than for schemes or only pointwise carrier maps.
+    The gluing and inverse-image module constructions retain their declared
+    diagonal universe boundaries.
+
+acknowledgements: >-
+  Built on mathlib. The adapted gluing code retains Andrew Yang's attribution;
+  individual Formal Frontier contributors and their exact work are credited in
+  NOTICE.md and the repository history.

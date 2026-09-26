@@ -1,0 +1,17 @@
+name = "ringed-spaces"
+version = "0.1.0"
+defaultTargets = ["RingedSpaces", "RingedSpacesExamples", "Test.Root", "Test.OpenCover", "Test.Axioms", "Test.ModuleChangeOfRings", "Test.ModuleChangeOfRingsRoot", "Test.ModuleChangeOfRingsAxioms", "Test.PresheafInverseImage", "Test.PresheafInverseImageConcrete", "Test.PresheafInverseImageRoot", "Test.PresheafInverseImageAxioms", "Test.PresheafInverseImageNativeDirect", "Test.PresheafInverseImageLegacyAggregate", "Test.ChangeOfRingsSymmetry", "Test.ChangeOfRingsSymmetryFixture", "Test.ChangeOfRingsSymmetryRoot", "Test.ChangeOfRingsSymmetryAxioms", "Test.PresheafInverseImageHom", "Test.PresheafInverseImageHomConcrete", "Test.PresheafInverseImageHomRoot", "Test.PresheafInverseImageHomAxioms"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "83abb3e776bdefcbc447a1e44d0debe4010039e5"
+
+[[lean_lib]]
+name = "RingedSpaces"
+
+[[lean_lib]]
+name = "Test"
+
+[[lean_lib]]
+name = "RingedSpacesExamples"
