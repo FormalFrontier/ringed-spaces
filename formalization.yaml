@@ -4,8 +4,11 @@ project:
   name: Ringed Spaces
   description: >-
     Full ringed-space restriction, open-cover gluing and inverse-image factorization;
-    scalar extension of module presheaves and sheaves; and a concrete inverse-image
-    module-presheaf Hom adjunction for arbitrary continuous maps.
+    scalar extension of module presheaves and sheaves; a concrete inverse-image
+    module-presheaf Hom adjunction for arbitrary continuous maps; and root-exported
+    continuous module-sheaf inverse image with a bundled linear Hom adjunction;
+    and root-exported full-morphism module pushforward and explicit sheafified
+    right-tensor pullback with their adjunction and native comparison.
   authors:
     - Formal Frontier Agents
   license: Apache-2.0
@@ -48,7 +51,11 @@ review:
     The repository includes independently reviewed mathematical contributions;
     this metadata does not certify independent acceptance of a complete release
     artifact. Release review, rights clearance and proof-integrity checks are
-    distinct from a successful build.
+    distinct from a successful build. The module-sheaf and full-morphism
+    mathematical leaves received bounded owner acceptance as preparation.
+    The combined root/default-target assembly has a distinct review boundary;
+    prior preparation alone does not certify its integration, release or a
+    source-coverage decision.
 
 fidelity:
   divergences: >-

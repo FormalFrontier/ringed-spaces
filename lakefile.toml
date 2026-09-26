@@ -1,6 +1,26 @@
 name = "ringed-spaces"
 version = "0.1.0"
-defaultTargets = ["RingedSpaces", "RingedSpacesExamples", "Test.Root", "Test.OpenCover", "Test.Axioms", "Test.ModuleChangeOfRings", "Test.ModuleChangeOfRingsRoot", "Test.ModuleChangeOfRingsAxioms", "Test.PresheafInverseImage", "Test.PresheafInverseImageConcrete", "Test.PresheafInverseImageRoot", "Test.PresheafInverseImageAxioms", "Test.PresheafInverseImageNativeDirect", "Test.PresheafInverseImageLegacyAggregate", "Test.ChangeOfRingsSymmetry", "Test.ChangeOfRingsSymmetryFixture", "Test.ChangeOfRingsSymmetryRoot", "Test.ChangeOfRingsSymmetryAxioms", "Test.PresheafInverseImageHom", "Test.PresheafInverseImageHomConcrete", "Test.PresheafInverseImageHomRoot", "Test.PresheafInverseImageHomAxioms"]
+defaultTargets = [
+  "RingedSpaces", "RingedSpacesExamples",
+  "Test.Axioms", "Test.ChangeOfRingsSymmetry", "Test.ChangeOfRingsSymmetryAxioms",
+  "Test.ChangeOfRingsSymmetryFixture", "Test.ChangeOfRingsSymmetryRoot",
+  "Test.InverseImage", "Test.ModuleChangeOfRings", "Test.ModuleChangeOfRingsAxioms",
+  "Test.ModuleChangeOfRingsRoot", "Test.OpenCover", "Test.PresheafInverseImage",
+  "Test.PresheafInverseImageAxioms", "Test.PresheafInverseImageConcrete",
+  "Test.PresheafInverseImageHom", "Test.PresheafInverseImageHomAxioms",
+  "Test.PresheafInverseImageHomConcrete", "Test.PresheafInverseImageHomRoot",
+  "Test.PresheafInverseImageLegacyAggregate", "Test.PresheafInverseImageNativeDirect",
+  "Test.PresheafInverseImageRoot", "Test.Restriction", "Test.RingedSpaceFullMorphismRoot",
+  "Test.RingedSpacePullback", "Test.RingedSpacePullbackAxioms",
+  "Test.RingedSpacePullbackConcrete", "Test.RingedSpacePullbackLegacy",
+  "Test.RingedSpacePullbackLegacyAxioms", "Test.RingedSpacePullbackRootCoexist",
+  "Test.RingedSpacePushforward", "Test.RingedSpacePushforwardAxioms",
+  "Test.RingedSpacePushforwardConcrete", "Test.RingedSpacePushforwardLegacy",
+  "Test.RingedSpacePushforwardRootCoexist", "Test.Root", "Test.SheafInverseImage",
+  "Test.SheafInverseImageAxioms", "Test.SheafInverseImageConcrete",
+  "Test.SheafInverseImageLegacy", "Test.SheafInverseImageRoot",
+  "Test.SheafInverseImageRootCoexist",
+]
 
 [[require]]
 name = "mathlib"

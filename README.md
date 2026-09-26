@@ -12,6 +12,12 @@ not just underlying continuous maps. The library also develops same-site
 scalar extension for module presheaves and sheaves, continuous inverse images
 of module presheaves, right-factor tensor comparison and a concrete Hom
 adjunction to native pushforward.
+The aggregate `RingedSpaces` exports continuous inverse images of module
+sheaves and their bundled Hom adjunction, as well as full-morphism pushforward
+and explicit right-tensor pullback with its adjunction and native comparison.
+Their mathematical leaves received bounded preparation acceptances. Separate
+revision-specific review and integration records govern the combined
+root/default-target assembly; prior preparation alone does not certify a release.
 
 ## API
 
@@ -28,6 +34,19 @@ pushforward; `forward_apply`, `backward_ι`, `backward_smul`, `unit_apply`,
 `counit_ι` and `forward_underlying_additive` expose formulas. See the
 [standalone mathematical API](docs/presheaf-inverse-image-hom.md) and
 [contributor and source attribution](NOTICE.md).
+The aggregate `RingedSpaces` exposes the module-sheaf API, as does the direct
+import `RingedSpaces.Modules.SheafInverseImageHom`; the narrower direct import
+`RingedSpaces.Modules.SheafInverseImage` exposes its functor and comparison.
+See the [sheaf inverse-image guide](docs/sheaf-inverse-image.md) and the
+[root-only checked client](Test/SheafInverseImageRoot.lean).
+For arbitrary full ringed-space morphisms, import `RingedSpaces` or
+`RingedSpaces.Modules.RingedSpacePushforward` for the original structure map,
+actual inverse-image mate and natural full pushforward comparison; see the
+[pushforward guide](docs/ringed-space-pushforward.md). Import `RingedSpaces` or
+`RingedSpaces.Modules.RingedSpacePullback` for the explicit sheafified right-tensor
+pullback, Hom adjunction, unit and comparison with native pullback; see the
+[pullback guide](docs/ringed-space-pullback.md) and the
+[root-only full-morphism client](Test/RingedSpaceFullMorphismRoot.lean).
 All declarations below are in `AlgebraicGeometry.RingedSpace`:
 
 - `restrictMap U V h` for `h : U ≤ V`: the canonical **full** morphism
@@ -141,6 +160,39 @@ mathematical argument, assumptions and additional APIs.
 The ordinary inverse image of module presheaves along continuous
 maps is documented in [`docs/presheaf-inverse-image.md`](docs/presheaf-inverse-image.md).
 
+## Module Sheaf Inverse Image
+
+The root-exported `SheafInverseImage.moduleFunctor f S` sheafifies the actual
+neighborhood-colimit module presheaf and restricts scalars along the genuine
+comparison between the forgotten `CommRingCat` and native `RingCat` sheaf
+pullbacks. `comparison_unit` and `ringUnit_iso` identify complete ring-sheaf
+units, not merely their values on selected sections. `actualUnit` uses the
+actual commutative-ring pullback unit; `homEquiv` gives bundled linear module-
+sheaf maps, natural in both variables, and `adjunction` packages their unit,
+counit and triangle equations. `moduleUnderlyingNatIso`,
+`forward_underlying_additive`, `backward_underlying_additive` and
+`unit_underlying` identify whole underlying additive sheaf morphisms. See
+[`docs/sheaf-inverse-image.md`](docs/sheaf-inverse-image.md) for types and limits.
+The sheaf mathematical leaves and prior reader documentation received bounded
+owner acceptances as preparation. These do not independently accept the
+September 26, 2026 combined assembly, its release or source coverage.
+
+## Full Ringed-Space Module Morphisms
+
+The root-exported `RingedSpacePushforward.structureMap f` is the forgotten
+**original** full structure map of any `f : X ⟶ Y`, including its ring maps on
+every target open; `actualUnit_comp_ringSheafMap` identifies its mate and
+`restrictPushforwardIso` naturally compares the two module pushforwards.
+`RingedSpacePullback.pullbackFunctor f` sheafifies the genuine right-factor
+tensor after continuous module inverse image. Its `homEquiv` and `adjunction`
+give an adjunction to full pushforward, while `unit_formula` and
+`nativeComparison_unit`, `nativeComparison_counit`, and
+`nativeComparison_homEquiv` check the unit and adjunction-level native bridge.
+No raw tensor formula on arbitrary opens or stalk-locality assumption is used.
+The [root-only client](Test/RingedSpaceFullMorphismRoot.lean) checks the public
+aggregate without leaf imports. The two `RootCoexist` clients additionally
+test root-plus-direct compatibility; they are not root-only witnesses.
+
 ## Right-Factor Scalar Extension
 
 The genuine section tensor `M(U) ⊗[A(U)] B(U)` carries the `B(U)` action on
@@ -160,12 +212,18 @@ lake exe cache get
 lake --wfail build
 ```
 
-The default build includes the library, the stored examples and every `Test`
-module, including concrete boundary clients and private/full-origin axiom
-audits. Use `lake --wfail build RingedSpacesExamples` to check just the examples
-after the cache fetch. `module`/`public import` is required for new downstream
-files; `import all` appears only in the audit drivers to inspect intentionally
-private declarations. Ordinary clients need only the documented public imports.
+The 42 literal `defaultTargets` include the aggregate library, stored
+examples and all 40 shipped `Test` modules: direct, concrete, audit,
+root-only, root-plus-direct coexistence, and intentional legacy clients.
+`Test.SheafInverseImageRoot` and `Test.RingedSpaceFullMorphismRoot` import
+**only** the public aggregate. The `RootCoexist` clients retain explicit leaf
+imports as compatibility checks; legacy clients deliberately preserve their
+older import syntax rather than serving as native API examples.
+
+Use `lake --wfail build RingedSpacesExamples` to check just the examples after
+the cache fetch. `module`/`public import` is required for new downstream files;
+`import all` appears only in the audit drivers to inspect intentionally private
+declarations. Ordinary clients need only the documented public imports.
 
 ## Quick Start
 
@@ -194,20 +252,31 @@ example {X Y : RingedSpace.{u, u}} (C : RingedSpace.OpenCover X)
 
 The stored module also checks literal-intersection compatibility and the
 adjunction for arbitrary continuous inverse images of module presheaves.
+For the module-sheaf functor, two-sided Hom inverse identities, naturality,
+whole additive unit and both triangles, use the build-checked root-only
+[`Test/SheafInverseImageRoot.lean`](Test/SheafInverseImageRoot.lean).
+For arbitrary full-morphism structure maps, mates, module pushforward and
+explicit right-tensor pullback, use the root-only
+[`Test/RingedSpaceFullMorphismRoot.lean`](Test/RingedSpaceFullMorphismRoot.lean).
 
 ## API Documentation
 
-[`docs/API.md`](docs/API.md) provides source-only Markdown generated from
-native Lean signatures and docstrings for all 33 shipped Lean modules.
-[`docs/README.md`](docs/README.md) explains exact input, tool and manifest
-bindings, regeneration, declared documentation gaps and source links. No
-JavaScript, dependency website, fonts or downloaded upstream assets are shipped.
-The four mathematical guides under `docs/` explain complex constructions and
-proofs; the generated signatures complement rather than replace them.
+[`docs/API.md`](docs/API.md) provides a historical source-only Markdown snapshot
+of native Lean signatures and docstrings for 33 modules at source revision
+`fc4581c6b42eb3b2c3dbeb714a8c76c51934d4fb` with doc-gen4
+`97d4ecdfc8e09e7f511724c25e303d448de6a3db`: 282 loaded public source
+names and 281 native records. The combined candidate has 55 Lean files;
+the historical snapshot does **not** authenticate the present root,
+`lakefile.toml` or whole source. [`docs/README.md`](docs/README.md) gives
+the historical binding boundary and direct API map for the added sheaf and
+full-morphism modules. The seven mathematical guides explain their
+constructions and proofs. No JavaScript, dependency website, fonts or
+downloaded upstream assets are shipped. This candidate and the historical
+API snapshot are not a release or source-coverage decision.
 
 On a 15 GiB Linux worker with `LEAN_NUM_THREADS=1`, a matching cache fetch
-decompressed 8,892 mathlib artifacts; an incremental warning-fatal default
-build after migration reported 2,216 Lake jobs without an out-of-memory event.
+decompressed 8,892 mathlib artifacts; a historical incremental warning-fatal
+default build after migration reported 2,216 Lake jobs without an out-of-memory event.
 The initial download/decompression and cold local compilation can take several
 minutes and vary with network, CPU and available memory. These figures describe
 that environment and workload, not a time guarantee or a new benchmark.

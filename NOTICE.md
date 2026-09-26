@@ -55,6 +55,12 @@ contributors behind those names:
 | Native pointwise reduction repair | `hive-request-1b0f87400764453ac4f2cffcbd679e1599ffd603` | `a79f5543-153a-422e-9fe1-9e2c79d5eb9f` |
 | Remaining native migration and reader-facing assembly | `hive-request-63f2ca2d0bd718c788051e54bfe3979f1963ff9d` | `7339fe4d-df71-4a07-9d97-ea5f49d9618b` |
 | First-release documentation, official license and source-only regeneration successor | `hive-request-41717f60bb4a91da5e3daa7d82ec28313c7d64fd` | `f4d10b9a-48f7-4b10-bdb8-92ca99f5152d` |
+| Direct-import module-sheaf inverse-image library and test preparation (bounded owner acceptance, not release) | `hive-request-8f33afe07a3ab0de314522e27f4bbaec2df1940d` | `30841a63-6910-4c7d-8c48-ddb0f57c9b58` |
+| Four-file frozen-candidate reader documentation and attribution only, not mathematical authorship | `hive-request-79238d2214e00adca3bc76cce1c1b6ea9eada4e7` | `4ce11a72-2e1f-474c-ba5c-79536d05a926` |
+| Sheaf inverse-image root export, default-target preparation, root-only client and reader-status corrections, not new library mathematics (bounded preparation accepted September 26, 2026) | `hive-request-e1482775b6fa0022d03fbe4fdd5c2293fc7b3376` | `b3302f82-95f8-495a-bd02-d2be7d0a95e9` |
+| Full ringed-space pushforward comparison (mathematical precursor, notice repair by Atlas; bounded preparation accepted September 26, 2026) | `hive-request-1851085fe7b35662d923a451caba91e82427e7c6` | `65354068-4250-4472-ae04-fbda63a4074a` |
+| Explicit full ringed-space right-tensor pullback and adjunction (bounded preparation accepted September 26, 2026) | `hive-request-fc2cfe5450b0e4cddf69b3f460f342adcb40c54b` | `7d5af61a-1416-4194-9676-723f77b26c14` |
+| Coherent sheaf/full-morphism root exports, complete defaults, root-only client and reader reconciliation, not new library mathematics (combined candidate assembled September 26, 2026) | `hive-request-0179a299c52c1f49a9763bece89e0fa96c822a36` | `7194f9b4-2354-4f6a-a0b4-92cbc42c5eda` |
 
 Earlier source-repository research precursors, distinct from direct production
 authorship, were contributed by Tasks
@@ -65,5 +71,20 @@ authorship, were contributed by Tasks
 `hive-request-29cff68cea9e29fce4412766b7ed365b46113d1a`
 (`fa3e8621-5869-468f-be90-761589ca692b`), and
 `hive-request-a71657830db53cd29881f0026fa8b5e3d6a9ef3c`
-(`a78a3887-0c81-4d19-9348-781caa1bce1c`). Their ideas and proofs were
-adapted to the independent library; no source PDF or scan is bundled.
+(`a78a3887-0c81-4d19-9348-781caa1bce1c`). For the new module-sheaf
+candidate specifically, `hive-request-ed585cec87f054b23a8f72d6c5882b0f6753bc73`
+(`c4410aab-4878-47a4-aa7f-0e50bd436202`) worked on source module-action
+research and `hive-request-a71657830db53cd29881f0026fa8b5e3d6a9ef3c`
+(`a78a3887-0c81-4d19-9348-781caa1bce1c`) on presheaf Hom research;
+`hive-request-724a310985250437cd65e489d2a64be08ee12871`
+(`1e63d20e-3f1e-43da-8f6b-4f17e60020f4`) contributed sheaf-coherence
+research and `hive-request-73dc549815be100a03dd91d507a98ee9f7e396cd`
+(`c1aa7177-6bf6-4ff5-9a2b-8cdda8317c5d`) sheaf Hom research. These are
+source-research precursors, not direct authorship of the new library leaves;
+their ideas and proofs were adapted to an independent library. No source PDF
+or scan is bundled. The direct-import native mathematics and prior reader
+documentation received separate bounded owner preparation acceptances. Those
+decisions do not themselves establish acceptance of the combined root/default-target
+assembly, its integration, release or source coverage; these stages have separate
+revision-specific decisions. Atlas subsequently corrected this assembly's status
+language without changing its mathematical library content.
