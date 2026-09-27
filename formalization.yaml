@@ -10,7 +10,9 @@ project:
     and root-exported full-morphism module pushforward and explicit sheafified
     right-tensor pullback with their adjunction and native comparison; and
     identity/composition coherence, commutative-square push-pull mates, and
-    horizontal and vertical pasting laws for those actual module functors.
+    horizontal and vertical pasting laws for those actual module functors;
+    and constant-closed full ringed morphisms to local affine spectra from
+    ring maps to global sections.
   authors:
     - Formal Frontier Agents
   license: Apache-2.0
@@ -64,12 +66,17 @@ review:
     release acceptance. The original pasting proof was accepted in the
     incubator. Its destination review, owner acceptance and official release
     are separate recorded decisions, none certified by this metadata alone;
+    the constant-closed destination contribution received exact-revision
+    independent review 3794 and maintainer acceptance, with official release
+    decisions recorded separately;
     neither preparation nor this metadata decides source coverage.
 
 fidelity:
   divergences: >-
     Results are stated for full ringed-space morphisms and arbitrary indicated
     continuous maps, rather than for schemes or only pointwise carrier maps.
+    The constant-closed construction requires a commutative local coefficient
+    ring but no locality of its ring map, and does not claim a scheme morphism.
     The gluing and inverse-image module constructions retain their declared
     diagonal universe boundaries.
 

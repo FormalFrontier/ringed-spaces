@@ -23,6 +23,11 @@ revision-specific review and integration records govern the combined
 root/default-target assembly; the earlier assembly was published in a prior
 release. The module-coherence and square-mate transfer has its own review and
 release boundary, independent of source-level coverage.
+For a commutative local ring, the library also constructs full ringed-space
+morphisms with constant closed-point base from arbitrary maps into global
+sections. This destination contribution has received independent review and
+maintainer acceptance; release publication is recorded separately for each
+exact artifact.
 
 ## API
 
@@ -60,6 +65,16 @@ the narrower `RingedSpaces.Modules.PullbackCoherence` and
 [pasting guide](docs/ringed-module-base-change-pasting.md),
 [root-only square client](Test/RingedSpaceBaseChange.lean) and
 [pasting client](Test/RingedSpaceBaseChangePasting.lean).
+For a commutative local ring `R`, import `RingedSpaces` or the narrower
+`RingedSpaces.ClosedPointHom` to construct a full morphism from any
+`R →+* X.presheaf.obj (op ⊤)` with underlying map constant at the closed point.
+The `AlgebraicGeometry.RingedSpace.ClosedPointHom` namespace provides `hom`,
+`hom_top_transport`, fixed-base `ext` and `equiv`, and `comp_hom` for
+precomposition. The [mathematical guide](docs/closed-point-hom.md) explains
+the assumptions and the [root-only client](Test/ClosedPointHom.lean) checks
+the arbitrary, empty and field cases, including a conditional nonlocal example.
+This is a *full ringed-space morphism*, not generally a locally ringed-space or
+scheme morphism.
 All declarations below are in `AlgebraicGeometry.RingedSpace`:
 
 - `restrictMap U V h` for `h : U ≤ V`: the canonical **full** morphism
@@ -128,10 +143,12 @@ example {X Y : RingedSpace.{u, u}} (C : RingedSpace.OpenCover X)
   C.existsUnique_gluing f hf
 ```
 
-The library uses **diagonal universes** `X Y : RingedSpace.{u,u}`, `T : TopCat.{u}`
-and, for covers, `J : Type u`. No mixed-universe lifting is claimed. No local-ring, scheme,
-finite-cover, nonempty-cover, nonempty-member, or nonzero-ring hypothesis is
-required. The index family may be empty when `X` is empty; see
+The restriction, gluing and inverse-image APIs use **diagonal universes**
+`X Y : RingedSpace.{u,u}`, `T : TopCat.{u}` and, for covers, `J : Type u`.
+No mixed-universe lifting is claimed. Those APIs require no local-ring, scheme,
+finite-cover, nonempty-cover, nonempty-member, or nonzero-ring hypothesis.
+The constant-closed construction separately requires `[IsLocalRing R]` for its
+target coefficient ring `R`. The index family may be empty when `X` is empty; see
 `Test/OpenCover.lean` and `Test/Restriction.lean` for empty and infinite-cover
 downstream clients. Literal intersections may be empty, even for nonempty opens.
 `Test/InverseImage.lean` also exercises a zero-ring sheaf on a two-point space
@@ -244,12 +261,12 @@ lake exe cache get
 lake --wfail build
 ```
 
-The 44 literal `defaultTargets` include the aggregate library, stored
-examples and all 42 shipped `Test` modules: direct, concrete, audit,
+The 45 literal `defaultTargets` include the aggregate library, stored
+examples and all 43 shipped `Test` modules: direct, concrete, audit,
 root-only, root-plus-direct coexistence, and intentional legacy clients.
-`Test.SheafInverseImageRoot`, `Test.RingedSpaceFullMorphismRoot` and
-`Test.RingedSpaceBaseChange` import **only** the public aggregate as their
-project import. The `RootCoexist` clients retain explicit leaf imports as
+`Test.SheafInverseImageRoot`, `Test.RingedSpaceFullMorphismRoot`,
+`Test.RingedSpaceBaseChange` and `Test.ClosedPointHom` import **only** the
+public aggregate as their project import. The `RootCoexist` clients retain explicit leaf imports as
 compatibility checks; the pasting client imports the public root plus the
 explicit non-Cartesian fixture `Test.RingedSpaceBaseChange`. Legacy clients
 preserve their older import syntax rather than serving as native API examples.
@@ -300,8 +317,9 @@ of native Lean signatures and docstrings for 33 modules at source revision
 `fc4581c6b42eb3b2c3dbeb714a8c76c51934d4fb` with doc-gen4
 `97d4ecdfc8e09e7f511724c25e303d448de6a3db`: 282 loaded public source
 names and 281 native records. The previously published full-morphism snapshot
-had 55 Lean files; the next published snapshot had 58; this tree has 60,
-including the new pasting leaf and public-root-plus-fixture client. In particular,
+had 55 Lean files; the next published snapshot had 58; this tree has 62,
+including the pasting leaf, public-root-plus-fixture client, constant-closed leaf
+and root-only client. In particular,
 the historical snapshot does **not** authenticate the present root,
 `lakefile.toml` or whole source. [`docs/README.md`](docs/README.md) gives
 the historical binding boundary and direct API map for the added sheaf and
@@ -309,7 +327,7 @@ full-morphism modules. The seven earlier mathematical guides explain their
 constructions and proofs. No JavaScript, dependency website, fonts or
 downloaded upstream assets are shipped. The historical API snapshot is not
 a certification of the present tree or a source-coverage decision.
-The coherence/base-change and pasting guides and their respective clients
+The coherence/base-change, pasting and constant-closed guides and their respective clients
 describe and check the added API; they are **not** part of the historical
 33-module API snapshot. On September 26, 2026, the originating incubator
 implementation was accepted and integrated at

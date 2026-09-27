@@ -3,6 +3,7 @@ version = "0.1.0"
 defaultTargets = [
   "RingedSpaces", "RingedSpacesExamples",
   "Test.Axioms", "Test.ChangeOfRingsSymmetry", "Test.ChangeOfRingsSymmetryAxioms",
+  "Test.ClosedPointHom",
   "Test.ChangeOfRingsSymmetryFixture", "Test.ChangeOfRingsSymmetryRoot",
   "Test.InverseImage", "Test.ModuleChangeOfRings", "Test.ModuleChangeOfRingsAxioms",
   "Test.ModuleChangeOfRingsRoot", "Test.OpenCover", "Test.PresheafInverseImage",

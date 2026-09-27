@@ -68,6 +68,8 @@ contributors behind those names:
 | Destination release-readiness prose and candidate preparation, not new library mathematics | `hive-request-409eb80a69cf8f493b7d4e2a405a5f1d3dd6a1b1` | `a9c7f24c-3c44-4b03-895d-9a870fb6a16c` |
 | Full ringed-module square-mate pasting mathematical leaf and original public clients (originating incubator contribution) | `hive-request-7b88f0e919ceb77be172b73736ccdc7f3ff43ad5` | `e330b828-529f-49c8-b2e0-e07909c10cef` |
 | Pasting promotion into this library, public-root/fixture client adaptation and reader-facing documentation, not authorship of the original pasting proofs | `hive-request-c0c7433494151c6dbff571786f73142dfbc06c8a` | `2b0e83f5-3c31-4bab-960c-8ff07e4eeb3f` |
+| Constant-closed full ringed morphism original Lean proof and client | `hive-request-da7e7acee403b485010744c0c39bcd03c2bc1041` | `2978daa3-8653-4a85-b398-56608e5a29e8` |
+| Constant-closed destination transfer, public-root client adaptation and standalone guide, not original proof authorship | `hive-request-14f43b76fa9cc2cc327d381a1a318a9ba7f9e6bd` | `81854e11-fe00-45db-acf2-d465d2e8248c` |
 
 Earlier source-repository research precursors, distinct from direct production
 authorship, were contributed by Tasks

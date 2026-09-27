@@ -12,7 +12,9 @@ module in that snapshot has a top-level source docstring. The September 26,
 2026 combined candidate had 55 Lean files (33 historical files, eight from
 sheaf preparation, 13 from full-morphism preparation, and one new root-only
 client), 40 `Test` modules and seven mathematical guides. The pasting addition
-brings this tree to 60 Lean files, 42 `Test` modules and nine mathematical guides.
+brings that tree to 60 Lean files, 42 `Test` modules and nine mathematical guides.
+The constant-closed addition brings this tree to 62 Lean files, 43 `Test` modules
+and ten mathematical guides.
 The historical
 `RingedSpaces` root and `lakefile.toml` have since changed: the old root's
 record and input hashes do **not** describe or certify this whole tree.
@@ -33,12 +35,15 @@ Direct imports and their guides give narrower dependencies:
 | [`RingedSpaces.Modules.PullbackCoherence`](../RingedSpaces/Modules/PullbackCoherence.lean) | `pushforwardComp`, `pullbackComp`, `pullbackComp_assoc` | [`ringed-module-coherence-base-change.md`](ringed-module-coherence-base-change.md) |
 | [`RingedSpaces.Modules.BaseChange`](../RingedSpaces/Modules/BaseChange.lean) | `pushPull`, `pushPull_identity_normalized` | [`ringed-module-coherence-base-change.md`](ringed-module-coherence-base-change.md) |
 | [`RingedSpaces.Modules.BaseChangePasting`](../RingedSpaces/Modules/BaseChangePasting.lean) | `pushPull_pastePullback`, `pushPull_pastePushforward` | [`ringed-module-base-change-pasting.md`](ringed-module-base-change-pasting.md) |
+| [`RingedSpaces.ClosedPointHom`](../RingedSpaces/ClosedPointHom.lean) | `hom`, `hom_top_transport`, `ext`, `equiv`, `comp_hom` in `AlgebraicGeometry.RingedSpace.ClosedPointHom` | [`closed-point-hom.md`](closed-point-hom.md) |
 
 The [root-only sheaf client](../Test/SheafInverseImageRoot.lean) and
 [root-only full-morphism client](../Test/RingedSpaceFullMorphismRoot.lean)
 exercise these public exports. The two full-morphism `RootCoexist` tests
 retain explicit leaf imports for compatibility, not root-only evidence.
-`lakefile.toml` lists all 42 shipped tests among its 44 literal defaults,
+The [root-only constant-closed client](../Test/ClosedPointHom.lean) exercises
+the new export without a leaf import. `lakefile.toml` lists all 43 shipped tests
+among its 45 literal defaults,
 including intentional legacy and diagnostic audit clients.
 
 ## Reproduction and binding
