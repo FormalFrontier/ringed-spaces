@@ -66,6 +66,8 @@ contributors behind those names:
 | Reusable module coherence, square mate and incubator client (original `8fa29a4e5f5447fae3578bbc04487d25855d6484`; successor `93a5cfd0bfefac803b66fbd21aff7b346ad7fa54` accepted and integrated September 26, 2026) | `hive-request-9b96dab56bf41ce7554f74026cc8603719e3384c` | `8d01f604-2c37-4eee-ba00-733cf8b4f2d4` |
 | Independent destination transfer, root/client assembly and reader documentation, not mathematical authorship of the origin | `hive-request-9ba8c100c88f6cb8d75c1f208a34c55974589c18` | `c17170b6-00a3-498c-9c19-d86aa575e29a` |
 | Destination release-readiness prose and candidate preparation, not new library mathematics | `hive-request-409eb80a69cf8f493b7d4e2a405a5f1d3dd6a1b1` | `a9c7f24c-3c44-4b03-895d-9a870fb6a16c` |
+| Full ringed-module square-mate pasting mathematical leaf and original public clients (originating incubator contribution) | `hive-request-7b88f0e919ceb77be172b73736ccdc7f3ff43ad5` | `e330b828-529f-49c8-b2e0-e07909c10cef` |
+| Pasting promotion into this library, public-root/fixture client adaptation and reader-facing documentation, not authorship of the original pasting proofs | `hive-request-c0c7433494151c6dbff571786f73142dfbc06c8a` | `2b0e83f5-3c31-4bab-960c-8ff07e4eeb3f` |
 
 Earlier source-repository research precursors, distinct from direct production
 authorship, were contributed by Tasks

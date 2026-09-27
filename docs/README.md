@@ -9,17 +9,19 @@ records. `AlgebraicGeometry.RingedSpace.OpenCover.rec` is an automatically
 generated recursor with no native record and is called out, not invented.
 The 122 declarations without native docstrings are labeled explicitly. Every
 module in that snapshot has a top-level source docstring. The September 26,
-2026 combined candidate has 55 Lean files (33 historical files, eight from
+2026 combined candidate had 55 Lean files (33 historical files, eight from
 sheaf preparation, 13 from full-morphism preparation, and one new root-only
-client), 40 `Test` modules and seven mathematical guides. The historical
+client), 40 `Test` modules and seven mathematical guides. The pasting addition
+brings this tree to 60 Lean files, 42 `Test` modules and nine mathematical guides.
+The historical
 `RingedSpaces` root and `lakefile.toml` have since changed: the old root's
-record and input hashes do **not** describe or certify this whole candidate.
+record and input hashes do **not** describe or certify this whole tree.
 The other unchanged historical module records remain useful within their
 recorded scope; added APIs are mapped below and in the guides.
 
 ## Current API map beyond the historical snapshot
 
-All four newer library leaves are exported by the public `RingedSpaces` root.
+The newer library leaves are exported by the public `RingedSpaces` root.
 Direct imports and their guides give narrower dependencies:
 
 | Direct module | Representative API | Mathematical guide |
@@ -28,12 +30,15 @@ Direct imports and their guides give narrower dependencies:
 | [`RingedSpaces.Modules.SheafInverseImageHom`](../RingedSpaces/Modules/SheafInverseImageHom.lean) | `homEquiv`, `adjunction`, `unit_underlying`, `left_triangle`, `right_triangle` | [`sheaf-inverse-image.md`](sheaf-inverse-image.md) |
 | [`RingedSpaces.Modules.RingedSpacePushforward`](../RingedSpaces/Modules/RingedSpacePushforward.lean) | `structureMap_original`, `actualUnit_comp_ringSheafMap`, `pushforwardFunctor`, `restrictPushforwardIso` | [`ringed-space-pushforward.md`](ringed-space-pushforward.md) |
 | [`RingedSpaces.Modules.RingedSpacePullback`](../RingedSpaces/Modules/RingedSpacePullback.lean) | `pullbackFunctor`, `homEquiv`, `adjunction`, `unit_formula`, `nativeComparison`, `nativeComparison_homEquiv` | [`ringed-space-pullback.md`](ringed-space-pullback.md) |
+| [`RingedSpaces.Modules.PullbackCoherence`](../RingedSpaces/Modules/PullbackCoherence.lean) | `pushforwardComp`, `pullbackComp`, `pullbackComp_assoc` | [`ringed-module-coherence-base-change.md`](ringed-module-coherence-base-change.md) |
+| [`RingedSpaces.Modules.BaseChange`](../RingedSpaces/Modules/BaseChange.lean) | `pushPull`, `pushPull_identity_normalized` | [`ringed-module-coherence-base-change.md`](ringed-module-coherence-base-change.md) |
+| [`RingedSpaces.Modules.BaseChangePasting`](../RingedSpaces/Modules/BaseChangePasting.lean) | `pushPull_pastePullback`, `pushPull_pastePushforward` | [`ringed-module-base-change-pasting.md`](ringed-module-base-change-pasting.md) |
 
 The [root-only sheaf client](../Test/SheafInverseImageRoot.lean) and
 [root-only full-morphism client](../Test/RingedSpaceFullMorphismRoot.lean)
 exercise these public exports. The two full-morphism `RootCoexist` tests
 retain explicit leaf imports for compatibility, not root-only evidence.
-`lakefile.toml` lists all 40 shipped tests among its 42 literal defaults,
+`lakefile.toml` lists all 42 shipped tests among its 44 literal defaults,
 including intentional legacy and diagnostic audit clients.
 
 ## Reproduction and binding
@@ -57,24 +62,24 @@ source path, revision and loaded source line, then checks every real source
 and configuration byte against the Git object. For a standalone parentless
 checkout without that object it instead checks the exact committed manifest
 and all current committed inputs; a present but wrong object is never treated
-as absent. The current 55-file candidate changes `RingedSpaces.lean` and
+as absent. This 60-file tree changes `RingedSpaces.lean` and
 `lakefile.toml`: their two historical input hashes **do not match** the current
-files. The old manifest does not authenticate this candidate; its other 34
+files. The old manifest does not authenticate this tree; its other 34
 historical inputs remain unchanged. The earlier private-provider native
 generation and 33 actual Git GET comparisons remain **separate historical evidence**, not the source of
 the provider-neutral records used for this Markdown. The renewed historical
 records, commands and compiled-part receipts are separate evidence, not a
-check of the present 55-file candidate.
+check of the present 60-file tree.
 
 To reproduce this scoped historical snapshot, use a separate checkout of accepted
 revision `5795205b8da2982b6cd70ea17d2f5ec721ac3819`, which contains the
 matching committed manifest, adapter and generated Markdown, with analyzed
 source revision `fc4581c6b42eb3b2c3dbeb714a8c76c51934d4fb` in its Git
 history. The unchanged adapter explicitly rejects this
-55-file candidate's 22 additional Lean files at its complete-inventory
+60-file tree's 27 additional Lean files at its complete-inventory
 guard; do **not** run the following historical 33-module recipe against this
-candidate. It is optional for reproducing **only** the frozen historical
-snapshot, not a prerequisite for building or reviewing this candidate.
+tree. It is optional for reproducing **only** the frozen historical
+snapshot, not a prerequisite for building or reviewing this tree.
 If reproducing the snapshot separately, first run `lake exe cache get` with
 the pinned toolchain and mathlib revision.
 Build the pinned `leanprover/doc-gen4` Git revision above with the same Lean
@@ -136,4 +141,4 @@ native diagnostic output and explicit dependency-link limitations remain
 development evidence rather than a claim about this source-only package.
 The adapted generator acknowledges Atlas's accepted multivariate-polynomials
 and quadratic-algebras recipes and Anchor's original ideal-completion recipe;
-earlier code acceptances do not review this exact generated candidate.
+earlier code acceptances alone do not certify this historical generated snapshot.

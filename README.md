@@ -16,7 +16,8 @@ The aggregate `RingedSpaces` exports continuous inverse images of module
 sheaves and their bundled Hom adjunction, as well as full-morphism pushforward
 and explicit right-tensor pullback with its adjunction and native comparison.
 It also exports module pullback identity/composition coherence and the mate
-associated to any commutative square of full ringed-space morphisms.
+associated to any commutative square of full ringed-space morphisms, including
+horizontal and vertical pasting laws for the actual outer-square mate.
 Their mathematical leaves received bounded preparation acceptances. Separate
 revision-specific review and integration records govern the combined
 root/default-target assembly; the earlier assembly was published in a prior
@@ -53,9 +54,12 @@ pullback, Hom adjunction, unit and comparison with native pullback; see the
 [root-only full-morphism client](Test/RingedSpaceFullMorphismRoot.lean).
 For coherent module functors and square comparisons, import `RingedSpaces`, or
 the narrower `RingedSpaces.Modules.PullbackCoherence` and
-`RingedSpaces.Modules.BaseChange` leaves; see the
-[coherence/base-change guide](docs/ringed-module-coherence-base-change.md) and
-[root-only square client](Test/RingedSpaceBaseChange.lean).
+`RingedSpaces.Modules.BaseChange` and
+`RingedSpaces.Modules.BaseChangePasting` leaves; see the
+[coherence/base-change guide](docs/ringed-module-coherence-base-change.md),
+[pasting guide](docs/ringed-module-base-change-pasting.md),
+[root-only square client](Test/RingedSpaceBaseChange.lean) and
+[pasting client](Test/RingedSpaceBaseChangePasting.lean).
 All declarations below are in `AlgebraicGeometry.RingedSpace`:
 
 - `restrictMap U V h` for `h : U ≤ V`: the canonical **full** morphism
@@ -215,6 +219,11 @@ The identity-vertical square normalizes to the identity; a non-Cartesian empty
 corner over the zero ring exercises the lack of Cartesian assumptions. No
 general invertibility, flatness or raw-section formula is claimed. See the
 [standalone guide](docs/ringed-module-coherence-base-change.md).
+`BaseChange.pushPull_pastePullback` and `pushPull_pastePushforward` identify
+the actual outer-square mate with the composite of the two constituent mates,
+using canonical inverse-/direct-image composition isomorphisms and functor
+associators. They need only the two square-commutativity hypotheses; see the
+[pasting guide](docs/ringed-module-base-change-pasting.md).
 
 ## Right-Factor Scalar Extension
 
@@ -235,14 +244,15 @@ lake exe cache get
 lake --wfail build
 ```
 
-The 43 literal `defaultTargets` include the aggregate library, stored
-examples and all 41 shipped `Test` modules: direct, concrete, audit,
+The 44 literal `defaultTargets` include the aggregate library, stored
+examples and all 42 shipped `Test` modules: direct, concrete, audit,
 root-only, root-plus-direct coexistence, and intentional legacy clients.
 `Test.SheafInverseImageRoot`, `Test.RingedSpaceFullMorphismRoot` and
 `Test.RingedSpaceBaseChange` import **only** the public aggregate as their
 project import. The `RootCoexist` clients retain explicit leaf imports as
-compatibility checks; legacy clients deliberately preserve their older import
-syntax rather than serving as native API examples.
+compatibility checks; the pasting client imports the public root plus the
+explicit non-Cartesian fixture `Test.RingedSpaceBaseChange`. Legacy clients
+preserve their older import syntax rather than serving as native API examples.
 
 Use `lake --wfail build RingedSpacesExamples` to check just the examples after
 the cache fetch. `module`/`public import` is required for new downstream files;
@@ -290,8 +300,8 @@ of native Lean signatures and docstrings for 33 modules at source revision
 `fc4581c6b42eb3b2c3dbeb714a8c76c51934d4fb` with doc-gen4
 `97d4ecdfc8e09e7f511724c25e303d448de6a3db`: 282 loaded public source
 names and 281 native records. The previously published full-morphism snapshot
-had 55 Lean files; this tree has 58, including the two new mathematical leaves
-and their root-only client. In particular,
+had 55 Lean files; the next published snapshot had 58; this tree has 60,
+including the new pasting leaf and public-root-plus-fixture client. In particular,
 the historical snapshot does **not** authenticate the present root,
 `lakefile.toml` or whole source. [`docs/README.md`](docs/README.md) gives
 the historical binding boundary and direct API map for the added sheaf and
@@ -299,14 +309,17 @@ full-morphism modules. The seven earlier mathematical guides explain their
 constructions and proofs. No JavaScript, dependency website, fonts or
 downloaded upstream assets are shipped. The historical API snapshot is not
 a certification of the present tree or a source-coverage decision.
-The new module-coherence/base-change guide and `Test.RingedSpaceBaseChange`
-client describe and check the added API; they are **not** part of the historical
+The coherence/base-change and pasting guides and their respective clients
+describe and check the added API; they are **not** part of the historical
 33-module API snapshot. On September 26, 2026, the originating incubator
 implementation was accepted and integrated at
 `93a5cfd0bfefac803b66fbd21aff7b346ad7fa54`; the destination transfer at
 `20890358aa62cfbccaeb2a75fbac105fa2e469a3` separately received independent
 review 3551. That exact-revision review is not owner destination acceptance,
-release acceptance, publication or a source-coverage decision.
+release acceptance, publication or a source-coverage decision for that transfer.
+The pasting promotion has separate destination review, owner acceptance and
+publication records; this API description alone certifies none of those
+decisions or source coverage.
 
 On a 15 GiB Linux worker with `LEAN_NUM_THREADS=1`, a matching cache fetch
 decompressed 8,892 mathlib artifacts; a historical incremental warning-fatal

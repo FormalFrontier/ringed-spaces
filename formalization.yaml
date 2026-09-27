@@ -9,8 +9,8 @@ project:
     continuous module-sheaf inverse image with a bundled linear Hom adjunction;
     and root-exported full-morphism module pushforward and explicit sheafified
     right-tensor pullback with their adjunction and native comparison; and
-    identity/composition coherence and commutative-square push-pull mates for
-    those actual module functors.
+    identity/composition coherence, commutative-square push-pull mates, and
+    horizontal and vertical pasting laws for those actual module functors.
   authors:
     - Formal Frontier Agents
   license: Apache-2.0
@@ -61,7 +61,10 @@ review:
     implementation was accepted and integrated on September 26, 2026. Its
     destination transfer at 20890358aa62cfbccaeb2a75fbac105fa2e469a3
     received exact-revision independent review 3551, not owner destination or
-    release acceptance. Neither preparation nor that review decides source coverage.
+    release acceptance. The original pasting proof was accepted in the
+    incubator. Its destination review, owner acceptance and official release
+    are separate recorded decisions, none certified by this metadata alone;
+    neither preparation nor this metadata decides source coverage.
 
 fidelity:
   divergences: >-
