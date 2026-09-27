@@ -12,7 +12,9 @@ project:
     identity/composition coherence, commutative-square push-pull mates, and
     horizontal and vertical pasting laws for those actual module functors;
     and constant-closed full ringed morphisms to local affine spectra from
-    ring maps to global sections.
+    ring maps to global sections, with an all-affine-induced-map exclusion
+    when such a map sends a maximal-ideal element to a unit of a nontrivial
+    commutative target ring.
   authors:
     - Formal Frontier Agents
   license: Apache-2.0
@@ -68,7 +70,11 @@ review:
     are separate recorded decisions, none certified by this metadata alone;
     the constant-closed destination contribution received exact-revision
     independent review 3794 and maintainer acceptance, with official release
-    decisions recorded separately;
+    decisions recorded separately. At this non-affineness transfer candidate
+    revision, its original incubator leaf has separate mathematical acceptance,
+    but the destination extension has not received independent destination
+    review or owner release acceptance. These remain revision-specific
+    recorded decisions, not certifications supplied by this metadata;
     neither preparation nor this metadata decides source coverage.
 
 fidelity:
@@ -77,6 +83,10 @@ fidelity:
     continuous maps, rather than for schemes or only pointwise carrier maps.
     The constant-closed construction requires a commutative local coefficient
     ring but no locality of its ring map, and does not claim a scheme morphism.
+    For the all-beta non-affineness theorem, both rings inhabit the same Lean
+    universe; its codomain is any nontrivial commutative ring, and the image of
+    a maximal-ideal element must be a unit. It compares actual full morphisms
+    and does not assert zero-ring or locally ringed/scheme conclusions.
     The gluing and inverse-image module constructions retain their declared
     diagonal universe boundaries.
 

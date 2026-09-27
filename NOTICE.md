@@ -70,6 +70,8 @@ contributors behind those names:
 | Pasting promotion into this library, public-root/fixture client adaptation and reader-facing documentation, not authorship of the original pasting proofs | `hive-request-c0c7433494151c6dbff571786f73142dfbc06c8a` | `2b0e83f5-3c31-4bab-960c-8ff07e4eeb3f` |
 | Constant-closed full ringed morphism original Lean proof and client | `hive-request-da7e7acee403b485010744c0c39bcd03c2bc1041` | `2978daa3-8653-4a85-b398-56608e5a29e8` |
 | Constant-closed destination transfer, public-root client adaptation and standalone guide, not original proof authorship | `hive-request-14f43b76fa9cc2cc327d381a1a318a9ba7f9e6bd` | `81854e11-fe00-45db-acf2-d465d2e8248c` |
+| Constant-closed all-beta non-affineness extension proof and original field/nonfield clients | `hive-request-40fac8331bc1ed1492ac705fb89f7cf61428db64` | `b18bb779-5865-4528-ab11-797b3b851c0c` |
+| Non-affineness destination transfer, root-only client adaptation and standalone guide, not original proof authorship | `hive-request-ddc90d45555f19a6d0ab6788a1d8c8b45693687e` | `0093a087-b9b9-4f34-9790-557fae2664d3` |
 
 Earlier source-repository research precursors, distinct from direct production
 authorship, were contributed by Tasks

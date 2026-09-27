@@ -15,6 +15,8 @@ client), 40 `Test` modules and seven mathematical guides. The pasting addition
 brings that tree to 60 Lean files, 42 `Test` modules and nine mathematical guides.
 The constant-closed addition brings this tree to 62 Lean files, 43 `Test` modules
 and ten mathematical guides.
+The non-affineness extension brings this candidate to 64 Lean files, 44 `Test`
+modules and eleven mathematical guides.
 The historical
 `RingedSpaces` root and `lakefile.toml` have since changed: the old root's
 record and input hashes do **not** describe or certify this whole tree.
@@ -36,15 +38,20 @@ Direct imports and their guides give narrower dependencies:
 | [`RingedSpaces.Modules.BaseChange`](../RingedSpaces/Modules/BaseChange.lean) | `pushPull`, `pushPull_identity_normalized` | [`ringed-module-coherence-base-change.md`](ringed-module-coherence-base-change.md) |
 | [`RingedSpaces.Modules.BaseChangePasting`](../RingedSpaces/Modules/BaseChangePasting.lean) | `pushPull_pastePullback`, `pushPull_pastePushforward` | [`ringed-module-base-change-pasting.md`](ringed-module-base-change-pasting.md) |
 | [`RingedSpaces.ClosedPointHom`](../RingedSpaces/ClosedPointHom.lean) | `hom`, `hom_top_transport`, `ext`, `equiv`, `comp_hom` in `AlgebraicGeometry.RingedSpace.ClosedPointHom` | [`closed-point-hom.md`](closed-point-hom.md) |
+| [`RingedSpaces.ClosedPointNonAffine`](../RingedSpaces/ClosedPointNonAffine.lean) | `hom_ne_sheafedSpaceMap_of_isUnit`, `not_exists_sheafedSpaceMap_of_isUnit` in `AlgebraicGeometry.RingedSpace.ClosedPointHom` | [`closed-point-nonaffine.md`](closed-point-nonaffine.md) |
 
 The [root-only sheaf client](../Test/SheafInverseImageRoot.lean) and
 [root-only full-morphism client](../Test/RingedSpaceFullMorphismRoot.lean)
 exercise these public exports. The two full-morphism `RootCoexist` tests
 retain explicit leaf imports for compatibility, not root-only evidence.
 The [root-only constant-closed client](../Test/ClosedPointHom.lean) exercises
-the new export without a leaf import. `lakefile.toml` lists all 43 shipped tests
-among its 45 literal defaults,
+its export without a leaf import. At that completed constructor checkpoint,
+`lakefile.toml` listed all 43 shipped tests among its 45 literal defaults,
 including intentional legacy and diagnostic audit clients.
+The [root-only non-affineness client](../Test/ClosedPointNonAffine.lean) tests
+arbitrary field and non-field inducing maps. This candidate lists all 44 shipped
+tests among its 46 literal default targets. The historical generated API
+snapshot and manifest above remain unchanged and cover neither new leaf.
 
 ## Reproduction and binding
 

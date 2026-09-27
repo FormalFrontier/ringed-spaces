@@ -28,6 +28,11 @@ morphisms with constant closed-point base from arbitrary maps into global
 sections. This destination contribution has received independent review and
 maintainer acceptance; release publication is recorded separately for each
 exact artifact.
+For a nontrivial commutative codomain, if such a map sends a maximal-ideal
+element to a unit, the new extension proves that its full morphism differs
+from **every** affine-induced map, not merely the one induced by the given map.
+Independent destination review and release decisions for this extension are
+separate from the published constructor's record.
 
 ## API
 
@@ -75,6 +80,16 @@ the assumptions and the [root-only client](Test/ClosedPointHom.lean) checks
 the arbitrary, empty and field cases, including a conditional nonlocal example.
 This is a *full ringed-space morphism*, not generally a locally ringed-space or
 scheme morphism.
+Import `RingedSpaces.ClosedPointNonAffine` or `RingedSpaces` for
+`hom_ne_sheafedSpaceMap_of_isUnit` and `not_exists_sheafedSpaceMap_of_isUnit`
+in the same namespace: for `[Nontrivial S]` and
+`r ∈ IsLocalRing.maximalIdeal R` with `IsUnit (alpha r)`, the constructed
+full morphism `Spec S ⟶ Spec R` is unequal to
+`Spec.sheafedSpaceMap (CommRingCat.ofHom beta)` for **every**
+`beta : R →+* S`. See the [standalone guide](docs/closed-point-nonaffine.md)
+and [root-only field/nonfield client](Test/ClosedPointNonAffine.lean).
+The prior field example checks only the same-`alpha` map; neither result
+asserts a scheme morphism or non-affineness for the zero ring.
 All declarations below are in `AlgebraicGeometry.RingedSpace`:
 
 - `restrictMap U V h` for `h : U ≤ V`: the canonical **full** morphism
@@ -261,12 +276,13 @@ lake exe cache get
 lake --wfail build
 ```
 
-The 45 literal `defaultTargets` include the aggregate library, stored
-examples and all 43 shipped `Test` modules: direct, concrete, audit,
+The 46 literal `defaultTargets` include the aggregate library, stored
+examples and all 44 shipped `Test` modules: direct, concrete, audit,
 root-only, root-plus-direct coexistence, and intentional legacy clients.
 `Test.SheafInverseImageRoot`, `Test.RingedSpaceFullMorphismRoot`,
-`Test.RingedSpaceBaseChange` and `Test.ClosedPointHom` import **only** the
-public aggregate as their project import. The `RootCoexist` clients retain explicit leaf imports as
+`Test.RingedSpaceBaseChange`, `Test.ClosedPointHom` and
+`Test.ClosedPointNonAffine` import **only** the public aggregate as their
+project import. The `RootCoexist` clients retain explicit leaf imports as
 compatibility checks; the pasting client imports the public root plus the
 explicit non-Cartesian fixture `Test.RingedSpaceBaseChange`. Legacy clients
 preserve their older import syntax rather than serving as native API examples.
@@ -317,9 +333,9 @@ of native Lean signatures and docstrings for 33 modules at source revision
 `fc4581c6b42eb3b2c3dbeb714a8c76c51934d4fb` with doc-gen4
 `97d4ecdfc8e09e7f511724c25e303d448de6a3db`: 282 loaded public source
 names and 281 native records. The previously published full-morphism snapshot
-had 55 Lean files; the next published snapshot had 58; this tree has 62,
+had 55 Lean files; the next published snapshot had 58; this tree has 64,
 including the pasting leaf, public-root-plus-fixture client, constant-closed leaf
-and root-only client. In particular,
+and root-only client, and the non-affineness leaf and root-only client. In particular,
 the historical snapshot does **not** authenticate the present root,
 `lakefile.toml` or whole source. [`docs/README.md`](docs/README.md) gives
 the historical binding boundary and direct API map for the added sheaf and
@@ -327,7 +343,8 @@ full-morphism modules. The seven earlier mathematical guides explain their
 constructions and proofs. No JavaScript, dependency website, fonts or
 downloaded upstream assets are shipped. The historical API snapshot is not
 a certification of the present tree or a source-coverage decision.
-The coherence/base-change, pasting and constant-closed guides and their respective clients
+The coherence/base-change, pasting, constant-closed and non-affineness guides
+and their respective clients
 describe and check the added API; they are **not** part of the historical
 33-module API snapshot. On September 26, 2026, the originating incubator
 implementation was accepted and integrated at

@@ -8,6 +8,7 @@ module
 public import RingedSpaces.OpenCover
 public import RingedSpaces.InverseImage
 public import RingedSpaces.ClosedPointHom
+public import RingedSpaces.ClosedPointNonAffine
 public import RingedSpaces.Modules.PresheafChangeOfRings
 public import RingedSpaces.Modules.PresheafInverseImage
 public import RingedSpaces.Modules.PresheafInverseImageHom
@@ -42,4 +43,6 @@ module functors, the push–pull mate of any commutative full-morphism square,
 and its horizontal and vertical pasting laws.
 It also constructs full morphisms to the spectrum of a commutative local ring
 from arbitrary maps to global sections, with constant closed-point base.
+When such a map sends a maximal-ideal element to a unit in a nontrivial
+commutative ring, the full morphism differs from every affine-induced map.
 -/
