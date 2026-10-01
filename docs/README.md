@@ -95,9 +95,13 @@ provider checks are separate historical evidence, not a current-tree check.
 To reproduce the **unmodified original** historical output, use a separate
 checkout of official published commit
 `958b340be6cf1a0bc86c2c378352664c9f7cca62`, which contains the matching
-original manifest, adapter and generated Markdown, with analyzed
-source revision `fc4581c6b42eb3b2c3dbeb714a8c76c51934d4fb` in its Git
-history. The unchanged adapter explicitly rejects this
+original inputs, manifest, adapter and generated Markdown. That official
+snapshot is parentless: analyzed development revision
+`fc4581c6b42eb3b2c3dbeb714a8c76c51934d4fb` is not in its Git history.
+A clean official checkout therefore uses the adapter's committed-manifest
+binding for the missing analyzed object, as described above. The identifier
+still binds the historical source bytes; it is not a fetchable ancestor.
+The unchanged adapter explicitly rejects this
 64-file tree's 31 additional Lean files at its complete-inventory
 guard; do **not** run the following historical 33-module recipe against this
 tree. It is optional for reproducing **only** the frozen historical
@@ -151,8 +155,9 @@ scheme, revision, source path or source line: the adapter rejects them.
 The source revision must identify the exact analyzed `.lean`/config bytes for
 that historical checkout, even if a later commit only edits documentation.
 In that separate checkout, if the analyzed revision exists in Git, its
-committed bytes are compared to every present input. A synthetic parentless
-historical checkout without that object instead checks the regenerated manifest
+committed bytes are compared to every present input. A historical checkout
+without that object, including a clean checkout of the official parentless
+snapshot, instead checks the regenerated manifest
 against its own committed manifest and every current committed input and generator;
 present-but-wrong history never triggers this fallback. The published
 evidence records the native inputs, bytes, tool and checks. Source changes
