@@ -46,9 +46,6 @@ coherence of the actual functors. The public client
 checks both arbitrary-square laws and the non-Cartesian empty-corner example,
 using the explicit existing fixture import `Test.RingedSpaceBaseChange`.
 
-The mathematical leaf originated with formalization-worker-b, Hive Task
-`hive-request-7b88f0e919ceb77be172b73736ccdc7f3ff43ad5`
-(UID `e330b828-529f-49c8-b2e0-e07909c10cef`). This guide describes the
-API regardless of its release stage; destination review, owner acceptance,
-official publication and source-coverage acceptance are separate recorded
-decisions, none certified by this guide alone.
+Formal Frontier contributors developed the original pasting proof and clients
+and adapted them for this library; see [attribution](../NOTICE.md). This guide
+documents the actual available API, not a source-coverage assertion.

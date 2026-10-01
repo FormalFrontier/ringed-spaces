@@ -45,37 +45,18 @@ sources:
 automation:
   methods:
     - method: agent
-      framework: Codex CLI and Hive
+      framework: Agent-assisted Lean development
       tool_setup: >-
         Agent-assisted Lean development with the repository-pinned Lean and mathlib
-        revisions, independently reviewed mathematical contributions and kernel
-        checking. Mathematical statements and acceptance remain subject to review.
+        revisions and kernel checking. Mathematical statements, attribution and
+        release acceptance require independent review.
 
 review:
   status: self-assessed
   notes: >-
-    The repository includes independently reviewed mathematical contributions;
-    this metadata does not certify independent acceptance of a complete release
-    artifact. Release review, rights clearance and proof-integrity checks are
-    distinct from a successful build. The module-sheaf and full-morphism
-    mathematical leaves received bounded owner acceptance as preparation.
-    The earlier combined root/default-target assembly was accepted and published
-    under its separate release record; bounded preparation alone did not certify
-    that outcome. The originating incubator module-coherence and square-mate
-    implementation was accepted and integrated on September 26, 2026. Its
-    destination transfer at 20890358aa62cfbccaeb2a75fbac105fa2e469a3
-    received exact-revision independent review 3551, not owner destination or
-    release acceptance. The original pasting proof was accepted in the
-    incubator. Its destination review, owner acceptance and official release
-    are separate recorded decisions, none certified by this metadata alone;
-    the constant-closed destination contribution received exact-revision
-    independent review 3794 and maintainer acceptance, with official release
-    decisions recorded separately. At this non-affineness transfer candidate
-    revision, its original incubator leaf has separate mathematical acceptance,
-    but the destination extension has not received independent destination
-    review or owner release acceptance. These remain revision-specific
-    recorded decisions, not certifications supplied by this metadata;
-    neither preparation nor this metadata decides source coverage.
+    This metadata describes the library and does not self-certify independent
+    acceptance of any new release, rights clearance, proof integrity or source
+    coverage. Revision-specific review and release evidence is recorded separately.
 
 fidelity:
   divergences: >-

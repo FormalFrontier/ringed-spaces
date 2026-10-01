@@ -19,9 +19,8 @@ the first map has identity base and the adjoint of the entire structure-sheaf ma
 The construction is not a categorical fiber-product pullback. It uses diagonal
 universes and does not require nonempty spaces, nonzero rings or local rings.
 
-The mathematical construction was first checked in the accepted source-research
-probe `source-vakil-foag` at `f8899a3f2220192cdcb7e39ee4c2e03692f6ce07`;
-this library interface is independent of that source repository.
+This standalone construction uses the native inverse-image sheaf and the adjunction
+unit. It factors full ringed-space morphisms without a source-repository dependency.
 -/
 
 @[expose] public section

@@ -64,28 +64,15 @@ underlying additive sheaf morphisms, not just selected section generators.
 The local filtered-neighborhood instance exists solely to reconstruct the
 CommRing/Ring colimit comparison: the original presheaf module's instance is
 private. The module action and presheaf Hom adjunction are reused rather than
-re-implemented. The only required foundations for completed results are
-`propext`, `Classical.choice`, and `Quot.sound` (verify the exact pinned build's
-actual axiom receipts before accepting any result). The sheaf leaves received
-bounded owner acceptance as preparation. Their root exports are part of the
-combined module-sheaf and full-morphism assembly. Earlier preparation alone does
-not establish this assembly's integration, release or source coverage.
+re-implemented. The allowed foundations for completed results are `propext`,
+`Classical.choice`, and `Quot.sound`; acceptance requires checking the actual
+transitive axiom evidence for the exact build.
 
 ## Provenance and reproducibility
 
-The accepted source precursors were produced by Tasks
-`hive-request-ed585cec87f054b23a8f72d6c5882b0f6753bc73`
-(UID `c4410aab-4878-47a4-aa7f-0e50bd436202`),
-`hive-request-a71657830db53cd29881f0026fa8b5e3d6a9ef3c`
-(UID `a78a3887-0c81-4d19-9348-781caa1bce1c`),
-`hive-request-724a310985250437cd65e489d2a64be08ee12871`
-(UID `1e63d20e-3f1e-43da-8f6b-4f17e60020f4`), and
-`hive-request-73dc549815be100a03dd91d507a98ee9f7e396cd`
-(UID `c1aa7177-6bf6-4ff5-9a2b-8cdda8317c5d`). This independent library
-preparation is by `hive-request-8f33afe07a3ab0de314522e27f4bbaec2df1940d`
-(UID `30841a63-6910-4c7d-8c48-ddb0f57c9b58`). The mathematical source is
-not a build dependency. Reproduce with Lean `v4.34.0-rc2`, mathlib revision
+Formal Frontier contributors adapted earlier module-action, presheaf Hom,
+sheaf-coherence and sheaf Hom research into this independent mathematical
+library; see [attribution](../NOTICE.md). No research repository is a build
+dependency. Reproduce with Lean `v4.34.0-rc2`, mathlib revision
 `83abb3e776bdefcbc447a1e44d0debe4010039e5`, then run
-`lake exe cache get` **before** targeted `lake --wfail build` commands. Exact
-candidate-branch check receipts and their limits belong to the separate
-evidence branch, not to the mathematical modules.
+`lake exe cache get` **before** targeted `lake --wfail build` commands.

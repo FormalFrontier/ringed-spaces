@@ -73,7 +73,7 @@ counits and **every Hom transpose** to the native ones. These equalities
 establish an adjunction-level semantic bridge rather than merely an abstract
 isomorphism of functors.
 
-The code imports accepted fixed-space scalar extension, actual inverse image,
+The code imports fixed-space scalar extension, actual inverse image,
 and full pushforward leaves, plus mathlib at
 `83abb3e776bdefcbc447a1e44d0debe4010039e5` with Lean `v4.34.0-rc2`.
 It duplicates none of the native identity, composition or coherence results.
@@ -81,7 +81,4 @@ The explicit base test works for arbitrary full `f`; the concrete tests reuse
 the discrete two-point proper open and nonidentity full morphism, empty-source
 and zero-ring boundary fixtures. The latter tests check formal typing and
 identities, not nonvanishing sheafified tensor sections. This guide makes no
-source-text, integration, coverage or release claim. The leaf received bounded
-preparation acceptance before the September 26, 2026 combined
-root/default-target assembly. Its review, integration, release and source-coverage
-decisions are separate from that earlier preparation acceptance.
+source-coverage claim.

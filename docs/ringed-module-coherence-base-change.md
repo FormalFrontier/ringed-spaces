@@ -84,6 +84,5 @@ This direct import builds against mathlib
 `83abb3e776bdefcbc447a1e44d0debe4010039e5` and Lean
 `leanprover/lean4:v4.34.0-rc2`. The historical 33-module
 [`API.md`](API.md) snapshot predates these two leaves and is not their API
-documentation. This guide describes the usable library API, regardless of its
-release stage; destination acceptance, release and source-level coverage are
-distinct decisions.
+documentation. This guide describes the usable library API, not a
+source-coverage decision.

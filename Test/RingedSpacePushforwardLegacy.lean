@@ -3,11 +3,15 @@ SPDX-License-Identifier: Apache-2.0
 Authors: Formal Frontier Agents
 -/
 
-import RingedSpaces.Modules.RingedSpacePushforward
+module
+
+public import RingedSpaces.Modules.RingedSpacePushforward
 
 set_option warningAsError true
 
-/-! Legacy-import compatibility check, kept separate from native public clients. -/
+/-! Historical filename; a native module-system public-import client. -/
+
+@[expose] public section
 
 open CategoryTheory
 open RingedSpaces.Modules.RingedSpacePushforward

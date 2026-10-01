@@ -49,9 +49,6 @@ resulting constant-closed morphism differs from the affine-induced morphism
 for that same ring map. In particular, this API does **not** supply a local
 ring-map condition at stalks, a locally ringed morphism, or a scheme morphism.
 
-Original Lean proofs and client: formalization-worker-b, Hive Task
-`hive-request-da7e7acee403b485010744c0c39bcd03c2bc1041` (UID
-`2978daa3-8653-4a85-b398-56608e5a29e8`). Destination transfer, client
-adaptation and this guide: formalization-worker-b, Hive Task
-`hive-request-14f43b76fa9cc2cc327d381a1a318a9ba7f9e6bd` (UID
-`81854e11-fe00-45db-acf2-d465d2e8248c`). See [attribution](../NOTICE.md).
+Formal Frontier contributors developed the original Lean constructor and
+client, then adapted them for this library with a public-root client and this
+guide. See [attribution](../NOTICE.md).

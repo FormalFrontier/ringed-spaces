@@ -18,21 +18,47 @@ and explicit right-tensor pullback with its adjunction and native comparison.
 It also exports module pullback identity/composition coherence and the mate
 associated to any commutative square of full ringed-space morphisms, including
 horizontal and vertical pasting laws for the actual outer-square mate.
-Their mathematical leaves received bounded preparation acceptances. Separate
-revision-specific review and integration records govern the combined
-root/default-target assembly; the earlier assembly was published in a prior
-release. The module-coherence and square-mate transfer has its own review and
-release boundary, independent of source-level coverage.
 For a commutative local ring, the library also constructs full ringed-space
 morphisms with constant closed-point base from arbitrary maps into global
-sections. This destination contribution has received independent review and
-maintainer acceptance; release publication is recorded separately for each
-exact artifact.
+sections.
 For a nontrivial commutative codomain, if such a map sends a maximal-ideal
 element to a unit, the new extension proves that its full morphism differs
 from **every** affine-induced map, not merely the one induced by the given map.
-Independent destination review and release decisions for this extension are
-separate from the published constructor's record.
+
+## Headline results
+
+- **Full restriction and gluing.** Literal intersections realize the pullback
+  of open restrictions, and compatible families on any indexed open cover glue
+  uniquely as full ringed-space morphisms, including for an empty cover of an
+  empty space. See [`Restriction`](RingedSpaces/Restriction.lean),
+  [`OpenCover`](RingedSpaces/OpenCover.lean) and [the API examples](#api).
+- **Inverse-image factorization.** A full morphism factors through the ringed
+  space with literal source carrier and the native inverse-image sheaf; this is
+  not a categorical ringed-space fiber product. See
+  [`InverseImage`](RingedSpaces/InverseImage.lean) and [the API](#api).
+- **Module scalar extension.** Full natural coefficient maps give tensor
+  presheaves, sheafified scalar extension and a right-factor tensor symmetry,
+  with genuine sheafification rather than raw-tensor sections on arbitrary
+  opens. See the [change-of-rings](docs/module-change-of-rings.md) and
+  [right-factor](docs/change-of-rings-symmetry.md) guides.
+- **Continuous module inverse image.** Neighborhood-colimit presheaf inverse
+  image and sheafified module inverse image have bundled linear Hom
+  adjunctions and whole additive-sheaf comparisons; coefficient transport is
+  not inferred from additive comparison. See the [presheaf](docs/presheaf-inverse-image-hom.md)
+  and [sheaf](docs/sheaf-inverse-image.md) guides.
+- **Full-morphism module functors.** The original structure map defines
+  pushforward, and explicit sheafified right-tensor pullback is left adjoint
+  to it, with native comparison, oriented composition isomorphisms and
+  arbitrary-square mates and pasting. No general mate invertibility or
+  Cartesian/flatness hypothesis is claimed. See the [pushforward](docs/ringed-space-pushforward.md),
+  [pullback](docs/ringed-space-pullback.md), [coherence](docs/ringed-module-coherence-base-change.md)
+  and [pasting](docs/ringed-module-base-change-pasting.md) guides.
+- **Constant closed-point morphisms.** Any ring map from a commutative local
+  ring into global sections yields a full constant-closed morphism; with a
+  same-universe nontrivial commutative codomain and maximal-ideal element sent
+  to a unit, this morphism differs from every affine-induced map. No scheme
+  morphism is asserted. See the [constructor](docs/closed-point-hom.md) and
+  [non-affineness](docs/closed-point-nonaffine.md) guides.
 
 ## API
 
@@ -218,9 +244,6 @@ counit and triangle equations. `moduleUnderlyingNatIso`,
 `forward_underlying_additive`, `backward_underlying_additive` and
 `unit_underlying` identify whole underlying additive sheaf morphisms. See
 [`docs/sheaf-inverse-image.md`](docs/sheaf-inverse-image.md) for types and limits.
-The sheaf mathematical leaves and prior reader documentation received bounded
-owner acceptances as preparation. These do not independently accept the
-September 26, 2026 combined assembly, its release or source coverage.
 
 ## Full Ringed-Space Module Morphisms
 
@@ -278,14 +301,15 @@ lake --wfail build
 
 The 46 literal `defaultTargets` include the aggregate library, stored
 examples and all 44 shipped `Test` modules: direct, concrete, audit,
-root-only, root-plus-direct coexistence, and intentional legacy clients.
+root-only, root-plus-direct coexistence, and clients with historical filenames.
 `Test.SheafInverseImageRoot`, `Test.RingedSpaceFullMorphismRoot`,
 `Test.RingedSpaceBaseChange`, `Test.ClosedPointHom` and
 `Test.ClosedPointNonAffine` import **only** the public aggregate as their
 project import. The `RootCoexist` clients retain explicit leaf imports as
 compatibility checks; the pasting client imports the public root plus the
-explicit non-Cartesian fixture `Test.RingedSpaceBaseChange`. Legacy clients
-preserve their older import syntax rather than serving as native API examples.
+explicit non-Cartesian fixture `Test.RingedSpaceBaseChange`. The four
+historically named `Legacy` files are native module-system clients, not tests
+of non-module import compatibility.
 
 Use `lake --wfail build RingedSpacesExamples` to check just the examples after
 the cache fetch. `module`/`public import` is required for new downstream files;
@@ -328,7 +352,7 @@ explicit right-tensor pullback, use the root-only
 
 ## API Documentation
 
-[`docs/API.md`](docs/API.md) provides a historical source-only Markdown snapshot
+[`docs/API.md`](docs/API.md) provides a navigation-adjusted historical reference
 of native Lean signatures and docstrings for 33 modules at source revision
 `fc4581c6b42eb3b2c3dbeb714a8c76c51934d4fb` with doc-gen4
 `97d4ecdfc8e09e7f511724c25e303d448de6a3db`: 282 loaded public source
@@ -344,17 +368,12 @@ constructions and proofs. No JavaScript, dependency website, fonts or
 downloaded upstream assets are shipped. The historical API snapshot is not
 a certification of the present tree or a source-coverage decision.
 The coherence/base-change, pasting, constant-closed and non-affineness guides
-and their respective clients
-describe and check the added API; they are **not** part of the historical
-33-module API snapshot. On September 26, 2026, the originating incubator
-implementation was accepted and integrated at
-`93a5cfd0bfefac803b66fbd21aff7b346ad7fa54`; the destination transfer at
-`20890358aa62cfbccaeb2a75fbac105fa2e469a3` separately received independent
-review 3551. That exact-revision review is not owner destination acceptance,
-release acceptance, publication or a source-coverage decision for that transfer.
-The pasting promotion has separate destination review, owner acceptance and
-publication records; this API description alone certifies none of those
-decisions or source coverage.
+and their respective clients describe the added API; they are **not** part of
+the historical 33-module snapshot. The snapshot's original manifest digest
+applies to the unmodified output at the matching official published revision
+`958b340be6cf1a0bc86c2c378352664c9f7cca62`, not to the prose/link edits
+or to the present 64-file tree. See [`docs/README.md`](docs/README.md) for its
+reproduction boundary and current direct-import map.
 
 On a 15 GiB Linux worker with `LEAN_NUM_THREADS=1`, a matching cache fetch
 decompressed 8,892 mathlib artifacts; a historical incremental warning-fatal

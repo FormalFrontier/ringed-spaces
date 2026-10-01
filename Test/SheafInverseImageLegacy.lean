@@ -3,13 +3,17 @@ SPDX-License-Identifier: Apache-2.0
 Authors: Formal Frontier Agents
 -/
 
-import RingedSpaces.Modules.SheafInverseImageHom
+module
+
+public import RingedSpaces.Modules.SheafInverseImageHom
 
 /-!
-# Legacy-import client for the native sheaf inverse-image module
+# Native module-system client with a historical filename
 
-Unlike the ordinary native module clients, this file has no `module` command.
+This direct-import client checks the public sheaf inverse-image API.
 -/
+
+@[expose] public section
 
 open CategoryTheory
 open RingedSpaces.Modules.SheafInverseImage

@@ -79,7 +79,7 @@ the clients do not assert nonzero sections of the resulting sheafification.
 
 ## Dependencies and attribution
 
-The implementation imports the accepted `RingedSpaces.InverseImage` and
+The implementation imports `RingedSpaces.InverseImage` and
 `RingedSpaces.Modules.SheafInverseImageHom`, and mathlib at
 `83abb3e776bdefcbc447a1e44d0debe4010039e5`, Lean `v4.34.0-rc2`.
 `SheafInverseImage.sheafForget` and `pushforwardForget_map` are reused as-is.
@@ -87,8 +87,5 @@ The underlying `SheafOfModules.pushforwardComp`, `pushforwardCongr`, and
 `restrictScalars` are from mathlib files
 `Mathlib/Algebra/Category/ModuleCat/Sheaf/PushforwardContinuous.lean` and
 `Mathlib/Algebra/Category/ModuleCat/Sheaf/ChangeOfRings.lean` by Joël Riou.
-This leaf does not import any source-specific research probe and claims no
-source-text reading, source correspondence, integration, or release. The leaf
-received bounded preparation acceptance before the September 26, 2026
-combined root/default-target assembly. Its review, integration, release and
-source-coverage decisions are separate from that earlier preparation acceptance.
+This leaf does not import a source-specific research repository and makes no
+source-coverage claim.

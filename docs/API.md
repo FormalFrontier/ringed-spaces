@@ -1,11 +1,17 @@
-# Generated API reference
+# Historical API reference (navigation-adjusted)
 
-Native source-only signatures for all 33 shipped Lean modules (281 recorded
-public declarations), with their complete original nonempty docstrings,
-relative links to all 33 module sources and explicit missing-doc accounting.
-The generated `OpenCover.rec` has no native record. See the
-[mathematical overview](../README.md),
-[module guides](README.md) and [exact artifact manifest](api-manifest.json).
+Native source-only signatures for 33 historical Lean modules (281 recorded
+public declarations), with their original nonempty docstrings and explicit
+missing-doc accounting. Source links below are hand-adjusted to the identical
+files at the official published commit
+`958b340be6cf1a0bc86c2c378352664c9f7cca62`; this page is **not** a new
+native generation or an inventory of the current 64-file library. The original
+generated Markdown SHA256 is
+`31abe5d797e950a0d6df5bc08167634abf872964723c03c85616f417972d0ade`;
+its [manifest](api-manifest.json) and generator describe that **unmodified**
+output, not the navigation- and prose-adjusted page here. The generated
+`OpenCover.rec` has no native record. See the [mathematical overview](../README.md)
+and [current API map](README.md) for additions beyond the historical scope.
 
 Signatures preserve native displayed implicit arguments, but contain no
 proof bodies. Native display may suppress type annotations on literals;
@@ -24,7 +30,7 @@ JavaScript, fonts, dependency website or build cache is bundled.
 > ordinary inverse image of module presheaves along continuous maps, including
 > its linear Hom adjunction to native module pushforward.
 
-[Module source](../RingedSpaces.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces.lean)
 
 ## Module `RingedSpaces.InverseImage`
 
@@ -39,11 +45,10 @@ JavaScript, fonts, dependency website or build cache is bundled.
 > The construction is not a categorical fiber-product pullback. It uses diagonal
 > universes and does not require nonempty spaces, nonzero rings or local rings.
 >
-> The mathematical construction was first checked in the accepted source-research
-> probe `source-vakil-foag` at `f8899a3f2220192cdcb7e39ee4c2e03692f6ce07`;
-> this library interface is independent of that source repository.
+> This standalone construction uses the native inverse-image sheaf and the adjunction
+> unit. It factors full ringed-space morphisms without a source-repository dependency.
 
-[Module source](../RingedSpaces/InverseImage.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean)
 
 ### `AlgebraicGeometry.RingedSpace.inverseImage`
 
@@ -53,7 +58,7 @@ noncomputable def AlgebraicGeometry.RingedSpace.inverseImage (Y : RingedSpace) {
 
 The ringed space on `T` with the native inverse-image sheaf of rings along `g`.
 
-[Source](../RingedSpaces/InverseImage.lean#L39) (line 39).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L39) (line 39).
 
 ### `AlgebraicGeometry.RingedSpace.inverseImage_carrier`
 
@@ -63,7 +68,7 @@ theorem AlgebraicGeometry.RingedSpace.inverseImage_carrier (Y : RingedSpace) {T 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/InverseImage.lean#L45) (line 45).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L45) (line 45).
 
 ### `AlgebraicGeometry.RingedSpace.inverseImage_sheaf`
 
@@ -73,7 +78,7 @@ theorem AlgebraicGeometry.RingedSpace.inverseImage_sheaf (Y : RingedSpace) {T : 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/InverseImage.lean#L48) (line 48).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L48) (line 48).
 
 ### `AlgebraicGeometry.RingedSpace.ofInverseImage`
 
@@ -83,7 +88,7 @@ noncomputable def AlgebraicGeometry.RingedSpace.ofInverseImage (Y : RingedSpace)
 
 The canonical full ringed-space morphism induced by the sheaf adjunction unit.
 
-[Source](../RingedSpaces/InverseImage.lean#L52) (line 52).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L52) (line 52).
 
 ### `AlgebraicGeometry.RingedSpace.ofInverseImage_base`
 
@@ -93,7 +98,7 @@ theorem AlgebraicGeometry.RingedSpace.ofInverseImage_base (Y : RingedSpace) {T :
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/InverseImage.lean#L59) (line 59).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L59) (line 59).
 
 ### `AlgebraicGeometry.RingedSpace.ofInverseImage_c`
 
@@ -103,7 +108,7 @@ theorem AlgebraicGeometry.RingedSpace.ofInverseImage_c (Y : RingedSpace) {T : To
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/InverseImage.lean#L62) (line 62).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L62) (line 62).
 
 ### `AlgebraicGeometry.RingedSpace.ofInverseImage_c_app`
 
@@ -113,7 +118,7 @@ theorem AlgebraicGeometry.RingedSpace.ofInverseImage_c_app (Y : RingedSpace) {T 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/InverseImage.lean#L67) (line 67).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L67) (line 67).
 
 ### `AlgebraicGeometry.RingedSpace.inverseImageMap`
 
@@ -123,7 +128,7 @@ noncomputable def AlgebraicGeometry.RingedSpace.inverseImageMap {X Y : RingedSpa
 
 The adjoint of the full structure-sheaf morphism of `f`, as a map of ring sheaves.
 
-[Source](../RingedSpaces/InverseImage.lean#L74) (line 74).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L74) (line 74).
 
 ### `AlgebraicGeometry.RingedSpace.inverseImageMap_unit`
 
@@ -133,7 +138,7 @@ theorem AlgebraicGeometry.RingedSpace.inverseImageMap_unit {X Y : RingedSpace} (
 
 The mate equation as an equality of full ring-sheaf maps.
 
-[Source](../RingedSpaces/InverseImage.lean#L80) (line 80).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L80) (line 80).
 
 ### `AlgebraicGeometry.RingedSpace.inverseImageMap_unit_hom`
 
@@ -143,7 +148,7 @@ theorem AlgebraicGeometry.RingedSpace.inverseImageMap_unit_hom {X Y : RingedSpac
 
 After forgetting to presheaves, the unit equation recovers the given structure map.
 
-[Source](../RingedSpaces/InverseImage.lean#L90) (line 90).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L90) (line 90).
 
 ### `AlgebraicGeometry.RingedSpace.inverseImageMap_unit_app`
 
@@ -154,7 +159,7 @@ theorem AlgebraicGeometry.RingedSpace.inverseImageMap_unit_app {X Y : RingedSpac
 On every target open, the sheaf unit followed by the pushed-forward mate is `f`'s
 ring map on sections.
 
-[Source](../RingedSpaces/InverseImage.lean#L102) (line 102).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L102) (line 102).
 
 ### `AlgebraicGeometry.RingedSpace.inverseImageMap_unit_components`
 
@@ -164,7 +169,7 @@ theorem AlgebraicGeometry.RingedSpace.inverseImageMap_unit_components {X Y : Rin
 
 The native unit and the pushed-forward mate compose as ring homomorphisms on every open.
 
-[Source](../RingedSpaces/InverseImage.lean#L111) (line 111).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L111) (line 111).
 
 ### `AlgebraicGeometry.RingedSpace.toInverseImage`
 
@@ -174,7 +179,7 @@ noncomputable def AlgebraicGeometry.RingedSpace.toInverseImage {X Y : RingedSpac
 
 The full map from `X` to the inverse-image ringed space, over the identity of `X`.
 
-[Source](../RingedSpaces/InverseImage.lean#L119) (line 119).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L119) (line 119).
 
 ### `AlgebraicGeometry.RingedSpace.toInverseImage_base`
 
@@ -184,7 +189,7 @@ theorem AlgebraicGeometry.RingedSpace.toInverseImage_base {X Y : RingedSpace} (f
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/InverseImage.lean#L126) (line 126).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L126) (line 126).
 
 ### `AlgebraicGeometry.RingedSpace.toInverseImage_c`
 
@@ -194,7 +199,7 @@ theorem AlgebraicGeometry.RingedSpace.toInverseImage_c {X Y : RingedSpace} (f : 
 
 The first map's entire presheaf component includes the identity-pushforward transport.
 
-[Source](../RingedSpaces/InverseImage.lean#L129) (line 129).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L129) (line 129).
 
 ### `AlgebraicGeometry.RingedSpace.toInverseImage_c_app`
 
@@ -204,7 +209,7 @@ theorem AlgebraicGeometry.RingedSpace.toInverseImage_c_app {X Y : RingedSpace} (
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/InverseImage.lean#L134) (line 134).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L134) (line 134).
 
 ### `AlgebraicGeometry.RingedSpace.toInverseImage_c_app_eq`
 
@@ -214,7 +219,7 @@ theorem AlgebraicGeometry.RingedSpace.toInverseImage_c_app_eq {X Y : RingedSpace
 
 On sections, the identity-pushforward transport acts as the identity.
 
-[Source](../RingedSpaces/InverseImage.lean#L139) (line 139).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L139) (line 139).
 
 ### `AlgebraicGeometry.RingedSpace.toInverseImage_ofInverseImage`
 
@@ -224,7 +229,7 @@ theorem AlgebraicGeometry.RingedSpace.toInverseImage_ofInverseImage {X Y : Ringe
 
 The two full morphisms compose to the original full morphism, including its sheaf map.
 
-[Source](../RingedSpaces/InverseImage.lean#L145) (line 145).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/InverseImage.lean#L145) (line 145).
 
 ## Module `RingedSpaces.Modules.PresheafChangeOfRings`
 
@@ -235,7 +240,7 @@ The two full morphisms compose to the original full morphism, including its shea
 > is obtained as a mate of the semilinear restriction on pure tensors, and does
 > not require a topology or a sheaf condition.
 
-[Module source](../RingedSpaces/Modules/PresheafChangeOfRings.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean)
 
 [Mathematical guide](module-change-of-rings.md)
 
@@ -247,7 +252,7 @@ abbrev RingedSpaces.Modules.ringPresheaf {C : Type u₁} [CategoryTheory.Categor
 
 The underlying presheaf of possibly noncommutative rings.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L31) (line 31).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L31) (line 31).
 
 ### `RingedSpaces.Modules.ringMap`
 
@@ -257,7 +262,7 @@ def RingedSpaces.Modules.ringMap {C : Type u₁} [CategoryTheory.Category.{v₁,
 
 Forget commutativity of a whole map of ring presheaves.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L35) (line 35).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L35) (line 35).
 
 ### `RingedSpaces.Modules.Presheaves`
 
@@ -267,7 +272,7 @@ abbrev RingedSpaces.Modules.Presheaves {C : Type u₁} [CategoryTheory.Category.
 
 Module presheaves over a presheaf of commutative rings.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L39) (line 39).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L39) (line 39).
 
 ### `RingedSpaces.Modules.tensorSection`
 
@@ -277,7 +282,7 @@ noncomputable def RingedSpaces.Modules.tensorSection {C : Type u₁} [CategoryTh
 
 The actual tensor of sections, with its `B(U)` action.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L43) (line 43).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L43) (line 43).
 
 ### `RingedSpaces.Modules.tensorUnitSection`
 
@@ -287,7 +292,7 @@ noncomputable def RingedSpaces.Modules.tensorUnitSection {C : Type u₁} [Catego
 
 The sectionwise unit `m ↦ 1 ⊗ m`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L50) (line 50).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L50) (line 50).
 
 ### `RingedSpaces.Modules.tensorSectionHomEquiv`
 
@@ -297,7 +302,7 @@ noncomputable def RingedSpaces.Modules.tensorSectionHomEquiv {C : Type u₁} [Ca
 
 The ordinary tensor Hom equivalence on a single open.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L60) (line 60).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L60) (line 60).
 
 ### `RingedSpaces.Modules.tensorSectionHomEquiv_apply`
 
@@ -307,7 +312,7 @@ theorem RingedSpaces.Modules.tensorSectionHomEquiv_apply {C : Type u₁} [Catego
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L69) (line 69).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L69) (line 69).
 
 ### `RingedSpaces.Modules.tensorSectionHomEquiv_symm_unit`
 
@@ -317,7 +322,7 @@ theorem RingedSpaces.Modules.tensorSectionHomEquiv_symm_unit {C : Type u₁} [Ca
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L77) (line 77).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L77) (line 77).
 
 ### `RingedSpaces.Modules.restrictionUnit`
 
@@ -327,7 +332,7 @@ noncomputable def RingedSpaces.Modules.restrictionUnit {C : Type u₁} [Category
 
 The restriction mate of `m ↦ 1 ⊗ m|`, linear over `A(U)`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L90) (line 90).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L90) (line 90).
 
 ### `RingedSpaces.Modules.tensorRestriction`
 
@@ -337,7 +342,7 @@ noncomputable def RingedSpaces.Modules.tensorRestriction {C : Type u₁} [Catego
 
 The `B(U)`-linear restriction mate, targeting the restriction along `B(U) → B(V)`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L137) (line 137).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L137) (line 137).
 
 ### `RingedSpaces.Modules.restrictionUnit_apply`
 
@@ -347,7 +352,7 @@ theorem RingedSpaces.Modules.restrictionUnit_apply {C : Type u₁} [CategoryTheo
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L145) (line 145).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L145) (line 145).
 
 ### `RingedSpaces.Modules.tensorRestriction_unit`
 
@@ -357,7 +362,7 @@ theorem RingedSpaces.Modules.tensorRestriction_unit {C : Type u₁} [CategoryThe
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L149) (line 149).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L149) (line 149).
 
 ### `RingedSpaces.Modules.tensorRestriction_smul`
 
@@ -367,7 +372,7 @@ theorem RingedSpaces.Modules.tensorRestriction_smul {C : Type u₁} [CategoryThe
 
 Restriction sends an arbitrary `b ⊗ m` to `B(f)(b) ⊗ M(f)(m)`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L164) (line 164).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L164) (line 164).
 
 ### `RingedSpaces.Modules.tensorPresheaf`
 
@@ -377,7 +382,7 @@ noncomputable def RingedSpaces.Modules.tensorPresheaf {C : Type u₁} [CategoryT
 
 The genuine pointwise tensor presheaf, including its identity and composition laws.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L175) (line 175).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L175) (line 175).
 
 ### `RingedSpaces.Modules.tensorSectionMap`
 
@@ -387,7 +392,7 @@ noncomputable def RingedSpaces.Modules.tensorSectionMap {C : Type u₁} [Categor
 
 The section map `b ⊗ m ↦ b ⊗ h(m)` induced by an `A`-linear sheaf map.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L205) (line 205).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L205) (line 205).
 
 ### `RingedSpaces.Modules.tensorSectionMap_unit`
 
@@ -397,7 +402,7 @@ theorem RingedSpaces.Modules.tensorSectionMap_unit {C : Type u₁} [CategoryTheo
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L212) (line 212).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L212) (line 212).
 
 ### `RingedSpaces.Modules.tensorSectionMap_smul`
 
@@ -407,7 +412,7 @@ theorem RingedSpaces.Modules.tensorSectionMap_smul {C : Type u₁} [CategoryTheo
 
 Maps of tensor presheaves act on arbitrary pure tensors.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L219) (line 219).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L219) (line 219).
 
 ### `RingedSpaces.Modules.tensorPresheafMap`
 
@@ -417,7 +422,7 @@ noncomputable def RingedSpaces.Modules.tensorPresheafMap {C : Type u₁} [Catego
 
 Tensoring a map is compatible with all presheaf restrictions.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L228) (line 228).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L228) (line 228).
 
 ### `RingedSpaces.Modules.tensorPresheafFunctor`
 
@@ -427,7 +432,7 @@ noncomputable def RingedSpaces.Modules.tensorPresheafFunctor {C : Type u₁} [Ca
 
 The covariant tensor presheaf functor.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L248) (line 248).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L248) (line 248).
 
 ### `RingedSpaces.Modules.presheafTensorUnit`
 
@@ -437,7 +442,7 @@ noncomputable def RingedSpaces.Modules.presheafTensorUnit {C : Type u₁} [Categ
 
 The natural presheaf unit before sheafification.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L277) (line 277).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L277) (line 277).
 
 ### `RingedSpaces.Modules.tensorPresheafHomDown`
 
@@ -447,7 +452,7 @@ noncomputable def RingedSpaces.Modules.tensorPresheafHomDown {C : Type u₁} [Ca
 
 Restrict a presheaf Hom along the local unit `m ↦ 1 ⊗ m`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L288) (line 288).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L288) (line 288).
 
 ### `RingedSpaces.Modules.tensorPresheafHomUp`
 
@@ -457,7 +462,7 @@ noncomputable def RingedSpaces.Modules.tensorPresheafHomUp {C : Type u₁} [Cate
 
 Extend an `A`-linear presheaf Hom by `b ⊗ m ↦ b • g(m)`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L304) (line 304).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L304) (line 304).
 
 ### `RingedSpaces.Modules.tensorPresheafHomUp_smul`
 
@@ -467,7 +472,7 @@ theorem RingedSpaces.Modules.tensorPresheafHomUp_smul {C : Type u₁} [CategoryT
 
 The upward Hom map evaluates `b ⊗ m` as `b • g(m)` for arbitrary `b`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L326) (line 326).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L326) (line 326).
 
 ### `RingedSpaces.Modules.tensorPresheafHomEquiv`
 
@@ -477,7 +482,7 @@ noncomputable def RingedSpaces.Modules.tensorPresheafHomEquiv {C : Type u₁} [C
 
 The inverse tensor Hom maps, proven compatible with restrictions.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L343) (line 343).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L343) (line 343).
 
 ### `RingedSpaces.Modules.tensorPresheafHomDown_naturality_left`
 
@@ -487,7 +492,7 @@ theorem RingedSpaces.Modules.tensorPresheafHomDown_naturality_left {C : Type u�
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L363) (line 363).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L363) (line 363).
 
 ### `RingedSpaces.Modules.tensorPresheafHomDown_naturality_right`
 
@@ -497,7 +502,7 @@ theorem RingedSpaces.Modules.tensorPresheafHomDown_naturality_right {C : Type u�
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L385) (line 385).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L385) (line 385).
 
 ### `RingedSpaces.Modules.tensorPresheafAdjunction`
 
@@ -507,7 +512,7 @@ noncomputable def RingedSpaces.Modules.tensorPresheafAdjunction {C : Type u₁} 
 
 Sectionwise scalar extension is left adjoint to restriction along the full ring map.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L403) (line 403).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L403) (line 403).
 
 ### `RingedSpaces.Modules.tensorPresheafAdjunction_unit`
 
@@ -517,7 +522,7 @@ theorem RingedSpaces.Modules.tensorPresheafAdjunction_unit {C : Type u₁} [Cate
 
 The adjunction unit is the actual sectionwise map `m ↦ 1 ⊗ m`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L425) (line 425).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L425) (line 425).
 
 ### `RingedSpaces.Modules.tensorPresheafAdjunction_counit`
 
@@ -527,7 +532,7 @@ theorem RingedSpaces.Modules.tensorPresheafAdjunction_counit {C : Type u₁} [Ca
 
 The adjunction counit sends `b ⊗ n` to `b • n` on every section.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRings.lean#L437) (line 437).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRings.lean#L437) (line 437).
 
 ## Module `RingedSpaces.Modules.PresheafChangeOfRingsSymmetry`
 
@@ -537,7 +542,7 @@ The adjunction counit sends `b ⊗ n` to `b • n` on every section.
 > on `B(U)` induced by the component of the ring-presheaf morphism. Tensor
 > symmetry transports the `B(U)` action and intertwines all restrictions.
 
-[Module source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean)
 
 [Mathematical guide](change-of-rings-symmetry.md)
 
@@ -549,7 +554,7 @@ noncomputable abbrev RingedSpaces.Modules.rightFactor {C : Type u₁} [CategoryT
 
 The actual `A(U)`-module `B(U)` obtained by restriction along `theta_U`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L32) (line 32).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L32) (line 32).
 
 ### `RingedSpaces.Modules.rightSection`
 
@@ -559,7 +564,7 @@ noncomputable def RingedSpaces.Modules.rightSection {C : Type u₁} [CategoryThe
 
 The genuine `M(U) ⊗[A(U), theta_U] B(U)` in its original factor order.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L40) (line 40).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L40) (line 40).
 
 ### `RingedSpaces.Modules.rightSectionAddEquiv`
 
@@ -569,7 +574,7 @@ noncomputable def RingedSpaces.Modules.rightSectionAddEquiv {C : Type u₁} [Cat
 
 Tensor symmetry as an equivalence of the underlying additive groups.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L51) (line 51).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L51) (line 51).
 
 ### `RingedSpaces.Modules.rightModule`
 
@@ -579,7 +584,7 @@ noncomputable abbrev RingedSpaces.Modules.rightModule {C : Type u₁} [CategoryT
 
 Transport the native `B(U)`-module structure onto the right-order tensor.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L62) (line 62).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L62) (line 62).
 
 ### `RingedSpaces.Modules.rightSectionCat`
 
@@ -589,7 +594,7 @@ noncomputable def RingedSpaces.Modules.rightSectionCat {C : Type u₁} [Category
 
 The right-order tensor as a bundled `B(U)`-module.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L67) (line 67).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L67) (line 67).
 
 ### `RingedSpaces.Modules.rightSectionIso`
 
@@ -599,7 +604,7 @@ noncomputable def RingedSpaces.Modules.rightSectionIso {C : Type u₁} [Category
 
 Tensor symmetry, linear for the transported action of `B(U)`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L73) (line 73).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L73) (line 73).
 
 ### `RingedSpaces.Modules.rightPure`
 
@@ -609,7 +614,7 @@ noncomputable def RingedSpaces.Modules.rightPure {C : Type u₁} [CategoryTheory
 
 The original-order generator `m ⊗ b` for arbitrary `b`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L79) (line 79).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L79) (line 79).
 
 ### `RingedSpaces.Modules.leftPure`
 
@@ -619,7 +624,7 @@ noncomputable def RingedSpaces.Modules.leftPure {C : Type u₁} [CategoryTheory.
 
 The opposite-order generator `b ⊗ m` in the accepted extension.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L90) (line 90).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L90) (line 90).
 
 ### `RingedSpaces.Modules.rightSectionIso_pure`
 
@@ -629,7 +634,7 @@ theorem RingedSpaces.Modules.rightSectionIso_pure {C : Type u₁} [CategoryTheor
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L100) (line 100).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L100) (line 100).
 
 ### `RingedSpaces.Modules.rightSectionIso_inv_tmul`
 
@@ -639,7 +644,7 @@ theorem RingedSpaces.Modules.rightSectionIso_inv_tmul {C : Type u₁} [CategoryT
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L116) (line 116).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L116) (line 116).
 
 ### `RingedSpaces.Modules.rightSectionSmul`
 
@@ -649,7 +654,7 @@ noncomputable def RingedSpaces.Modules.rightSectionSmul {C : Type u₁} [Categor
 
 Explicit scalar action from `rightModule`, without a global instance.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L133) (line 133).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L133) (line 133).
 
 ### `RingedSpaces.Modules.smul_pure`
 
@@ -659,7 +664,7 @@ theorem RingedSpaces.Modules.smul_pure {C : Type u₁} [CategoryTheory.Category.
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L139) (line 139).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L139) (line 139).
 
 ### `RingedSpaces.Modules.rightASmul_pure`
 
@@ -669,7 +674,7 @@ theorem RingedSpaces.Modules.rightASmul_pure {C : Type u₁} [CategoryTheory.Cat
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L156) (line 156).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L156) (line 156).
 
 ### `RingedSpaces.Modules.rightBalance_pure`
 
@@ -679,7 +684,7 @@ theorem RingedSpaces.Modules.rightBalance_pure {C : Type u₁} [CategoryTheory.C
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L173) (line 173).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L173) (line 173).
 
 ### `RingedSpaces.Modules.theta_smul_pure`
 
@@ -689,7 +694,7 @@ theorem RingedSpaces.Modules.theta_smul_pure {C : Type u₁} [CategoryTheory.Cat
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L188) (line 188).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L188) (line 188).
 
 ### `RingedSpaces.Modules.theta_smul`
 
@@ -700,7 +705,7 @@ theorem RingedSpaces.Modules.theta_smul {C : Type u₁} [CategoryTheory.Category
 The native tensor `A(U)`-action is the restriction of its transported `B(U)`-action
 on every tensor, not only on pure tensors.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L195) (line 195).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L195) (line 195).
 
 ### `RingedSpaces.Modules.unit_eq_leftPure`
 
@@ -710,7 +715,7 @@ theorem RingedSpaces.Modules.unit_eq_leftPure {C : Type u₁} [CategoryTheory.Ca
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L225) (line 225).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L225) (line 225).
 
 ### `RingedSpaces.Modules.leftPure_eq_smul_unit`
 
@@ -720,7 +725,7 @@ theorem RingedSpaces.Modules.leftPure_eq_smul_unit {C : Type u₁} [CategoryTheo
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L230) (line 230).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L230) (line 230).
 
 ### `RingedSpaces.Modules.rightRestriction`
 
@@ -730,7 +735,7 @@ noncomputable def RingedSpaces.Modules.rightRestriction {C : Type u₁} [Categor
 
 The original-order restriction, linear after restricting scalars through `B(f)`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L252) (line 252).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L252) (line 252).
 
 ### `RingedSpaces.Modules.rightRestriction_comm`
 
@@ -740,7 +745,7 @@ theorem RingedSpaces.Modules.rightRestriction_comm {C : Type u₁} [CategoryTheo
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L262) (line 262).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L262) (line 262).
 
 ### `RingedSpaces.Modules.oppositeRestriction_pure`
 
@@ -750,7 +755,7 @@ theorem RingedSpaces.Modules.oppositeRestriction_pure {C : Type u₁} [CategoryT
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L270) (line 270).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L270) (line 270).
 
 ### `RingedSpaces.Modules.rightRestriction_pure`
 
@@ -760,7 +765,7 @@ theorem RingedSpaces.Modules.rightRestriction_pure {C : Type u₁} [CategoryTheo
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L299) (line 299).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L299) (line 299).
 
 ### `RingedSpaces.Modules.rightRestriction_semilinear`
 
@@ -770,7 +775,7 @@ theorem RingedSpaces.Modules.rightRestriction_semilinear {C : Type u₁} [Catego
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L309) (line 309).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L309) (line 309).
 
 ### `RingedSpaces.Modules.rightPresheaf`
 
@@ -780,7 +785,7 @@ noncomputable def RingedSpaces.Modules.rightPresheaf {C : Type u₁} [CategoryTh
 
 Actual right-order section tensors and semilinear restrictions form a presheaf.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L328) (line 328).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L328) (line 328).
 
 ### `RingedSpaces.Modules.rightPresheafIso`
 
@@ -790,7 +795,7 @@ noncomputable def RingedSpaces.Modules.rightPresheafIso {C : Type u₁} [Categor
 
 The right-order presheaf is naturally equivalent to the accepted one.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L371) (line 371).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L371) (line 371).
 
 ### `RingedSpaces.Modules.rightPresheafMap`
 
@@ -800,7 +805,7 @@ noncomputable def RingedSpaces.Modules.rightPresheafMap {C : Type u₁} [Categor
 
 Sectionwise tensoring of an `A`-module sheaf morphism, in right order.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L377) (line 377).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L377) (line 377).
 
 ### `RingedSpaces.Modules.oppositeMap_pure`
 
@@ -810,7 +815,7 @@ theorem RingedSpaces.Modules.oppositeMap_pure {C : Type u₁} [CategoryTheory.Ca
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L383) (line 383).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L383) (line 383).
 
 ### `RingedSpaces.Modules.rightSectionMap`
 
@@ -820,7 +825,7 @@ noncomputable def RingedSpaces.Modules.rightSectionMap {C : Type u₁} [Category
 
 The right-order component of `rightPresheafMap` on one open.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L400) (line 400).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L400) (line 400).
 
 ### `RingedSpaces.Modules.rightSectionMap_pure`
 
@@ -830,7 +835,7 @@ theorem RingedSpaces.Modules.rightSectionMap_pure {C : Type u₁} [CategoryTheor
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L407) (line 407).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L407) (line 407).
 
 ### `RingedSpaces.Modules.rightPresheafMap_pure`
 
@@ -840,7 +845,7 @@ theorem RingedSpaces.Modules.rightPresheafMap_pure {C : Type u₁} [CategoryTheo
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L417) (line 417).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L417) (line 417).
 
 ### `RingedSpaces.Modules.rightPresheafMap_restriction`
 
@@ -850,7 +855,7 @@ theorem RingedSpaces.Modules.rightPresheafMap_restriction {C : Type u₁} [Categ
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L423) (line 423).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L423) (line 423).
 
 ### `RingedSpaces.Modules.rightUnitSection`
 
@@ -860,7 +865,7 @@ noncomputable def RingedSpaces.Modules.rightUnitSection {C : Type u₁} [Categor
 
 The sectionwise right-order unit, linear over `A(U)`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L429) (line 429).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L429) (line 429).
 
 ### `RingedSpaces.Modules.rightUnitSection_pure`
 
@@ -870,7 +875,7 @@ theorem RingedSpaces.Modules.rightUnitSection_pure {C : Type u₁} [CategoryTheo
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L438) (line 438).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L438) (line 438).
 
 ### `RingedSpaces.Modules.rightPresheafUnit`
 
@@ -880,7 +885,7 @@ noncomputable def RingedSpaces.Modules.rightPresheafUnit {C : Type u₁} [Catego
 
 The compatible presheaf unit `m ↦ m ⊗ 1`.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L445) (line 445).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L445) (line 445).
 
 ### `RingedSpaces.Modules.rightPresheafUnit_pure`
 
@@ -890,7 +895,7 @@ theorem RingedSpaces.Modules.rightPresheafUnit_pure {C : Type u₁} [CategoryThe
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L453) (line 453).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L453) (line 453).
 
 ### `RingedSpaces.Modules.rightPresheafFunctor`
 
@@ -900,7 +905,7 @@ noncomputable def RingedSpaces.Modules.rightPresheafFunctor {C : Type u₁} [Cat
 
 Functoriality in the `A`-module presheaf input.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L469) (line 469).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L469) (line 469).
 
 ### `RingedSpaces.Modules.rightPresheafNatIso`
 
@@ -910,7 +915,7 @@ noncomputable def RingedSpaces.Modules.rightPresheafNatIso {C : Type u₁} [Cate
 
 The natural presheaf-level tensor symmetry, including module-map naturality.
 
-[Source](../RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L499) (line 499).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafChangeOfRingsSymmetry.lean#L499) (line 499).
 
 ## Module `RingedSpaces.Modules.PresheafInverseImage`
 
@@ -920,7 +925,7 @@ The natural presheaf-level tensor symmetry, including module-map naturality.
 > The action and restriction maps are those of the actual pointwise left Kan extensions;
 > the underlying additive presheaf is naturally the usual inverse image.
 
-[Module source](../RingedSpaces/Modules/PresheafInverseImage.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean)
 
 [Mathematical guide](presheaf-inverse-image.md)
 
@@ -932,7 +937,7 @@ abbrev RingedSpaces.Modules.PresheafInverseImage.index {X Y : TopCat} (f : X ⟶
 
 Open neighborhoods of the image of `U`, ordered in the colimit direction.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L32) (line 32).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L32) (line 32).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwiseModule`
 
@@ -942,7 +947,7 @@ noncomputable instance RingedSpaces.Modules.PresheafInverseImage.pointwiseModule
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L134) (line 134).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L134) (line 134).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwise_smul_ι`
 
@@ -952,7 +957,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.pointwise_smul_ι {X Y : TopCa
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L181) (line 181).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L181) (line 181).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.ring_map_ι`
 
@@ -962,7 +967,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.ring_map_ι {X Y : TopCat} (f 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L214) (line 214).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L214) (line 214).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.group_map_ι`
 
@@ -972,7 +977,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.group_map_ι {X Y : TopCat} (f
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L225) (line 225).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L225) (line 225).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwise_jointly_surjective`
 
@@ -982,7 +987,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.pointwise_jointly_surjective {
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L237) (line 237).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L237) (line 237).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.restriction_smul`
 
@@ -992,7 +997,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.restriction_smul {X Y : TopCat
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L258) (line 258).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L258) (line 258).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.inverseImageModule`
 
@@ -1002,7 +1007,7 @@ noncomputable def RingedSpaces.Modules.PresheafInverseImage.inverseImageModule {
 
 The ordinary inverse-image additive presheaf equipped with its neighborhood-colimit action.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L274) (line 274).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L274) (line 274).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwiseToPullback`
 
@@ -1012,7 +1017,7 @@ noncomputable def RingedSpaces.Modules.PresheafInverseImage.pointwiseToPullback 
 
 Compare a pointwise Kan extension to the chosen presheaf inverse image.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L286) (line 286).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L286) (line 286).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwiseMap`
 
@@ -1022,7 +1027,7 @@ noncomputable def RingedSpaces.Modules.PresheafInverseImage.pointwiseMap {X Y : 
 
 Apply an input module morphism on each Kan-colimit generator.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L298) (line 298).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L298) (line 298).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_ι`
 
@@ -1032,7 +1037,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_ι {X Y : TopCat}
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L316) (line 316).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L316) (line 316).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_smul`
 
@@ -1042,7 +1047,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_smul {X Y : TopCa
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L328) (line 328).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L328) (line 328).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.inverseImageMap`
 
@@ -1052,7 +1057,7 @@ noncomputable def RingedSpaces.Modules.PresheafInverseImage.inverseImageMap {X Y
 
 The module-linear map induced on ordinary presheaf inverse images.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L343) (line 343).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L343) (line 343).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_id`
 
@@ -1062,7 +1067,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_id {X Y : TopCat}
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L350) (line 350).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L350) (line 350).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_comp`
 
@@ -1072,7 +1077,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_comp {X Y : TopCa
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L363) (line 363).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L363) (line 363).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.inverseImageFunctor`
 
@@ -1082,7 +1087,7 @@ noncomputable def RingedSpaces.Modules.PresheafInverseImage.inverseImageFunctor 
 
 Ordinary inverse image as a functor on presheaves of modules.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L384) (line 384).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L384) (line 384).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_unit`
 
@@ -1092,7 +1097,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.pointwiseMap_unit {X Y : TopCa
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L397) (line 397).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L397) (line 397).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwiseToPullback_fac`
 
@@ -1102,7 +1107,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.pointwiseToPullback_fac {X Y :
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L410) (line 410).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L410) (line 410).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwiseSmul`
 
@@ -1112,7 +1117,7 @@ noncomputable def RingedSpaces.Modules.PresheafInverseImage.pointwiseSmul {X Y :
 
 The pointwise scalar operation, with its module instance explicitly selected.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L420) (line 420).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L420) (line 420).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.pointwiseSmul_eq`
 
@@ -1122,7 +1127,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.pointwiseSmul_eq {X Y : TopCat
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L429) (line 429).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L429) (line 429).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.unit_smul`
 
@@ -1132,7 +1137,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.unit_smul {X Y : TopCat} (f : 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L439) (line 439).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L439) (line 439).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.underlyingComparison`
 
@@ -1142,7 +1147,7 @@ noncomputable def RingedSpaces.Modules.PresheafInverseImage.underlyingComparison
 
 The ordinary additive presheaf inverse image is naturally the underlying functor.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImage.lean#L450) (line 450).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImage.lean#L450) (line 450).
 
 ## Module `RingedSpaces.Modules.PresheafInverseImageHom`
 
@@ -1153,7 +1158,7 @@ The ordinary additive presheaf inverse image is naturally the underlying functor
 > forward and backward natural transformations identify the actual action on
 > sections and expose the unit, counit and natural Hom equivalence.
 
-[Module source](../RingedSpaces/Modules/PresheafInverseImageHom.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean)
 
 [Mathematical guide](presheaf-inverse-image-hom.md)
 
@@ -1165,7 +1170,7 @@ noncomputable def RingedSpaces.Modules.PresheafInverseImage.forward {X Y : TopCa
 
 The actual additive Kan-unit map, shown linear over the source ring.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L136) (line 136).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L136) (line 136).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.backward`
 
@@ -1175,7 +1180,7 @@ noncomputable def RingedSpaces.Modules.PresheafInverseImage.backward {X Y : TopC
 
 The native Kan descent, shown linear over every pointwise-colimit ring section.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L165) (line 165).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L165) (line 165).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.backward_smul`
 
@@ -1185,7 +1190,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.backward_smul {X Y : TopCat} (
 
 Kan descent is linear over every coefficient of the actual pointwise Kan ring.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L203) (line 203).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L203) (line 203).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.backward_ι`
 
@@ -1195,7 +1200,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.backward_ι {X Y : TopCat} (f 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L214) (line 214).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L214) (line 214).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.forward_apply`
 
@@ -1205,7 +1210,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.forward_apply {X Y : TopCat} (
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L224) (line 224).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L224) (line 224).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.backward_forward`
 
@@ -1215,7 +1220,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.backward_forward {X Y : TopCat
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L233) (line 233).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L233) (line 233).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.forward_backward`
 
@@ -1225,7 +1230,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.forward_backward {X Y : TopCat
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L256) (line 256).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L256) (line 256).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.forward_naturality_left`
 
@@ -1235,7 +1240,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.forward_naturality_left {X Y :
 
 Naturality in the source module, for complete bundled linear maps.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L278) (line 278).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L278) (line 278).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.forward_naturality_right`
 
@@ -1245,7 +1250,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.forward_naturality_right {X Y 
 
 Naturality in the target module, for complete bundled linear maps.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L303) (line 303).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L303) (line 303).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.homEquiv`
 
@@ -1255,7 +1260,7 @@ noncomputable def RingedSpaces.Modules.PresheafInverseImage.homEquiv {X Y : TopC
 
 The full presheaf-module Hom equivalence for the actual neighborhood-colimit action.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L323) (line 323).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L323) (line 323).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.adjunction`
 
@@ -1265,7 +1270,7 @@ noncomputable def RingedSpaces.Modules.PresheafInverseImage.adjunction {X Y : To
 
 The actual neighborhood-colimit inverse-image functor is left adjoint to native pushforward.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L351) (line 351).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L351) (line 351).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.backward_naturality_left`
 
@@ -1275,7 +1280,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.backward_naturality_left {X Y 
 
 Naturality of descent with respect to the source module.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L371) (line 371).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L371) (line 371).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.backward_naturality_right`
 
@@ -1285,7 +1290,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.backward_naturality_right {X Y
 
 Naturality of descent with respect to the target module.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L381) (line 381).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L381) (line 381).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.unit_app_eq`
 
@@ -1295,7 +1300,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.unit_app_eq {X Y : TopCat} (f 
 
 The actual unit is the additive Kan unit, bundled as a linear map.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L392) (line 392).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L392) (line 392).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.unit_apply`
 
@@ -1305,7 +1310,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.unit_apply {X Y : TopCat} (f :
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L397) (line 397).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L397) (line 397).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.counit_app_eq`
 
@@ -1315,7 +1320,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.counit_app_eq {X Y : TopCat} (
 
 The actual counit is Kan descent of the pushforward identity.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L404) (line 404).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L404) (line 404).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.counit_ι`
 
@@ -1325,7 +1330,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.counit_ι {X Y : TopCat} (f : 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L411) (line 411).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L411) (line 411).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.unit_naturality`
 
@@ -1335,7 +1340,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.unit_naturality {X Y : TopCat}
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L424) (line 424).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L424) (line 424).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.counit_naturality`
 
@@ -1345,7 +1350,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.counit_naturality {X Y : TopCa
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L432) (line 432).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L432) (line 432).
 
 ### `RingedSpaces.Modules.PresheafInverseImage.forward_underlying_additive`
 
@@ -1356,7 +1361,7 @@ theorem RingedSpaces.Modules.PresheafInverseImage.forward_underlying_additive {X
 The forward map is the ordinary additive presheaf transpose, after the accepted
 pointwise-to-native pullback comparison in the inverse direction.
 
-[Source](../RingedSpaces/Modules/PresheafInverseImageHom.lean#L443) (line 443).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/PresheafInverseImageHom.lean#L443) (line 443).
 
 ## Module `RingedSpaces.Modules.SheafChangeOfRings`
 
@@ -1367,7 +1372,7 @@ pointwise-to-native pullback comparison in the inverse direction.
 > map of ring sheaves. Sections of the sheafification are not asserted to be
 > sectionwise tensors.
 
-[Module source](../RingedSpaces/Modules/SheafChangeOfRings.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean)
 
 [Mathematical guide](module-change-of-rings.md)
 
@@ -1379,7 +1384,7 @@ abbrev RingedSpaces.Modules.ringSheaf {C : Type u₁} [CategoryTheory.Category.{
 
 Forget commutativity of a sheaf of rings.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L42) (line 42).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L42) (line 42).
 
 ### `RingedSpaces.Modules.ringSheafMap`
 
@@ -1389,7 +1394,7 @@ def RingedSpaces.Modules.ringSheafMap {C : Type u₁} [CategoryTheory.Category.{
 
 A morphism of the underlying sheaves of rings.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L46) (line 46).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L46) (line 46).
 
 ### `RingedSpaces.Modules.Sheaves`
 
@@ -1399,7 +1404,7 @@ abbrev RingedSpaces.Modules.Sheaves {C : Type u₁} [CategoryTheory.Category.{v�
 
 Sheaves of modules over a sheaf of commutative rings.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L50) (line 50).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L50) (line 50).
 
 ### `RingedSpaces.Modules.moduleSheafification`
 
@@ -1409,7 +1414,7 @@ noncomputable def RingedSpaces.Modules.moduleSheafification {C : Type u₁} [Cat
 
 Native sheafification of module presheaves over the existing ring sheaf.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L56) (line 56).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L56) (line 56).
 
 ### `RingedSpaces.Modules.moduleSheafificationAdjunction`
 
@@ -1419,7 +1424,7 @@ noncomputable def RingedSpaces.Modules.moduleSheafificationAdjunction {C : Type 
 
 The native adjunction governing module sheafification.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L63) (line 63).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L63) (line 63).
 
 ### `RingedSpaces.Modules.tensorSheaf`
 
@@ -1429,7 +1434,7 @@ noncomputable def RingedSpaces.Modules.tensorSheaf {C : Type u₁} [CategoryTheo
 
 The tensor sheaf; arbitrary-open sections need not be pure tensors.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L71) (line 71).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L71) (line 71).
 
 ### `RingedSpaces.Modules.tensorSheafFunctor`
 
@@ -1439,7 +1444,7 @@ noncomputable def RingedSpaces.Modules.tensorSheafFunctor {C : Type u₁} [Categ
 
 The explicit sheaf extension-of-scalars functor.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L75) (line 75).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L75) (line 75).
 
 ### `RingedSpaces.Modules.tensorSheafHomEquiv`
 
@@ -1449,7 +1454,7 @@ noncomputable def RingedSpaces.Modules.tensorSheafHomEquiv {C : Type u₁} [Cate
 
 The natural Hom equivalence for the sheafified tensor presheaf.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L80) (line 80).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L80) (line 80).
 
 ### `RingedSpaces.Modules.tensorSheafHomEquiv_val`
 
@@ -1459,7 +1464,7 @@ theorem RingedSpaces.Modules.tensorSheafHomEquiv_val {C : Type u₁} [CategoryTh
 
 After forgetting the sheaf structure, the Hom equivalence restricts a map to `1 ⊗ m`.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L90) (line 90).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L90) (line 90).
 
 ### `RingedSpaces.Modules.tensorSheafHomEquiv_apply`
 
@@ -1469,7 +1474,7 @@ theorem RingedSpaces.Modules.tensorSheafHomEquiv_apply {C : Type u₁} [Category
 
 The sheaf Hom map evaluates via the actual sheafification unit and `1 ⊗ m`.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L99) (line 99).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L99) (line 99).
 
 ### `RingedSpaces.Modules.tensorSheafHomEquiv_naturality_left`
 
@@ -1479,7 +1484,7 @@ theorem RingedSpaces.Modules.tensorSheafHomEquiv_naturality_left {C : Type u₁}
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L122) (line 122).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L122) (line 122).
 
 ### `RingedSpaces.Modules.tensorSheafHomEquiv_naturality_right`
 
@@ -1489,7 +1494,7 @@ theorem RingedSpaces.Modules.tensorSheafHomEquiv_naturality_right {C : Type u₁
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L140) (line 140).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L140) (line 140).
 
 ### `RingedSpaces.Modules.tensorSheafAdjunction`
 
@@ -1499,7 +1504,7 @@ noncomputable def RingedSpaces.Modules.tensorSheafAdjunction {C : Type u₁} [Ca
 
 Extension by sheafified tensor is left adjoint to restriction of scalars.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L157) (line 157).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L157) (line 157).
 
 ### `RingedSpaces.Modules.tensorSheafAdjunction_unit`
 
@@ -1509,7 +1514,7 @@ theorem RingedSpaces.Modules.tensorSheafAdjunction_unit {C : Type u₁} [Categor
 
 The sheaf unit on `m` is the sheafification of `1 ⊗ m`.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L175) (line 175).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L175) (line 175).
 
 ### `RingedSpaces.Modules.tensorSheafAdjunction_counit`
 
@@ -1519,7 +1524,7 @@ theorem RingedSpaces.Modules.tensorSheafAdjunction_counit {C : Type u₁} [Categ
 
 The sheaf counit extends `b ⊗ n ↦ b • n` through the genuine sheafification unit.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L221) (line 221).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L221) (line 221).
 
 ### `RingedSpaces.Modules.opensWeakSheafify`
 
@@ -1529,7 +1534,7 @@ theorem RingedSpaces.Modules.opensWeakSheafify (X : TopCat) : CategoryTheory.Has
 
 The topological open site supplies native weak sheafification.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L250) (line 250).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L250) (line 250).
 
 ### `RingedSpaces.Modules.opensWEqualsLocallyBijective`
 
@@ -1539,7 +1544,7 @@ theorem RingedSpaces.Modules.opensWEqualsLocallyBijective (X : TopCat) : (Opens.
 
 The topological open site satisfies native local-bijection detection.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L255) (line 255).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L255) (line 255).
 
 ### `RingedSpaces.Modules.opensTensorSheafAdjunction`
 
@@ -1549,7 +1554,7 @@ noncomputable def RingedSpaces.Modules.opensTensorSheafAdjunction {X : TopCat} (
 
 A topological open site discharges every sheaf-level hypothesis at matched universes.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRings.lean#L260) (line 260).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRings.lean#L260) (line 260).
 
 ## Module `RingedSpaces.Modules.SheafChangeOfRingsSymmetry`
 
@@ -1559,7 +1564,7 @@ A topological open site discharges every sheaf-level hypothesis at matched unive
 > to the ordinary sheafified scalar extension. This does not identify sections
 > of a sheafification on an arbitrary open with raw tensor products.
 
-[Module source](../RingedSpaces/Modules/SheafChangeOfRingsSymmetry.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRingsSymmetry.lean)
 
 [Mathematical guide](change-of-rings-symmetry.md)
 
@@ -1571,7 +1576,7 @@ noncomputable def RingedSpaces.Modules.rightSheafFunctor {C : Type u₁} [Catego
 
 Apply right-factor scalar extension before sheafifying.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRingsSymmetry.lean#L33) (line 33).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRingsSymmetry.lean#L33) (line 33).
 
 ### `RingedSpaces.Modules.rightSheafNatIso`
 
@@ -1581,7 +1586,7 @@ noncomputable def RingedSpaces.Modules.rightSheafNatIso {C : Type u₁} [Categor
 
 Sheafification of the right-factor presheaf agrees with scalar extension.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRingsSymmetry.lean#L38) (line 38).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRingsSymmetry.lean#L38) (line 38).
 
 ### `RingedSpaces.Modules.rightSheafificationUnit_naturality`
 
@@ -1591,7 +1596,7 @@ theorem RingedSpaces.Modules.rightSheafificationUnit_naturality {C : Type u₁} 
 
 Tensor symmetry commutes with the actual module-sheafification unit.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRingsSymmetry.lean#L45) (line 45).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRingsSymmetry.lean#L45) (line 45).
 
 ### `RingedSpaces.Modules.opensRightSheafNatIso`
 
@@ -1601,7 +1606,7 @@ noncomputable def RingedSpaces.Modules.opensRightSheafNatIso {X : TopCat} (A B :
 
 The diagonal open site has the existing weak-sheafification witnesses.
 
-[Source](../RingedSpaces/Modules/SheafChangeOfRingsSymmetry.lean#L58) (line 58).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Modules/SheafChangeOfRingsSymmetry.lean#L58) (line 58).
 
 ## Module `RingedSpaces.OpenCover`
 
@@ -1621,7 +1626,7 @@ The diagonal open site has the existing weak-sheafification witnesses.
 > The present universe boundary is diagonal: the source, target and cover index live in
 > `RingedSpace.{u, u}` and `Type u`, respectively.
 
-[Module source](../RingedSpaces/OpenCover.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean)
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover`
 
@@ -1632,7 +1637,7 @@ structure AlgebraicGeometry.RingedSpace.OpenCover (X : RingedSpace) : Type (u + 
 A small indexed open cover of a ringed space. The family may be empty when the source
 is empty, and any member of the family may itself be empty.
 
-[Source](../RingedSpaces/OpenCover.lean#L42) (line 42).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L42) (line 42).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.mk`
 
@@ -1642,7 +1647,7 @@ constructor AlgebraicGeometry.RingedSpace.OpenCover.mk : {X : AlgebraicGeometry.
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../RingedSpaces/OpenCover.lean#L42) (line 42).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L42) (line 42).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.J`
 
@@ -1652,7 +1657,7 @@ abbrev AlgebraicGeometry.RingedSpace.OpenCover.J {X : RingedSpace} (self : X.Ope
 
 The type indexing the members of the cover.
 
-[Source](../RingedSpaces/OpenCover.lean#L46) (line 46).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L46) (line 46).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.U`
 
@@ -1662,7 +1667,7 @@ abbrev AlgebraicGeometry.RingedSpace.OpenCover.U {X : RingedSpace} (self : X.Ope
 
 The indexed open subsets of the underlying topological space.
 
-[Source](../RingedSpaces/OpenCover.lean#L48) (line 48).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L48) (line 48).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.covers`
 
@@ -1672,7 +1677,7 @@ theorem AlgebraicGeometry.RingedSpace.OpenCover.covers {X : RingedSpace} (self :
 
 Each point of the source belongs to some member.
 
-[Source](../RingedSpaces/OpenCover.lean#L50) (line 50).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L50) (line 50).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.obj`
 
@@ -1682,7 +1687,7 @@ abbrev AlgebraicGeometry.RingedSpace.OpenCover.obj {X : RingedSpace} (C : X.Open
 
 The canonical restriction of the ringed space to a cover member.
 
-[Source](../RingedSpaces/OpenCover.lean#L56) (line 56).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L56) (line 56).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.ι`
 
@@ -1692,7 +1697,7 @@ abbrev AlgebraicGeometry.RingedSpace.OpenCover.ι {X : RingedSpace} (C : X.OpenC
 
 The canonical inclusion of a restricted member into the ringed space, as a full morphism.
 
-[Source](../RingedSpaces/OpenCover.lean#L60) (line 60).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L60) (line 60).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.glueMorphisms`
 
@@ -1703,7 +1708,7 @@ noncomputable def AlgebraicGeometry.RingedSpace.OpenCover.glueMorphisms {X : Rin
 Glue pairwise compatible full morphisms from the canonical open restrictions to a target
 ringed space. Compatibility is equality of morphisms from each categorical pullback.
 
-[Source](../RingedSpaces/OpenCover.lean#L302) (line 302).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L302) (line 302).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.ι_glueMorphisms`
 
@@ -1713,7 +1718,7 @@ theorem AlgebraicGeometry.RingedSpace.OpenCover.ι_glueMorphisms {X : RingedSpac
 
 The glued full morphism restricts literally to each prescribed cover-member morphism.
 
-[Source](../RingedSpaces/OpenCover.lean#L518) (line 518).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L518) (line 518).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.ι_glueMorphisms_assoc`
 
@@ -1723,7 +1728,7 @@ theorem AlgebraicGeometry.RingedSpace.OpenCover.ι_glueMorphisms_assoc {X : Ring
 
 The glued full morphism restricts literally to each prescribed cover-member morphism.
 
-[Source](../RingedSpaces/OpenCover.lean#L519) (line 519).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L519) (line 519).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.hom_ext`
 
@@ -1734,7 +1739,7 @@ theorem AlgebraicGeometry.RingedSpace.OpenCover.hom_ext {X : RingedSpace} (C : X
 Full morphisms from a ringed space are equal if their restrictions to every cover member
 are equal, including the induced maps of structure sheaves.
 
-[Source](../RingedSpaces/OpenCover.lean#L531) (line 531).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L531) (line 531).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.existsUnique_gluing`
 
@@ -1745,7 +1750,7 @@ theorem AlgebraicGeometry.RingedSpace.OpenCover.existsUnique_gluing {X : RingedS
 A compatible family of full morphisms on an arbitrary indexed open cover has exactly
 one extension to the original ringed space.
 
-[Source](../RingedSpaces/OpenCover.lean#L545) (line 545).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L545) (line 545).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.pullback_compatibility_iff_intersection`
 
@@ -1757,7 +1762,7 @@ Full-morphism compatibility on the literal pairwise open restrictions is equival
 to compatibility on categorical pullbacks. No choice of pullback model is required
 by a caller using the literal-intersection condition.
 
-[Source](../RingedSpaces/OpenCover.lean#L559) (line 559).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L559) (line 559).
 
 ### `AlgebraicGeometry.RingedSpace.OpenCover.existsUnique_gluing_of_intersection`
 
@@ -1769,7 +1774,7 @@ A family of full morphisms agreeing on literal pairwise intersections extends
 uniquely to the entire ringed space. In particular, this covers empty intersections,
 empty cover members, infinite covers and the empty cover of an empty space.
 
-[Source](../RingedSpaces/OpenCover.lean#L581) (line 581).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/OpenCover.lean#L581) (line 581).
 
 ## Module `RingedSpaces.Restriction`
 
@@ -1780,7 +1785,7 @@ empty cover members, infinite covers and the empty cover of an empty space.
 > maps of structure sheaves. The construction uses the open-immersion lifting property
 > for presheafed spaces and introduces no local-ring assumptions.
 
-[Module source](../RingedSpaces/Restriction.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Restriction.lean)
 
 ### `AlgebraicGeometry.RingedSpace.restrictMap`
 
@@ -1790,7 +1795,7 @@ noncomputable def AlgebraicGeometry.RingedSpace.restrictMap {X : RingedSpace} (U
 
 The canonical full morphism from a smaller open restriction to a larger one.
 
-[Source](../RingedSpaces/Restriction.lean#L49) (line 49).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Restriction.lean#L49) (line 49).
 
 ### `AlgebraicGeometry.RingedSpace.restrictMap_ofRestrict`
 
@@ -1800,7 +1805,7 @@ theorem AlgebraicGeometry.RingedSpace.restrictMap_ofRestrict {X : RingedSpace} (
 
 The restriction map factors the original full open inclusion.
 
-[Source](../RingedSpaces/Restriction.lean#L62) (line 62).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Restriction.lean#L62) (line 62).
 
 ### `AlgebraicGeometry.RingedSpace.restrictMap_ofRestrict_assoc`
 
@@ -1810,7 +1815,7 @@ theorem AlgebraicGeometry.RingedSpace.restrictMap_ofRestrict_assoc {X : RingedSp
 
 The restriction map factors the original full open inclusion.
 
-[Source](../RingedSpaces/Restriction.lean#L63) (line 63).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Restriction.lean#L63) (line 63).
 
 ### `AlgebraicGeometry.RingedSpace.restrictMap_base`
 
@@ -1820,7 +1825,7 @@ theorem AlgebraicGeometry.RingedSpace.restrictMap_base {X : RingedSpace} (U V : 
 
 On points, the restriction map is the canonical inclusion of subtypes.
 
-[Source](../RingedSpaces/Restriction.lean#L69) (line 69).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Restriction.lean#L69) (line 69).
 
 ### `AlgebraicGeometry.RingedSpace.restrictMap_comp`
 
@@ -1830,7 +1835,7 @@ theorem AlgebraicGeometry.RingedSpace.restrictMap_comp {X : RingedSpace} (U V : 
 
 Two successive restrictions compose to the direct restriction.
 
-[Source](../RingedSpaces/Restriction.lean#L78) (line 78).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Restriction.lean#L78) (line 78).
 
 ### `AlgebraicGeometry.RingedSpace.restrictMap_comp_assoc`
 
@@ -1840,7 +1845,7 @@ theorem AlgebraicGeometry.RingedSpace.restrictMap_comp_assoc {X : RingedSpace} (
 
 Two successive restrictions compose to the direct restriction.
 
-[Source](../RingedSpaces/Restriction.lean#L79) (line 79).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Restriction.lean#L79) (line 79).
 
 ### `AlgebraicGeometry.RingedSpace.restrictMap_id`
 
@@ -1850,7 +1855,7 @@ theorem AlgebraicGeometry.RingedSpace.restrictMap_id {X : RingedSpace} (U : Topo
 
 Restricting to the same open is the identity full morphism.
 
-[Source](../RingedSpaces/Restriction.lean#L86) (line 86).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Restriction.lean#L86) (line 86).
 
 ### `AlgebraicGeometry.RingedSpace.isPullback_restrictInf`
 
@@ -1861,7 +1866,7 @@ theorem AlgebraicGeometry.RingedSpace.isPullback_restrictInf {X : RingedSpace} (
 The literal intersection restriction is the full categorical pullback of the two
 canonical inclusions. This also holds for empty or non-covering opens.
 
-[Source](../RingedSpaces/Restriction.lean#L93) (line 93).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpaces/Restriction.lean#L93) (line 93).
 
 ## Module `RingedSpacesExamples`
 
@@ -1871,7 +1876,7 @@ canonical inclusions. This also holds for empty or non-covering opens.
 > intersections, full inverse-image factorization, and inverse-image module
 > presheaf constructions through the public aggregate import.
 
-[Module source](../RingedSpacesExamples.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/RingedSpacesExamples.lean)
 
 ## Module `Test.Axioms`
 
@@ -1879,7 +1884,7 @@ canonical inclusions. This also holds for empty or non-covering opens.
 >
 > Each command reports the transitive axioms of a proof-bearing public declaration or client.
 
-[Module source](../Test/Axioms.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Axioms.lean)
 
 ## Module `Test.ChangeOfRingsSymmetry`
 
@@ -1888,7 +1893,7 @@ canonical inclusions. This also holds for empty or non-covering opens.
 > The coefficient map and site are arbitrary in the main clients. The nonidentity
 > arrow, zero ring, empty site and topological boundary clients exercise the same API.
 
-[Module source](../Test/ChangeOfRingsSymmetry.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean)
 
 ### `Test.ChangeOfRingsSymmetry.arbitraryCoefficients`
 
@@ -1898,7 +1903,7 @@ theorem Test.ChangeOfRingsSymmetry.arbitraryCoefficients {C : Type u₁} [Catego
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L31) (line 31).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L31) (line 31).
 
 ### `Test.ChangeOfRingsSymmetry.balanceForFullMap`
 
@@ -1908,7 +1913,7 @@ theorem Test.ChangeOfRingsSymmetry.balanceForFullMap {C : Type u₁} [CategoryTh
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L36) (line 36).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L36) (line 36).
 
 ### `Test.ChangeOfRingsSymmetry.arbitraryTensorCompatibility`
 
@@ -1918,7 +1923,7 @@ theorem Test.ChangeOfRingsSymmetry.arbitraryTensorCompatibility {C : Type u₁} 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L41) (line 41).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L41) (line 41).
 
 ### `Test.ChangeOfRingsSymmetry.comparisonBothDirections`
 
@@ -1928,7 +1933,7 @@ theorem Test.ChangeOfRingsSymmetry.comparisonBothDirections {C : Type u₁} [Cat
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L47) (line 47).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L47) (line 47).
 
 ### `Test.ChangeOfRingsSymmetry.actualArrowRestriction`
 
@@ -1938,7 +1943,7 @@ theorem Test.ChangeOfRingsSymmetry.actualArrowRestriction {C : Type u₁} [Categ
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L55) (line 55).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L55) (line 55).
 
 ### `Test.ChangeOfRingsSymmetry.arbitraryMorphismNaturality`
 
@@ -1948,7 +1953,7 @@ theorem Test.ChangeOfRingsSymmetry.arbitraryMorphismNaturality {C : Type u₁} [
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L65) (line 65).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L65) (line 65).
 
 ### `Test.ChangeOfRingsSymmetry.rightFunctorLaws`
 
@@ -1958,7 +1963,7 @@ theorem Test.ChangeOfRingsSymmetry.rightFunctorLaws {C : Type u₁} [CategoryThe
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L76) (line 76).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L76) (line 76).
 
 ### `Test.ChangeOfRingsSymmetry.rightIdentityOnPure`
 
@@ -1968,7 +1973,7 @@ theorem Test.ChangeOfRingsSymmetry.rightIdentityOnPure {C : Type u₁} [Category
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L90) (line 90).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L90) (line 90).
 
 ### `Test.ChangeOfRingsSymmetry.unitAndComparison`
 
@@ -1978,7 +1983,7 @@ theorem Test.ChangeOfRingsSymmetry.unitAndComparison {C : Type u₁} [CategoryTh
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L98) (line 98).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L98) (line 98).
 
 ### `Test.ChangeOfRingsSymmetry.homFormulaViaComparison`
 
@@ -1988,7 +1993,7 @@ theorem Test.ChangeOfRingsSymmetry.homFormulaViaComparison {C : Type u₁} [Cate
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L112) (line 112).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L112) (line 112).
 
 ### `Test.ChangeOfRingsSymmetry.emptySiteComparison`
 
@@ -1998,7 +2003,7 @@ noncomputable def Test.ChangeOfRingsSymmetry.emptySiteComparison (A : CategoryTh
 
 The tensor comparison exists on a site with no objects.
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L143) (line 143).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L143) (line 143).
 
 ### `Test.ChangeOfRingsSymmetry.zeroRingPresheaf`
 
@@ -2008,7 +2013,7 @@ noncomputable def Test.ChangeOfRingsSymmetry.zeroRingPresheaf : CategoryTheory.F
 
 A constant zero ring, without a nontriviality assumption.
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L149) (line 149).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L149) (line 149).
 
 ### `Test.ChangeOfRingsSymmetry.zeroRingArrowComparison`
 
@@ -2018,7 +2023,7 @@ noncomputable def Test.ChangeOfRingsSymmetry.zeroRingArrowComparison : RingedSpa
 
 Tensor comparison also exists for zero coefficient rings.
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L153) (line 153).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L153) (line 153).
 
 ### `Test.ChangeOfRingsSymmetry.sheafificationComparisonSquare`
 
@@ -2028,7 +2033,7 @@ theorem Test.ChangeOfRingsSymmetry.sheafificationComparisonSquare {C : Type u₁
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetry.lean#L170) (line 170).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetry.lean#L170) (line 170).
 
 ## Module `Test.ChangeOfRingsSymmetryAxioms`
 
@@ -2039,7 +2044,7 @@ theorem Test.ChangeOfRingsSymmetry.sheafificationComparisonSquare {C : Type u₁
 > own declarations and explicitly prints the public API, critical native endpoints
 > and named consumer axioms.
 
-[Module source](../Test/ChangeOfRingsSymmetryAxioms.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetryAxioms.lean)
 
 ## Module `Test.ChangeOfRingsSymmetryFixture`
 
@@ -2049,7 +2054,7 @@ theorem Test.ChangeOfRingsSymmetry.sheafificationComparisonSquare {C : Type u₁
 > The natural map from the constant integers to this diagram is the identity at
 > `1`, and integer inclusion at `0`.
 
-[Module source](../Test/ChangeOfRingsSymmetryFixture.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetryFixture.lean)
 
 ### `Test.ChangeOfRingsSymmetryFixture.changingRing`
 
@@ -2059,7 +2064,7 @@ noncomputable def Test.ChangeOfRingsSymmetryFixture.changingRing : CategoryTheor
 
 Integer coefficients at object `1`, rational coefficients at object `0`.
 
-[Source](../Test/ChangeOfRingsSymmetryFixture.lean#L29) (line 29).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetryFixture.lean#L29) (line 29).
 
 ### `Test.ChangeOfRingsSymmetryFixture.constantIntegers`
 
@@ -2069,7 +2074,7 @@ noncomputable def Test.ChangeOfRingsSymmetryFixture.constantIntegers : CategoryT
 
 The constant integer source ring presheaf.
 
-[Source](../Test/ChangeOfRingsSymmetryFixture.lean#L87) (line 87).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetryFixture.lean#L87) (line 87).
 
 ### `Test.ChangeOfRingsSymmetryFixture.integerInclusion`
 
@@ -2079,7 +2084,7 @@ noncomputable def Test.ChangeOfRingsSymmetryFixture.integerInclusion : constantI
 
 Identity at object `1` and integer inclusion into rationals at object `0`.
 
-[Source](../Test/ChangeOfRingsSymmetryFixture.lean#L91) (line 91).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetryFixture.lean#L91) (line 91).
 
 ### `Test.ChangeOfRingsSymmetryFixture.nonidentityComponentOnTwo`
 
@@ -2089,7 +2094,7 @@ theorem Test.ChangeOfRingsSymmetryFixture.nonidentityComponentOnTwo : (CategoryT
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetryFixture.lean#L127) (line 127).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetryFixture.lean#L127) (line 127).
 
 ### `Test.ChangeOfRingsSymmetryFixture.integerInclusionNotSurjective`
 
@@ -2099,7 +2104,7 @@ theorem Test.ChangeOfRingsSymmetryFixture.integerInclusionNotSurjective : ¬Func
 
 The coefficient component at object `0` genuinely changes rings: it omits `1/2`.
 
-[Source](../Test/ChangeOfRingsSymmetryFixture.lean#L134) (line 134).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetryFixture.lean#L134) (line 134).
 
 ### `Test.ChangeOfRingsSymmetryFixture.nontrivialTwoCoefficientRestriction`
 
@@ -2109,13 +2114,13 @@ theorem Test.ChangeOfRingsSymmetryFixture.nontrivialTwoCoefficientRestriction (M
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetryFixture.lean#L148) (line 148).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetryFixture.lean#L148) (line 148).
 
 ## Module `Test.ChangeOfRingsSymmetryRoot`
 
 > # Aggregate-import clients of right-factor scalar extension
 
-[Module source](../Test/ChangeOfRingsSymmetryRoot.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetryRoot.lean)
 
 ### `Test.ChangeOfRingsSymmetryRoot.rootComparisonOnArbitraryCoefficient`
 
@@ -2125,7 +2130,7 @@ theorem Test.ChangeOfRingsSymmetryRoot.rootComparisonOnArbitraryCoefficient {C :
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetryRoot.lean#L28) (line 28).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetryRoot.lean#L28) (line 28).
 
 ### `Test.ChangeOfRingsSymmetryRoot.rootNonidentityDiagram`
 
@@ -2135,7 +2140,7 @@ theorem Test.ChangeOfRingsSymmetryRoot.rootNonidentityDiagram (M : RingedSpaces.
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ChangeOfRingsSymmetryRoot.lean#L34) (line 34).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ChangeOfRingsSymmetryRoot.lean#L34) (line 34).
 
 ## Module `Test.InverseImage`
 
@@ -2145,7 +2150,7 @@ theorem Test.ChangeOfRingsSymmetryRoot.rootNonidentityDiagram (M : RingedSpaces.
 > The fixtures also exercise identity, empty carrier and the zero ring, including a
 > nonidentity full map with a constant underlying continuous map.
 
-[Module source](../Test/InverseImage.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/InverseImage.lean)
 
 ### `Test.InverseImage.arbitraryContinuous`
 
@@ -2155,7 +2160,7 @@ theorem Test.InverseImage.arbitraryContinuous (Y : AlgebraicGeometry.RingedSpace
 
 A continuous map alone determines the literal carrier, ring sheaf and entire unit map.
 
-[Source](../Test/InverseImage.lean#L27) (line 27).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/InverseImage.lean#L27) (line 27).
 
 ### `Test.InverseImage.unitOnOpen`
 
@@ -2165,7 +2170,7 @@ theorem Test.InverseImage.unitOnOpen (Y : AlgebraicGeometry.RingedSpace) {T : To
 
 The canonical map's ring homomorphism on each open is the native adjunction unit.
 
-[Source](../Test/InverseImage.lean#L39) (line 39).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/InverseImage.lean#L39) (line 39).
 
 ### `Test.InverseImage.arbitraryFull`
 
@@ -2175,7 +2180,7 @@ theorem Test.InverseImage.arbitraryFull {X Y : AlgebraicGeometry.RingedSpace} (f
 
 An arbitrary full morphism has the mate, both base maps and full factorization.
 
-[Source](../Test/InverseImage.lean#L46) (line 46).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/InverseImage.lean#L46) (line 46).
 
 ### `Test.InverseImage.componentOnOpen`
 
@@ -2186,7 +2191,7 @@ theorem Test.InverseImage.componentOnOpen {X Y : AlgebraicGeometry.RingedSpace} 
 The ring-sheaf equation, the original presheaf component on every open and
 the identity-pushforward transport of the first map.
 
-[Source](../Test/InverseImage.lean#L58) (line 58).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/InverseImage.lean#L58) (line 58).
 
 ### `Test.InverseImage.sectionMaps`
 
@@ -2196,7 +2201,7 @@ theorem Test.InverseImage.sectionMaps {X Y : AlgebraicGeometry.RingedSpace} (f :
 
 Explicit ring homomorphisms on each target/source open, with the identity transport erased.
 
-[Source](../Test/InverseImage.lean#L77) (line 77).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/InverseImage.lean#L77) (line 77).
 
 ### `Test.InverseImage.identity`
 
@@ -2206,7 +2211,7 @@ theorem Test.InverseImage.identity (X : AlgebraicGeometry.RingedSpace) : Categor
 
 Identity morphisms are covered by the same complete full-morphism theorem.
 
-[Source](../Test/InverseImage.lean#L88) (line 88).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/InverseImage.lean#L88) (line 88).
 
 ### `Test.InverseImage.emptyCarrier`
 
@@ -2216,7 +2221,7 @@ theorem Test.InverseImage.emptyCarrier (X : AlgebraicGeometry.RingedSpace) : Cat
 
 The factorization also holds with an empty underlying source.
 
-[Source](../Test/InverseImage.lean#L94) (line 94).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/InverseImage.lean#L94) (line 94).
 
 ### `Test.InverseImage.zeroRingSpace`
 
@@ -2226,7 +2231,7 @@ def Test.InverseImage.zeroRingSpace (T : TopCat) : AlgebraicGeometry.RingedSpace
 
 The constant terminal-ring presheaf is a sheaf, including on empty opens.
 
-[Source](../Test/InverseImage.lean#L101) (line 101).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/InverseImage.lean#L101) (line 101).
 
 ### `Test.InverseImage.zeroRing`
 
@@ -2236,7 +2241,7 @@ theorem Test.InverseImage.zeroRing (T : TopCat) : CategoryTheory.CategoryStruct.
 
 Nonzero rings are not needed for a full factorization.
 
-[Source](../Test/InverseImage.lean#L108) (line 108).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/InverseImage.lean#L108) (line 108).
 
 ### `Test.InverseImage.nonidentityFull`
 
@@ -2246,7 +2251,7 @@ theorem Test.InverseImage.nonidentityFull : ∃ (Y : AlgebraicGeometry.RingedSpa
 
 A genuinely nonidentity full map over a constant map of a two-point discrete space.
 
-[Source](../Test/InverseImage.lean#L116) (line 116).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/InverseImage.lean#L116) (line 116).
 
 ## Module `Test.ModuleChangeOfRings`
 
@@ -2255,7 +2260,7 @@ A genuinely nonidentity full map over a constant map of a two-point discrete spa
 > These tests exercise maps, naturality, units, counits and sectionwise scalars
 > on arbitrary sites, including sites without objects or sections.
 
-[Module source](../Test/ModuleChangeOfRings.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean)
 
 ### `Test.ModuleChangeOfRings.fullRingNaturality`
 
@@ -2265,7 +2270,7 @@ theorem Test.ModuleChangeOfRings.fullRingNaturality {C : Type u₁} [CategoryThe
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L30) (line 30).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L30) (line 30).
 
 ### `Test.ModuleChangeOfRings.nontrivialArrowRestriction`
 
@@ -2275,7 +2280,7 @@ theorem Test.ModuleChangeOfRings.nontrivialArrowRestriction {C : Type u₁} [Cat
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L34) (line 34).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L34) (line 34).
 
 ### `Test.ModuleChangeOfRings.tensorMapArbitraryScalar`
 
@@ -2285,7 +2290,7 @@ theorem Test.ModuleChangeOfRings.tensorMapArbitraryScalar {C : Type u₁} [Categ
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L41) (line 41).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L41) (line 41).
 
 ### `Test.ModuleChangeOfRings.tensorFunctorIdentityComposition`
 
@@ -2295,7 +2300,7 @@ theorem Test.ModuleChangeOfRings.tensorFunctorIdentityComposition {C : Type u₁
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L48) (line 48).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L48) (line 48).
 
 ### `Test.ModuleChangeOfRings.homInverses`
 
@@ -2305,7 +2310,7 @@ theorem Test.ModuleChangeOfRings.homInverses {C : Type u₁} [CategoryTheory.Cat
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L58) (line 58).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L58) (line 58).
 
 ### `Test.ModuleChangeOfRings.homNaturalityLeft`
 
@@ -2315,7 +2320,7 @@ theorem Test.ModuleChangeOfRings.homNaturalityLeft {C : Type u₁} [CategoryTheo
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L70) (line 70).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L70) (line 70).
 
 ### `Test.ModuleChangeOfRings.homNaturalityRight`
 
@@ -2325,7 +2330,7 @@ theorem Test.ModuleChangeOfRings.homNaturalityRight {C : Type u₁} [CategoryThe
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L78) (line 78).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L78) (line 78).
 
 ### `Test.ModuleChangeOfRings.adjunctionUnitOnSections`
 
@@ -2335,7 +2340,7 @@ theorem Test.ModuleChangeOfRings.adjunctionUnitOnSections {C : Type u₁} [Categ
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L87) (line 87).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L87) (line 87).
 
 ### `Test.ModuleChangeOfRings.adjunctionCounitOnScalars`
 
@@ -2345,7 +2350,7 @@ theorem Test.ModuleChangeOfRings.adjunctionCounitOnScalars {C : Type u₁} [Cate
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L93) (line 93).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L93) (line 93).
 
 ### `Test.ModuleChangeOfRings.zeroRingPresheaf`
 
@@ -2355,7 +2360,7 @@ noncomputable def Test.ModuleChangeOfRings.zeroRingPresheaf : CategoryTheory.Fun
 
 A literal zero coefficient ring presheaf, without a nontriviality hypothesis.
 
-[Source](../Test/ModuleChangeOfRings.lean#L120) (line 120).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L120) (line 120).
 
 ### `Test.ModuleChangeOfRings.emptySiteAdjunction`
 
@@ -2365,7 +2370,7 @@ noncomputable def Test.ModuleChangeOfRings.emptySiteAdjunction (A : CategoryTheo
 
 The presheaf adjunction also exists when the indexing category is empty.
 
-[Source](../Test/ModuleChangeOfRings.lean#L134) (line 134).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L134) (line 134).
 
 ### `Test.ModuleChangeOfRings.topologicalAdjunction`
 
@@ -2375,7 +2380,7 @@ noncomputable def Test.ModuleChangeOfRings.topologicalAdjunction {X : TopCat} (A
 
 Topological sites infer both sheafification witnesses without hypotheses.
 
-[Source](../Test/ModuleChangeOfRings.lean#L147) (line 147).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L147) (line 147).
 
 ### `Test.ModuleChangeOfRings.sheafUnitGenerator`
 
@@ -2385,7 +2390,7 @@ theorem Test.ModuleChangeOfRings.sheafUnitGenerator {X : TopCat} (A B : TopCat.S
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L153) (line 153).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L153) (line 153).
 
 ### `Test.ModuleChangeOfRings.sheafCounitGenerator`
 
@@ -2395,7 +2400,7 @@ theorem Test.ModuleChangeOfRings.sheafCounitGenerator {X : TopCat} (A B : TopCat
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L164) (line 164).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L164) (line 164).
 
 ### `Test.ModuleChangeOfRings.sheafHomInverses`
 
@@ -2405,7 +2410,7 @@ theorem Test.ModuleChangeOfRings.sheafHomInverses {X : TopCat} (A B : TopCat.She
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L179) (line 179).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L179) (line 179).
 
 ### `Test.ModuleChangeOfRings.sheafHomOnGenerator`
 
@@ -2415,7 +2420,7 @@ theorem Test.ModuleChangeOfRings.sheafHomOnGenerator {X : TopCat} (A B : TopCat.
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L192) (line 192).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L192) (line 192).
 
 ### `Test.ModuleChangeOfRings.sheafHomNaturalityLeft`
 
@@ -2425,7 +2430,7 @@ theorem Test.ModuleChangeOfRings.sheafHomNaturalityLeft {X : TopCat} (A B : TopC
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L205) (line 205).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L205) (line 205).
 
 ### `Test.ModuleChangeOfRings.sheafHomNaturalityRight`
 
@@ -2435,7 +2440,7 @@ theorem Test.ModuleChangeOfRings.sheafHomNaturalityRight {X : TopCat} (A B : Top
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L214) (line 214).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L214) (line 214).
 
 ### `Test.ModuleChangeOfRings.sheafAdjunctionUnitNaturality`
 
@@ -2445,7 +2450,7 @@ theorem Test.ModuleChangeOfRings.sheafAdjunctionUnitNaturality {X : TopCat} (A B
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L225) (line 225).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L225) (line 225).
 
 ### `Test.ModuleChangeOfRings.sheafAdjunctionCounitNaturality`
 
@@ -2455,7 +2460,7 @@ theorem Test.ModuleChangeOfRings.sheafAdjunctionCounitNaturality {X : TopCat} (A
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRings.lean#L235) (line 235).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L235) (line 235).
 
 ### `Test.ModuleChangeOfRings.emptySpaceAdjunction`
 
@@ -2465,7 +2470,7 @@ noncomputable def Test.ModuleChangeOfRings.emptySpaceAdjunction (A B : TopCat.Sh
 
 The topological adjunction does not require points in the underlying space.
 
-[Source](../Test/ModuleChangeOfRings.lean#L247) (line 247).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRings.lean#L247) (line 247).
 
 ## Module `Test.ModuleChangeOfRingsAxioms`
 
@@ -2476,13 +2481,13 @@ The topological adjunction does not require points in the underlying space.
 > `linter.auxLemma` because those names are unstable; enumerating their actual
 > declarations instead keeps this file warning-free without suppressing the linter.
 
-[Module source](../Test/ModuleChangeOfRingsAxioms.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRingsAxioms.lean)
 
 ## Module `Test.ModuleChangeOfRingsRoot`
 
 > # Aggregate-import change-of-rings client
 
-[Module source](../Test/ModuleChangeOfRingsRoot.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRingsRoot.lean)
 
 ### `Test.ModuleChangeOfRingsRoot.scalarRestriction`
 
@@ -2492,7 +2497,7 @@ theorem Test.ModuleChangeOfRingsRoot.scalarRestriction (A B : CategoryTheory.Fun
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/ModuleChangeOfRingsRoot.lean#L23) (line 23).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRingsRoot.lean#L23) (line 23).
 
 ### `Test.ModuleChangeOfRingsRoot.topologicalSheafAdjunction`
 
@@ -2502,7 +2507,7 @@ noncomputable def Test.ModuleChangeOfRingsRoot.topologicalSheafAdjunction {X : T
 
 The same-site adjunction inferred from topological sheafification witnesses.
 
-[Source](../Test/ModuleChangeOfRingsRoot.lean#L35) (line 35).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/ModuleChangeOfRingsRoot.lean#L35) (line 35).
 
 ## Module `Test.OpenCover`
 
@@ -2510,7 +2515,7 @@ The same-site adjunction inferred from topological sheafification witnesses.
 >
 > These clients use only the public API, without any access to the construction internals.
 
-[Module source](../Test/OpenCover.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/OpenCover.lean)
 
 ### `Test.OpenCover.arbitraryFamily`
 
@@ -2520,7 +2525,7 @@ theorem Test.OpenCover.arbitraryFamily {X Y : AlgebraicGeometry.RingedSpace} (C 
 
 Existence, actual restrictions, and uniqueness for an arbitrary full-morphism family.
 
-[Source](../Test/OpenCover.lean#L26) (line 26).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/OpenCover.lean#L26) (line 26).
 
 ### `Test.OpenCover.emptyCover`
 
@@ -2530,7 +2535,7 @@ def Test.OpenCover.emptyCover (X : AlgebraicGeometry.RingedSpace) : AlgebraicGeo
 
 The empty family covers the empty restriction, even for an arbitrary ringed-space target.
 
-[Source](../Test/OpenCover.lean#L36) (line 36).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/OpenCover.lean#L36) (line 36).
 
 ### `Test.OpenCover.emptyFamily`
 
@@ -2540,7 +2545,7 @@ theorem Test.OpenCover.emptyFamily (X Y : AlgebraicGeometry.RingedSpace) : ∃! 
 
 The ordinary universal property applies to an empty indexed cover of an empty source.
 
-[Source](../Test/OpenCover.lean#L43) (line 43).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/OpenCover.lean#L43) (line 43).
 
 ### `Test.OpenCover.infiniteCover`
 
@@ -2550,7 +2555,7 @@ def Test.OpenCover.infiniteCover (X : AlgebraicGeometry.RingedSpace) : X.OpenCov
 
 An infinite-indexed cover whose members away from zero are empty.
 
-[Source](../Test/OpenCover.lean#L51) (line 51).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/OpenCover.lean#L51) (line 51).
 
 ### `Test.OpenCover.infiniteFamily`
 
@@ -2560,7 +2565,7 @@ theorem Test.OpenCover.infiniteFamily (X Y : AlgebraicGeometry.RingedSpace) (f :
 
 The same full-morphism gluing works for an infinite index type with empty members.
 
-[Source](../Test/OpenCover.lean#L57) (line 57).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/OpenCover.lean#L57) (line 57).
 
 ## Module `Test.PresheafInverseImage`
 
@@ -2568,7 +2573,7 @@ The same full-morphism gluing works for an infinite index type with empty member
 >
 > All equations refer to the actual pointwise Kan extensions and their unit.
 
-[Module source](../Test/PresheafInverseImage.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean)
 
 ### `Test.PresheafInverseImage.simultaneousGenerators`
 
@@ -2578,7 +2583,7 @@ theorem Test.PresheafInverseImage.simultaneousGenerators {X Y : TopCat} (f : X �
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L28) (line 28).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L28) (line 28).
 
 ### `Test.PresheafInverseImage.generatorAction`
 
@@ -2588,7 +2593,7 @@ theorem Test.PresheafInverseImage.generatorAction {X Y : TopCat} (f : X ⟶ Y) (
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L36) (line 36).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L36) (line 36).
 
 ### `Test.PresheafInverseImage.ringRestrictionGenerator`
 
@@ -2598,7 +2603,7 @@ theorem Test.PresheafInverseImage.ringRestrictionGenerator {X Y : TopCat} (f : X
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L45) (line 45).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L45) (line 45).
 
 ### `Test.PresheafInverseImage.moduleRestrictionGenerator`
 
@@ -2608,7 +2613,7 @@ theorem Test.PresheafInverseImage.moduleRestrictionGenerator {X Y : TopCat} (f :
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L53) (line 53).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L53) (line 53).
 
 ### `Test.PresheafInverseImage.restrictionArbitraryScalar`
 
@@ -2618,7 +2623,7 @@ theorem Test.PresheafInverseImage.restrictionArbitraryScalar {X Y : TopCat} (f :
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L61) (line 61).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L61) (line 61).
 
 ### `Test.PresheafInverseImage.restrictionIdentityComposition`
 
@@ -2628,7 +2633,7 @@ theorem Test.PresheafInverseImage.restrictionIdentityComposition {X Y : TopCat} 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L71) (line 71).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L71) (line 71).
 
 ### `Test.PresheafInverseImage.inducedMapGenerator`
 
@@ -2638,7 +2643,7 @@ theorem Test.PresheafInverseImage.inducedMapGenerator {X Y : TopCat} (f : X ⟶ 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L81) (line 81).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L81) (line 81).
 
 ### `Test.PresheafInverseImage.inducedMapArbitraryScalar`
 
@@ -2648,7 +2653,7 @@ theorem Test.PresheafInverseImage.inducedMapArbitraryScalar {X Y : TopCat} (f : 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L89) (line 89).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L89) (line 89).
 
 ### `Test.PresheafInverseImage.inducedMapNaturality`
 
@@ -2658,7 +2663,7 @@ theorem Test.PresheafInverseImage.inducedMapNaturality {X Y : TopCat} (f : X ⟶
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L99) (line 99).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L99) (line 99).
 
 ### `Test.PresheafInverseImage.inducedFunctorLaws`
 
@@ -2668,7 +2673,7 @@ theorem Test.PresheafInverseImage.inducedFunctorLaws {X Y : TopCat} (f : X ⟶ Y
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L108) (line 108).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L108) (line 108).
 
 ### `Test.PresheafInverseImage.actualUnitAction`
 
@@ -2678,7 +2683,7 @@ theorem Test.PresheafInverseImage.actualUnitAction {X Y : TopCat} (f : X ⟶ Y) 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L116) (line 116).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L116) (line 116).
 
 ### `Test.PresheafInverseImage.actualUnitNaturality`
 
@@ -2688,7 +2693,7 @@ theorem Test.PresheafInverseImage.actualUnitNaturality {X Y : TopCat} (f : X ⟶
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L123) (line 123).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L123) (line 123).
 
 ### `Test.PresheafInverseImage.additiveComparisonNatural`
 
@@ -2698,7 +2703,7 @@ theorem Test.PresheafInverseImage.additiveComparisonNatural {X Y : TopCat} (f : 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L130) (line 130).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L130) (line 130).
 
 ### `Test.PresheafInverseImage.additiveComparisonUnit`
 
@@ -2708,7 +2713,7 @@ theorem Test.PresheafInverseImage.additiveComparisonUnit {X Y : TopCat} (f : X �
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImage.lean#L137) (line 137).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImage.lean#L137) (line 137).
 
 ## Module `Test.PresheafInverseImageAxioms`
 
@@ -2719,7 +2724,7 @@ theorem Test.PresheafInverseImage.additiveComparisonUnit {X Y : TopCat} (f : X �
 > public API, all saved clients and selected native dependencies. Enumerating
 > generated declarations avoids unstable `_proof_` references in source text.
 
-[Module source](../Test/PresheafInverseImageAxioms.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageAxioms.lean)
 
 ## Module `Test.PresheafInverseImageConcrete`
 
@@ -2729,7 +2734,7 @@ theorem Test.PresheafInverseImage.additiveComparisonUnit {X Y : TopCat} (f : X �
 > base map and a restriction to a nonempty proper open. Constant presheaves need
 > not satisfy a sheaf condition, even over the empty open.
 
-[Module source](../Test/PresheafInverseImageConcrete.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageConcrete.lean)
 
 ## Module `Test.PresheafInverseImageHom`
 
@@ -2738,7 +2743,7 @@ theorem Test.PresheafInverseImage.additiveComparisonUnit {X Y : TopCat} (f : X �
 > These statements use the actual pointwise Kan ring, the accepted module action,
 > and mathlib's native module pushforward. The source and target are arbitrary.
 
-[Module source](../Test/PresheafInverseImageHom.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHom.lean)
 
 ### `Test.PresheafInverseImageHom.forwardSection`
 
@@ -2748,7 +2753,7 @@ theorem Test.PresheafInverseImageHom.forwardSection {X Y : TopCat} (f : X ⟶ Y)
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHom.lean#L30) (line 30).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHom.lean#L30) (line 30).
 
 ### `Test.PresheafInverseImageHom.descentGenerator`
 
@@ -2758,7 +2763,7 @@ theorem Test.PresheafInverseImageHom.descentGenerator {X Y : TopCat} (f : X ⟶ 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHom.lean#L38) (line 38).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHom.lean#L38) (line 38).
 
 ### `Test.PresheafInverseImageHom.descentArbitraryScalar`
 
@@ -2768,7 +2773,7 @@ theorem Test.PresheafInverseImageHom.descentArbitraryScalar {X Y : TopCat} (f : 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHom.lean#L47) (line 47).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHom.lean#L47) (line 47).
 
 ### `Test.PresheafInverseImageHom.bothHomDirections`
 
@@ -2778,7 +2783,7 @@ theorem Test.PresheafInverseImageHom.bothHomDirections {X Y : TopCat} (f : X ⟶
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHom.lean#L56) (line 56).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHom.lean#L56) (line 56).
 
 ### `Test.PresheafInverseImageHom.sourceNaturality`
 
@@ -2788,7 +2793,7 @@ theorem Test.PresheafInverseImageHom.sourceNaturality {X Y : TopCat} (f : X ⟶ 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHom.lean#L64) (line 64).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHom.lean#L64) (line 64).
 
 ### `Test.PresheafInverseImageHom.targetNaturality`
 
@@ -2798,7 +2803,7 @@ theorem Test.PresheafInverseImageHom.targetNaturality {X Y : TopCat} (f : X ⟶ 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHom.lean#L72) (line 72).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHom.lean#L72) (line 72).
 
 ### `Test.PresheafInverseImageHom.actualUnitSection`
 
@@ -2808,7 +2813,7 @@ theorem Test.PresheafInverseImageHom.actualUnitSection {X Y : TopCat} (f : X ⟶
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHom.lean#L85) (line 85).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHom.lean#L85) (line 85).
 
 ### `Test.PresheafInverseImageHom.actualCounitGenerator`
 
@@ -2818,7 +2823,7 @@ theorem Test.PresheafInverseImageHom.actualCounitGenerator {X Y : TopCat} (f : X
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHom.lean#L90) (line 90).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHom.lean#L90) (line 90).
 
 ### `Test.PresheafInverseImageHom.actualUnitCounitNaturalities`
 
@@ -2828,7 +2833,7 @@ theorem Test.PresheafInverseImageHom.actualUnitCounitNaturalities {X Y : TopCat}
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHom.lean#L100) (line 100).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHom.lean#L100) (line 100).
 
 ### `Test.PresheafInverseImageHom.bothTriangleIdentities`
 
@@ -2838,7 +2843,7 @@ theorem Test.PresheafInverseImageHom.bothTriangleIdentities {X Y : TopCat} (f : 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHom.lean#L115) (line 115).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHom.lean#L115) (line 115).
 
 ### `Test.PresheafInverseImageHom.ordinaryAdditiveTranspose`
 
@@ -2848,7 +2853,7 @@ theorem Test.PresheafInverseImageHom.ordinaryAdditiveTranspose {X Y : TopCat} (f
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHom.lean#L128) (line 128).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHom.lean#L128) (line 128).
 
 ## Module `Test.PresheafInverseImageHomAxioms`
 
@@ -2859,7 +2864,7 @@ theorem Test.PresheafInverseImageHom.ordinaryAdditiveTranspose {X Y : TopCat} (f
 > generated, and names outside their expected namespaces. The audit rejects any
 > transitive axiom other than the three permitted foundational axioms.
 
-[Module source](../Test/PresheafInverseImageHomAxioms.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHomAxioms.lean)
 
 ## Module `Test.PresheafInverseImageHomConcrete`
 
@@ -2869,13 +2874,13 @@ theorem Test.PresheafInverseImageHom.ordinaryAdditiveTranspose {X Y : TopCat} (f
 > nonidentity collapse map and a nonempty proper open. No nonzero statement about
 > its Kan colimits is inferred from the nonzero input sections.
 
-[Module source](../Test/PresheafInverseImageHomConcrete.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHomConcrete.lean)
 
 ## Module `Test.PresheafInverseImageHomRoot`
 
 > # Aggregate-import clients for inverse-image module-presheaf Hom
 
-[Module source](../Test/PresheafInverseImageHomRoot.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHomRoot.lean)
 
 ### `Test.PresheafInverseImageHomRoot.completeHomEquivalence`
 
@@ -2885,7 +2890,7 @@ theorem Test.PresheafInverseImageHomRoot.completeHomEquivalence {X Y : TopCat} (
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHomRoot.lean#L25) (line 25).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHomRoot.lean#L25) (line 25).
 
 ### `Test.PresheafInverseImageHomRoot.actualAdjunction`
 
@@ -2895,7 +2900,7 @@ noncomputable def Test.PresheafInverseImageHomRoot.actualAdjunction {X Y : TopCa
 
 The ordinary aggregate import provides the inverse-image/pushforward adjunction.
 
-[Source](../Test/PresheafInverseImageHomRoot.lean#L30) (line 30).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHomRoot.lean#L30) (line 30).
 
 ### `Test.PresheafInverseImageHomRoot.additiveComparison`
 
@@ -2905,7 +2910,7 @@ theorem Test.PresheafInverseImageHomRoot.additiveComparison {X Y : TopCat} (f : 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageHomRoot.lean#L36) (line 36).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageHomRoot.lean#L36) (line 36).
 
 ## Module `Test.PresheafInverseImageLegacyAggregate`
 
@@ -2914,7 +2919,7 @@ theorem Test.PresheafInverseImageHomRoot.additiveComparison {X Y : TopCat} (f : 
 > This client imports only the aggregate root and independently reconstructs the
 > pointwise neighborhood-colimit action without implementation-private names.
 
-[Module source](../Test/PresheafInverseImageLegacyAggregate.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageLegacyAggregate.lean)
 
 ## Module `Test.PresheafInverseImageNativeDirect`
 
@@ -2923,13 +2928,13 @@ theorem Test.PresheafInverseImageHomRoot.additiveComparison {X Y : TopCat} (f : 
 > The expected action is constructed independently from the exposed neighborhood
 > diagrams and Kan-colimit comparisons, without access to implementation helpers.
 
-[Module source](../Test/PresheafInverseImageNativeDirect.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageNativeDirect.lean)
 
 ## Module `Test.PresheafInverseImageRoot`
 
 > # Aggregate-import clients for inverse-image module presheaves
 
-[Module source](../Test/PresheafInverseImageRoot.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageRoot.lean)
 
 ### `Test.PresheafInverseImageRoot.arbitraryScalarRestriction`
 
@@ -2939,7 +2944,7 @@ theorem Test.PresheafInverseImageRoot.arbitraryScalarRestriction {X Y : TopCat} 
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageRoot.lean#L26) (line 26).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageRoot.lean#L26) (line 26).
 
 ### `Test.PresheafInverseImageRoot.actualUnit`
 
@@ -2949,7 +2954,7 @@ theorem Test.PresheafInverseImageRoot.actualUnit {X Y : TopCat} (f : X ⟶ Y) (R
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageRoot.lean#L36) (line 36).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageRoot.lean#L36) (line 36).
 
 ### `Test.PresheafInverseImageRoot.fullUnderlyingIso`
 
@@ -2959,7 +2964,7 @@ theorem Test.PresheafInverseImageRoot.fullUnderlyingIso {X Y : TopCat} (f : X �
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageRoot.lean#L43) (line 43).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageRoot.lean#L43) (line 43).
 
 ### `Test.PresheafInverseImageRoot.additiveUnitComparison`
 
@@ -2969,7 +2974,7 @@ theorem Test.PresheafInverseImageRoot.additiveUnitComparison {X Y : TopCat} (f :
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/PresheafInverseImageRoot.lean#L50) (line 50).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/PresheafInverseImageRoot.lean#L50) (line 50).
 
 ## Module `Test.Restriction`
 
@@ -2978,7 +2983,7 @@ theorem Test.PresheafInverseImageRoot.additiveUnitComparison {X Y : TopCat} (f :
 > These checks use full ringed-space morphisms through the public restriction, pullback
 > and gluing APIs, without the private lifting implementation.
 
-[Module source](../Test/Restriction.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean)
 
 ### `Test.Restriction.literalInclusion`
 
@@ -2988,7 +2993,7 @@ theorem Test.Restriction.literalInclusion {X : AlgebraicGeometry.RingedSpace} (U
 
 The restriction map is the literal inclusion on underlying points.
 
-[Source](../Test/Restriction.lean#L29) (line 29).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L29) (line 29).
 
 ### `Test.Restriction.identityRestriction`
 
@@ -2998,7 +3003,7 @@ theorem Test.Restriction.identityRestriction {X : AlgebraicGeometry.RingedSpace}
 
 Restriction along an identity inclusion is the identity full morphism.
 
-[Source](../Test/Restriction.lean#L34) (line 34).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L34) (line 34).
 
 ### `Test.Restriction.composedRestriction`
 
@@ -3008,7 +3013,7 @@ theorem Test.Restriction.composedRestriction {X : AlgebraicGeometry.RingedSpace}
 
 The full restriction maps are functorial along chains of inclusions.
 
-[Source](../Test/Restriction.lean#L39) (line 39).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L39) (line 39).
 
 ### `Test.Restriction.fullFactorization`
 
@@ -3018,7 +3023,7 @@ theorem Test.Restriction.fullFactorization {X : AlgebraicGeometry.RingedSpace} (
 
 The factorization is an equality of full morphisms, not merely continuous maps.
 
-[Source](../Test/Restriction.lean#L45) (line 45).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L45) (line 45).
 
 ### `Test.Restriction.sheafComponent`
 
@@ -3029,7 +3034,7 @@ theorem Test.Restriction.sheafComponent {X : AlgebraicGeometry.RingedSpace} (U V
 The factorization agrees even as a presheafed-space morphism, so in particular
 its structure-sheaf transformation is not merely inferred from the carrier map.
 
-[Source](../Test/Restriction.lean#L51) (line 51).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L51) (line 51).
 
 ### `Test.Restriction.literalPullback`
 
@@ -3039,7 +3044,7 @@ theorem Test.Restriction.literalPullback {X : AlgebraicGeometry.RingedSpace} (U 
 
 The literal intersection is a categorical pullback as a full ringed space.
 
-[Source](../Test/Restriction.lean#L58) (line 58).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L58) (line 58).
 
 ### `Test.Restriction.literalProjectionLeft`
 
@@ -3049,7 +3054,7 @@ theorem Test.Restriction.literalProjectionLeft {X : AlgebraicGeometry.RingedSpac
 
 Pullback comparison genuinely identifies both full projections.
 
-[Source](../Test/Restriction.lean#L66) (line 66).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L66) (line 66).
 
 ### `Test.Restriction.literalProjectionRight`
 
@@ -3059,7 +3064,7 @@ theorem Test.Restriction.literalProjectionRight {X : AlgebraicGeometry.RingedSpa
 
 *No declaration docstring is attached in the native record.*
 
-[Source](../Test/Restriction.lean#L73) (line 73).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L73) (line 73).
 
 ### `Test.Restriction.emptyIntersection`
 
@@ -3069,7 +3074,7 @@ theorem Test.Restriction.emptyIntersection {X : AlgebraicGeometry.RingedSpace} (
 
 The empty literal intersection is still a full categorical pullback.
 
-[Source](../Test/Restriction.lean#L79) (line 79).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L79) (line 79).
 
 ### `Test.Restriction.pullbackToLiteral`
 
@@ -3079,7 +3084,7 @@ theorem Test.Restriction.pullbackToLiteral {X Y : AlgebraicGeometry.RingedSpace}
 
 A downstream client converts the categorical condition to literal intersections.
 
-[Source](../Test/Restriction.lean#L89) (line 89).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L89) (line 89).
 
 ### `Test.Restriction.literalToPullback`
 
@@ -3089,7 +3094,7 @@ theorem Test.Restriction.literalToPullback {X Y : AlgebraicGeometry.RingedSpace}
 
 The converse converts literal intersection agreement to categorical compatibility.
 
-[Source](../Test/Restriction.lean#L97) (line 97).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L97) (line 97).
 
 ### `Test.Restriction.uniqueLiteralExtension`
 
@@ -3099,7 +3104,7 @@ theorem Test.Restriction.uniqueLiteralExtension {X Y : AlgebraicGeometry.RingedS
 
 Unique full extension from literal intersection compatibility.
 
-[Source](../Test/Restriction.lean#L105) (line 105).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L105) (line 105).
 
 ### `Test.Restriction.emptyCoverLiteral`
 
@@ -3109,7 +3114,7 @@ theorem Test.Restriction.emptyCoverLiteral (X Y : AlgebraicGeometry.RingedSpace)
 
 Vacuous compatibility glues the empty cover of the empty restriction.
 
-[Source](../Test/Restriction.lean#L112) (line 112).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L112) (line 112).
 
 ### `Test.Restriction.infiniteCoverLiteral`
 
@@ -3119,13 +3124,13 @@ theorem Test.Restriction.infiniteCoverLiteral (X Y : AlgebraicGeometry.RingedSpa
 
 An infinite indexed cover with empty members still uses literal intersections.
 
-[Source](../Test/Restriction.lean#L122) (line 122).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Restriction.lean#L122) (line 122).
 
 ## Module `Test.Root`
 
 > # Aggregate-import client
 
-[Module source](../Test/Root.lean)
+[Module source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Root.lean)
 
 ### `Test.Root.gluing`
 
@@ -3135,7 +3140,7 @@ theorem Test.Root.gluing {X Y : AlgebraicGeometry.RingedSpace} (C : X.OpenCover)
 
 A downstream client needs only the aggregate import for the full universal property.
 
-[Source](../Test/Root.lean#L22) (line 22).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Root.lean#L22) (line 22).
 
 ### `Test.Root.literalGluing`
 
@@ -3145,7 +3150,7 @@ theorem Test.Root.literalGluing {X Y : AlgebraicGeometry.RingedSpace} (C : X.Ope
 
 Aggregate-import client: both compatibility directions and unique literal gluing.
 
-[Source](../Test/Root.lean#L30) (line 30).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Root.lean#L30) (line 30).
 
 ### `Test.Root.inverseImageFull`
 
@@ -3155,7 +3160,7 @@ theorem Test.Root.inverseImageFull {X Y : AlgebraicGeometry.RingedSpace} (f : X 
 
 An aggregate-only client obtains the full factorization for every full morphism.
 
-[Source](../Test/Root.lean#L44) (line 44).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Root.lean#L44) (line 44).
 
 ### `Test.Root.inverseImageContinuous`
 
@@ -3165,7 +3170,7 @@ theorem Test.Root.inverseImageContinuous (Y : AlgebraicGeometry.RingedSpace) {T 
 
 The aggregate also constructs the actual sheaf from an arbitrary continuous map.
 
-[Source](../Test/Root.lean#L50) (line 50).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Root.lean#L50) (line 50).
 
 ### `Test.Root.inverseImageSections`
 
@@ -3175,4 +3180,4 @@ theorem Test.Root.inverseImageSections {X Y : AlgebraicGeometry.RingedSpace} (f 
 
 The aggregate exposes both the full sheaf mate equation and every-open ring maps.
 
-[Source](../Test/Root.lean#L60) (line 60).
+[Source](https://github.com/FormalFrontier/ringed-spaces/blob/958b340be6cf1a0bc86c2c378352664c9f7cca62/Test/Root.lean#L60) (line 60).

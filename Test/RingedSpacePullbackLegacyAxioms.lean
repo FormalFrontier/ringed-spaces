@@ -3,11 +3,13 @@ SPDX-License-Identifier: Apache-2.0
 Authors: Formal Frontier Agents
 -/
 
-import Test.RingedSpacePullbackLegacy
+module
+
+import all Test.RingedSpacePullbackLegacy
 
 set_option warningAsError true
 
-/-! The non-`module` legacy client requires a separate compiled-origin audit. -/
+/-! Compiled-origin audit of the native client with the historical filename. -/
 
 open Lean Elab Command
 

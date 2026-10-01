@@ -1,9 +1,14 @@
-# Source-only API documentation
+# API documentation and historical binding
 
-[`API.md`](API.md) retains native displayed signatures and original nonempty
-docstrings for every generated public declaration in the historical 33-module
-snapshot. It links to the **relative** source path for each recorded declaration
-and module, so it works without a development-history parent or Forgejo session.
+[`API.md`](API.md) is a **navigation- and prose-adjusted historical reference**
+retaining native displayed signatures and original nonempty declaration
+docstrings from a 33-module snapshot. Its 33 module and 281 declaration links
+point to identical old sources at official published commit
+`958b340be6cf1a0bc86c2c378352664c9f7cca62`. This is not a newly
+generated or complete current API page. The original generated Markdown SHA256
+`31abe5d797e950a0d6df5bc08167634abf872964723c03c85616f417972d0ade`
+and the manifest digest apply to the **unmodified** page at that published
+snapshot, not to the hand-adjusted page or the current 64-file library.
 That source carries 282 public source-range names; native doc-gen4 emits 281
 records. `AlgebraicGeometry.RingedSpace.OpenCover.rec` is an automatically
 generated recursor with no native record and is called out, not invented.
@@ -15,11 +20,11 @@ client), 40 `Test` modules and seven mathematical guides. The pasting addition
 brings that tree to 60 Lean files, 42 `Test` modules and nine mathematical guides.
 The constant-closed addition brings this tree to 62 Lean files, 43 `Test` modules
 and ten mathematical guides.
-The non-affineness extension brings this candidate to 64 Lean files, 44 `Test`
+The non-affineness extension brings this tree to 64 Lean files, 44 `Test`
 modules and eleven mathematical guides.
-The historical
-`RingedSpaces` root and `lakefile.toml` have since changed: the old root's
-record and input hashes do **not** describe or certify this whole tree.
+The historical `RingedSpaces` root, `lakefile.toml`, and the module-doc paragraph
+in `RingedSpaces/InverseImage.lean` have since changed: the historical records
+and input hashes do **not** describe or certify this whole tree.
 The other unchanged historical module records remain useful within their
 recorded scope; added APIs are mapped below and in the guides.
 
@@ -45,12 +50,16 @@ The [root-only sheaf client](../Test/SheafInverseImageRoot.lean) and
 exercise these public exports. The two full-morphism `RootCoexist` tests
 retain explicit leaf imports for compatibility, not root-only evidence.
 The [root-only constant-closed client](../Test/ClosedPointHom.lean) exercises
-its export without a leaf import. At that completed constructor checkpoint,
+its export without a leaf import. At that earlier constructor checkpoint,
 `lakefile.toml` listed all 43 shipped tests among its 45 literal defaults,
-including intentional legacy and diagnostic audit clients.
+including historically named and diagnostic audit clients.
 The [root-only non-affineness client](../Test/ClosedPointNonAffine.lean) tests
-arbitrary field and non-field inducing maps. This candidate lists all 44 shipped
-tests among its 46 literal default targets. The historical generated API
+arbitrary field and non-field inducing maps. This tree lists all 44 shipped
+tests among its 46 literal default targets. All four historically named `Legacy`
+files now use `module`: three are public-import clients and one is an import-all
+audit driver. The pullback compiled-origin census imports all of its client to
+include private and generated bodies.
+The historical generated API
 snapshot and manifest above remain unchanged and cover neither new leaf.
 
 ## Reproduction and binding
@@ -74,24 +83,26 @@ source path, revision and loaded source line, then checks every real source
 and configuration byte against the Git object. For a standalone parentless
 checkout without that object it instead checks the exact committed manifest
 and all current committed inputs; a present but wrong object is never treated
-as absent. This 60-file tree changes `RingedSpaces.lean` and
-`lakefile.toml`: their two historical input hashes **do not match** the current
-files. The old manifest does not authenticate this tree; its other 34
-historical inputs remain unchanged. The earlier private-provider native
-generation and 33 actual Git GET comparisons remain **separate historical evidence**, not the source of
-the provider-neutral records used for this Markdown. The renewed historical
-records, commands and compiled-part receipts are separate evidence, not a
-check of the present 60-file tree.
+as absent. In this 64-file tree, `RingedSpaces.lean`, `lakefile.toml`, and
+`RingedSpaces/InverseImage.lean` differ from their historical input hashes;
+the other 33 of 36 historical inputs still match. Before the module-doc edit,
+the predecessor tree had 34 matching inputs; at the official historical snapshot
+all 36 match.
+The old manifest cannot authenticate this tree, its added modules or the
+hand-adjusted API page. Provider-neutral generation records and earlier
+provider checks are separate historical evidence, not a current-tree check.
 
-To reproduce this scoped historical snapshot, use a separate checkout of accepted
-revision `5795205b8da2982b6cd70ea17d2f5ec721ac3819`, which contains the
-matching committed manifest, adapter and generated Markdown, with analyzed
+To reproduce the **unmodified original** historical output, use a separate
+checkout of official published commit
+`958b340be6cf1a0bc86c2c378352664c9f7cca62`, which contains the matching
+original manifest, adapter and generated Markdown, with analyzed
 source revision `fc4581c6b42eb3b2c3dbeb714a8c76c51934d4fb` in its Git
 history. The unchanged adapter explicitly rejects this
-60-file tree's 27 additional Lean files at its complete-inventory
+64-file tree's 31 additional Lean files at its complete-inventory
 guard; do **not** run the following historical 33-module recipe against this
 tree. It is optional for reproducing **only** the frozen historical
-snapshot, not a prerequisite for building or reviewing this tree.
+original output, not this hand-adjusted page and not a prerequisite for
+building or reviewing this tree.
 If reproducing the snapshot separately, first run `lake exe cache get` with
 the pinned toolchain and mathlib revision.
 Build the pinned `leanprover/doc-gen4` Git revision above with the same Lean
@@ -134,8 +145,8 @@ python3 -B scripts/generate_api.py --native-data "$NATIVE_OUTPUT/rendered/doc-da
 python3 -B scripts/test_generate_api.py --native-data "$NATIVE_OUTPUT/rendered/doc-data"
 ```
 
-No private provider, native HTML site or hypothetical public GitHub commit
-is needed to run this source-only recipe. Do not substitute a different origin
+No private provider or native HTML site is needed to run this source-only
+recipe in the published checkout. Do not substitute a different origin
 scheme, revision, source path or source line: the adapter rejects them.
 The source revision must identify the exact analyzed `.lean`/config bytes for
 that historical checkout, even if a later commit only edits documentation.
@@ -151,6 +162,6 @@ No HTML site, mathlib dependency pages, Lean `Init` pages, CDNs, JavaScript,
 fonts or source scans ship in the Markdown release artifact. Their earlier
 native diagnostic output and explicit dependency-link limitations remain
 development evidence rather than a claim about this source-only package.
-The adapted generator acknowledges Atlas's accepted multivariate-polynomials
-and quadratic-algebras recipes and Anchor's original ideal-completion recipe;
-earlier code acceptances alone do not certify this historical generated snapshot.
+The adapted generator credits Atlas's multivariate-polynomials and
+quadratic-algebras adapters and Anchor's original ideal-completion recipe;
+the historical output is not a certification of current library content.

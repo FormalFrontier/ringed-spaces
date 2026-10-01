@@ -69,10 +69,6 @@ lake exe cache get
 lake --wfail build RingedSpaces Test.ClosedPointNonAffine
 ```
 
-The original extension proof and its field/product-of-fields clients are by
-formalization-worker-b, Hive Task
-`hive-request-40fac8331bc1ed1492ac705fb89f7cf61428db64` (UID
-`b18bb779-5865-4528-ab11-797b3b851c0c`). Transfer into this library,
-root-only client adaptation and documentation are by formalization-worker-b,
-Hive Task `hive-request-ddc90d45555f19a6d0ab6788a1d8c8b45693687e`
-(UID `0093a087-b9b9-4f34-9790-557fae2664d3`). See [`NOTICE.md`](../NOTICE.md).
+Formal Frontier contributors developed the original non-affineness proof and
+field/product-of-fields clients, then adapted them for this library with a
+root-only client and this guide. See [`NOTICE.md`](../NOTICE.md).
