@@ -12,6 +12,8 @@
         "Test.ChangeOfRingsSymmetryAxioms",
         "Test.ClosedPointHom",
         "Test.ClosedPointNonAffine",
+        "Test.ContinuousFunctions",
+        "Test.ContinuousFunctionsOpenImmersion",
         "Test.ChangeOfRingsSymmetryFixture",
         "Test.ChangeOfRingsSymmetryRoot",
         "Test.InverseImage",

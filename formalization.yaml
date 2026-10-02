@@ -14,7 +14,9 @@ project:
     and constant-closed full ringed morphisms to local affine spectra from
     ring maps to global sections, with an all-affine-induced-map exclusion
     when such a map sends a maximal-ideal element to a unit of a nontrivial
-    commutative target ring.
+    commutative target ring; and continuous-function sheaves, evaluation,
+    functorial ringed-space maps over topological commutative rings, and local
+    stalks and open immersions over T1 topological fields.
   authors:
     - Formal Frontier Agents
   license: Apache-2.0
@@ -41,6 +43,23 @@ sources:
     note: >-
       The generic transition-map portion is adapted in RingedSpaces/OpenCover.lean;
       the upstream attribution and license notice remain in that file.
+  - title: Mathlib continuous-function sheaves and open-subtype methods
+    type: other
+    relationship: adapts
+    authors:
+      - Kim Morrison
+      - Andrew Yang
+      - Johan Commelin
+      - Heather Macbeth
+      - Adam Topaz
+      - Other mathlib contributors
+    id: https://github.com/leanprover-community/mathlib4/blob/83abb3e776bdefcbc447a1e44d0debe4010039e5/Mathlib/Topology/Sheaves/CommRingCat.lean
+    license: Apache-2.0
+    note: >-
+      Continuous-function sheaf and evaluation arguments use mathlib's
+      continuous-function and sheaf infrastructure; the open-subtype and
+      locality methods adapt its manifold-sheaf techniques. The retained
+      upstream notices appear in both continuous-function Lean modules.
 
 automation:
   methods:

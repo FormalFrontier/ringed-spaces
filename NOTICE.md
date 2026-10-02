@@ -23,6 +23,18 @@ external dependency, not copied into this repository; their original mathlib
 authorship remains with the upstream project. In particular, the native
 varying-ring module-colimit API used here credits Joël Riou in mathlib.
 
+`RingedSpaces/ContinuousFunctions.lean` and
+`RingedSpaces/ContinuousFunctions/OpenImmersion.lean` retain the upstream
+copyright notices for Kim Morrison (2020) and Heather Macbeth (2023),
+their Apache-2.0 notice and adaptation credit. The sheaf and continuous-function
+methods build on work by Kim Morrison, Andrew Yang, Johan Commelin, Adam Topaz
+and other mathlib contributors; the stalk and open-subtype approaches adapt
+Heather Macbeth's methods. Formal Frontier contributors developed and extended
+the reusable mathematical proofs. Transfer into this library, root-only
+clients and the unified guide are separate contributions, not claims to have
+originated the upstream mathematics or to own its copyright. Exact authors,
+revisions and review decisions belong in development history, not this API.
+
 The repository's root `LICENSE` is the complete Apache-2.0 license text.
 `formalization.yaml` uses the publicly distributed Apache-2.0 v0.4
 formalization.yaml schema and template as a metadata format, not as copied
@@ -59,6 +71,7 @@ remain in the project's development history.
 | Pullback coherence and arbitrary-square mates | Source prototypes preceded the original reusable proof and client; a separate contributor transferred the accepted mathematics into this library, prepared public-root examples and documentation. A transfer does not claim original authorship. |
 | Square-mate horizontal and vertical pasting | The original proof and clients were developed for a reusable incubator module; a separate destination contribution adapted the library module, fixture, root client and guide without claiming original proof authorship. |
 | Constant-closed full morphisms and all-affine-map non-affineness | Original constructor, extension proofs and clients are distinguished from their subsequent destination transfers, public-root client adaptations and guides. |
+| Continuous-function sheaves, evaluation, ringed and locally ringed-space maps, and open immersions | Mathlib contributors' sheaf and open-subtype methods are retained and credited in both transferred modules. Formal Frontier contributors supplied the mathematical extensions; the destination transfer, root-only clients and standalone guide are distinct roles. No transfer claims original proof authorship or independent approval. |
 | Documentation, license and native API adaptation | Documentation and native-module migration have separate contributors from the mathematical originals. Anchor originated the ideal-completion doc-generation recipe; Atlas adapted it for multivariate polynomials and quadratic algebras and maintains the project adapter. Independent reviewers verify exact candidate revisions but do not become their original authors. |
 
 The historical [`docs/API.md`](docs/API.md) links to the matching official

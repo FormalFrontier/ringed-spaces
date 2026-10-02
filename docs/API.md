@@ -5,7 +5,7 @@ public declarations), with their original nonempty docstrings and explicit
 missing-doc accounting. Source links below are hand-adjusted to the identical
 files at the official published commit
 `958b340be6cf1a0bc86c2c378352664c9f7cca62`; this page is **not** a new
-native generation or an inventory of the current 64-file library. The original
+native generation or an inventory of the current library. The original
 generated Markdown SHA256 is
 `31abe5d797e950a0d6df5bc08167634abf872964723c03c85616f417972d0ade`;
 its [manifest](api-manifest.json) and generator describe that **unmodified**

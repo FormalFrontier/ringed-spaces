@@ -8,7 +8,7 @@ point to identical old sources at official published commit
 generated or complete current API page. The original generated Markdown SHA256
 `31abe5d797e950a0d6df5bc08167634abf872964723c03c85616f417972d0ade`
 and the manifest digest apply to the **unmodified** page at that published
-snapshot, not to the hand-adjusted page or the current 64-file library.
+snapshot, not to the hand-adjusted page or the current 68-file library.
 That source carries 282 public source-range names; native doc-gen4 emits 281
 records. `AlgebraicGeometry.RingedSpace.OpenCover.rec` is an automatically
 generated recursor with no native record and is called out, not invented.
@@ -20,8 +20,11 @@ client), 40 `Test` modules and seven mathematical guides. The pasting addition
 brings that tree to 60 Lean files, 42 `Test` modules and nine mathematical guides.
 The constant-closed addition brings this tree to 62 Lean files, 43 `Test` modules
 and ten mathematical guides.
-The non-affineness extension brings this tree to 64 Lean files, 44 `Test`
+The non-affineness extension brought the previous tree to 64 Lean files, 44 `Test`
 modules and eleven mathematical guides.
+The continuous-function transfer adds two library leaves, two root-only
+clients and one guide: this tree has 68 Lean files, 46 `Test` modules and
+twelve mathematical guides.
 The historical `RingedSpaces` root, `lakefile.toml`, and the module-doc paragraph
 in `RingedSpaces/InverseImage.lean` have since changed: the historical records
 and input hashes do **not** describe or certify this whole tree.
@@ -44,6 +47,8 @@ Direct imports and their guides give narrower dependencies:
 | [`RingedSpaces.Modules.BaseChangePasting`](../RingedSpaces/Modules/BaseChangePasting.lean) | `pushPull_pastePullback`, `pushPull_pastePushforward` | [`ringed-module-base-change-pasting.md`](ringed-module-base-change-pasting.md) |
 | [`RingedSpaces.ClosedPointHom`](../RingedSpaces/ClosedPointHom.lean) | `hom`, `hom_top_transport`, `ext`, `equiv`, `comp_hom` in `AlgebraicGeometry.RingedSpace.ClosedPointHom` | [`closed-point-hom.md`](closed-point-hom.md) |
 | [`RingedSpaces.ClosedPointNonAffine`](../RingedSpaces/ClosedPointNonAffine.lean) | `hom_ne_sheafedSpaceMap_of_isUnit`, `not_exists_sheafedSpaceMap_of_isUnit` in `AlgebraicGeometry.RingedSpace.ClosedPointHom` | [`closed-point-nonaffine.md`](closed-point-nonaffine.md) |
+| [`RingedSpaces.ContinuousFunctions`](../RingedSpaces/ContinuousFunctions.lean) | `ContinuousFunctions.sheaf`, `evalHom`, `ringedSpaceMap`, `locallyRingedSpaceMap`, `forget_locallyRingedSpaceMap` | [`continuous-functions.md`](continuous-functions.md) |
+| [`RingedSpaces.ContinuousFunctions.OpenImmersion`](../RingedSpaces/ContinuousFunctions/OpenImmersion.lean) | `ContinuousFunctions.locallyRingedSpaceMap_isOpenImmersion`, `restrictLocallyRingedSpaceIso` and both `*_ofRestrict` equalities | [`continuous-functions.md`](continuous-functions.md) |
 
 The [root-only sheaf client](../Test/SheafInverseImageRoot.lean) and
 [root-only full-morphism client](../Test/RingedSpaceFullMorphismRoot.lean)
@@ -54,13 +59,16 @@ its export without a leaf import. At that earlier constructor checkpoint,
 `lakefile.toml` listed all 43 shipped tests among its 45 literal defaults,
 including historically named and diagnostic audit clients.
 The [root-only non-affineness client](../Test/ClosedPointNonAffine.lean) tests
-arbitrary field and non-field inducing maps. This tree lists all 44 shipped
-tests among its 46 literal default targets. All four historically named `Legacy`
+arbitrary field and non-field inducing maps. The two new
+[general-ring](../Test/ContinuousFunctions.lean) and
+[open-immersion](../Test/ContinuousFunctionsOpenImmersion.lean) clients also
+import only `RingedSpaces`. This tree lists all 46 shipped tests among its
+48 literal default targets. All four historically named `Legacy`
 files now use `module`: three are public-import clients and one is an import-all
 audit driver. The pullback compiled-origin census imports all of its client to
 include private and generated bodies.
 The historical generated API
-snapshot and manifest above remain unchanged and cover neither new leaf.
+snapshot and manifest above remain unchanged and cover none of the new leaves.
 
 ## Reproduction and binding
 
@@ -83,7 +91,7 @@ source path, revision and loaded source line, then checks every real source
 and configuration byte against the Git object. For a standalone parentless
 checkout without that object it instead checks the exact committed manifest
 and all current committed inputs; a present but wrong object is never treated
-as absent. In this 64-file tree, `RingedSpaces.lean`, `lakefile.toml`, and
+as absent. In this 68-file tree, `RingedSpaces.lean`, `lakefile.toml`, and
 `RingedSpaces/InverseImage.lean` differ from their historical input hashes;
 the other 33 of 36 historical inputs still match. Before the module-doc edit,
 the predecessor tree had 34 matching inputs; at the official historical snapshot
@@ -102,7 +110,7 @@ A clean official checkout therefore uses the adapter's committed-manifest
 binding for the missing analyzed object, as described above. The identifier
 still binds the historical source bytes; it is not a fetchable ancestor.
 The unchanged adapter explicitly rejects this
-64-file tree's 31 additional Lean files at its complete-inventory
+68-file tree's 35 additional Lean files at its complete-inventory
 guard; do **not** run the following historical 33-module recipe against this
 tree. It is optional for reproducing **only** the frozen historical
 original output, not this hand-adjusted page and not a prerequisite for

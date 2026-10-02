@@ -4,6 +4,7 @@ defaultTargets = [
   "RingedSpaces", "RingedSpacesExamples",
   "Test.Axioms", "Test.ChangeOfRingsSymmetry", "Test.ChangeOfRingsSymmetryAxioms",
   "Test.ClosedPointHom", "Test.ClosedPointNonAffine",
+  "Test.ContinuousFunctions", "Test.ContinuousFunctionsOpenImmersion",
   "Test.ChangeOfRingsSymmetryFixture", "Test.ChangeOfRingsSymmetryRoot",
   "Test.InverseImage", "Test.ModuleChangeOfRings", "Test.ModuleChangeOfRingsAxioms",
   "Test.ModuleChangeOfRingsRoot", "Test.OpenCover", "Test.PresheafInverseImage",

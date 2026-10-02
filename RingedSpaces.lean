@@ -9,6 +9,8 @@ public import RingedSpaces.OpenCover
 public import RingedSpaces.InverseImage
 public import RingedSpaces.ClosedPointHom
 public import RingedSpaces.ClosedPointNonAffine
+public import RingedSpaces.ContinuousFunctions
+public import RingedSpaces.ContinuousFunctions.OpenImmersion
 public import RingedSpaces.Modules.PresheafChangeOfRings
 public import RingedSpaces.Modules.PresheafInverseImage
 public import RingedSpaces.Modules.PresheafInverseImageHom
@@ -45,4 +47,9 @@ It also constructs full morphisms to the spectrum of a commutative local ring
 from arbitrary maps to global sections, with constant closed-point base.
 When such a map sends a maximal-ideal element to a unit in a nontrivial
 commutative ring, the full morphism differs from every affine-induced map.
+It provides the sheaf of continuous functions into a topological commutative ring,
+stalk evaluation and full ringed-space maps induced by continuous maps,
+with contravariant maps on stalks.
+For T1 topological fields, its stalks are local and those maps are locally ringed;
+open embeddings give open immersions and canonical open-subtype restriction comparisons.
 -/

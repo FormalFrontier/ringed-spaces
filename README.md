@@ -24,6 +24,10 @@ sections.
 For a nontrivial commutative codomain, if such a map sends a maximal-ideal
 element to a unit, the new extension proves that its full morphism differs
 from **every** affine-induced map, not merely the one induced by the given map.
+Continuous functions into a topological commutative ring additionally define a
+ringed space, with stalk evaluation and full morphisms induced by continuous
+maps. Over a T1 topological field, the stalks are local and open embeddings
+induce open immersions with a canonical open-subtype restriction comparison.
 
 ## Headline results
 
@@ -36,6 +40,11 @@ from **every** affine-induced map, not merely the one induced by the given map.
   space with literal source carrier and the native inverse-image sheaf; this is
   not a categorical ringed-space fiber product. See
   [`InverseImage`](RingedSpaces/InverseImage.lean) and [the API](#api).
+- **Continuous-function spaces.** General topological commutative rings give
+  stalk evaluation and functorial full ringed-space maps; T1 topological fields
+  give local stalks, functorial locally ringed-space maps and open immersions
+  from open embeddings. See the [standalone guide](docs/continuous-functions.md)
+  and [root-only clients](Test/ContinuousFunctions.lean).
 - **Module scalar extension.** Full natural coefficient maps give tensor
   presheaves, sheafified scalar extension and a right-factor tensor symmetry,
   with genuine sheafification rather than raw-tensor sections on arbitrary
@@ -66,6 +75,13 @@ Import `RingedSpaces.Restriction` for open-restriction maps and the intersection
 pullback; import `RingedSpaces.OpenCover` for the gluing bridge; import
 `RingedSpaces.InverseImage` for inverse-image factorization, or use the aggregate
 `RingedSpaces`.
+Import `RingedSpaces.ContinuousFunctions` for the general-ring sheaf,
+evaluation, precomposition and ringed-space maps; import
+`RingedSpaces.ContinuousFunctions.OpenImmersion` for the field-valued locally
+ringed-space open-immersion and restriction API, or use `RingedSpaces` for both.
+The [guide](docs/continuous-functions.md) details the hypotheses and both
+[general](Test/ContinuousFunctions.lean) and
+[open-immersion](Test/ContinuousFunctionsOpenImmersion.lean) root-only clients.
 Import `RingedSpaces.Modules.PresheafInverseImage` for inverse-image module
 presheaves along continuous maps; see `docs/presheaf-inverse-image.md` for the
 actual coefficient ring, generator, functor, unit and additive comparison APIs.
@@ -296,22 +312,30 @@ Use the repository's `lean-toolchain` (`leanprover/lean4:v4.34.0-rc2`) and
 
 ```sh
 lake exe cache get
-lake --wfail build
+lake build
 ```
 
-The 46 literal `defaultTargets` include the aggregate library, stored
-examples and all 44 shipped `Test` modules: direct, concrete, audit,
+The continuous-function open-immersion implementation and client currently emit
+three nonfatal proposition-instance style suggestions (`haveI` versus `have`).
+The checked build retains these diagnostics. `--wfail`, also shown in some
+specialist guides, is an optional stricter warning check, not the successful
+default-build recipe for this version; it can fail on those known suggestions.
+No linter is disabled by the commands above.
+
+The 48 literal `defaultTargets` include the aggregate library, stored
+examples and all 46 shipped `Test` modules: direct, concrete, audit,
 root-only, root-plus-direct coexistence, and clients with historical filenames.
 `Test.SheafInverseImageRoot`, `Test.RingedSpaceFullMorphismRoot`,
 `Test.RingedSpaceBaseChange`, `Test.ClosedPointHom` and
-`Test.ClosedPointNonAffine` import **only** the public aggregate as their
+`Test.ClosedPointNonAffine`, `Test.ContinuousFunctions` and
+`Test.ContinuousFunctionsOpenImmersion` import **only** the public aggregate as their
 project import. The `RootCoexist` clients retain explicit leaf imports as
 compatibility checks; the pasting client imports the public root plus the
 explicit non-Cartesian fixture `Test.RingedSpaceBaseChange`. The four
 historically named `Legacy` files are native module-system clients, not tests
 of non-module import compatibility.
 
-Use `lake --wfail build RingedSpacesExamples` to check just the examples after
+Use `lake build RingedSpacesExamples` to check just the examples after
 the cache fetch. `module`/`public import` is required for new downstream files;
 `import all` appears only in the audit drivers to inspect intentionally private
 declarations. Ordinary clients need only the documented public imports.
@@ -357,9 +381,11 @@ of native Lean signatures and docstrings for 33 modules at source revision
 `fc4581c6b42eb3b2c3dbeb714a8c76c51934d4fb` with doc-gen4
 `97d4ecdfc8e09e7f511724c25e303d448de6a3db`: 282 loaded public source
 names and 281 native records. The previously published full-morphism snapshot
-had 55 Lean files; the next published snapshot had 58; this tree has 64,
+had 55 Lean files; the next published snapshot had 58; the preceding tree had 64,
 including the pasting leaf, public-root-plus-fixture client, constant-closed leaf
-and root-only client, and the non-affineness leaf and root-only client. In particular,
+and root-only client, and the non-affineness leaf and root-only client.
+The continuous-function transfer adds two library leaves and two root-only
+clients: this tree has 68 Lean files. In particular,
 the historical snapshot does **not** authenticate the present root,
 `lakefile.toml` or whole source. [`docs/README.md`](docs/README.md) gives
 the historical binding boundary and direct API map for the added sheaf and
@@ -367,12 +393,13 @@ full-morphism modules. The seven earlier mathematical guides explain their
 constructions and proofs. No JavaScript, dependency website, fonts or
 downloaded upstream assets are shipped. The historical API snapshot is not
 a certification of the present tree or a source-coverage decision.
-The coherence/base-change, pasting, constant-closed and non-affineness guides
+The coherence/base-change, pasting, constant-closed, non-affineness and
+continuous-function guides
 and their respective clients describe the added API; they are **not** part of
 the historical 33-module snapshot. The snapshot's original manifest digest
 applies to the unmodified output at the matching official published revision
 `958b340be6cf1a0bc86c2c378352664c9f7cca62`, not to the prose/link edits
-or to the present 64-file tree. See [`docs/README.md`](docs/README.md) for its
+or to the present 68-file tree. See [`docs/README.md`](docs/README.md) for its
 reproduction boundary and current direct-import map.
 
 On a 15 GiB Linux worker with `LEAN_NUM_THREADS=1`, a matching cache fetch
