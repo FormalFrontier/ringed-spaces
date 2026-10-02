@@ -15,7 +15,6 @@ direct-image composition. No Cartesian, flatness, or invertibility hypothesis
 is imposed on the square or on the comparison.
 -/
 
-set_option maxHeartbeats 1000000
 set_option maxRecDepth 2048
 set_option backward.isDefEq.respectTransparency false
 set_option warningAsError true

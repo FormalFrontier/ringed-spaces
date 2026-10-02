@@ -41,6 +41,8 @@ end Test.Root
 
 namespace Test.Root
 
+universe u
+
 /-- An aggregate-only client obtains the full factorization for every full morphism. -/
 theorem inverseImageFull {X Y : RingedSpace.{u, u}} (f : X ⟶ Y) :
     RingedSpace.toInverseImage f ≫ RingedSpace.ofInverseImage Y f.hom.base = f ∧

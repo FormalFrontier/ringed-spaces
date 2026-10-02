@@ -47,7 +47,8 @@ noncomputable def comparison :
 theorem forwardOpen (M : SheafOfModules.{u} (ringSheaf X))
     (U : (Opens Y.carrier)ᵒᵖ)
     (m : ((SheafOfModules.restrictScalars (ringSheafMap f) ⋙
-      RingedSpaces.Modules.SheafInverseImage.pushforwardFunctor f.hom.base Y.sheaf).obj M).val.obj U) :
+      RingedSpaces.Modules.SheafInverseImage.pushforwardFunctor f.hom.base Y.sheaf).obj M).val.obj
+        U) :
     ((comparison f).hom.app M).val.app U m = m :=
   restrictPushforwardIso_hom_app f M U m
 

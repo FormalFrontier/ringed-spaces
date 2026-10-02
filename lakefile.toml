@@ -3,7 +3,7 @@ version = "0.1.0"
 defaultTargets = [
   "RingedSpaces", "RingedSpacesExamples",
   "Test.Axioms", "Test.ChangeOfRingsSymmetry", "Test.ChangeOfRingsSymmetryAxioms",
-  "Test.ClosedPointHom", "Test.ClosedPointNonAffine",
+  "Test.ClosedPointHom", "Test.ClosedPointNonAffine", "Test.FiniteRegularityFunctions",
   "Test.ContinuousFunctions", "Test.ContinuousFunctionsOpenImmersion",
   "Test.ChangeOfRingsSymmetryFixture", "Test.ChangeOfRingsSymmetryRoot",
   "Test.InverseImage", "Test.ModuleChangeOfRings", "Test.ModuleChangeOfRingsAxioms",
@@ -24,6 +24,12 @@ defaultTargets = [
   "Test.SheafInverseImageLegacy", "Test.SheafInverseImageRoot",
   "Test.SheafInverseImageRootCoexist",
 ]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+weak.linter.style.header = false
 
 [[require]]
 name = "mathlib"

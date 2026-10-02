@@ -17,7 +17,10 @@ project:
     commutative target ring; and continuous-function sheaves, evaluation,
     functorial maps and open immersions of ringed spaces over topological
     commutative rings, with local stalks and corresponding locally ringed-space
-    maps and open immersions over T1 topological fields.
+    maps and open immersions over T1 topological fields; and finite-order
+    chart-dependent scalar-function sheaves over nontrivially normed fields,
+    with local stalks, smooth-to-finite comparison and a natural order-zero
+    isomorphism to the existing continuous-function sheaf.
   authors:
     - Formal Frontier Agents
   license: Apache-2.0
@@ -61,6 +64,31 @@ sources:
       continuous-function and sheaf infrastructure; the open-subtype and
       locality methods adapt its manifold-sheaf techniques. The retained
       upstream notices appear in both continuous-function Lean modules.
+  - title: Mathlib smooth scalar-function sheaf
+    type: other
+    relationship: adapts
+    authors:
+      - Heather Macbeth
+      - Adam Topaz
+      - Other mathlib contributors
+    id: https://github.com/leanprover-community/mathlib4/blob/83abb3e776bdefcbc447a1e44d0debe4010039e5/Mathlib/Geometry/Manifold/Sheaf/Smooth.lean
+    license: Apache-2.0
+    note: >-
+      The finite-order scalar-function sheaf adapts mathlib's smooth sheaf
+      construction. Its comparison maps reuse the
+      pinned mathlib smooth scalar sheaf and the library's existing continuous
+      scalar sheaf instead of replacing either endpoint. Original notices
+      are preserved in the finite-order Lean module.
+  - title: Mathlib smooth-manifold local scalar stalks
+    type: other
+    relationship: adapts
+    authors:
+      - Heather Macbeth
+    id: https://github.com/leanprover-community/mathlib4/blob/83abb3e776bdefcbc447a1e44d0debe4010039e5/Mathlib/Geometry/Manifold/Sheaf/LocallyRingedSpace.lean
+    license: Apache-2.0
+    note: >-
+      The finite-order stalk unit criterion adapts the local reciprocal
+      argument for smooth scalar germs, without an IsManifold assumption.
 
 automation:
   methods:
@@ -89,7 +117,11 @@ fidelity:
     a maximal-ideal element must be a unit. It compares actual full morphisms
     and does not assert zero-ring or locally ringed/scheme conclusions.
     The gluing and inverse-image module constructions retain their declared
-    diagonal universe boundaries.
+    diagonal universe boundaries. Finite-regularity scalar sections use a
+    chosen charted-space structure and finite natural order, with scalar
+    field and carrier in the same Lean universe. No chart-independence,
+    analytic-order output or general precomposition claim is made; neither
+    an IsManifold instance nor an inhabitant of the carrier is required.
 
 acknowledgements: >-
   Built on mathlib. The adapted gluing code retains Andrew Yang's attribution;

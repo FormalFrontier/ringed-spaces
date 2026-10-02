@@ -10,6 +10,7 @@ public import RingedSpaces.InverseImage
 public import RingedSpaces.ClosedPointHom
 public import RingedSpaces.ClosedPointNonAffine
 public import RingedSpaces.ContinuousFunctions
+public import RingedSpaces.FiniteRegularityFunctions
 public import RingedSpaces.ContinuousFunctions.OpenImmersion
 public import RingedSpaces.Modules.PresheafChangeOfRings
 public import RingedSpaces.Modules.PresheafInverseImage
@@ -52,4 +53,7 @@ stalk evaluation and full ringed-space maps induced by continuous maps,
 with contravariant maps on stalks.
 For T1 topological fields, its stalks are local and those maps are locally ringed;
 open embeddings give open immersions and canonical open-subtype restriction comparisons.
+For finite natural regularity orders, it also provides scalar-function sheaves on
+charted spaces, with smooth-to-finite section weakening and a zero-order comparison
+to the continuous-function sheaf.
 -/

@@ -17,7 +17,6 @@ released ringed-spaces library, and `A` is its actual adjunction to `R`.
 The canonical comparisons are natural isomorphisms, not equalities of functors.
 -/
 
-set_option maxHeartbeats 1000000
 set_option maxRecDepth 2048
 set_option warningAsError true
 
@@ -123,7 +122,9 @@ theorem pushforwardComp_assoc (f : X ⟶ Y) (g : Y ⟶ Z) (h : Z ⟶ W) :
     isoWhiskerLeft (R f) (pushforwardComp g h) ≪≫ pushforwardComp f (g ≫ h) =
       (associator (R f) (R g) (R h)).symm ≪≫
         isoWhiskerRight (pushforwardComp f g) (R h) ≪≫
-          pushforwardComp (f ≫ g) h := rfl
+          pushforwardComp (f ≫ g) h :=
+  SheafOfModules.pushforward_assoc (RingedSpacePushforward.structureMap h)
+    (RingedSpacePushforward.structureMap g) (RingedSpacePushforward.structureMap f)
 
 /-- Right unit law for inverse-image composition. -/
 theorem pullbackComp_rightUnit (f : X ⟶ Y) :

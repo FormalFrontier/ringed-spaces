@@ -15,7 +15,6 @@ The functor comparisons are the canonical composition isomorphisms of the
 actual sheafified inverse image and full direct image.
 -/
 
-set_option maxHeartbeats 1000000
 set_option maxRecDepth 2048
 set_option backward.isDefEq.respectTransparency false
 set_option warningAsError true

@@ -29,6 +29,13 @@ maps**, not just their maps of underlying spaces.
   For a T1 topological field `K` with a topological division-ring structure,
   its stalks are local and the maps and open immersions are locally ringed.
   See the [continuous-functions guide](docs/continuous-functions.md).
+- **Finite-regularity scalar functions.** For a charted space over a nontrivially
+  normed field, [`FiniteRegularityFunctions.sheaf`](RingedSpaces/FiniteRegularityFunctions.lean)
+  gives chosen-chart `C^r` scalar sections for `r : ℕ` and local stalks without
+  an `IsManifold` or nonempty-carrier assumption. Smooth sections weaken to
+  finite order; order zero is naturally isomorphic to the existing continuous
+  scalar sheaf, including compatible stalk evaluation. See the
+  [finite-regularity guide](docs/finite-regularity-functions.md).
 - **Change of coefficient sheaves.** A full natural map of commutative-ring
   presheaves induces a tensor-presheaf/restriction-of-scalars adjunction;
   with the required site sheafification witnesses, a full map of ring sheaves
@@ -136,6 +143,7 @@ the linked guides supply definitions, formulas, hypotheses and clients.
 | [`RingedSpaces.ClosedPointHom`](RingedSpaces/ClosedPointHom.lean) | [Constant closed-point construction](docs/closed-point-hom.md). |
 | [`RingedSpaces.ClosedPointNonAffine`](RingedSpaces/ClosedPointNonAffine.lean) | [Exclusion of every affine-induced map](docs/closed-point-nonaffine.md). |
 | [`RingedSpaces.ContinuousFunctions`](RingedSpaces/ContinuousFunctions.lean) | [General-ring sheaf, evaluation and maps; field locality](docs/continuous-functions.md). |
+| [`RingedSpaces.FiniteRegularityFunctions`](RingedSpaces/FiniteRegularityFunctions.lean) | [Finite-regularity scalar sections, stalks, and endpoint comparisons](docs/finite-regularity-functions.md). |
 | [`RingedSpaces.ContinuousFunctions.OpenImmersion`](RingedSpaces/ContinuousFunctions/OpenImmersion.lean) | [General-ring open immersions and field restriction](docs/continuous-functions.md#open-embeddings-and-restriction). |
 | [`RingedSpaces.Modules.PresheafChangeOfRings`](RingedSpaces/Modules/PresheafChangeOfRings.lean) | [Tensor presheaf and adjunction](docs/module-change-of-rings.md). |
 | [`RingedSpaces.Modules.SheafChangeOfRings`](RingedSpaces/Modules/SheafChangeOfRings.lean) | [Sheafified tensor adjunction](docs/module-change-of-rings.md#sheaves). |

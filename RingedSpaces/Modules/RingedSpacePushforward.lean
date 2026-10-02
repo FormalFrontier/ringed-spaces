@@ -67,8 +67,6 @@ theorem actualUnit_comp_ringSheafMap :
   simp only [Functor.map_comp, SheafInverseImage.pushforwardForget_map] at identity
   exact identity
 
-set_option maxHeartbeats 1000000
-
 /-- Scalar restriction then continuous pushforward equals native full-morphism pushforward. -/
 noncomputable def restrictPushforwardIso :
     SheafOfModules.restrictScalars (ringSheafMap f) ⋙
