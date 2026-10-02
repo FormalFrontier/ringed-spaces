@@ -26,8 +26,10 @@ element to a unit, the new extension proves that its full morphism differs
 from **every** affine-induced map, not merely the one induced by the given map.
 Continuous functions into a topological commutative ring additionally define a
 ringed space, with stalk evaluation and full morphisms induced by continuous
-maps. Over a T1 topological field, the stalks are local and open embeddings
-induce open immersions with a canonical open-subtype restriction comparison.
+maps. Open embeddings induce ringed-space open immersions and mathlib's
+open-subtype restriction comparison for any such ring. Over a T1 topological
+field the stalks are local, and the same maps give locally ringed-space open
+immersions with the canonical open-subtype comparison.
 
 ## Headline results
 
@@ -41,9 +43,9 @@ induce open immersions with a canonical open-subtype restriction comparison.
   not a categorical ringed-space fiber product. See
   [`InverseImage`](RingedSpaces/InverseImage.lean) and [the API](#api).
 - **Continuous-function spaces.** General topological commutative rings give
-  stalk evaluation and functorial full ringed-space maps; T1 topological fields
-  give local stalks, functorial locally ringed-space maps and open immersions
-  from open embeddings. See the [standalone guide](docs/continuous-functions.md)
+  stalk evaluation, functorial full ringed-space maps and open immersions from
+  open embeddings; T1 topological fields also give local stalks and functorial
+  locally ringed-space maps. See the [standalone guide](docs/continuous-functions.md)
   and [root-only clients](Test/ContinuousFunctions.lean).
 - **Module scalar extension.** Full natural coefficient maps give tensor
   presheaves, sheafified scalar extension and a right-factor tensor symmetry,
@@ -77,8 +79,9 @@ pullback; import `RingedSpaces.OpenCover` for the gluing bridge; import
 `RingedSpaces`.
 Import `RingedSpaces.ContinuousFunctions` for the general-ring sheaf,
 evaluation, precomposition and ringed-space maps; import
-`RingedSpaces.ContinuousFunctions.OpenImmersion` for the field-valued locally
-ringed-space open-immersion and restriction API, or use `RingedSpaces` for both.
+`RingedSpaces.ContinuousFunctions.OpenImmersion` for general-ring open immersions
+and the field-valued locally ringed-space restriction API, or use `RingedSpaces`
+for both.
 The [guide](docs/continuous-functions.md) details the hypotheses and both
 [general](Test/ContinuousFunctions.lean) and
 [open-immersion](Test/ContinuousFunctionsOpenImmersion.lean) root-only clients.
@@ -315,12 +318,11 @@ lake exe cache get
 lake build
 ```
 
-The continuous-function open-immersion implementation and client currently emit
-three nonfatal proposition-instance style suggestions (`haveI` versus `have`).
-The checked build retains these diagnostics. `--wfail`, also shown in some
-specialist guides, is an optional stricter warning check, not the successful
-default-build recipe for this version; it can fail on those known suggestions.
-No linter is disabled by the commands above.
+The previously checked field-only open-immersion implementation and client
+emitted three nonfatal proposition-instance style suggestions (`haveI` versus
+`have`). Those historical diagnostics do not fix the warning count for a later
+revision. `--wfail`, also shown in some specialist guides, requests a stricter
+warning check; no linter is disabled by the commands above.
 
 The 48 literal `defaultTargets` include the aggregate library, stored
 examples and all 46 shipped `Test` modules: direct, concrete, audit,

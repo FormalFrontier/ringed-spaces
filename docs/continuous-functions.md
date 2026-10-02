@@ -3,7 +3,7 @@
 The modules [`RingedSpaces.ContinuousFunctions`](../RingedSpaces/ContinuousFunctions.lean)
 and [`RingedSpaces.ContinuousFunctions.OpenImmersion`](../RingedSpaces/ContinuousFunctions/OpenImmersion.lean)
 give a sheaf of continuous ring-valued functions, evaluation of its germs,
-continuous-map morphisms and an open-immersion comparison. Import either leaf
+continuous-map morphisms and open-immersion comparisons. Import either leaf
 directly or import the aggregate `RingedSpaces` for both. All declarations below
 live in the existing `ContinuousFunctions` namespace.
 
@@ -76,18 +76,60 @@ formalized theorem. No norm, completeness or base-space separation is required.
 
 ## Open embeddings and restriction
 
-For `U X K : Type u` with topologies on both spaces and the *field* hypotheses
-above, let `j : U → X` and `hj : IsOpenEmbedding j`. The theorem
-`locallyRingedSpaceMap_c_iso U X K j hj V` makes the actual precomposition
-component an isomorphism over the image of every `V : Opens U`.
-The instance `locallyRingedSpaceMap_isOpenImmersion` applies the open-immersion
-criterion to the **actual** `locallyRingedSpaceMap U K X j hj.continuous`;
-it does not assert a new map with the same base. The proof uses the
-homeomorphism from the inverse image of `j(V)` to `j(V)` to transport sections.
-This includes an empty source or open, without assumptions on separation of
-`U` or `X`.
+For `U X R : Type u` with topologies on both spaces and the *general-ring*
+hypotheses above, let `j : U → X` and `hj : IsOpenEmbedding j`. The theorem
+`ringedSpaceMap_c_iso U X R j hj V` makes the actual precomposition component
+an isomorphism over the image of every `V : Opens U`. The instance
+`ringedSpaceMap_isOpenImmersion` applies the open-immersion criterion to the
+**actual** `ringedSpaceMap U R X j hj.continuous`. Its inverse on sections is
+precomposition with the inverse homeomorphism from `j(V)` to its preimage. The
+argument works for empty sources and opens, zero or subsingleton coefficient
+rings and non-T1 coefficient topologies; it assumes no separation of `U` or
+`X` and does not assert a local-ring structure on stalks.
 
-For `A : Opens X`, the canonical comparison is oriented **from the restriction
+The existing `locallyRingedSpaceMap_c_iso U X K j hj V` specializes the same
+section argument via `forget_locallyRingedSpaceMap`. With the *T1 topological
+field* hypotheses, `locallyRingedSpaceMap_isOpenImmersion` applies it to the
+actual locally ringed-space morphism, without changing the field-facing API.
+
+For any `A : Opens X` and general-ring coefficients, mathlib directly gives
+the comparison (oriented from the intrinsic subtype to the restriction).
+The snippets below use `open ContinuousFunctions`. Make the open-immersion
+instance local **before elaborating** the generic comparison or a proposition
+that contains it, as in the linked root-only client:
+
+```lean
+letI := ringedSpaceMap_isOpenImmersion
+  A X R Subtype.val A.isOpenEmbedding';
+  (SheafedSpace.IsOpenImmersion.isoRestrict
+      (ringedSpaceMap A R X Subtype.val A.isOpenEmbedding'.continuous) :
+    ringedSpace A R ≅ (ringedSpace X R).restrict A.isOpenEmbedding)
+```
+
+The same mathlib API supplies both **full-morphism** equations:
+
+```lean
+letI := ringedSpaceMap_isOpenImmersion
+  A X R Subtype.val A.isOpenEmbedding';
+  (SheafedSpace.IsOpenImmersion.isoRestrict
+      (ringedSpaceMap A R X Subtype.val A.isOpenEmbedding'.continuous)).hom ≫
+    (ringedSpace X R).ofRestrict A.isOpenEmbedding =
+      ringedSpaceMap A R X Subtype.val A.isOpenEmbedding'.continuous
+
+letI := ringedSpaceMap_isOpenImmersion
+  A X R Subtype.val A.isOpenEmbedding';
+  (SheafedSpace.IsOpenImmersion.isoRestrict
+      (ringedSpaceMap A R X Subtype.val A.isOpenEmbedding'.continuous)).inv ≫
+    ringedSpaceMap A R X Subtype.val A.isOpenEmbedding'.continuous =
+      (ringedSpace X R).ofRestrict A.isOpenEmbedding
+```
+
+Here `A.isOpenEmbedding` supplies the `TopCat` restriction arrow, while
+`A.isOpenEmbedding'` supplies continuity of the subtype function. The generic
+comparison and its triangles require no newly named restriction construction.
+
+With the T1 topological-field hypotheses and `A : Opens X`, the canonical
+comparison is oriented **from the restriction
 of the ambient space to the intrinsic open subtype**:
 
 ```lean
@@ -120,7 +162,8 @@ The [ring-valued root-only examples](../Test/ContinuousFunctions.lean) exercise
 general-ring precomposition, stalk evaluation, identity/composition, the empty
 base and subsingleton rings, alongside field locality and forgetting. The
 [open-immersion root-only examples](../Test/ContinuousFunctionsOpenImmersion.lean)
-exercise the actual embedding and both inclusion factorizations. A consumer
+exercise general-ring open embeddings, mathlib's full restriction comparison
+and triangles, plus the existing field-specific inclusion factorizations. A consumer
 may start either of two separate files with one of these imports:
 
 ```lean
@@ -137,7 +180,8 @@ For example, after either import (and `open CategoryTheory TopologicalSpace
 AlgebraicGeometry`), the test files demonstrate statements such as
 `ContinuousFunctions.ringedSpaceMap_id X R` and
 `ContinuousFunctions.restrictLocallyRingedSpaceIso X K A`; for the general-ring
-leaf alone, use `public import RingedSpaces.ContinuousFunctions`.
+sheaf alone, use `public import RingedSpaces.ContinuousFunctions`, and for
+general-ring open immersions use the open-immersion leaf or root.
 The repository pins Lean `v4.34.0-rc2` and mathlib
 `83abb3e776bdefcbc447a1e44d0debe4010039e5`. In an authorized pinned
 build environment, retrieve the matching precompiled cache **first**:
@@ -148,10 +192,11 @@ lake build +Test.ContinuousFunctions +Test.ContinuousFunctionsOpenImmersion
 lake build
 ```
 
-The open-immersion implementation and its client retain three nonfatal
-proposition-instance style suggestions (`haveI` versus `have`). These were present
-in the successful checked build. Adding `--wfail` requests a stricter warning
-check and can fail on those suggestions; the recipe above does not suppress them.
+The earlier field-only open-immersion implementation and client emitted three
+nonfatal proposition-instance style suggestions (`haveI` versus `have`). Those
+historical diagnostics do not establish the warning count of later revisions.
+Adding `--wfail` requests a stricter warning check; the recipe above does not
+suppress warnings.
 
 Do not fall back to a cold mathlib build if cache retrieval fails. These
 declarations use one universe for spaces and coefficients; there is no general

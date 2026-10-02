@@ -15,8 +15,9 @@ project:
     ring maps to global sections, with an all-affine-induced-map exclusion
     when such a map sends a maximal-ideal element to a unit of a nontrivial
     commutative target ring; and continuous-function sheaves, evaluation,
-    functorial ringed-space maps over topological commutative rings, and local
-    stalks and open immersions over T1 topological fields.
+    functorial maps and open immersions of ringed spaces over topological
+    commutative rings, with local stalks and corresponding locally ringed-space
+    maps and open immersions over T1 topological fields.
   authors:
     - Formal Frontier Agents
   license: Apache-2.0
