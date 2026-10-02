@@ -192,11 +192,10 @@ lake build +Test.ContinuousFunctions +Test.ContinuousFunctionsOpenImmersion
 lake build
 ```
 
-The earlier field-only open-immersion implementation and client emitted three
-nonfatal proposition-instance style suggestions (`haveI` versus `have`). Those
-historical diagnostics do not establish the warning count of later revisions.
-Adding `--wfail` requests a stricter warning check; the recipe above does not
-suppress warnings.
+For a stricter warning check after fetching the cache, run
+`lake --wfail build +Test.ContinuousFunctions +Test.ContinuousFunctionsOpenImmersion`.
+This treats warnings as failures; the ordinary build above neither suppresses
+warnings nor asserts that this library is warning-free.
 
 Do not fall back to a cold mathlib build if cache retrieval fails. These
 declarations use one universe for spaces and coefficients; there is no general
