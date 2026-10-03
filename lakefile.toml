@@ -6,6 +6,7 @@ defaultTargets = [
   "RingedSpacesTests.ClosedPointHom", "RingedSpacesTests.ClosedPointNonAffine", "RingedSpacesTests.FiniteRegularityFunctions",
   "RingedSpacesTests.FiniteRegularityFunctionsMaps",
   "RingedSpacesTests.FiniteRegularityFunctionsOpenImmersion",
+  "RingedSpacesTests.FiniteRegularityFunctionsLocalBall",
   "RingedSpacesTests.ContinuousFunctions", "RingedSpacesTests.ContinuousFunctionsOpenImmersion",
   "RingedSpacesTests.ChangeOfRingsSymmetryFixture", "RingedSpacesTests.ChangeOfRingsSymmetryRoot",
   "RingedSpacesTests.InverseImage", "RingedSpacesTests.ModuleChangeOfRings", "RingedSpacesTests.ModuleChangeOfRingsAxioms",

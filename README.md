@@ -40,7 +40,12 @@ maps**, not just their maps of underlying spaces.
   both endpoint sheaf comparisons. For an open subtype with its induced charts,
   inclusion is an [open immersion](RingedSpaces/FiniteRegularityFunctions/OpenImmersion.lean)
   of locally ringed spaces; the restriction comparison satisfies both whole-arrow
-  factorization equations. See the
+  factorization equations. On a finite-order manifold with the self model
+  `𝓘(𝕜, E)`, [`localBall`](RingedSpaces/FiniteRegularityFunctions/LocalBall.lean)
+  restricts the chosen chart near any point to a diffeomorphism onto an entire
+  positive-radius ball in the normed model space. Its locally ringed-space
+  isomorphism identifies the restricted ambient scalar-function space with
+  the ball's scalar-function space. See the
   [finite-regularity guide](docs/finite-regularity-functions.md).
 - **Change of coefficient sheaves.** A full natural map of commutative-ring
   presheaves induces a tensor-presheaf/restriction-of-scalars adjunction;

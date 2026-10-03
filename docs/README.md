@@ -16,8 +16,8 @@ That source carries 282 public source-range names; native doc-gen4 emits 281
 records. `AlgebraicGeometry.RingedSpace.OpenCover.rec` is an automatically
 generated recursor with no native record and is called out, not invented.
 The 122 declarations without native docstrings are labeled explicitly. Every
-module in that snapshot has a top-level source docstring. This tree has 74 Lean
-files, including 49 tests under `RingedSpacesTests/`, and 13 mathematical guides.
+module in that snapshot has a top-level source docstring. This tree has 76 Lean
+files, including 50 tests under `RingedSpacesTests/`, and 13 mathematical guides.
 The unchanged historical records remain useful for their original sources;
 the current additions are mapped below and in the guides.
 
@@ -42,6 +42,7 @@ Direct imports and their guides give narrower dependencies:
 | [`RingedSpaces.FiniteRegularityFunctions`](../RingedSpaces/FiniteRegularityFunctions.lean) | `FiniteRegularityFunctions.sheaf`, `sectionRingEquiv`, `evalHom`, `zeroSheafIso` | [`finite-regularity-functions.md`](finite-regularity-functions.md) |
 | [`RingedSpaces.FiniteRegularityFunctions.Maps`](../RingedSpaces/FiniteRegularityFunctions/Maps.lean) | `FiniteRegularityFunctions.precompose`, `sheafHom`, `locallyRingedSpaceMap`, `smoothToFinite_naturality`, `zeroSheafIso_naturality` | [`finite-regularity-functions.md`](finite-regularity-functions.md) |
 | [`RingedSpaces.FiniteRegularityFunctions.OpenImmersion`](../RingedSpaces/FiniteRegularityFunctions/OpenImmersion.lean) | `FiniteRegularityFunctions.restrictLocallyRingedSpaceIso` and both whole-arrow `*_ofRestrict` equalities | [`finite-regularity-functions.md`](finite-regularity-functions.md#open-subtypes-and-restriction) |
+| [`RingedSpaces.FiniteRegularityFunctions.LocalBall`](../RingedSpaces/FiniteRegularityFunctions/LocalBall.lean) | `FiniteRegularityFunctions.localBall`, `LocalBall.iso`, and coordinate germ/section evaluation | [`finite-regularity-functions.md`](finite-regularity-functions.md#finite-order-local-balls) |
 
 The [root-only sheaf client](../RingedSpacesTests/SheafInverseImageRoot.lean) and
 [root-only full-morphism client](../RingedSpacesTests/RingedSpaceFullMorphismRoot.lean)
@@ -55,8 +56,9 @@ arbitrary field and non-field inducing maps. The
 [open-immersion](../RingedSpacesTests/ContinuousFunctionsOpenImmersion.lean) clients also
 import only `RingedSpaces`. The [finite-regularity](../RingedSpacesTests/FiniteRegularityFunctions.lean)
 and [map](../RingedSpacesTests/FiniteRegularityFunctionsMaps.lean) clients, as well as the
-[open-subtype client](../RingedSpacesTests/FiniteRegularityFunctionsOpenImmersion.lean),
-likewise exercise the public root. All 49 tests are among the 51 literal default
+[open-subtype](../RingedSpacesTests/FiniteRegularityFunctionsOpenImmersion.lean) and
+[local-ball](../RingedSpacesTests/FiniteRegularityFunctionsLocalBall.lean) clients,
+likewise exercise the public root. All 50 tests are among the 52 literal default
 targets, alongside the library aggregate and examples. The historical
 generated API snapshot and manifest remain unchanged and cover none of the
 new leaves.
@@ -101,7 +103,7 @@ binding for the missing analyzed object, as described above. The identifier
 still binds the historical source bytes; it is not a fetchable ancestor.
 The unchanged adapter first compares the current complete Lean module-path set
 with its fixed 33-module historical inventory, before reading source inputs or
-native records. This tree has 63 Lean paths outside that old set and lacks 22
+native records. This tree has 65 Lean paths outside that old set and lacks 22
 old paths, so it fails that inventory check; the changed and missing input
 paths also prevent a historical source binding. Do **not** run the following
 historical recipe against this tree. It is optional for reproducing **only**

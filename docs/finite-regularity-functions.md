@@ -8,6 +8,8 @@ existing Mathlib and RingedSpaces sheaves. The companion
 constructs pullback on sections, sheaves, and locally ringed spaces. The companion
 [`RingedSpaces.FiniteRegularityFunctions.OpenImmersion`](../RingedSpaces/FiniteRegularityFunctions/OpenImmersion.lean)
 compares the locally ringed space of an open subtype with the ambient restriction.
+[`RingedSpaces.FiniteRegularityFunctions.LocalBall`](../RingedSpaces/FiniteRegularityFunctions/LocalBall.lean)
+constructs finite-order ball coordinates and their locally ringed-space comparison.
 
 Fix a nontrivially normed field `𝕜 : Type u`, a normed model `EM` over `𝕜`,
 a topological model `HM`, and `IM : ModelWithCorners 𝕜 EM HM`. Let
@@ -72,6 +74,44 @@ underlying continuous maps. Empty subtypes and order zero are included.
 No manifold, nonempty-carrier, or finite-dimensionality hypothesis is required;
 the assertion does not extend to arbitrary open embeddings without
 compatibility with the chosen charts.
+
+## Finite-order local balls
+
+Suppose `E : Type u` is an arbitrary normed vector space over the
+nontrivially normed field `𝕜 : Type u`, `M : Type u` is charted over `E`,
+and `[IsManifold 𝓘(𝕜, E) (r : ℕ∞ω) M]` for a natural number `r`.
+For each `x : M`, `localBall r x` gives an open neighborhood `b.neighborhood`
+containing `x`, a radius `b.radius > 0`, and a diffeomorphism
+`b.coord : b.neighborhood ≃ₘ^(r : ℕ∞ω)⟮𝓘(𝕜, E), 𝓘(𝕜, E)⟯ b.ball`.
+The target is the **entire** metric ball centered at `(chartAt E x) x`,
+not merely the part of that ball lying in a chart target. On the source,
+`b.coord_apply` agrees with the chosen chart; `b.coord_symm_apply` agrees
+with the chart inverse on the ball. The construction takes a small ball
+inside the open chart target and restricts the chart to its preimage in
+the chart source. Mathlib's chart and inverse regularity and open-subtype
+transport supply the finite-order diffeomorphism.
+
+`b.iso` identifies the **restriction of the ambient** canonical
+`C^r` scalar-function locally ringed space to `b.neighborhood` with the
+canonical space on `b.ball`. Its forward underlying map goes from the
+neighborhood to the ball, while its sheaf map pulls sections back from
+the ball. The laws `iso_hom` and `iso_inv` identify both whole arrows;
+`restrict_iso_inv_comp_iso_hom` identifies the forward arrow after
+transport back to the intrinsic neighborhood. `iso_hom_germ_eval` and
+`iso_hom_section_germ_eval` compute the resulting values of pulled-back
+germs and sections at chart images. The
+[examples](../RingedSpacesTests/FiniteRegularityFunctionsLocalBall.lean)
+evaluate a nonconstant real `C¹` section on a proper interval to `2`,
+and scalar sections in the order-zero and zero-dimensional cases to
+`3` and `4` through this comparison.
+
+No finite-dimensionality, completeness, separation, positive-order,
+positive-dimension, or inhabited-carrier hypothesis is needed; for an
+empty manifold the assertion is per-point and vacuous. The self-model
+assumption excludes a general model with corners, where a boundary chart
+need not contain an ambient ball. These results concern chosen-chart
+finite-order scalar functions, not chart independence, an arbitrary-sheaf
+converse, or merely differentiable or holomorphic source claims.
 
 ## Smooth sections and zero order
 
