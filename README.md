@@ -54,6 +54,14 @@ maps**, not just their maps of underlying spaces.
   canonical smooth scalar locally ringed space is isomorphic to the canonical
   one on that ball; its whole arrows and full-composite germ and section
   evaluations are explicit. See the [chart-ball guide](docs/chart-local-ball.md).
+- **Holomorphic scalar sections.** On open and nested-open subtypes of the
+  complex line, complex differentiability of scalar-valued functions is
+  equivalent to complex smoothness. The canonical smooth scalar sheaf accepts
+  these functions directly as sections, with pointwise evaluation, restriction,
+  and sheaf and locally ringed-space maps that precompose representatives on
+  inverse-image opens.
+  This one-variable result does not assert the analogous equivalence on
+  higher-dimensional complex models.
 - **Change of coefficient sheaves.** A full natural map of commutative-ring
   presheaves induces a tensor-presheaf/restriction-of-scalars adjunction;
   with the required site sheafification witnesses, a full map of ring sheaves
@@ -172,6 +180,8 @@ the linked guides supply definitions, formulas, hypotheses and clients.
 | [`RingedSpaces.FiniteRegularityFunctions.LocalBall`](RingedSpaces/FiniteRegularityFunctions/LocalBall.lean) | [Finite-order entire-ball coordinates and scalar locally ringed spaces](docs/finite-regularity-functions.md#finite-order-local-balls). |
 | [`RingedSpaces.ChartedSpace.LocalBall`](RingedSpaces/ChartedSpace/LocalBall.lean) | [Regularity-indexed chart coordinates on entire positive-radius balls](docs/chart-local-ball.md). |
 | [`RingedSpaces.ChartedSpace.SmoothLocalBall`](RingedSpaces/ChartedSpace/SmoothLocalBall.lean) | [Canonical smooth scalar locally ringed spaces on chart balls](docs/chart-local-ball.md). |
+| [`RingedSpaces.Complex.Holomorphic`](RingedSpaces/Complex/Holomorphic.lean) | Complex smoothness and differentiability with complete target on open subsets of the complex line. |
+| [`RingedSpaces.ChartedSpace.HolomorphicSections`](RingedSpaces/ChartedSpace/HolomorphicSections.lean) | Holomorphic scalar functions as canonical smooth sheaf sections on open complex domains. |
 | [`RingedSpaces.ContinuousFunctions.OpenImmersion`](RingedSpaces/ContinuousFunctions/OpenImmersion.lean) | [General-ring open immersions and field restriction](docs/continuous-functions.md#open-embeddings-and-restriction). |
 | [`RingedSpaces.Modules.PresheafChangeOfRings`](RingedSpaces/Modules/PresheafChangeOfRings.lean) | [Tensor presheaf and adjunction](docs/module-change-of-rings.md). |
 | [`RingedSpaces.Modules.SheafChangeOfRings`](RingedSpaces/Modules/SheafChangeOfRings.lean) | [Sheafified tensor adjunction](docs/module-change-of-rings.md#sheaves). |

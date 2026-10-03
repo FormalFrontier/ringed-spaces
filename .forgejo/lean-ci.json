@@ -17,6 +17,7 @@
         "RingedSpacesTests.FiniteRegularityFunctionsOpenImmersion",
         "RingedSpacesTests.FiniteRegularityFunctionsLocalBall",
         "RingedSpacesTests.ChartedSpaceSmoothLocalBall",
+        "RingedSpacesTests.HolomorphicSections",
         "RingedSpacesTests.ContinuousFunctions",
         "RingedSpacesTests.ContinuousFunctionsOpenImmersion",
         "RingedSpacesTests.ChangeOfRingsSymmetryFixture",

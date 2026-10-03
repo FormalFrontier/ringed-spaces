@@ -16,8 +16,8 @@ That source carries 282 public source-range names; native doc-gen4 emits 281
 records. `AlgebraicGeometry.RingedSpace.OpenCover.rec` is an automatically
 generated recursor with no native record and is called out, not invented.
 The 122 declarations without native docstrings are labeled explicitly. Every
-module in that snapshot has a top-level source docstring. This tree has 79 Lean
-files, including 51 tests under `RingedSpacesTests/`, and 14 mathematical guides.
+module in that snapshot has a top-level source docstring. This tree has 82 Lean
+files, including 52 tests under `RingedSpacesTests/`, and 14 mathematical guides.
 The unchanged historical records remain useful for their original sources;
 the current additions are mapped below and in the guides.
 
@@ -45,6 +45,8 @@ Direct imports and their guides give narrower dependencies:
 | [`RingedSpaces.FiniteRegularityFunctions.LocalBall`](../RingedSpaces/FiniteRegularityFunctions/LocalBall.lean) | `FiniteRegularityFunctions.localBall`, `LocalBall.iso`, and coordinate germ/section evaluation | [`finite-regularity-functions.md`](finite-regularity-functions.md#finite-order-local-balls) |
 | [`RingedSpaces.ChartedSpace.LocalBall`](../RingedSpaces/ChartedSpace/LocalBall.lean) | `ChartedSpace.chartLocalBall`, `ChartLocalBall.coord`, `center`, `coord_at_center` | [`chart-local-ball.md`](chart-local-ball.md) |
 | [`RingedSpaces.ChartedSpace.SmoothLocalBall`](../RingedSpaces/ChartedSpace/SmoothLocalBall.lean) | `ChartLocalBall.smoothIso`, whole-arrow and full-composite evaluation laws | [`chart-local-ball.md`](chart-local-ball.md) |
+| [`RingedSpaces.Complex.Holomorphic`](../RingedSpaces/Complex/Holomorphic.lean) | Complex smoothness and differentiability on open subsets of the complex line with complete targets | [`README.md`](../README.md) |
+| [`RingedSpaces.ChartedSpace.HolomorphicSections`](../RingedSpaces/ChartedSpace/HolomorphicSections.lean) | `ComplexLine.ofHolomorphic`, restriction, germ evaluation and precomposition on inverse-image opens through full maps | [`README.md`](../README.md) |
 
 The [root-only sheaf client](../RingedSpacesTests/SheafInverseImageRoot.lean) and
 [root-only full-morphism client](../RingedSpacesTests/RingedSpaceFullMorphismRoot.lean)
@@ -60,8 +62,9 @@ import only `RingedSpaces`. The [finite-regularity](../RingedSpacesTests/FiniteR
 and [map](../RingedSpacesTests/FiniteRegularityFunctionsMaps.lean) clients, as well as the
 [open-subtype](../RingedSpacesTests/FiniteRegularityFunctionsOpenImmersion.lean) and
 [local-ball](../RingedSpacesTests/FiniteRegularityFunctionsLocalBall.lean) clients,
-and the [smooth chart-ball](../RingedSpacesTests/ChartedSpaceSmoothLocalBall.lean)
-client likewise exercises the public root. All 51 tests are among the 53 literal default
+the [smooth chart-ball](../RingedSpacesTests/ChartedSpaceSmoothLocalBall.lean),
+and [holomorphic section](../RingedSpacesTests/HolomorphicSections.lean)
+clients likewise exercise the public root. All 52 tests are among the 54 literal default
 targets, alongside the library aggregate and examples. The historical
 generated API snapshot and manifest remain unchanged and cover none of the
 new leaves.

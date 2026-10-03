@@ -29,6 +29,7 @@ public import RingedSpaces.Modules.PullbackCoherence
 public import RingedSpaces.Modules.BaseChange
 public import RingedSpaces.Modules.BaseChangePasting
 public import RingedSpaces.ChartedSpace.SmoothLocalBall
+public import RingedSpaces.ChartedSpace.HolomorphicSections
 
 /-!
 # Ringed spaces
@@ -65,4 +66,6 @@ an entire positive-radius model ball. At smooth regularity `∞`, it compares th
 canonical smooth scalar locally ringed space restricted from the ambient manifold
 with the canonical one on that entire coordinate ball, including the induced
 point maps and full-composite germ and section-evaluation laws.
+On open domains of the complex line it also relates holomorphic scalar
+representatives to sections of this existing complex-smooth sheaf.
 -/
