@@ -5,7 +5,9 @@ constructs, for each finite `r : ℕ`, a sheaf of scalar-valued `C^r` functions
 on a charted space. It also relates its smooth and continuous endpoints to the
 existing Mathlib and RingedSpaces sheaves. The companion
 [`RingedSpaces.FiniteRegularityFunctions.Maps`](../RingedSpaces/FiniteRegularityFunctions/Maps.lean)
-constructs pullback on sections, sheaves, and locally ringed spaces.
+constructs pullback on sections, sheaves, and locally ringed spaces. The companion
+[`RingedSpaces.FiniteRegularityFunctions.OpenImmersion`](../RingedSpaces/FiniteRegularityFunctions/OpenImmersion.lean)
+compares the locally ringed space of an open subtype with the ambient restriction.
 
 Fix a nontrivially normed field `𝕜 : Type u`, a normed model `EM` over `𝕜`,
 a topological model `HM`, and `IM : ModelWithCorners 𝕜 EM HM`. Let
@@ -51,6 +53,25 @@ The naturality equations `smoothToFinite_naturality` and
 pullback and the existing continuous-function pullback, respectively, as
 arrows of sheaves. They do not identify finite-order chosen-chart regularity
 with an intrinsic regularity condition or with mere pointwise differentiability.
+
+## Open subtypes and restriction
+
+Let `U : Opens M` carry the charts induced from `M`. For every `r : ℕ`,
+`locallyRingedSpaceMap IM IM U M r Subtype.val contMDiff_subtype_val`
+is an open immersion of locally ringed spaces. Its section maps are
+isomorphisms over the images of opens in `U`: every finite-`C^r` scalar
+section on such an inverse image descends to the image open using the
+induced charts. The comparison
+`restrictLocallyRingedSpaceIso IM M r U` identifies
+`(locallyRingedSpace r IM M).restrict U.isOpenEmbedding` with
+`locallyRingedSpace r IM U`. The equalities
+`restrictLocallyRingedSpaceIso_hom_ofRestrict` and
+`restrictLocallyRingedSpaceIso_inv_ofRestrict` express the two factorizations
+of the entire inclusion and canonical restriction morphisms, not only their
+underlying continuous maps. Empty subtypes and order zero are included.
+No manifold, nonempty-carrier, or finite-dimensionality hypothesis is required;
+the assertion does not extend to arbitrary open embeddings without
+compatibility with the chosen charts.
 
 ## Smooth sections and zero order
 

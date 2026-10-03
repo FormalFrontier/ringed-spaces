@@ -14,6 +14,7 @@
         "RingedSpacesTests.ClosedPointNonAffine",
         "RingedSpacesTests.FiniteRegularityFunctions",
         "RingedSpacesTests.FiniteRegularityFunctionsMaps",
+        "RingedSpacesTests.FiniteRegularityFunctionsOpenImmersion",
         "RingedSpacesTests.ContinuousFunctions",
         "RingedSpacesTests.ContinuousFunctionsOpenImmersion",
         "RingedSpacesTests.ChangeOfRingsSymmetryFixture",

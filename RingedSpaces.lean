@@ -12,6 +12,7 @@ public import RingedSpaces.ClosedPointNonAffine
 public import RingedSpaces.ContinuousFunctions
 public import RingedSpaces.FiniteRegularityFunctions
 public import RingedSpaces.FiniteRegularityFunctions.Maps
+public import RingedSpaces.FiniteRegularityFunctions.OpenImmersion
 public import RingedSpaces.ContinuousFunctions.OpenImmersion
 public import RingedSpaces.Modules.PresheafChangeOfRings
 public import RingedSpaces.Modules.PresheafInverseImage
