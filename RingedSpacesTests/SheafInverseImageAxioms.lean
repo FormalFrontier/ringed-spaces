@@ -7,9 +7,9 @@ module
 
 import all RingedSpaces.Modules.SheafInverseImage
 import all RingedSpaces.Modules.SheafInverseImageHom
-import all Test.SheafInverseImage
-import all Test.SheafInverseImageConcrete
-import all Test.SheafInverseImageRootCoexist
+import all RingedSpacesTests.SheafInverseImage
+import all RingedSpacesTests.SheafInverseImageConcrete
+import all RingedSpacesTests.SheafInverseImageRootCoexist
 
 /-!
 # Full compiled-origin axiom audit for the new sheaf inverse-image leaves
@@ -26,9 +26,9 @@ run_cmd do
   let modules : List Name :=
     [`RingedSpaces.Modules.SheafInverseImage,
      `RingedSpaces.Modules.SheafInverseImageHom,
-     `Test.SheafInverseImage,
-     `Test.SheafInverseImageConcrete,
-     `Test.SheafInverseImageRootCoexist]
+     `RingedSpacesTests.SheafInverseImage,
+     `RingedSpacesTests.SheafInverseImageConcrete,
+     `RingedSpacesTests.SheafInverseImageRootCoexist]
   let mut total : Nat := 0
   let mut empty : Nat := 0
   let mut extra : Nat := 0

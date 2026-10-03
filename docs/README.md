@@ -4,32 +4,22 @@
 retaining native displayed signatures and original nonempty declaration
 docstrings from a 33-module snapshot. Its 33 module and 281 declaration links
 point to identical old sources at official published commit
-`958b340be6cf1a0bc86c2c378352664c9f7cca62`. This is not a newly
-generated or complete current API page. The original generated Markdown SHA256
+`958b340be6cf1a0bc86c2c378352664c9f7cca62`. The absolute GitHub URLs to
+the old `Test/` sources remain pinned to that commit; those local paths are
+absent from this tree.
+This is not a newly generated or complete current API page. The original
+generated Markdown SHA256
 `31abe5d797e950a0d6df5bc08167634abf872964723c03c85616f417972d0ade`
 and the manifest digest apply to the **unmodified** page at that published
-snapshot, not to the hand-adjusted page or the current 68-file library.
+snapshot, not to the hand-adjusted page or the current library.
 That source carries 282 public source-range names; native doc-gen4 emits 281
 records. `AlgebraicGeometry.RingedSpace.OpenCover.rec` is an automatically
 generated recursor with no native record and is called out, not invented.
 The 122 declarations without native docstrings are labeled explicitly. Every
-module in that snapshot has a top-level source docstring. The September 26,
-2026 combined candidate had 55 Lean files (33 historical files, eight from
-sheaf preparation, 13 from full-morphism preparation, and one new root-only
-client), 40 `Test` modules and seven mathematical guides. The pasting addition
-brings that tree to 60 Lean files, 42 `Test` modules and nine mathematical guides.
-The constant-closed addition brings this tree to 62 Lean files, 43 `Test` modules
-and ten mathematical guides.
-The non-affineness extension brought the previous tree to 64 Lean files, 44 `Test`
-modules and eleven mathematical guides.
-The continuous-function transfer adds two library leaves, two root-only
-clients and one guide: this tree has 68 Lean files, 46 `Test` modules and
-twelve mathematical guides.
-The historical `RingedSpaces` root, `lakefile.toml`, and the module-doc paragraph
-in `RingedSpaces/InverseImage.lean` have since changed: the historical records
-and input hashes do **not** describe or certify this whole tree.
-The other unchanged historical module records remain useful within their
-recorded scope; added APIs are mapped below and in the guides.
+module in that snapshot has a top-level source docstring. This tree has 72 Lean
+files, including 48 tests under `RingedSpacesTests/`, and 13 mathematical guides.
+The unchanged historical records remain useful for their original sources;
+the current additions are mapped below and in the guides.
 
 ## Current API map beyond the historical snapshot
 
@@ -49,26 +39,25 @@ Direct imports and their guides give narrower dependencies:
 | [`RingedSpaces.ClosedPointNonAffine`](../RingedSpaces/ClosedPointNonAffine.lean) | `hom_ne_sheafedSpaceMap_of_isUnit`, `not_exists_sheafedSpaceMap_of_isUnit` in `AlgebraicGeometry.RingedSpace.ClosedPointHom` | [`closed-point-nonaffine.md`](closed-point-nonaffine.md) |
 | [`RingedSpaces.ContinuousFunctions`](../RingedSpaces/ContinuousFunctions.lean) | `ContinuousFunctions.sheaf`, `evalHom`, `ringedSpaceMap`, `locallyRingedSpaceMap`, `forget_locallyRingedSpaceMap` | [`continuous-functions.md`](continuous-functions.md) |
 | [`RingedSpaces.ContinuousFunctions.OpenImmersion`](../RingedSpaces/ContinuousFunctions/OpenImmersion.lean) | `ContinuousFunctions.locallyRingedSpaceMap_isOpenImmersion`, `restrictLocallyRingedSpaceIso` and both `*_ofRestrict` equalities | [`continuous-functions.md`](continuous-functions.md) |
+| [`RingedSpaces.FiniteRegularityFunctions`](../RingedSpaces/FiniteRegularityFunctions.lean) | `FiniteRegularityFunctions.sheaf`, `sectionRingEquiv`, `evalHom`, `zeroSheafIso` | [`finite-regularity-functions.md`](finite-regularity-functions.md) |
+| [`RingedSpaces.FiniteRegularityFunctions.Maps`](../RingedSpaces/FiniteRegularityFunctions/Maps.lean) | `FiniteRegularityFunctions.precompose`, `sheafHom`, `locallyRingedSpaceMap`, `smoothToFinite_naturality`, `zeroSheafIso_naturality` | [`finite-regularity-functions.md`](finite-regularity-functions.md) |
 
-The [root-only sheaf client](../Test/SheafInverseImageRoot.lean) and
-[root-only full-morphism client](../Test/RingedSpaceFullMorphismRoot.lean)
+The [root-only sheaf client](../RingedSpacesTests/SheafInverseImageRoot.lean) and
+[root-only full-morphism client](../RingedSpacesTests/RingedSpaceFullMorphismRoot.lean)
 exercise these public exports. The two full-morphism `RootCoexist` tests
 retain explicit leaf imports for compatibility, not root-only evidence.
-The [root-only constant-closed client](../Test/ClosedPointHom.lean) exercises
-its export without a leaf import. At that earlier constructor checkpoint,
-`lakefile.toml` listed all 43 shipped tests among its 45 literal defaults,
-including historically named and diagnostic audit clients.
-The [root-only non-affineness client](../Test/ClosedPointNonAffine.lean) tests
-arbitrary field and non-field inducing maps. The two new
-[general-ring](../Test/ContinuousFunctions.lean) and
-[open-immersion](../Test/ContinuousFunctionsOpenImmersion.lean) clients also
-import only `RingedSpaces`. This tree lists all 46 shipped tests among its
-48 literal default targets. All four historically named `Legacy`
-files now use `module`: three are public-import clients and one is an import-all
-audit driver. The pullback compiled-origin census imports all of its client to
-include private and generated bodies.
-The historical generated API
-snapshot and manifest above remain unchanged and cover none of the new leaves.
+The [root-only constant-closed client](../RingedSpacesTests/ClosedPointHom.lean) exercises
+its export without a leaf import.
+The [root-only non-affineness client](../RingedSpacesTests/ClosedPointNonAffine.lean) tests
+arbitrary field and non-field inducing maps. The
+[general-ring](../RingedSpacesTests/ContinuousFunctions.lean) and
+[open-immersion](../RingedSpacesTests/ContinuousFunctionsOpenImmersion.lean) clients also
+import only `RingedSpaces`. The [finite-regularity](../RingedSpacesTests/FiniteRegularityFunctions.lean)
+and [map](../RingedSpacesTests/FiniteRegularityFunctionsMaps.lean) clients likewise
+exercise the public root. All 48 tests are among the 50 literal default
+targets, alongside the library aggregate and examples. The historical
+generated API snapshot and manifest remain unchanged and cover none of the
+new leaves.
 
 ## Reproduction and binding
 
@@ -91,11 +80,10 @@ source path, revision and loaded source line, then checks every real source
 and configuration byte against the Git object. For a standalone parentless
 checkout without that object it instead checks the exact committed manifest
 and all current committed inputs; a present but wrong object is never treated
-as absent. In this 68-file tree, `RingedSpaces.lean`, `lakefile.toml`, and
-`RingedSpaces/InverseImage.lean` differ from their historical input hashes;
-the other 33 of 36 historical inputs still match. Before the module-doc edit,
-the predecessor tree had 34 matching inputs; at the official historical snapshot
-all 36 match.
+as absent. All 36 input hashes match at the official historical snapshot. In
+this tree, only 11 historical inputs still match; `RingedSpaces.lean`,
+`RingedSpaces/InverseImage.lean`, and `lakefile.toml` differ, while the 22 old
+`Test/*.lean` input paths are absent after the move to `RingedSpacesTests/`.
 The old manifest cannot authenticate this tree, its added modules or the
 hand-adjusted API page. Provider-neutral generation records and earlier
 provider checks are separate historical evidence, not a current-tree check.
@@ -109,12 +97,14 @@ snapshot is parentless: analyzed development revision
 A clean official checkout therefore uses the adapter's committed-manifest
 binding for the missing analyzed object, as described above. The identifier
 still binds the historical source bytes; it is not a fetchable ancestor.
-The unchanged adapter explicitly rejects this
-68-file tree's 35 additional Lean files at its complete-inventory
-guard; do **not** run the following historical 33-module recipe against this
-tree. It is optional for reproducing **only** the frozen historical
-original output, not this hand-adjusted page and not a prerequisite for
-building or reviewing this tree.
+The unchanged adapter first compares the current complete Lean module-path set
+with its fixed 33-module historical inventory, before reading source inputs or
+native records. This tree has 61 Lean paths outside that old set and lacks 22
+old paths, so it fails that inventory check; the changed and missing input
+paths also prevent a historical source binding. Do **not** run the following
+historical recipe against this tree. It is optional for reproducing **only**
+the frozen historical original output, not this hand-adjusted page and not a
+prerequisite for building or reviewing this tree.
 If reproducing the snapshot separately, first run `lake exe cache get` with
 the pinned toolchain and mathlib revision.
 Build the pinned `leanprover/doc-gen4` Git revision above with the same Lean

@@ -5,8 +5,8 @@ Authors: Formal Frontier Agents
 
 module
 
-import all Test.ModuleChangeOfRings
-import Test.ModuleChangeOfRingsRoot
+import all RingedSpacesTests.ModuleChangeOfRings
+import RingedSpacesTests.ModuleChangeOfRingsRoot
 
 /-!
 # Transitive axiom audit for module change of rings

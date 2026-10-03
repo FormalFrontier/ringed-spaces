@@ -6,9 +6,9 @@ Authors: Formal Frontier Agents
 module
 
 import all RingedSpaces.Modules.RingedSpacePullback
-import all Test.RingedSpacePullback
-import all Test.RingedSpacePullbackConcrete
-import all Test.RingedSpacePullbackRootCoexist
+import all RingedSpacesTests.RingedSpacePullback
+import all RingedSpacesTests.RingedSpacePullbackConcrete
+import all RingedSpacesTests.RingedSpacePullbackRootCoexist
 
 set_option warningAsError true
 
@@ -26,9 +26,9 @@ run_cmd do
   let env ← getEnv
   let modules : List Name :=
     [`RingedSpaces.Modules.RingedSpacePullback,
-     `Test.RingedSpacePullback,
-     `Test.RingedSpacePullbackConcrete,
-     `Test.RingedSpacePullbackRootCoexist]
+     `RingedSpacesTests.RingedSpacePullback,
+     `RingedSpacesTests.RingedSpacePullbackConcrete,
+     `RingedSpacesTests.RingedSpacePullbackRootCoexist]
   let mut total : Nat := 0
   let mut empty : Nat := 0
   let mut extra : Nat := 0

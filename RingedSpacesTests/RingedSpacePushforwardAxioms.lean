@@ -6,9 +6,9 @@ Authors: Formal Frontier Agents
 module
 
 import all RingedSpaces.Modules.RingedSpacePushforward
-import all Test.RingedSpacePushforward
-import all Test.RingedSpacePushforwardConcrete
-import all Test.RingedSpacePushforwardRootCoexist
+import all RingedSpacesTests.RingedSpacePushforward
+import all RingedSpacesTests.RingedSpacePushforwardConcrete
+import all RingedSpacesTests.RingedSpacePushforwardRootCoexist
 
 set_option warningAsError true
 
@@ -26,9 +26,9 @@ run_cmd do
   let env ← getEnv
   let modules : List Name :=
     [`RingedSpaces.Modules.RingedSpacePushforward,
-     `Test.RingedSpacePushforward,
-     `Test.RingedSpacePushforwardConcrete,
-     `Test.RingedSpacePushforwardRootCoexist]
+     `RingedSpacesTests.RingedSpacePushforward,
+     `RingedSpacesTests.RingedSpacePushforwardConcrete,
+     `RingedSpacesTests.RingedSpacePushforwardRootCoexist]
   let mut total : Nat := 0
   let mut empty : Nat := 0
   let mut extra : Nat := 0

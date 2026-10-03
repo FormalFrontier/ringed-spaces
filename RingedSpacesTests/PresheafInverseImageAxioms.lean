@@ -5,9 +5,9 @@ Authors: Formal Frontier Agents
 
 module
 
-import Test.PresheafInverseImage
-import all Test.PresheafInverseImageConcrete
-import Test.PresheafInverseImageRoot
+import RingedSpacesTests.PresheafInverseImage
+import all RingedSpacesTests.PresheafInverseImageConcrete
+import RingedSpacesTests.PresheafInverseImageRoot
 
 /-!
 # Transitive axiom audit for inverse-image module presheaves

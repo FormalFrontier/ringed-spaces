@@ -103,10 +103,10 @@ property without a `SmallCategory` premise.
 
 ## Clients and attribution
 
-`Test/ModuleChangeOfRings.lean` checks the direct import and actual
+`RingedSpacesTests/ModuleChangeOfRings.lean` checks the direct import and actual
 two-object arrow, zero ring, empty site/space, unit, counit, naturality and
-Hom inverse clients. `Test/ModuleChangeOfRingsRoot.lean` checks the
-aggregate import; `Test/ModuleChangeOfRingsAxioms.lean` prints transitive
+Hom inverse clients. `RingedSpacesTests/ModuleChangeOfRingsRoot.lean` checks the
+aggregate import; `RingedSpacesTests/ModuleChangeOfRingsAxioms.lean` prints transitive
 axioms in the pinned environment. Contributor and adapted-research credit
 is in `NOTICE.md`. Fetch the matching mathlib cache with `lake exe cache get`
 before running `lake --wfail build`.

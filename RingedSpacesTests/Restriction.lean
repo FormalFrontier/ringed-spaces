@@ -7,7 +7,7 @@ module
 
 public import RingedSpaces.Restriction
 public import RingedSpaces.OpenCover
-public import Test.OpenCover
+public import RingedSpacesTests.OpenCover
 
 /-!
 # Direct-import clients for literal open-intersection gluing

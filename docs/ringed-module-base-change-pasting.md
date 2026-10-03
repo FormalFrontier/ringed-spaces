@@ -42,9 +42,9 @@ square-commutativity equalities are assumed: no Cartesian, flatness, nonzero,
 invertibility, or raw-tensor-section condition is required. The proofs use
 mathlib's `mateEquiv_vcomp` and `mateEquiv_hcomp` and the existing composition
 coherence of the actual functors. The public client
-[`Test/RingedSpaceBaseChangePasting.lean`](../Test/RingedSpaceBaseChangePasting.lean)
+[`RingedSpacesTests/RingedSpaceBaseChangePasting.lean`](../RingedSpacesTests/RingedSpaceBaseChangePasting.lean)
 checks both arbitrary-square laws and the non-Cartesian empty-corner example,
-using the explicit existing fixture import `Test.RingedSpaceBaseChange`.
+using the explicit existing fixture import `RingedSpacesTests.RingedSpaceBaseChange`.
 
 Formal Frontier contributors developed the original pasting proof and clients
 and adapted them for this library; see [attribution](../NOTICE.md). This guide

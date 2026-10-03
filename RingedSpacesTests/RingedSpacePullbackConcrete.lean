@@ -6,7 +6,7 @@ Authors: Formal Frontier Agents
 module
 
 public import RingedSpaces.Modules.RingedSpacePullback
-public import Test.RingedSpacePushforwardConcrete
+public import RingedSpacesTests.RingedSpacePushforwardConcrete
 
 set_option warningAsError true
 

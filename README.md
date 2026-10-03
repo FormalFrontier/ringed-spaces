@@ -34,7 +34,10 @@ maps**, not just their maps of underlying spaces.
   gives chosen-chart `C^r` scalar sections for `r : ℕ` and local stalks without
   an `IsManifold` or nonempty-carrier assumption. Smooth sections weaken to
   finite order; order zero is naturally isomorphic to the existing continuous
-  scalar sheaf, including compatible stalk evaluation. See the
+  scalar sheaf, including compatible stalk evaluation. Finite-`C^r` maps
+  [pull sections back](RingedSpaces/FiniteRegularityFunctions/Maps.lean) and induce
+  locally ringed-space morphisms compatible with identity, composition and
+  both endpoint sheaf comparisons. See the
   [finite-regularity guide](docs/finite-regularity-functions.md).
 - **Change of coefficient sheaves.** A full natural map of commutative-ring
   presheaves induces a tensor-presheaf/restriction-of-scalars adjunction;
@@ -70,15 +73,20 @@ maps**, not just their maps of underlying spaces.
 
 ## Using the library
 
-With access to the official GitHub repository, add the published revision to
-your `lakefile.toml`:
+With access to the official GitHub repository, add the library to your
+`lakefile.toml`:
 
 ```toml
 [[require]]
 name = "ringed-spaces"
 git = "https://github.com/FormalFrontier/ringed-spaces.git"
-rev = "b6a8d77904ae863c1b3b9d2844102667173b5cb2"
+rev = "main"
 ```
+
+GitHub `main` contains reviewed releases. Lake resolves the latest release when
+the dependency is first added or updated, and `lake-manifest.json` locks the
+resolved commit until the next update. To pin a particular release instead,
+replace `main` with a commit from its history.
 
 Use the public aggregate import (or a narrower leaf listed below). This
 complete example is already checked in [`RingedSpacesExamples.lean`](RingedSpacesExamples.lean):
@@ -107,8 +115,8 @@ compatibility and gluing APIs, and the inverse-image sheaf mate are exposed
 without unfolding definitions; the [`Restriction`](RingedSpaces/Restriction.lean),
 [`OpenCover`](RingedSpaces/OpenCover.lean) and
 [`InverseImage`](RingedSpaces/InverseImage.lean) modules give their signatures.
-The [root-only examples](Test/ContinuousFunctions.lean) and
-[open-immersion clients](Test/ContinuousFunctionsOpenImmersion.lean) show the
+The [root-only examples](RingedSpacesTests/ContinuousFunctions.lean) and
+[open-immersion clients](RingedSpacesTests/ContinuousFunctionsOpenImmersion.lean) show the
 general-ring and field-specific continuous-function imports and local
 open-immersion-instance recipe.
 
@@ -144,6 +152,7 @@ the linked guides supply definitions, formulas, hypotheses and clients.
 | [`RingedSpaces.ClosedPointNonAffine`](RingedSpaces/ClosedPointNonAffine.lean) | [Exclusion of every affine-induced map](docs/closed-point-nonaffine.md). |
 | [`RingedSpaces.ContinuousFunctions`](RingedSpaces/ContinuousFunctions.lean) | [General-ring sheaf, evaluation and maps; field locality](docs/continuous-functions.md). |
 | [`RingedSpaces.FiniteRegularityFunctions`](RingedSpaces/FiniteRegularityFunctions.lean) | [Finite-regularity scalar sections, stalks, and endpoint comparisons](docs/finite-regularity-functions.md). |
+| [`RingedSpaces.FiniteRegularityFunctions.Maps`](RingedSpaces/FiniteRegularityFunctions/Maps.lean) | [Chosen-chart finite-regularity pullbacks and locally ringed-space maps](docs/finite-regularity-functions.md#maps-of-finite-regularity). |
 | [`RingedSpaces.ContinuousFunctions.OpenImmersion`](RingedSpaces/ContinuousFunctions/OpenImmersion.lean) | [General-ring open immersions and field restriction](docs/continuous-functions.md#open-embeddings-and-restriction). |
 | [`RingedSpaces.Modules.PresheafChangeOfRings`](RingedSpaces/Modules/PresheafChangeOfRings.lean) | [Tensor presheaf and adjunction](docs/module-change-of-rings.md). |
 | [`RingedSpaces.Modules.SheafChangeOfRings`](RingedSpaces/Modules/SheafChangeOfRings.lean) | [Sheafified tensor adjunction](docs/module-change-of-rings.md#sheaves). |

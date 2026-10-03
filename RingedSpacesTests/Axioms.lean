@@ -5,10 +5,10 @@ Authors: Formal Frontier Agents
 
 module
 
-import Test.OpenCover
-import Test.Restriction
-import Test.Root
-import Test.InverseImage
+import RingedSpacesTests.OpenCover
+import RingedSpacesTests.Restriction
+import RingedSpacesTests.Root
+import RingedSpacesTests.InverseImage
 
 /-!
 # Public and downstream-client axiom audit

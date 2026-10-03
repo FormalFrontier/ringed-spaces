@@ -3,7 +3,7 @@
 Import `RingedSpaces` for the public aggregate, or import
 `RingedSpaces.Modules.PullbackCoherence` and
 `RingedSpaces.Modules.BaseChange` directly. The root-only client
-[`Test/RingedSpaceBaseChange.lean`](../Test/RingedSpaceBaseChange.lean) exercises
+[`RingedSpacesTests/RingedSpaceBaseChange.lean`](../RingedSpacesTests/RingedSpaceBaseChange.lean) exercises
 both leaves and a non-Cartesian example. In these modules `X`, `Y`, `Z` and
 `W` are commutative `RingedSpace.{u,u}` objects and every arrow is a **full**
 ringed-space morphism, not merely a map of their underlying topological spaces.

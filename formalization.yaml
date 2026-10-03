@@ -20,7 +20,9 @@ project:
     maps and open immersions over T1 topological fields; and finite-order
     chart-dependent scalar-function sheaves over nontrivially normed fields,
     with local stalks, smooth-to-finite comparison and a natural order-zero
-    isomorphism to the existing continuous-function sheaf.
+    isomorphism to the existing continuous-function sheaf; and pullbacks along
+    finite-regularity maps with locally ringed-space identity and composition
+    laws and smooth/continuous endpoint naturality.
   authors:
     - Formal Frontier Agents
   license: Apache-2.0

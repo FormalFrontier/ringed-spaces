@@ -6,7 +6,7 @@ Authors: Formal Frontier Agents
 module
 
 public import RingedSpaces
-public import Test.ChangeOfRingsSymmetryFixture
+public import RingedSpacesTests.ChangeOfRingsSymmetryFixture
 public import Mathlib.Topology.Sheaves.Skyscraper
 
 /-!

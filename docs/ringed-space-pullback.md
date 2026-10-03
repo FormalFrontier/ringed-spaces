@@ -2,8 +2,8 @@
 
 Import `RingedSpaces.Modules.RingedSpacePullback` directly or the public
 `RingedSpaces` aggregate. The root-only full-morphism client
-[`Test/RingedSpaceFullMorphismRoot.lean`](../Test/RingedSpaceFullMorphismRoot.lean)
-checks the public export; `Test.RingedSpacePullbackRootCoexist` checks
+[`RingedSpacesTests/RingedSpaceFullMorphismRoot.lean`](../RingedSpacesTests/RingedSpaceFullMorphismRoot.lean)
+checks the public export; `RingedSpacesTests.RingedSpacePullbackRootCoexist` checks
 root-plus-direct compatibility, not an independent root-only import.
 
 For any morphism `f : X ⟶ Y` of commutative ringed spaces in diagonal universe

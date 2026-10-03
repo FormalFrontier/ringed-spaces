@@ -158,10 +158,10 @@ restriction construction.
 
 ## Import and build
 
-The [ring-valued root-only examples](../Test/ContinuousFunctions.lean) exercise
+The [ring-valued root-only examples](../RingedSpacesTests/ContinuousFunctions.lean) exercise
 general-ring precomposition, stalk evaluation, identity/composition, the empty
 base and subsingleton rings, alongside field locality and forgetting. The
-[open-immersion root-only examples](../Test/ContinuousFunctionsOpenImmersion.lean)
+[open-immersion root-only examples](../RingedSpacesTests/ContinuousFunctionsOpenImmersion.lean)
 exercise general-ring open embeddings, mathlib's full restriction comparison
 and triangles, plus the existing field-specific inclusion factorizations. A consumer
 may start either of two separate files with one of these imports:
@@ -188,12 +188,12 @@ build environment, retrieve the matching precompiled cache **first**:
 
 ```sh
 lake exe cache get
-lake build +Test.ContinuousFunctions +Test.ContinuousFunctionsOpenImmersion
+lake build +RingedSpacesTests.ContinuousFunctions +RingedSpacesTests.ContinuousFunctionsOpenImmersion
 lake build
 ```
 
 For a stricter warning check after fetching the cache, run
-`lake --wfail build +Test.ContinuousFunctions +Test.ContinuousFunctionsOpenImmersion`.
+`lake --wfail build +RingedSpacesTests.ContinuousFunctions +RingedSpacesTests.ContinuousFunctionsOpenImmersion`.
 This treats warnings as failures; the ordinary build above neither suppresses
 warnings nor asserts that this library is warning-free.
 

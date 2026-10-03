@@ -50,7 +50,7 @@ to this contraction, whence `alpha r ∈ p.asIdeal`. A unit cannot belong to
 a proper prime ideal, contradicting `hu`.
 
 No field, domain, Noetherian or algebraically closed hypothesis on `S` is
-needed. The [root-only client](../Test/ClosedPointNonAffine.lean) uses both
+needed. The [root-only client](../RingedSpacesTests/ClosedPointNonAffine.lean) uses both
 arbitrary field `beta` and arbitrary `beta : R →+* K × K` for a non-field
 product of fields; it imports **only** the public root. Nontriviality
 provides the prime used in the proof; this theorem makes no claim for the
@@ -66,7 +66,7 @@ Use the checked-in `lean-toolchain` (`leanprover/lean4:v4.34.0-rc2`) and
 ```sh
 elan toolchain install leanprover/lean4:v4.34.0-rc2
 lake exe cache get
-lake --wfail build RingedSpaces Test.ClosedPointNonAffine
+lake --wfail build RingedSpaces RingedSpacesTests.ClosedPointNonAffine
 ```
 
 Formal Frontier contributors developed the original non-affineness proof and

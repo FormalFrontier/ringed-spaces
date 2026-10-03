@@ -2,8 +2,8 @@
 
 Import `RingedSpaces.Modules.RingedSpacePushforward` directly or the public
 `RingedSpaces` aggregate. The root-only full-morphism client
-[`Test/RingedSpaceFullMorphismRoot.lean`](../Test/RingedSpaceFullMorphismRoot.lean)
-checks the public export; `Test.RingedSpacePushforwardRootCoexist` checks
+[`RingedSpacesTests/RingedSpaceFullMorphismRoot.lean`](../RingedSpacesTests/RingedSpaceFullMorphismRoot.lean)
+checks the public export; `RingedSpacesTests.RingedSpacePushforwardRootCoexist` checks
 root-plus-direct compatibility, not an independent root-only import.
 
 Let `X` and `Y` be ringed spaces in diagonal universe `u` and let `f : X ⟶ Y`
@@ -71,7 +71,7 @@ does not construct a tensor pullback,
 identify a chosen pullback, or establish a ringed-space composition law.
 
 The theorems require no nonempty spaces, nonzero rings, stalk-locality, or
-schemes. `Test.RingedSpacePushforwardConcrete` uses a verified proper open of
+schemes. `RingedSpacesTests.RingedSpacePushforwardConcrete` uses a verified proper open of
 the discrete two-point space, a nonidentity collapse map, the actual canonical
 full ringed-space map with its sectionwise equations, an empty source space,
 and the zero ring `ZMod 1`. Its other coefficient example uses `ZMod 5`;

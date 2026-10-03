@@ -40,7 +40,7 @@ composite of `alpha` and the top component of `g`.
 
 ## Scope and checked uses
 
-The [root-only client](../Test/ClosedPointHom.lean) exercises arbitrary and
+The [root-only client](../RingedSpacesTests/ClosedPointHom.lean) exercises arbitrary and
 empty sources, field targets, base and top calculations, fixed-base
 extensionality and equivalence, and precomposition. Its conditional theorem
 `Test.ClosedPointHom.nonlocal_ne_affine` assumes a ring homomorphism to a field

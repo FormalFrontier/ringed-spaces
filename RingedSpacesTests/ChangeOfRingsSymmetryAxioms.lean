@@ -5,9 +5,9 @@ Authors: Formal Frontier Agents
 
 module
 
-import all Test.ChangeOfRingsSymmetry
-import all Test.ChangeOfRingsSymmetryFixture
-import all Test.ChangeOfRingsSymmetryRoot
+import all RingedSpacesTests.ChangeOfRingsSymmetry
+import all RingedSpacesTests.ChangeOfRingsSymmetryFixture
+import all RingedSpacesTests.ChangeOfRingsSymmetryRoot
 
 /-!
 # Pinned transitive axiom census for right-factor scalar extension
@@ -26,8 +26,8 @@ run_cmd do
   let env ← getEnv
   let moduleNames := #[`RingedSpaces.Modules.PresheafChangeOfRingsSymmetry,
     `RingedSpaces.Modules.SheafChangeOfRingsSymmetry,
-    `Test.ChangeOfRingsSymmetry, `Test.ChangeOfRingsSymmetryFixture,
-    `Test.ChangeOfRingsSymmetryRoot]
+    `RingedSpacesTests.ChangeOfRingsSymmetry, `RingedSpacesTests.ChangeOfRingsSymmetryFixture,
+    `RingedSpacesTests.ChangeOfRingsSymmetryRoot]
   let mut total : Nat := 0
   let mut noAxioms : Nat := 0
   let mut allowedAxioms : Nat := 0
@@ -162,7 +162,8 @@ run_cmd do
   let env ← getEnv
   let declarations := (env.constants.toList.map Prod.fst).filter fun declaration =>
     (env.getModuleIdxFor? declaration).isNone
-  logInfo m!"MODULE Test.ChangeOfRingsSymmetryAxioms CURRENT DECLARATIONS {declarations.length}"
+  logInfo (m!"MODULE RingedSpacesTests.ChangeOfRingsSymmetryAxioms " ++
+    m!"CURRENT DECLARATIONS {declarations.length}")
   for declaration in declarations.toArray.qsort
       (fun first second => first.toString < second.toString) do
     let axioms ← Lean.collectAxioms declaration

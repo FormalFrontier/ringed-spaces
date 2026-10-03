@@ -5,7 +5,7 @@ Authors: Formal Frontier Agents
 
 module
 
-public import Test.PresheafInverseImageHom
+public import RingedSpacesTests.PresheafInverseImageHom
 public import Mathlib.Data.ZMod.Defs
 
 /-!

@@ -5,7 +5,7 @@ Authors: Formal Frontier Agents
 
 module
 
-import all Test.RingedSpacePullbackLegacy
+import all RingedSpacesTests.RingedSpacePullbackLegacy
 
 set_option warningAsError true
 
@@ -15,7 +15,7 @@ open Lean Elab Command
 
 run_cmd do
   let env ← getEnv
-  let moduleName := `Test.RingedSpacePullbackLegacy
+  let moduleName := `RingedSpacesTests.RingedSpacePullbackLegacy
   let some index := env.getModuleIdx? moduleName
     | throwError "missing compiled module: {moduleName}"
   let names := env.constants.toList.map Prod.fst |>.filter fun name =>

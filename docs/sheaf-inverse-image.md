@@ -3,7 +3,7 @@
 Import `RingedSpaces` for the complete API, or import
 `RingedSpaces.Modules.SheafInverseImageHom` directly; the narrower
 `RingedSpaces.Modules.SheafInverseImage` provides the functor and comparison.
-The [root-only client](../Test/SheafInverseImageRoot.lean) uses only the public
+The [root-only client](../RingedSpacesTests/SheafInverseImageRoot.lean) uses only the public
 aggregate. These modules need only the pinned mathlib dependency and the
 library's public presheaf inverse-image modules; no research repository is
 required by clients.

@@ -87,18 +87,18 @@ stalk statement or mixed-universe promise here.
 With the checked-in `lean-toolchain` and complete `lake-manifest.json`, run
 `lake exe cache get` successfully **before** building. For the focused API,
 run `lake --wfail build RingedSpaces.Modules.PresheafInverseImage
-Test.PresheafInverseImage Test.PresheafInverseImageConcrete
-Test.PresheafInverseImageRoot Test.PresheafInverseImageAxioms`, then
+RingedSpacesTests.PresheafInverseImage RingedSpacesTests.PresheafInverseImageConcrete
+RingedSpacesTests.PresheafInverseImageRoot RingedSpacesTests.PresheafInverseImageAxioms`, then
 `lake --wfail build RingedSpaces` and `lake --wfail build`. The exact
 direct/aggregate clients and axiom driver are in
-`Test/PresheafInverseImage*.lean`; historical raw outputs are preserved in
+`RingedSpacesTests/PresheafInverseImage*.lean`; historical raw outputs are preserved in
 the separate pre-release evidence archive.
 
-`Test.PresheafInverseImage` proves named generic generator, common-index,
+`RingedSpacesTests.PresheafInverseImage` proves named generic generator, common-index,
 arbitrary-scalar restriction and map equations, identity/composition, actual
-unit and additive-comparison naturality/unit. `Test.PresheafInverseImageRoot`
+unit and additive-comparison naturality/unit. `RingedSpacesTests.PresheafInverseImageRoot`
 imports only the aggregate root and checks the same structure from downstream.
-`Test.PresheafInverseImageConcrete` uses a nonidentity collapse map of the
+`RingedSpacesTests.PresheafInverseImageConcrete` uses a nonidentity collapse map of the
 two-point **discrete** space, integer ring and integer module with nonzero
 input elements, and a restriction from the whole space to a proper **nonempty**
 open. It also checks the empty space, empty open and zero ring `ZMod 1`;

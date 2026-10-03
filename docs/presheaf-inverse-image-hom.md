@@ -74,8 +74,8 @@ with `(underlyingComparison f R).inv.app M` (the inverse orientation), rather
 than claiming equality of separately chosen pullback objects.
 
 For an executable, generic API example, see
-`Test/PresheafInverseImageHom.lean`; for a nonidentity continuous map and a
-nonempty proper open, see `Test/PresheafInverseImageHomConcrete.lean`.
+`RingedSpacesTests/PresheafInverseImageHom.lean`; for a nonidentity continuous map and a
+nonempty proper open, see `RingedSpacesTests/PresheafInverseImageHomConcrete.lean`.
 
 ## Reproducibility
 
@@ -83,8 +83,8 @@ This library's sole direct dependency is mathlib, at the exact revision in
 `lakefile.toml`; use the pinned `lean-toolchain`. Before any build, execute
 `lake exe cache get`. The focused import and saved clients can then be built
 with `lake --wfail build RingedSpaces.Modules.PresheafInverseImageHom
-Test.PresheafInverseImageHom Test.PresheafInverseImageHomConcrete
-Test.PresheafInverseImageHomRoot Test.PresheafInverseImageHomAxioms`.
+RingedSpacesTests.PresheafInverseImageHom RingedSpacesTests.PresheafInverseImageHomConcrete
+RingedSpacesTests.PresheafInverseImageHomRoot RingedSpacesTests.PresheafInverseImageHomAxioms`.
 Historical contributor and source-adaptation credit is in `NOTICE.md`.
 Prior author-side checks and review records are preserved separately from
 this mathematical guide in the pre-release evidence archive.

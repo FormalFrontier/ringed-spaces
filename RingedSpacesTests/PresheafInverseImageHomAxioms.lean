@@ -5,9 +5,9 @@ Authors: Formal Frontier Agents
 
 module
 
-import Test.PresheafInverseImageHom
-import all Test.PresheafInverseImageHomConcrete
-import Test.PresheafInverseImageHomRoot
+import RingedSpacesTests.PresheafInverseImageHom
+import all RingedSpacesTests.PresheafInverseImageHomConcrete
+import RingedSpacesTests.PresheafInverseImageHomRoot
 
 /-!
 # Compiled-origin axiom census for the inverse-image Hom contribution
@@ -24,9 +24,9 @@ run_cmd do
   let env ← getEnv
   let modules : List Name :=
     [`RingedSpaces.Modules.PresheafInverseImageHom,
-     `Test.PresheafInverseImageHom,
-     `Test.PresheafInverseImageHomConcrete,
-     `Test.PresheafInverseImageHomRoot]
+     `RingedSpacesTests.PresheafInverseImageHom,
+     `RingedSpacesTests.PresheafInverseImageHomConcrete,
+     `RingedSpacesTests.PresheafInverseImageHomRoot]
   let mut total : Nat := 0
   let mut empty : Nat := 0
   let mut extra : Nat := 0

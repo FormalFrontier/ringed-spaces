@@ -98,10 +98,10 @@ adjunction in this contribution.
 
 ## Downstream examples and reproducibility
 
-`Test/ChangeOfRingsSymmetry.lean` directly imports both leaves and exercises
+`RingedSpacesTests/ChangeOfRingsSymmetry.lean` directly imports both leaves and exercises
 arbitrary universes, scalars, tensors, full-map balancing, all-tensor
 compatibility, units, restrictions, naturality, and the existing Hom formula.
-`Test/ChangeOfRingsSymmetryFixture.lean` defines a literal two-object
+`RingedSpacesTests/ChangeOfRingsSymmetryFixture.lean` defines a literal two-object
 diagram with `B(1)=ℤ`, `B(0)=ℚ`, and `B(1→0)=Int.castRingHom ℚ`, while `A`
 is constant `ℤ` and `theta_1=id`, `theta_0=Int.castRingHom ℚ`.
 `integerInclusionNotSurjective` proves that `1/2` is outside the image of
@@ -109,7 +109,7 @@ is constant `ℤ` and `theta_1=id`, `theta_0=Int.castRingHom ℚ`.
 genuinely nonidentity. The clients restrict nonzero coefficients `2,3` along
 the nonidentity arrow,
 not merely along an identity or between constant coefficient rings.
-`Test/ChangeOfRingsSymmetryRoot.lean` checks the aggregate import on the
+`RingedSpacesTests/ChangeOfRingsSymmetryRoot.lean` checks the aggregate import on the
 **discrete** two-point space (`⊥` in mathlib's reverse inclusion order for
 topologies). Its original open inclusion is from the empty open to the whole
 space; the associated section restriction is from the whole space to the empty
@@ -124,7 +124,7 @@ The direct clients separately exercise zero coefficient rings and an empty
 site; the topological client discharges the native witnesses even for an empty
 open.
 
-`Test/ChangeOfRingsSymmetryAxioms.lean` is an axiom-audit client. Fetch the
+`RingedSpacesTests/ChangeOfRingsSymmetryAxioms.lean` is an axiom-audit client. Fetch the
 matching precompiled mathlib cache with `lake exe cache get` before running
 `lake --wfail build`. Contributor and source-adaptation credit is in
 `NOTICE.md`; historical raw logs and review records are preserved separately

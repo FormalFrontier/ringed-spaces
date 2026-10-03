@@ -3,7 +3,9 @@
 The module [`RingedSpaces.FiniteRegularityFunctions`](../RingedSpaces/FiniteRegularityFunctions.lean)
 constructs, for each finite `r : ℕ`, a sheaf of scalar-valued `C^r` functions
 on a charted space. It also relates its smooth and continuous endpoints to the
-existing Mathlib and RingedSpaces sheaves.
+existing Mathlib and RingedSpaces sheaves. The companion
+[`RingedSpaces.FiniteRegularityFunctions.Maps`](../RingedSpaces/FiniteRegularityFunctions/Maps.lean)
+constructs pullback on sections, sheaves, and locally ringed spaces.
 
 Fix a nontrivially normed field `𝕜 : Type u`, a normed model `EM` over `𝕜`,
 a topological model `HM`, and `IM : ModelWithCorners 𝕜 EM HM`. Let
@@ -29,6 +31,27 @@ can be formed at a nonexistent point.
 The field and carrier have the same Lean universe, as in the pinned Mathlib
 smooth sheaf and the existing continuous-function construction.
 
+## Maps of finite regularity
+
+For charted spaces `M` and `N` over the same field, with respective chosen
+models `IM` and `IN`, a map `f : M → N` satisfying
+`ContMDiff IM IN (r : ℕ∞ω) f` pulls sections on `U : Opens N` back to
+sections on the inverse-image open. The ring homomorphism `precompose`
+satisfies `precompose_apply` and `precompose_restrict`; `sheafHom` assembles
+these into an arrow from the sheaf on `N` to the pushforward of the sheaf on
+`M`. The corresponding `locallyRingedSpaceMap` is local on stalks: it takes
+the germ of a section to the germ of its precomposition and preserves
+evaluation at the mapped point. `locallyRingedSpaceMap_id` and
+`locallyRingedSpaceMap_comp` identify the **entire** arrows, including their
+sheaf maps, with identity and composition. These constructions require no
+nonempty carrier, manifold-compatibility instance, or finite-dimensional model.
+
+The naturality equations `smoothToFinite_naturality` and
+`zeroSheafIso_naturality` compare these pullbacks with Mathlib's smooth
+pullback and the existing continuous-function pullback, respectively, as
+arrows of sheaves. They do not identify finite-order chosen-chart regularity
+with an intrinsic regularity condition or with mere pointwise differentiability.
+
 ## Smooth sections and zero order
 
 Mathlib's `smoothSheafCommRing IM 𝓘(𝕜) M 𝕜` has a canonical arrow
@@ -49,13 +72,18 @@ isomorphism `zeroSheafIso (IM := IM) (M := M)` with the **existing**
 with the two evaluation homomorphisms. It preserves and reflects units
 and is a local homomorphism.
 
-The [ordinary-import examples](../Test/FiniteRegularityFunctions.lean)
+The [ordinary-import examples](../RingedSpacesTests/FiniteRegularityFunctions.lean)
 include the unit germ of the real `C¹` constant two, the nonunit germ of
 the identity at zero, a smooth constant under order weakening, and the
 zero-order absolute-value function restricted to `(-∞, 1)` and evaluated
 at zero. Here `C¹` means continuously differentiable in the `ContMDiff`
 API, rather than merely differentiable at a single point. Only finite
 natural orders are considered, not analytic or infinite orders as outputs.
+The [map examples](../RingedSpacesTests/FiniteRegularityFunctionsMaps.lean) include a
+nonconstant real `C¹` translation on a proper open, its backward germ and
+evaluation, whole-arrow identity and composition, a smooth comparison at
+order one, an absolute-value comparison at order zero, and a map from the
+empty charted carrier.
 
 The finite sheaf and local-ring arguments adapt Heather Macbeth and Adam
 Topaz's Mathlib smooth-sheaf work (2023, Apache-2.0), including the

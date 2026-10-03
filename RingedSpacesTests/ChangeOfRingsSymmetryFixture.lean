@@ -5,7 +5,7 @@ Authors: Formal Frontier Agents
 
 module
 
-public import Test.ChangeOfRingsSymmetry
+public import RingedSpacesTests.ChangeOfRingsSymmetry
 public import Mathlib.Data.Rat.Cast.Defs
 public import Mathlib.Data.Rat.Lemmas
 

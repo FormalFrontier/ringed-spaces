@@ -5,7 +5,7 @@ Authors: Formal Frontier Agents
 module
 
 public import RingedSpaces
-public import Test.RingedSpaceBaseChange
+public import RingedSpacesTests.RingedSpaceBaseChange
 
 /-! # Public clients of full ringed-module square pasting -/
 
