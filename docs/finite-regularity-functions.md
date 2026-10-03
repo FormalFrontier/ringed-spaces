@@ -9,7 +9,9 @@ constructs pullback on sections, sheaves, and locally ringed spaces. The compani
 [`RingedSpaces.FiniteRegularityFunctions.OpenImmersion`](../RingedSpaces/FiniteRegularityFunctions/OpenImmersion.lean)
 compares the locally ringed space of an open subtype with the ambient restriction.
 [`RingedSpaces.FiniteRegularityFunctions.LocalBall`](../RingedSpaces/FiniteRegularityFunctions/LocalBall.lean)
-constructs finite-order ball coordinates and their locally ringed-space comparison.
+packages the regularity-indexed chart-ball construction at finite order and
+gives its locally ringed-space comparison; see the
+[indexed and smooth chart-ball guide](chart-local-ball.md).
 
 Fix a nontrivially normed field `𝕜 : Type u`, a normed model `EM` over `𝕜`,
 a topological model `HM`, and `IM : ModelWithCorners 𝕜 EM HM`. Let

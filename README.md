@@ -47,6 +47,13 @@ maps**, not just their maps of underlying spaces.
   isomorphism identifies the restricted ambient scalar-function space with
   the ball's scalar-function space. See the
   [finite-regularity guide](docs/finite-regularity-functions.md).
+- **Indexed chart balls and smooth scalar functions.** For any regularity
+  `n : ℕ∞ω`, a self-model manifold has chart coordinates on a neighborhood
+  diffeomorphic to an **entire** positive-radius model ball, with no dimension
+  or completeness assumption. At smooth regularity `∞`, the restricted ambient
+  canonical smooth scalar locally ringed space is isomorphic to the canonical
+  one on that ball; its whole arrows and full-composite germ and section
+  evaluations are explicit. See the [chart-ball guide](docs/chart-local-ball.md).
 - **Change of coefficient sheaves.** A full natural map of commutative-ring
   presheaves induces a tensor-presheaf/restriction-of-scalars adjunction;
   with the required site sheafification witnesses, a full map of ring sheaves
@@ -162,6 +169,9 @@ the linked guides supply definitions, formulas, hypotheses and clients.
 | [`RingedSpaces.FiniteRegularityFunctions`](RingedSpaces/FiniteRegularityFunctions.lean) | [Finite-regularity scalar sections, stalks, and endpoint comparisons](docs/finite-regularity-functions.md). |
 | [`RingedSpaces.FiniteRegularityFunctions.Maps`](RingedSpaces/FiniteRegularityFunctions/Maps.lean) | [Chosen-chart finite-regularity pullbacks and locally ringed-space maps](docs/finite-regularity-functions.md#maps-of-finite-regularity). |
 | [`RingedSpaces.FiniteRegularityFunctions.OpenImmersion`](RingedSpaces/FiniteRegularityFunctions/OpenImmersion.lean) | [Finite-order scalar open-subtype immersions and restriction comparison](docs/finite-regularity-functions.md#open-subtypes-and-restriction). |
+| [`RingedSpaces.FiniteRegularityFunctions.LocalBall`](RingedSpaces/FiniteRegularityFunctions/LocalBall.lean) | [Finite-order entire-ball coordinates and scalar locally ringed spaces](docs/finite-regularity-functions.md#finite-order-local-balls). |
+| [`RingedSpaces.ChartedSpace.LocalBall`](RingedSpaces/ChartedSpace/LocalBall.lean) | [Regularity-indexed chart coordinates on entire positive-radius balls](docs/chart-local-ball.md). |
+| [`RingedSpaces.ChartedSpace.SmoothLocalBall`](RingedSpaces/ChartedSpace/SmoothLocalBall.lean) | [Canonical smooth scalar locally ringed spaces on chart balls](docs/chart-local-ball.md). |
 | [`RingedSpaces.ContinuousFunctions.OpenImmersion`](RingedSpaces/ContinuousFunctions/OpenImmersion.lean) | [General-ring open immersions and field restriction](docs/continuous-functions.md#open-embeddings-and-restriction). |
 | [`RingedSpaces.Modules.PresheafChangeOfRings`](RingedSpaces/Modules/PresheafChangeOfRings.lean) | [Tensor presheaf and adjunction](docs/module-change-of-rings.md). |
 | [`RingedSpaces.Modules.SheafChangeOfRings`](RingedSpaces/Modules/SheafChangeOfRings.lean) | [Sheafified tensor adjunction](docs/module-change-of-rings.md#sheaves). |

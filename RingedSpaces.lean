@@ -28,6 +28,7 @@ public import RingedSpaces.Modules.RingedSpacePullback
 public import RingedSpaces.Modules.PullbackCoherence
 public import RingedSpaces.Modules.BaseChange
 public import RingedSpaces.Modules.BaseChangePasting
+public import RingedSpaces.ChartedSpace.SmoothLocalBall
 
 /-!
 # Ringed spaces
@@ -59,4 +60,9 @@ open embeddings give open immersions and canonical open-subtype restriction comp
 For finite natural regularity orders, it also provides scalar-function sheaves on
 charted spaces, with smooth-to-finite section weakening and a zero-order comparison
 to the continuous-function sheaf.
+For any manifold regularity indexed by `ℕ∞ω`, it provides chart coordinates on
+an entire positive-radius model ball. At smooth regularity `∞`, it compares the
+canonical smooth scalar locally ringed space restricted from the ambient manifold
+with the canonical one on that entire coordinate ball, including the induced
+point maps and full-composite germ and section-evaluation laws.
 -/
