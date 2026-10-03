@@ -57,7 +57,8 @@ maps**, not just their maps of underlying spaces.
 - **Holomorphic scalar sections.** On open and nested-open subtypes of the
   complex line, complex differentiability of scalar-valued functions is
   equivalent to complex smoothness. The canonical smooth scalar sheaf accepts
-  these functions directly as sections, with pointwise evaluation, restriction,
+  [these functions directly as sections](RingedSpaces/ChartedSpace/HolomorphicSections.lean),
+  with pointwise evaluation, restriction,
   and sheaf and locally ringed-space maps that precompose representatives on
   inverse-image opens.
   This one-variable result does not assert the analogous equivalence on

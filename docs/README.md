@@ -109,9 +109,9 @@ binding for the missing analyzed object, as described above. The identifier
 still binds the historical source bytes; it is not a fetchable ancestor.
 The unchanged adapter first compares the current complete Lean module-path set
 with its fixed 33-module historical inventory, before reading source inputs or
-native records. This tree has 65 Lean paths outside that old set and lacks 22
-old paths, so it fails that inventory check; the changed and missing input
-paths also prevent a historical source binding. Do **not** run the following
+native records. This tree has Lean paths outside that old set and lacks the 22
+old `Test/*.lean` paths, so it fails that inventory check; the changed and missing
+input paths also prevent a historical source binding. Do **not** run the following
 historical recipe against this tree. It is optional for reproducing **only**
 the frozen historical original output, not this hand-adjusted page and not a
 prerequisite for building or reviewing this tree.
