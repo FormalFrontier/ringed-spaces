@@ -29,8 +29,10 @@ public import RingedSpaces.Modules.PullbackCoherence
 public import RingedSpaces.Modules.BaseChange
 public import RingedSpaces.Modules.BaseChangePasting
 public import RingedSpaces.ChartedSpace.SmoothLocalBall
+public import RingedSpaces.ChartedSpace.SmoothScalarReconstruction
 public import RingedSpaces.ChartedSpace.HolomorphicSections
 public import RingedSpaces.Complex.AtlasRegularity
+public import RingedSpaces.ChartedSpace.CompatibleAtlases
 
 /-!
 # Ringed spaces
@@ -67,8 +69,14 @@ an entire positive-radius model ball. At smooth regularity `∞`, it compares th
 canonical smooth scalar locally ringed space restricted from the ambient manifold
 with the canonical one on that entire coordinate ball, including the induced
 point maps and full-composite germ and section-evaluation laws.
+Scalar-preserving morphisms between canonical smooth scalar presheafed spaces
+pull back sections by precomposition; for open finite-dimensional targets their
+continuous base maps are smooth and determine their full sheaf morphisms.
+For real scalars, every morphism preserves constants automatically.
 On finite-dimensional complex open domains it also relates holomorphic scalar
 representatives to sections of this existing complex-smooth sheaf.
 For finite-dimensional boundaryless complex models, differentiable transitions
 of a given charted space give analytic (`ω`) and smooth (`∞`) regularity.
+Mixed groupoid-compatible atlases on the same topology give own regularity,
+equal maximal atlases, and an identity diffeomorphism to a typed copy.
 -/

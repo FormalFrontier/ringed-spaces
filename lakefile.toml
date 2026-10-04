@@ -8,6 +8,8 @@ defaultTargets = [
   "RingedSpacesTests.FiniteRegularityFunctionsOpenImmersion",
   "RingedSpacesTests.FiniteRegularityFunctionsLocalBall",
   "RingedSpacesTests.ChartedSpaceSmoothLocalBall",
+  "RingedSpacesTests.SmoothScalarReconstruction",
+  "RingedSpacesTests.CompatibleAtlases",
   "RingedSpacesTests.HolomorphicSections",
   "RingedSpacesTests.ComplexAtlasRegularity",
   "RingedSpacesTests.ContinuousFunctions", "RingedSpacesTests.ContinuousFunctionsOpenImmersion",

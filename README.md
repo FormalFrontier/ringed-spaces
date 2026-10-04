@@ -54,6 +54,21 @@ maps**, not just their maps of underlying spaces.
   canonical smooth scalar locally ringed space is isomorphic to the canonical
   one on that ball; its whole arrows and full-composite germ and section
   evaluations are explicit. See the [chart-ball guide](docs/chart-local-ball.md).
+- **Recovering smooth maps from scalar-preserving morphisms.** For canonical
+  smooth scalar presheaves on charted spaces over a nontrivially normed field,
+  preservation of global field constants is equivalent to preservation on every
+  open. The evaluation law
+  identifies pullbacks of arbitrary sections with precomposition, without
+  dimensionality or completeness requirements. For arbitrary canonical charted
+  targets, scalar-preserving full morphisms with the same base map coincide;
+  a separately supplied smoothness proof identifies the full induced morphism.
+  If the target is an open subset of a finite-dimensional normed space over a
+  complete field, smoothness of the base map follows; no dimensionality or
+  manifold-regularity assumption is imposed on the source. For real scalars,
+  preservation of constants follows from uniqueness of real ring endomorphisms;
+  for complex scalars it is an explicit hypothesis. The scalar field and space
+  carriers share a universe; source model universes are independent. See
+  [`SmoothScalarReconstruction`](RingedSpaces/ChartedSpace/SmoothScalarReconstruction.lean).
 - **Holomorphic scalar sections.** On open and nested-open subtypes of the
   finite-dimensional complex normed spaces, complex differentiability into
   complete complex normed spaces is equivalent to complex smoothness. For
@@ -75,6 +90,13 @@ maps**, not just their maps of underlying spaces.
   `isManifold_omega_of_differentiableOn_chartTransitions` explicitly to the existing
   charts; importing the module does not install a global upgrade instance.
   See [complex atlas regularity](RingedSpaces/Complex/AtlasRegularity.lean).
+- **Mixed-compatible atlases.** For two specified atlases on
+  one topological space, membership of every ordered mixed chart transition in
+  a structure groupoid gives both atlases' own regularity and equality of their
+  maximal atlases, without assuming either is already regular. For mixed `C^n`
+  transitions, the point-preserving comparison is a `C^n` diffeomorphism to a
+  typed `ULift` copy retaining the entire second atlas. See
+  [`CompatibleAtlases`](RingedSpaces/ChartedSpace/CompatibleAtlases.lean).
 - **Change of coefficient sheaves.** A full natural map of commutative-ring
   presheaves induces a tensor-presheaf/restriction-of-scalars adjunction;
   with the required site sheafification witnesses, a full map of ring sheaves
@@ -193,9 +215,11 @@ the linked guides supply definitions, formulas, hypotheses and clients.
 | [`RingedSpaces.FiniteRegularityFunctions.LocalBall`](RingedSpaces/FiniteRegularityFunctions/LocalBall.lean) | [Finite-order entire-ball coordinates and scalar locally ringed spaces](docs/finite-regularity-functions.md#finite-order-local-balls). |
 | [`RingedSpaces.ChartedSpace.LocalBall`](RingedSpaces/ChartedSpace/LocalBall.lean) | [Regularity-indexed chart coordinates on entire positive-radius balls](docs/chart-local-ball.md). |
 | [`RingedSpaces.ChartedSpace.SmoothLocalBall`](RingedSpaces/ChartedSpace/SmoothLocalBall.lean) | [Canonical smooth scalar locally ringed spaces on chart balls](docs/chart-local-ball.md). |
+| [`RingedSpaces.ChartedSpace.SmoothScalarReconstruction`](RingedSpaces/ChartedSpace/SmoothScalarReconstruction.lean) | Scalar-constant preservation and recovery of smooth maps and their full sheaf morphisms. |
 | [`RingedSpaces.Complex.Holomorphic`](RingedSpaces/Complex/Holomorphic.lean) | Complex smoothness and differentiability with complete target on open subsets of finite-dimensional complex normed spaces. |
 | [`RingedSpaces.Complex.AtlasRegularity`](RingedSpaces/Complex/AtlasRegularity.lean) | Analytic and smooth regularity from differentiable transitions on a fixed boundaryless complex atlas. |
 | [`RingedSpaces.ChartedSpace.HolomorphicSections`](RingedSpaces/ChartedSpace/HolomorphicSections.lean) | Holomorphic scalar functions as canonical smooth sheaf sections on finite-dimensional complex open domains. |
+| [`RingedSpaces.ChartedSpace.CompatibleAtlases`](RingedSpaces/ChartedSpace/CompatibleAtlases.lean) | Full-atlas `ULift` transport and mixed-atlas comparison: both atlases' own regularity and equal maximal atlases, and a smooth identity diffeomorphism for mixed `C^n` transitions. |
 | [`RingedSpaces.ContinuousFunctions.OpenImmersion`](RingedSpaces/ContinuousFunctions/OpenImmersion.lean) | [General-ring open immersions and field restriction](docs/continuous-functions.md#open-embeddings-and-restriction). |
 | [`RingedSpaces.Modules.PresheafChangeOfRings`](RingedSpaces/Modules/PresheafChangeOfRings.lean) | [Tensor presheaf and adjunction](docs/module-change-of-rings.md). |
 | [`RingedSpaces.Modules.SheafChangeOfRings`](RingedSpaces/Modules/SheafChangeOfRings.lean) | [Sheafified tensor adjunction](docs/module-change-of-rings.md#sheaves). |
