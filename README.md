@@ -97,6 +97,14 @@ maps**, not just their maps of underlying spaces.
   transitions, the point-preserving comparison is a `C^n` diffeomorphism to a
   typed `ULift` copy retaining the entire second atlas. See
   [`CompatibleAtlases`](RingedSpaces/ChartedSpace/CompatibleAtlases.lean).
+- **Compatible-atlas smooth scalar sheaves.** Two specified smooth-compatible
+  atlases on the same topology give an identity-base isomorphism between their
+  canonical smooth scalar locally ringed spaces. The complete forward and inverse
+  maps are smooth precomposition; their section-ring equivalences preserve
+  values and scalar constants on every open, commute with restriction, and
+  preserve germ evaluation. No dimension, completeness or separation hypothesis
+  is needed. This compares canonical sheaves, not an arbitrary structure sheaf.
+  See [`CompatibleAtlasSheaf`](RingedSpaces/ChartedSpace/CompatibleAtlasSheaf.lean).
 - **Change of coefficient sheaves.** A full natural map of commutative-ring
   presheaves induces a tensor-presheaf/restriction-of-scalars adjunction;
   with the required site sheafification witnesses, a full map of ring sheaves

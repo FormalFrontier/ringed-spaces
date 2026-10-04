@@ -33,6 +33,7 @@ public import RingedSpaces.ChartedSpace.SmoothScalarReconstruction
 public import RingedSpaces.ChartedSpace.HolomorphicSections
 public import RingedSpaces.Complex.AtlasRegularity
 public import RingedSpaces.ChartedSpace.CompatibleAtlases
+public import RingedSpaces.ChartedSpace.CompatibleAtlasSheaf
 
 /-!
 # Ringed spaces
@@ -79,4 +80,6 @@ For finite-dimensional boundaryless complex models, differentiable transitions
 of a given charted space give analytic (`ω`) and smooth (`∞`) regularity.
 Mixed groupoid-compatible atlases on the same topology give own regularity,
 equal maximal atlases, and an identity diffeomorphism to a typed copy.
+Compatible explicit atlases also give an identity-base comparison of their
+canonical smooth scalar locally ringed spaces.
 -/

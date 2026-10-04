@@ -16,8 +16,7 @@ That source carries 282 public source-range names; native doc-gen4 emits 281
 records. `AlgebraicGeometry.RingedSpace.OpenCover.rec` is an automatically
 generated recursor with no native record and is called out, not invented.
 The 122 declarations without native docstrings are labeled explicitly. Every
-module in that snapshot has a top-level source docstring. This tree has 86 Lean
-files, including 54 tests under `RingedSpacesTests/`, and 14 mathematical guides.
+module in that snapshot has a top-level source docstring.
 The unchanged historical records remain useful for their original sources;
 the current map below describes newer modules separately from that frozen API snapshot.
 
@@ -46,6 +45,7 @@ Direct imports and their guides give narrower dependencies:
 | [`RingedSpaces.ChartedSpace.LocalBall`](../RingedSpaces/ChartedSpace/LocalBall.lean) | `ChartedSpace.chartLocalBall`, `ChartLocalBall.coord`, `center`, `coord_at_center` | [`chart-local-ball.md`](chart-local-ball.md) |
 | [`RingedSpaces.ChartedSpace.SmoothLocalBall`](../RingedSpaces/ChartedSpace/SmoothLocalBall.lean) | `ChartLocalBall.smoothIso`, whole-arrow and full-composite evaluation laws | [`chart-local-ball.md`](chart-local-ball.md) |
 | [`RingedSpaces.ChartedSpace.SmoothScalarReconstruction`](../RingedSpaces/ChartedSpace/SmoothScalarReconstruction.lean) | `PreservesSmoothScalars`, `PreservesSmoothScalars.apply`, `PreservesSmoothScalars.eq_of_base_eq`, `PreservesSmoothScalars.eq_locallyRingedSpaceMap_of_contMDiff`, `PreservesSmoothScalars.contMDiff_base`, `PreservesSmoothScalars.eq_locallyRingedSpaceMap`, `preservesSmoothScalars_real` | [`README.md`](../README.md#headline-results) |
+| [`RingedSpaces.ChartedSpace.CompatibleAtlases`](../RingedSpaces/ChartedSpace/CompatibleAtlases.lean) | Both atlases' own regularity and equal maximal atlases from mixed groupoid transitions; for mixed `C^n` transitions, a point-preserving `C^n` diffeomorphism to a typed copy retaining the entire second atlas | [`README.md`](../README.md#headline-results) |
 | [`RingedSpaces.Complex.Holomorphic`](../RingedSpaces/Complex/Holomorphic.lean) | Complex smoothness and differentiability on finite-dimensional complex open subsets with complete targets | [`README.md`](../README.md) |
 | [`RingedSpaces.Complex.AtlasRegularity`](../RingedSpaces/Complex/AtlasRegularity.lean) | `isManifold_omega_of_differentiableOn_chartTransitions`, `isManifold_infty_of_differentiableOn_chartTransitions`, `isManifold_omega_of_isManifold_one`: analytic or smooth regularity for the existing boundaryless complex atlas with a finite-dimensional model, from differentiable transitions or order-one regularity | [`README.md`](../README.md#headline-results) |
 | [`RingedSpaces.ChartedSpace.HolomorphicSections`](../RingedSpaces/ChartedSpace/HolomorphicSections.lean) | `ComplexManifold.ofHolomorphic`, restriction, germ evaluation and precomposition on inverse-image opens through full maps; `ComplexLine` specializations | [`README.md`](../README.md) |
@@ -68,8 +68,11 @@ the [smooth chart-ball](../RingedSpacesTests/ChartedSpaceSmoothLocalBall.lean),
 [holomorphic section](../RingedSpacesTests/HolomorphicSections.lean), and
 [fixed-atlas regularity](../RingedSpacesTests/ComplexAtlasRegularity.lean), and
 [smooth scalar reconstruction](../RingedSpacesTests/SmoothScalarReconstruction.lean)
-clients likewise exercise the public root. All 54 tests are among the 56 literal default
-targets, alongside the library aggregate and examples. The historical
+clients likewise exercise the public root. The
+[compatible-atlas client](../RingedSpacesTests/CompatibleAtlases.lean) covers
+nonlinear and nonpreferred charts, full-atlas transport, and empty and
+zero-dimensional boundaries. The default build includes the shipped tests,
+library aggregate and examples. The historical
 generated API snapshot and manifest remain unchanged and cover none of the
 new leaves.
 

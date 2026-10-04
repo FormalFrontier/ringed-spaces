@@ -4,7 +4,7 @@ Authors: Formal Frontier Agents
 -/
 module
 
-public import RingedSpaces.ChartedSpace.CompatibleAtlases
+public import RingedSpaces.ChartedSpace.CompatibleAtlasSheaf
 public import Mathlib.Analysis.InnerProductSpace.PiL2
 public import Mathlib.Tactic.FunProp
 public import Mathlib.Tactic.Ring
@@ -15,6 +15,8 @@ public import Mathlib.Tactic.Ring
 The preferred charts on `ℝ × ℝ` are the identity and a global triangular polynomial shear.
 The groupoid hypothesis is verified from the polynomial maps. The comparison theorems give
 regularity, equal maximal atlases, and a point-preserving diffeomorphism between the two structures.
+Further examples compare scalar sections on proper nested opens and evaluate germs in both
+directions; a complex translation atlas and empty and zero-dimensional carriers test the scope.
 -/
 
 @[expose] public section
@@ -22,6 +24,7 @@ regularity, equal maximal atlases, and a point-preserving diffeomorphism between
 noncomputable section
 
 open scoped ContDiff Manifold
+open CategoryTheory TopologicalSpace Opposite
 
 namespace CompatibleAtlasesTest
 
@@ -198,5 +201,247 @@ private theorem emptyMixed (n : ℕ∞ω) :
 example : @HasGroupoid Plane _ Empty _ (ChartedSpace.empty Plane Empty)
       (contDiffGroupoid 1 𝓘(ℝ, Plane)) :=
   (ChartedSpace.hasGroupoid_of_compatible_atlases _ _ _ (emptyMixed 1)).1
+
+private def positiveOpen : Opens Plane :=
+  ⟨{point | 0 < point.1}, isOpen_Ioi.preimage continuous_fst⟩
+
+private def smallerOpen : Opens Plane :=
+  ⟨{point | 1 < point.1}, isOpen_Ioi.preimage continuous_fst⟩
+
+private theorem smaller_le_positive : smallerOpen ≤ positiveOpen := by
+  intro point hpoint
+  change 1 < point.1 at hpoint
+  change 0 < point.1
+  exact lt_trans zero_lt_one hpoint
+
+private theorem one_mem_positive : (1, 0) ∈ positiveOpen := by
+  change (0 : ℝ) < 1
+  norm_num
+
+private theorem smaller_lt_positive : smallerOpen < positiveOpen := by
+  refine lt_of_le_of_ne smaller_le_positive ?_
+  intro heq
+  have hpoint : (1, 0) ∈ smallerOpen := heq.symm ▸ one_mem_positive
+  change (1 : ℝ) < 1 at hpoint
+  exact (lt_irrefl (1 : ℝ)) hpoint
+
+private theorem two_mem_positive : (2, 0) ∈ positiveOpen := by
+  change (0 : ℝ) < 2
+  norm_num
+
+private theorem two_mem_smaller : (2, 0) ∈ smallerOpen := by
+  change (1 : ℝ) < 2
+  norm_num
+
+private def coordinateSection :
+    (ChartedSpace.smoothScalarLocallyRingedSpace 𝓘(ℝ, Plane) identityAtlas).presheaf.obj
+      (op positiveOpen) := by
+  letI : ChartedSpace Plane Plane := identityAtlas
+  have hfst : ContDiff ℝ ∞ (fun point : Plane => point.1) := contDiff_fst
+  exact ⟨fun point : positiveOpen => point.1.1,
+    hfst.contMDiff.comp contMDiff_subtype_val⟩
+
+example : positiveOpen ≠ (⊤ : Opens Plane) ∧ smallerOpen ≠ (⊤ : Opens Plane) := by
+  constructor <;> intro h
+  · have hpoint : (0, 0) ∈ positiveOpen := h.symm ▸ trivial
+    change (0 : ℝ) < 0 at hpoint
+    exact (lt_irrefl (0 : ℝ)) hpoint
+  · have hpoint : (0, 0) ∈ smallerOpen := h.symm ▸ trivial
+    change (1 : ℝ) < 0 at hpoint
+    norm_num at hpoint
+
+private theorem coordinateSection_not_constant :
+    coordinateSection.1 ⟨(1, 0), one_mem_positive⟩ ≠
+    coordinateSection.1 ⟨(2, 0), two_mem_positive⟩ := by
+  norm_num [coordinateSection]
+
+private theorem atlasIso_base_preserving (point : Plane) :
+    (ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, Plane)
+      identityAtlas shearAtlas (mixed ∞)).hom.base point = point ∧
+    (ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, Plane)
+      identityAtlas shearAtlas (mixed ∞)).inv.base point = point := by
+  constructor <;> rfl
+
+private theorem inverseSection_value :
+    (((ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, Plane)
+      identityAtlas shearAtlas (mixed ∞)).inv.c.app (op positiveOpen))
+      coordinateSection).1 ⟨(2, 0), by change (2, 0) ∈ positiveOpen; exact two_mem_positive⟩ =
+        2 := by
+  rfl
+
+private theorem inverseEquivSection_one_value :
+    ((ChartedSpace.compatibleAtlasSectionRingEquiv 𝓘(ℝ, Plane)
+      identityAtlas shearAtlas (mixed ∞) positiveOpen).symm
+      coordinateSection).1 ⟨(1, 0), one_mem_positive⟩ = 1 := by
+  rw [ChartedSpace.compatibleAtlasSectionRingEquiv_symm_apply]
+  rfl
+
+private theorem inverseEquivSection_two_value :
+    ((ChartedSpace.compatibleAtlasSectionRingEquiv 𝓘(ℝ, Plane)
+      identityAtlas shearAtlas (mixed ∞) positiveOpen).symm
+      coordinateSection).1 ⟨(2, 0), two_mem_positive⟩ = 2 := by
+  rw [ChartedSpace.compatibleAtlasSectionRingEquiv_symm_apply]
+  rfl
+
+private theorem inverseEquivSection_not_constant :
+    ((ChartedSpace.compatibleAtlasSectionRingEquiv 𝓘(ℝ, Plane)
+      identityAtlas shearAtlas (mixed ∞) positiveOpen).symm
+      coordinateSection).1 ⟨(1, 0), one_mem_positive⟩ ≠
+    ((ChartedSpace.compatibleAtlasSectionRingEquiv 𝓘(ℝ, Plane)
+      identityAtlas shearAtlas (mixed ∞) positiveOpen).symm
+      coordinateSection).1 ⟨(2, 0), two_mem_positive⟩ := by
+  rw [inverseEquivSection_one_value, inverseEquivSection_two_value]
+  norm_num
+
+private theorem sectionRoundtrip_value :
+    (((ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, Plane)
+      identityAtlas shearAtlas (mixed ∞)).hom.c.app (op positiveOpen))
+      (((ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, Plane)
+        identityAtlas shearAtlas (mixed ∞)).inv.c.app (op positiveOpen))
+        coordinateSection)).1 ⟨(2, 0), by
+          change (2, 0) ∈ positiveOpen
+          exact two_mem_positive⟩ = 2 := by
+  rfl
+
+private theorem inverseSection_restrict_value :
+    ((ChartedSpace.smoothScalarLocallyRingedSpace 𝓘(ℝ, Plane) shearAtlas).presheaf.map
+      (homOfLE smaller_le_positive).op
+      (((ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, Plane)
+        identityAtlas shearAtlas (mixed ∞)).inv.c.app (op positiveOpen))
+        coordinateSection)).1 ⟨(2, 0), two_mem_smaller⟩ = 2 := by
+  rfl
+
+private theorem inverseEquivSection_restrict_value :
+    ((ChartedSpace.smoothScalarLocallyRingedSpace 𝓘(ℝ, Plane) shearAtlas).presheaf.map
+      (homOfLE smaller_le_positive).op
+      ((ChartedSpace.compatibleAtlasSectionRingEquiv 𝓘(ℝ, Plane)
+        identityAtlas shearAtlas (mixed ∞) positiveOpen).symm
+        coordinateSection)).1 ⟨(2, 0), two_mem_smaller⟩ = 2 := by
+  have hrestrict := ChartedSpace.compatibleAtlasSectionRingEquiv_symm_restrict
+    𝓘(ℝ, Plane) identityAtlas shearAtlas (mixed ∞) smaller_le_positive coordinateSection
+  have hvalue := ChartedSpace.compatibleAtlasSectionRingEquiv_symm_apply
+    𝓘(ℝ, Plane) identityAtlas shearAtlas (mixed ∞) smallerOpen
+    ((ChartedSpace.smoothScalarLocallyRingedSpace 𝓘(ℝ, Plane) identityAtlas).presheaf.map
+      (homOfLE smaller_le_positive).op coordinateSection) ⟨(2, 0), two_mem_smaller⟩
+  exact ((congrArg (fun (restrictedSection :
+      (ChartedSpace.smoothScalarLocallyRingedSpace 𝓘(ℝ, Plane) shearAtlas).presheaf.obj
+        (op smallerOpen)) => restrictedSection.1 ⟨(2, 0), two_mem_smaller⟩)
+      hrestrict).trans hvalue).trans (by rfl)
+
+private theorem inverseGerm_eval :
+    ChartedSpace.smoothScalarStalkEval 𝓘(ℝ, Plane) shearAtlas (2, 0)
+      ((ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, Plane)
+        identityAtlas shearAtlas (mixed ∞)).inv.stalkMap (2, 0)
+        ((ChartedSpace.smoothScalarLocallyRingedSpace 𝓘(ℝ, Plane) identityAtlas).presheaf.germ
+          positiveOpen (2, 0) two_mem_positive coordinateSection)) = 2 := by
+  rw [ChartedSpace.compatibleAtlasLocallyRingedSpaceIso_inv_germ_eval]
+  rfl
+
+private theorem forwardGerm_eval :
+    ChartedSpace.smoothScalarStalkEval 𝓘(ℝ, Plane) identityAtlas (2, 0)
+      ((ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, Plane)
+        identityAtlas shearAtlas (mixed ∞)).hom.stalkMap (2, 0)
+        ((ChartedSpace.smoothScalarLocallyRingedSpace 𝓘(ℝ, Plane) shearAtlas).presheaf.germ
+          positiveOpen (2, 0) two_mem_positive
+          (((ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, Plane)
+            identityAtlas shearAtlas (mixed ∞)).inv.c.app (op positiveOpen))
+            coordinateSection))) = 2 := by
+  have hvalue :
+      (((ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, Plane)
+        identityAtlas shearAtlas (mixed ∞)).inv.c.app (op positiveOpen))
+        coordinateSection).1 ⟨(2, 0), two_mem_positive⟩ = 2 := rfl
+  exact (ChartedSpace.compatibleAtlasLocallyRingedSpaceIso_hom_germ_eval
+    𝓘(ℝ, Plane) identityAtlas shearAtlas (mixed ∞) positiveOpen
+    (2, 0) two_mem_positive _).trans hvalue
+
+private theorem mixedWithExtra :
+    ∀ e ∈ identityAtlas.atlas, ∀ f ∈ identityWithShearAtlas.atlas,
+      e.symm ≫ₕ f ∈ contDiffGroupoid ∞ 𝓘(ℝ, Plane) := by
+  intro e he f hf
+  change f = OpenPartialHomeomorph.refl Plane ∨ f = shearChart at hf
+  rcases hf with rfl | rfl
+  · have heq : e = OpenPartialHomeomorph.refl Plane := by
+      change e ∈ ({OpenPartialHomeomorph.refl Plane} : Set _) at he
+      exact he
+    subst e
+    rw [OpenPartialHomeomorph.refl_symm, OpenPartialHomeomorph.refl_trans]
+    exact (contDiffGroupoid ∞ 𝓘(ℝ, Plane)).id_mem
+  · exact mixed ∞ e he shearChart rfl
+
+private theorem extraChart_atlasIso_base :
+    (Homeomorph.ulift : ULift Plane ≃ₜ Plane).toOpenPartialHomeomorph ≫ₕ
+        shearChart ∈ (ChartedSpace.liftedChartedSpace identityWithShearAtlas).atlas ∧
+    (ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, Plane)
+      identityAtlas identityWithShearAtlas mixedWithExtra).hom.base (2, 0) = (2, 0) := by
+  constructor
+  · exact (ChartedSpace.mem_liftedChartedSpace_atlas_iff _ _).2
+      ⟨shearChart, Or.inr rfl, rfl⟩
+  · rfl
+
+private def zeroModel_atlasIso : ChartedSpace.smoothScalarLocallyRingedSpace 𝓘(ℝ, ZeroModel)
+      (chartedSpaceSelf ZeroModel) ≅
+    ChartedSpace.smoothScalarLocallyRingedSpace 𝓘(ℝ, ZeroModel)
+      (chartedSpaceSelf ZeroModel) :=
+  ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, ZeroModel)
+    (chartedSpaceSelf ZeroModel) (chartedSpaceSelf ZeroModel) (zeroMixed ∞)
+
+private def empty_atlasIso : ChartedSpace.smoothScalarLocallyRingedSpace 𝓘(ℝ, Plane)
+      (ChartedSpace.empty Plane Empty) ≅
+    ChartedSpace.smoothScalarLocallyRingedSpace 𝓘(ℝ, Plane)
+      (ChartedSpace.empty Plane Empty) :=
+  ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℝ, Plane)
+    (ChartedSpace.empty Plane Empty) (ChartedSpace.empty Plane Empty) (emptyMixed ∞)
+
+private def translatedComplexChart : OpenPartialHomeomorph ℂ ℂ :=
+  (Homeomorph.addLeft (1 : ℂ)).toOpenPartialHomeomorph
+
+@[instance_reducible]
+private def translatedComplexAtlas : ChartedSpace ℂ ℂ :=
+  translatedComplexChart.singletonChartedSpace (by simp [translatedComplexChart])
+
+private theorem complexMixed :
+    ∀ e ∈ (chartedSpaceSelf ℂ).atlas, ∀ f ∈ translatedComplexAtlas.atlas,
+      e.symm ≫ₕ f ∈ contDiffGroupoid ∞ 𝓘(ℂ) := by
+  intro e he f hf
+  have heq : e = OpenPartialHomeomorph.refl ℂ := by
+    change e ∈ ({OpenPartialHomeomorph.refl ℂ} : Set _) at he
+    exact he
+  have hfq : f = translatedComplexChart := by
+    exact translatedComplexChart.singletonChartedSpace_mem_atlas_eq
+      (by simp [translatedComplexChart]) f hf
+  subst e
+  subst f
+  rw [OpenPartialHomeomorph.refl_symm, OpenPartialHomeomorph.refl_trans]
+  rw [contDiffGroupoid, mem_groupoid_of_pregroupoid]
+  constructor
+  · change ContDiffOn ℂ ∞ (𝓘(ℂ) ∘ translatedComplexChart ∘ 𝓘(ℂ).symm)
+        (𝓘(ℂ).symm ⁻¹' translatedComplexChart.source ∩ Set.range 𝓘(ℂ))
+    simpa [translatedComplexChart, Homeomorph.addLeft] using
+      ((contDiff_const : ContDiff ℂ ∞ (fun _ : ℂ => (1 : ℂ))).add contDiff_id).contDiffOn
+  · change ContDiffOn ℂ ∞ (𝓘(ℂ) ∘ translatedComplexChart.symm ∘ 𝓘(ℂ).symm)
+        (𝓘(ℂ).symm ⁻¹' translatedComplexChart.target ∩ Set.range 𝓘(ℂ))
+    simpa [translatedComplexChart, Homeomorph.addLeft] using
+      ((contDiff_const : ContDiff ℂ ∞ (fun _ : ℂ => (-1 : ℂ))).add contDiff_id).contDiffOn
+
+private theorem complexAtlasIso_base (point : ℂ) :
+    (ChartedSpace.compatibleAtlasLocallyRingedSpaceIso 𝓘(ℂ)
+      (chartedSpaceSelf ℂ) translatedComplexAtlas complexMixed).hom.base point = point := by
+  rfl
+
+private theorem complexAtlasScalar (scalar : ℂ) :
+    ChartedSpace.compatibleAtlasSectionRingEquiv 𝓘(ℂ)
+      (chartedSpaceSelf ℂ) translatedComplexAtlas complexMixed ⊤
+      (ChartedSpace.smoothScalarConstant 𝓘(ℂ) translatedComplexAtlas ⊤ scalar) =
+        ChartedSpace.smoothScalarConstant 𝓘(ℂ) (chartedSpaceSelf ℂ) ⊤ scalar := by
+  exact ChartedSpace.compatibleAtlasSectionRingEquiv_constant 𝓘(ℂ)
+    (chartedSpaceSelf ℂ) translatedComplexAtlas complexMixed ⊤ scalar
+
+private theorem complexAtlasInverseScalar (scalar : ℂ) :
+    (ChartedSpace.compatibleAtlasSectionRingEquiv 𝓘(ℂ)
+      (chartedSpaceSelf ℂ) translatedComplexAtlas complexMixed ⊤).symm
+      (ChartedSpace.smoothScalarConstant 𝓘(ℂ) (chartedSpaceSelf ℂ) ⊤ scalar) =
+        ChartedSpace.smoothScalarConstant 𝓘(ℂ) translatedComplexAtlas ⊤ scalar := by
+  exact ChartedSpace.compatibleAtlasSectionRingEquiv_symm_constant 𝓘(ℂ)
+    (chartedSpaceSelf ℂ) translatedComplexAtlas complexMixed ⊤ scalar
 
 end CompatibleAtlasesTest
