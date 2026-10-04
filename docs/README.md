@@ -45,8 +45,8 @@ Direct imports and their guides give narrower dependencies:
 | [`RingedSpaces.FiniteRegularityFunctions.LocalBall`](../RingedSpaces/FiniteRegularityFunctions/LocalBall.lean) | `FiniteRegularityFunctions.localBall`, `LocalBall.iso`, and coordinate germ/section evaluation | [`finite-regularity-functions.md`](finite-regularity-functions.md#finite-order-local-balls) |
 | [`RingedSpaces.ChartedSpace.LocalBall`](../RingedSpaces/ChartedSpace/LocalBall.lean) | `ChartedSpace.chartLocalBall`, `ChartLocalBall.coord`, `center`, `coord_at_center` | [`chart-local-ball.md`](chart-local-ball.md) |
 | [`RingedSpaces.ChartedSpace.SmoothLocalBall`](../RingedSpaces/ChartedSpace/SmoothLocalBall.lean) | `ChartLocalBall.smoothIso`, whole-arrow and full-composite evaluation laws | [`chart-local-ball.md`](chart-local-ball.md) |
-| [`RingedSpaces.Complex.Holomorphic`](../RingedSpaces/Complex/Holomorphic.lean) | Complex smoothness and differentiability on open subsets of the complex line with complete targets | [`README.md`](../README.md) |
-| [`RingedSpaces.ChartedSpace.HolomorphicSections`](../RingedSpaces/ChartedSpace/HolomorphicSections.lean) | `ComplexLine.ofHolomorphic`, restriction, germ evaluation and precomposition on inverse-image opens through full maps | [`README.md`](../README.md) |
+| [`RingedSpaces.Complex.Holomorphic`](../RingedSpaces/Complex/Holomorphic.lean) | Complex smoothness and differentiability on finite-dimensional complex open subsets with complete targets | [`README.md`](../README.md) |
+| [`RingedSpaces.ChartedSpace.HolomorphicSections`](../RingedSpaces/ChartedSpace/HolomorphicSections.lean) | `ComplexManifold.ofHolomorphic`, restriction, germ evaluation and precomposition on inverse-image opens through full maps; `ComplexLine` specializations | [`README.md`](../README.md) |
 
 The [root-only sheaf client](../RingedSpacesTests/SheafInverseImageRoot.lean) and
 [root-only full-morphism client](../RingedSpacesTests/RingedSpaceFullMorphismRoot.lean)

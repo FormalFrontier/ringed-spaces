@@ -7,10 +7,11 @@ module
 public import RingedSpaces
 
 /-!
-# Holomorphic scalar sections on a proper complex disc
+# Holomorphic scalar sections on complex domains
 
 A nonconstant holomorphic function on the entire chart ball gives a section whose
 value is computed through the complete restricted-ambient chart morphism.
+Finite-dimensional complex balls exercise restriction and full sheaf precomposition.
 -/
 
 @[expose] public section
@@ -195,3 +196,202 @@ example : smoothSheafCommRing.eval 𝓘(ℂ) 𝓘(ℂ) chartData.neighborhood �
     coordinate_at_point
 
 end HolomorphicSectionsTest
+
+namespace FiniteDimensionalHolomorphicSectionsTest
+
+open ChartedSpace
+
+private abbrev Model := EuclideanSpace ℂ (Fin 2)
+
+private def domain : Opens Model := ⟨Metric.ball (0 : Model) 1, Metric.isOpen_ball⟩
+
+private def origin : domain := ⟨0, by simp [domain]⟩
+
+private def quarter : domain :=
+  ⟨EuclideanSpace.single (0 : Fin 2) (1 / 4 : ℂ), by
+    norm_num [domain, Metric.mem_ball, dist_eq_norm, PiLp.norm_single]⟩
+
+example : EuclideanSpace.single (0 : Fin 2) (2 : ℂ) ∉ domain := by
+  norm_num [domain, Metric.mem_ball, dist_eq_norm, PiLp.norm_single]
+
+private def squareCoordinate (point : domain) : ℂ :=
+  (point.1 0) ^ 2 + point.1 1
+
+private theorem coordinate_mdifferentiable (index : Fin 2) :
+    MDifferentiable 𝓘(ℂ, Model) 𝓘(ℂ)
+      (fun point : domain ↦ point.1 index) := by
+  have hproj : Differentiable ℂ (fun point : Model ↦ point index) := by
+    simpa only [EuclideanSpace.coe_proj] using
+      (EuclideanSpace.proj (𝕜 := ℂ) index).differentiable
+  exact hproj.mdifferentiable.comp
+    ((contMDiff_subtype_val (n := 1)).mdifferentiable (by norm_num))
+
+private theorem squareCoordinate_holomorphic :
+    MDifferentiable 𝓘(ℂ, Model) 𝓘(ℂ) squareCoordinate :=
+  ((coordinate_mdifferentiable 0).pow 2).add (coordinate_mdifferentiable 1)
+
+example : (ComplexManifold.ofHolomorphic domain ⊤
+    (fun point : (⊤ : Opens domain) ↦ squareCoordinate point.1)
+    (squareCoordinate_holomorphic.comp
+      ((contMDiff_subtype_val (n := 1)).mdifferentiable (by norm_num))))
+      ⟨origin, by simp⟩ = 0 := by
+  norm_num [squareCoordinate, origin]
+
+example : squareCoordinate origin = 0 ∧ squareCoordinate quarter = 1 / 16 := by
+  norm_num [squareCoordinate, origin, quarter, PiLp.single_apply]
+
+example : ContMDiff 𝓘(ℂ, Model) 𝓘(ℂ, ℂ × ℂ) ∞
+    (fun point : domain ↦ ((point.1 0) ^ 2, (point.1 1) ^ 3)) := by
+  apply (ComplexManifold.smooth_iff_holomorphic_open domain _).2
+  exact ((coordinate_mdifferentiable 0).pow 2).prodMk_space
+    ((coordinate_mdifferentiable 1).pow 3)
+
+private def inner : Opens domain :=
+  ⟨(Subtype.val : domain → Model) ⁻¹' Metric.ball 0 (3 / 4),
+    Metric.isOpen_ball.preimage continuous_subtype_val⟩
+
+private def topRepresentative (point : (⊤ : Opens domain)) : ℂ :=
+  squareCoordinate point.1
+
+private theorem topRepresentative_holomorphic :
+    MDifferentiable 𝓘(ℂ, Model) 𝓘(ℂ) topRepresentative :=
+  squareCoordinate_holomorphic.comp
+    ((contMDiff_subtype_val (n := 1)).mdifferentiable (by norm_num))
+
+example : ∃ first second : (⊤ : Opens domain),
+    (ComplexManifold.ofHolomorphic domain ⊤ topRepresentative
+      topRepresentative_holomorphic) first ≠
+    (ComplexManifold.ofHolomorphic domain ⊤ topRepresentative
+      topRepresentative_holomorphic) second := by
+  refine ⟨⟨origin, trivial⟩, ⟨quarter, trivial⟩, ?_⟩
+  norm_num [topRepresentative, squareCoordinate, origin, quarter,
+    PiLp.single_apply]
+
+private def innerOrigin : inner := ⟨origin, by simp [inner, origin]⟩
+
+example : quarter ∈ inner := by
+  norm_num [inner, quarter, Metric.mem_ball, dist_eq_norm, PiLp.norm_single]
+
+private def nearBoundary : domain :=
+  ⟨EuclideanSpace.single (0 : Fin 2) (7 / 8 : ℂ), by
+    norm_num [domain, Metric.mem_ball, dist_eq_norm, PiLp.norm_single]⟩
+
+example : nearBoundary ∉ inner := by
+  norm_num [inner, nearBoundary, Metric.mem_ball, dist_eq_norm, PiLp.norm_single]
+
+example :
+    ((smoothSheafCommRing 𝓘(ℂ, Model) 𝓘(ℂ) domain ℂ).presheaf.map
+        (show inner ≤ (⊤ : Opens domain) from le_top).hom.op
+        (ComplexManifold.ofHolomorphic domain ⊤ topRepresentative
+          topRepresentative_holomorphic)).1 innerOrigin = 0 := by
+  rw [ComplexManifold.ofHolomorphic_restrict]
+  norm_num [topRepresentative, squareCoordinate, innerOrigin, origin]
+
+example (f : (⊥ : Opens Model) → ℂ) :
+    ContMDiff 𝓘(ℂ, Model) 𝓘(ℂ) ∞ f := by
+  apply (ComplexManifold.smooth_iff_holomorphic_open (⊥ : Opens Model) f).2
+  intro point
+  exact False.elim point.2
+
+private abbrev ZeroModel := EuclideanSpace ℂ (Fin 0)
+
+private def zeroPoint : (⊤ : Opens (⊤ : Opens ZeroModel)) :=
+  ⟨⟨0, trivial⟩, trivial⟩
+
+example : ComplexManifold.ofHolomorphic (⊤ : Opens ZeroModel) ⊤
+    (fun _ : (⊤ : Opens (⊤ : Opens ZeroModel)) ↦ (7 : ℂ)) mdifferentiable_const
+      zeroPoint = 7 := rfl
+
+private def projection (point : domain) : (⊤ : Opens ℂ) :=
+  ⟨point.1 0 + 1 / 4, trivial⟩
+
+private theorem projection_holomorphic :
+    MDifferentiable 𝓘(ℂ, Model) 𝓘(ℂ) projection := by
+  have hcoord : ContMDiff 𝓘(ℂ, Model) 𝓘(ℂ) ∞
+      (fun point : domain ↦ point.1 0) := by
+    simpa only [EuclideanSpace.coe_proj, Function.comp_def] using
+      (EuclideanSpace.proj (𝕜 := ℂ) (0 : Fin 2)).contMDiff.comp contMDiff_subtype_val
+  have hvalue : ContMDiff 𝓘(ℂ, Model) 𝓘(ℂ) ∞
+      (fun point : domain ↦ point.1 0 + 1 / 4) := hcoord.add contMDiff_const
+  exact ((ContMDiff.subtypeVal_comp_iff (⊤ : Opens ℂ) projection).mp hvalue).mdifferentiable
+    (by norm_num)
+
+private def imageDisc : Opens (⊤ : Opens ℂ) :=
+  ⟨(Subtype.val : (⊤ : Opens ℂ) → ℂ) ⁻¹' Metric.ball 0 (1 / 2),
+    Metric.isOpen_ball.preimage continuous_subtype_val⟩
+
+private def imageRepresentative (point : imageDisc) : ℂ := (point.1 : ℂ)
+
+private theorem imageRepresentative_holomorphic :
+    MDifferentiable 𝓘(ℂ) 𝓘(ℂ) imageRepresentative :=
+  ((contMDiff_subtype_val (n := 1)).mdifferentiable (by norm_num)).comp
+    ((contMDiff_subtype_val (n := 1)).mdifferentiable (by norm_num))
+
+private theorem origin_mem_preimage : origin ∈
+    (Opens.map (TopCat.ofHom ⟨projection,
+      (ComplexManifold.holomorphic_contMDiff projection projection_holomorphic).continuous⟩)).obj
+        imageDisc := by
+  change projection origin ∈ imageDisc
+  norm_num [projection, origin, imageDisc, Metric.mem_ball, dist_eq_norm]
+
+example : quarter ∉
+    (Opens.map (TopCat.ofHom ⟨projection,
+      (ComplexManifold.holomorphic_contMDiff projection projection_holomorphic).continuous⟩)).obj
+        imageDisc := by
+  change projection quarter ∉ imageDisc
+  norm_num [projection, quarter, imageDisc, Metric.mem_ball, dist_eq_norm,
+    PiLp.single_apply]
+
+example : ((ComplexManifold.holomorphicLocallyRingedSpaceMap projection
+      projection_holomorphic).c.app (op imageDisc)
+      (ComplexManifold.ofHolomorphic (⊤ : Opens ℂ) imageDisc imageRepresentative
+        imageRepresentative_holomorphic) :
+      (smoothSheafCommRing 𝓘(ℂ, Model) 𝓘(ℂ) domain ℂ).presheaf.obj
+        (op ((Opens.map (TopCat.ofHom ⟨projection,
+          (ComplexManifold.holomorphic_contMDiff projection
+            projection_holomorphic).continuous⟩)).obj
+            imageDisc))).1 ⟨origin, origin_mem_preimage⟩ = 1 / 4 := by
+  have heval := ComplexManifold.holomorphicLocallyRingedSpaceMap_c_app_apply
+    projection projection_holomorphic imageDisc
+    (ComplexManifold.ofHolomorphic (⊤ : Opens ℂ) imageDisc imageRepresentative
+      imageRepresentative_holomorphic) ⟨origin, origin_mem_preimage⟩
+  exact heval.trans (by norm_num [imageRepresentative, projection, origin])
+
+end FiniteDimensionalHolomorphicSectionsTest
+
+namespace HolomorphicHelperGeneralityTest
+
+universe u v
+
+variable {E : Type u} [NormedAddCommGroup E] [NormedSpace ℂ E]
+variable {F : Type v} [NormedAddCommGroup F] [NormedSpace ℂ F]
+
+example (D : Opens E) {V W : Opens D} (h : W ≤ V) (g : V → ℂ)
+    (hg : MDifferentiable 𝓘(ℂ, E) 𝓘(ℂ) g) :
+    Continuous (fun point : W ↦ g ⟨point.1, h point.2⟩) :=
+  (ComplexManifold.holomorphic_restrict D h g hg).continuous
+
+example {D : Opens E} {G : Opens F} (f : D → G)
+    (hf : MDifferentiable 𝓘(ℂ, E) 𝓘(ℂ, F) f) (V : Opens G)
+    (g : V → ℂ) (hg : MDifferentiable 𝓘(ℂ, F) 𝓘(ℂ) g) :
+    Continuous (fun point : (⟨f ⁻¹' (V : Set G), V.isOpen.preimage hf.continuous⟩ : Opens D) ↦
+      g ⟨f point.1, point.2⟩) :=
+  (ComplexManifold.holomorphic_precomp f hf V g hg).continuous
+
+example [FiniteDimensional ℂ E] [CompleteSpace F] {D : Opens E} {G : Opens F}
+    (f : D → G) (hf : MDifferentiable 𝓘(ℂ, E) 𝓘(ℂ, F) f) :
+    Continuous f :=
+  (ComplexManifold.holomorphic_contMDiff f hf).continuous
+
+end HolomorphicHelperGeneralityTest
+
+namespace SmoothSectionGeneralityTest
+
+variable {E : Type} [NormedAddCommGroup E] [NormedSpace ℂ E]
+
+example (D : Opens E) (V : Opens D)
+    (representativeSection : (smoothSheafCommRing 𝓘(ℂ, E) 𝓘(ℂ) D ℂ).presheaf.obj (op V)) :
+    Continuous (fun point : V ↦ representativeSection point) :=
+  (ComplexManifold.section_holomorphic D V representativeSection).continuous
+
+end SmoothSectionGeneralityTest

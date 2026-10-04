@@ -55,14 +55,26 @@ maps**, not just their maps of underlying spaces.
   one on that ball; its whole arrows and full-composite germ and section
   evaluations are explicit. See the [chart-ball guide](docs/chart-local-ball.md).
 - **Holomorphic scalar sections.** On open and nested-open subtypes of the
-  complex line, complex differentiability of scalar-valued functions is
-  equivalent to complex smoothness. The canonical smooth scalar sheaf accepts
-  [these functions directly as sections](RingedSpaces/ChartedSpace/HolomorphicSections.lean),
+  finite-dimensional complex normed spaces, complex differentiability into
+  complete complex normed spaces is equivalent to complex smoothness. For
+  scalar-valued functions, the canonical smooth scalar sheaf accepts
+  [them directly as sections](RingedSpaces/ChartedSpace/HolomorphicSections.lean),
   with pointwise evaluation, restriction,
   and sheaf and locally ringed-space maps that precompose representatives on
   inverse-image opens.
-  This one-variable result does not assert the analogous equivalence on
-  higher-dimensional complex models.
+  The chartwise version assumes a smooth manifold structure; it does not
+  upgrade a merely holomorphic atlas or identify arbitrary structure sheaves.
+  The scalar-sheaf API retains Mathlib's common-universe restriction.
+- **Finite-dimensional complex atlas regularity.** On a given charted space over a
+  boundaryless complex model with finite-dimensional coordinates, differentiability
+  of every ordered chart transition in model coordinates on its exact transition
+  domain implies analytic manifold regularity at `ω`, hence complex smoothness at
+  `∞`. An order-one manifold structure also gives analytic regularity; neither
+  construction replaces the original atlas. The hypotheses concern transitions,
+  not an arbitrary structure sheaf. Apply
+  `isManifold_omega_of_differentiableOn_chartTransitions` explicitly to the existing
+  charts; importing the module does not install a global upgrade instance.
+  See [complex atlas regularity](RingedSpaces/Complex/AtlasRegularity.lean).
 - **Change of coefficient sheaves.** A full natural map of commutative-ring
   presheaves induces a tensor-presheaf/restriction-of-scalars adjunction;
   with the required site sheafification witnesses, a full map of ring sheaves
@@ -181,8 +193,9 @@ the linked guides supply definitions, formulas, hypotheses and clients.
 | [`RingedSpaces.FiniteRegularityFunctions.LocalBall`](RingedSpaces/FiniteRegularityFunctions/LocalBall.lean) | [Finite-order entire-ball coordinates and scalar locally ringed spaces](docs/finite-regularity-functions.md#finite-order-local-balls). |
 | [`RingedSpaces.ChartedSpace.LocalBall`](RingedSpaces/ChartedSpace/LocalBall.lean) | [Regularity-indexed chart coordinates on entire positive-radius balls](docs/chart-local-ball.md). |
 | [`RingedSpaces.ChartedSpace.SmoothLocalBall`](RingedSpaces/ChartedSpace/SmoothLocalBall.lean) | [Canonical smooth scalar locally ringed spaces on chart balls](docs/chart-local-ball.md). |
-| [`RingedSpaces.Complex.Holomorphic`](RingedSpaces/Complex/Holomorphic.lean) | Complex smoothness and differentiability with complete target on open subsets of the complex line. |
-| [`RingedSpaces.ChartedSpace.HolomorphicSections`](RingedSpaces/ChartedSpace/HolomorphicSections.lean) | Holomorphic scalar functions as canonical smooth sheaf sections on open complex domains. |
+| [`RingedSpaces.Complex.Holomorphic`](RingedSpaces/Complex/Holomorphic.lean) | Complex smoothness and differentiability with complete target on open subsets of finite-dimensional complex normed spaces. |
+| [`RingedSpaces.Complex.AtlasRegularity`](RingedSpaces/Complex/AtlasRegularity.lean) | Analytic and smooth regularity from differentiable transitions on a fixed boundaryless complex atlas. |
+| [`RingedSpaces.ChartedSpace.HolomorphicSections`](RingedSpaces/ChartedSpace/HolomorphicSections.lean) | Holomorphic scalar functions as canonical smooth sheaf sections on finite-dimensional complex open domains. |
 | [`RingedSpaces.ContinuousFunctions.OpenImmersion`](RingedSpaces/ContinuousFunctions/OpenImmersion.lean) | [General-ring open immersions and field restriction](docs/continuous-functions.md#open-embeddings-and-restriction). |
 | [`RingedSpaces.Modules.PresheafChangeOfRings`](RingedSpaces/Modules/PresheafChangeOfRings.lean) | [Tensor presheaf and adjunction](docs/module-change-of-rings.md). |
 | [`RingedSpaces.Modules.SheafChangeOfRings`](RingedSpaces/Modules/SheafChangeOfRings.lean) | [Sheafified tensor adjunction](docs/module-change-of-rings.md#sheaves). |
