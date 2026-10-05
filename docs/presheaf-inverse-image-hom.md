@@ -85,8 +85,8 @@ nonempty proper open, see `RingedSpacesTests/PresheafInverseImageHomConcrete.lea
 
 ## Reproducibility
 
-This library's sole direct dependency is mathlib, at the exact revision in
-`lakefile.toml`; use the pinned `lean-toolchain`. Before any build, execute
+Use the checked-in `lean-toolchain`, `lakefile.toml` and complete
+`lake-manifest.json` for the pinned build environment. Before any build, execute
 `lake exe cache get`. The focused import and saved clients can then be built
 with `lake --wfail build RingedSpaces.Modules.PresheafInverseImageHom
 RingedSpacesTests.PresheafInverseImageHom RingedSpacesTests.PresheafInverseImageHomConcrete

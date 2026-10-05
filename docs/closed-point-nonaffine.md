@@ -66,8 +66,8 @@ a locally ringed-space/scheme morphism, or a zero-ring conclusion.
 
 ## Reproduce
 
-Use the checked-in `lean-toolchain` (`leanprover/lean4:v4.34.0-rc2`) and
-`lakefile.toml` (sole direct dependency mathlib at
+Use the checked-in `lean-toolchain` (`leanprover/lean4:v4.34.0-rc2`),
+`lakefile.toml` and complete `lake-manifest.json` (including mathlib at
 `83abb3e776bdefcbc447a1e44d0debe4010039e5`). From the repository root:
 
 ```sh
