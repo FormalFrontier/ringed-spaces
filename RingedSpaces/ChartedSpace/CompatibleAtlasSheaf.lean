@@ -17,6 +17,19 @@ has the identity as its base map and precomposes every section with the identity
 The scalar field and carrier share the universe required by the existing smooth sheaf;
 the model and chart spaces may live in independent universes. No finiteness, separation,
 or nonemptiness assumptions are imposed.
+
+## References
+
+* Mathlib, `Mathlib/Geometry/Manifold/Sheaf/Smooth.lean` (Heather Macbeth and
+  Adam Topaz) and `Mathlib/Geometry/Manifold/Sheaf/LocallyRingedSpace.lean`
+  (Heather Macbeth): the existing smooth scalar sheaf and locally ringed space
+  compared under the two atlases.
+* `RingedSpaces.ChartedSpace.CompatibleAtlases`: the compatible maximal-atlas
+  comparison used to identify the smooth structures.
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (October 21, 2025
+  draft), Definition 4.3.9 (p. 142): motivation for local-model independence,
+  not a proof of the canonical identity-base whole scalar-sheaf comparison of
+  two specified atlases, arbitrary-sheaf recovery or automatic complex scalar preservation.
 -/
 
 @[expose] public section

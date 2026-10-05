@@ -16,6 +16,13 @@ function sheaves supply the comparison maps at the two regularity endpoints.
 
 The regularity is relative to the chosen model-with-corners structures. No
 chart-independence or equivalence with an intrinsic regularity condition is asserted.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Definition 4.3.9 (p. 142): smooth scalar functions in local-ball
+  coordinates motivate the model. Pullback by finite natural `C^r` maps between
+  chosen charted spaces is a project construction, not a theorem in that definition.
 -/
 
 @[expose] public section

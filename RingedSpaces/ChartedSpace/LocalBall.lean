@@ -13,6 +13,17 @@ public import Mathlib.Geometry.Manifold.Diffeomorph
 At any regularity indexed by `ℕ∞ω`, a chart of a boundaryless self-model manifold
 restricts near a point to a diffeomorphism onto an entire positive-radius model ball.
 No dimension or nonemptiness condition on the model space is required.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (October 21, 2025
+  draft), Definition 4.3.9 (p. 142): motivation for entire-ball local models,
+  not a proof of this indexed chart construction or arbitrary-sheaf recovery.
+* Mathlib, `Mathlib/Geometry/Manifold/ContMDiff/Atlas.lean` (Sébastien Gouëzel
+  and Floris van Doorn): chart regularity used for the construction.
+* Mathlib, `Mathlib/Geometry/Manifold/Diffeomorph.lean` (Nicolò Cavalleri and
+  Yury Kudryashov): the diffeomorphism structure and differentiability fields
+  used for the indexed coordinate diffeomorphism.
 -/
 
 @[expose] public section

@@ -18,6 +18,16 @@ First take the genuine sheafified inverse image of modules, then sheafify the
 right-factor tensor presheaf along the full inverse-image map of structure
 sheaves. Its right adjoint is pushforward along the original full morphism.
 No assertion identifies arbitrary sections of a sheafification with raw tensors.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Definition 7.2.1 (p. 204) and Exercise 7.2.D(b,c,e) (p. 205):
+  full-morphism pullback and its pushforward adjunction motivate the functors.
+  §2.6.4 and Exercise 2.6.K(a) (p. 92) motivate the tensor presheaf followed
+  by sheafification; §2.7.2 (p. 93) the temporary inverse-image presheaf.
+  The right-tensor order, bundled Hom adjunction and natural isomorphism with
+  Mathlib's chosen pullback are further project/Mathlib constructions.
 -/
 
 @[expose] public section
@@ -38,7 +48,10 @@ noncomputable abbrev inverseRing : X.carrier.Sheaf CommRingCat.{u} :=
 noncomputable abbrev coefficientMap : inverseRing f ⟶ X.sheaf :=
   AlgebraicGeometry.RingedSpace.inverseImageMap f
 
-/-- The explicit right-tensor, sheafified pullback. -/
+/-- The explicit right-tensor, sheafified pullback.
+Vakil's *The Rising Sea* (21 October 2025 draft), Exercise 7.2.D(b)
+(p. 205), requests full-morphism pullback; the project construction
+sheafifies a genuine right-factor tensor after inverse image. -/
 noncomputable def pullbackFunctor :
     SheafOfModules.{u} (RingedSpacePushforward.ringSheaf Y) ⥤
       SheafOfModules.{u} (RingedSpacePushforward.ringSheaf X) := by
@@ -64,7 +77,10 @@ theorem coefficientMap_ringSheafMap :
       RingedSpacePushforward.ringSheafMap f := by
   rfl
 
-/-- Right-tensor sheaf extension is left adjoint to full-morphism pushforward. -/
+/-- Right-tensor sheaf extension is left adjoint to full-morphism pushforward.
+Vakil's *The Rising Sea* (21 October 2025 draft), Exercise 7.2.D(e)
+(p. 205), requests this adjunction; the bundled proof uses Mathlib and
+the complete structure map rather than raw tensor sections. -/
 noncomputable def adjunction :
     pullbackFunctor f ⊣ RingedSpacePushforward.pushforwardFunctor f := by
   letI := opensWeakSheafify X.carrier
@@ -77,7 +93,9 @@ noncomputable def adjunction :
     exact composed.ofNatIsoLeft (tensorComparison f).symm
   exact baseAdj.ofNatIsoRight (RingedSpacePushforward.restrictPushforwardIso f)
 
-/-- The bundled Hom equivalence, natural in both module variables. -/
+/-- The bundled Hom equivalence, natural in both module variables.
+This is the project's formal Hom-adjunction realization of Vakil's
+*The Rising Sea* (21 October 2025 draft), Exercise 7.2.D(e) (p. 205). -/
 noncomputable def homEquiv
     (M : SheafOfModules.{u} (RingedSpacePushforward.ringSheaf Y))
     (N : SheafOfModules.{u} (RingedSpacePushforward.ringSheaf X)) :

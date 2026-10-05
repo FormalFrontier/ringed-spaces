@@ -1,5 +1,12 @@
 # Right-factor scalar extension and tensor symmetry
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+draft), §2.6.4 and Exercise 2.6.K(a) (p. 92), motivate forming the tensor
+presheaf before sheafifying it. The right-factor order, tensor symmetry and
+arbitrary-site comparison are project prerequisites for Exercise 7.2.D(b,c,e)
+(p. 205), not separate theorems in the source. In particular the sheafified
+right tensor is not identified with raw tensors on each open.
+
 ## Statement and hypotheses
 
 Fix any category `C : Type u₁` with `Category.{v₁} C`; these universes are

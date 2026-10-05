@@ -20,6 +20,18 @@ precomposition morphism of continuous-function ringed spaces over any topologica
 commutative ring. For T1 topological fields this also gives an open immersion
 of locally ringed spaces and the intrinsic open-subtype restriction comparison.
 All spaces and coefficients lie in one universe.
+
+## References
+
+* Mathlib, `Mathlib/Geometry/Manifold/Sheaf/LocallyRingedSpace.lean` (Heather Macbeth):
+  the open-subtype comparison adapted for continuous-function sections.
+* Mathlib, `Mathlib/Geometry/RingedSpace/OpenImmersion.lean` (Andrew Yang):
+  the open-immersion API used for full ringed-space morphisms.
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Definition 4.3.9 (p. 142): restricted versus intrinsic continuous
+  real-function sheaves on a model ball motivate this comparison. The open
+  immersion over any topological commutative ring is a project generalization;
+  `T1Space` is used only for the field-valued locally ringed-space case.
 -/
 
 @[expose] public section

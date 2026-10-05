@@ -1,5 +1,12 @@
 # Inverse-image module presheaves
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+draft), §2.7.2 (p. 93) and Exercise 7.2.D(b,e) (p. 205), motivate the
+temporary inverse-image presheaf used before full module pullback. This
+neighborhood-colimit construction is a project prerequisite that also works
+for `RingCat` presheaves of noncommutative rings, using Riou's separate Mathlib
+module-colimit action; it is not already the sheafified pullback.
+
 Import `RingedSpaces.Modules.PresheafInverseImage` for the focused library or
 `RingedSpaces` for its aggregate import. Names below live in
 `RingedSpaces.Modules.PresheafInverseImage`. Neither a source repository nor
@@ -107,4 +114,7 @@ assert that an arbitrary map's target colimit is nonzero or that the additive
 comparison transports the coefficient ring.
 
 The original contributors and the adapted research precursor are credited in
-`NOTICE.md`. Native varying-ring colimits are provided by pinned mathlib.
+`NOTICE.md`. The varying-ring module-colimit action used in the proof is Joël
+Riou's Mathlib formalization in
+`Mathlib/Algebra/Category/ModuleCat/Presheaf/ColimitFunctor.lean` at the
+pinned Mathlib revision; the neighborhood-colimit comparison is constructed here.

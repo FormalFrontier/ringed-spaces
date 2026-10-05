@@ -15,6 +15,14 @@ The functors below use full ringed-space morphisms. In particular, `L` is the
 sheafified ordinary inverse image followed by extension of scalars from the
 released ringed-spaces library, and `A` is its actual adjunction to `R`.
 The canonical comparisons are natural isomorphisms, not equalities of functors.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Exercise 7.2.D(d) (p. 205): requests a natural isomorphism for
+  composite pullback functors. The canonical identity and associativity
+  coherence here are additional project/Mathlib results, not equalities
+  or printed proofs in the exercise.
 -/
 
 set_option maxRecDepth 2048
@@ -68,7 +76,10 @@ noncomputable def pushforwardId (X : AlgebraicGeometry.RingedSpace.{u, u}) :
     R (𝟙 X) ≅ 𝟭 (ModuleSheaves X) :=
   SheafOfModules.pushforwardId (RingedSpacePushforward.ringSheaf X)
 
-/-- Inverse-image composition, transported across the actual adjunctions. -/
+/-- Inverse-image composition, transported across the actual adjunctions.
+This is the natural isomorphism requested in Vakil's *The Rising Sea*
+(21 October 2025 draft), Exercise 7.2.D(d) (p. 205), not an equality
+of pullback functors; the explicit mate construction uses Mathlib. -/
 noncomputable def pullbackComp (f : X ⟶ Y) (g : Y ⟶ Z) :
     L g ⋙ L f ≅ L (f ≫ g) :=
   Adjunction.leftAdjointCompIso (A g) (A f) (A (f ≫ g)) (pushforwardComp f g)

@@ -1,5 +1,14 @@
 # Explicit module pullback through a full ringed-space morphism
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+draft), Definition 7.2.1 (p. 204) and Exercise 7.2.D(b,c,e) (p. 205), request
+full-morphism module pullback, pushforward and adjunction. §2.6.4 and Exercise
+2.6.K(a) (p. 92) motivate the tensor presheaf then sheafification; §2.7.2
+(p. 93) motivates temporary inverse image. The project implementation uses the
+whole structure map, genuine sheafified right tensors and a natural Hom
+adjunction; comparison with Mathlib's chosen pullback is a natural
+**isomorphism**, not equality or an identity on raw tensor sections.
+
 Import `RingedSpaces.Modules.RingedSpacePullback` directly or the public
 `RingedSpaces` aggregate. The root-only full-morphism client
 [`RingedSpacesTests/RingedSpaceFullMorphismRoot.lean`](../RingedSpacesTests/RingedSpaceFullMorphismRoot.lean)

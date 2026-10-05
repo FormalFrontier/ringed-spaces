@@ -228,6 +228,7 @@ the linked guides supply definitions, formulas, hypotheses and clients.
 | [`RingedSpaces.Complex.AtlasRegularity`](RingedSpaces/Complex/AtlasRegularity.lean) | Analytic and smooth regularity from differentiable transitions on a fixed boundaryless complex atlas. |
 | [`RingedSpaces.ChartedSpace.HolomorphicSections`](RingedSpaces/ChartedSpace/HolomorphicSections.lean) | Holomorphic scalar functions as canonical smooth sheaf sections on finite-dimensional complex open domains. |
 | [`RingedSpaces.ChartedSpace.CompatibleAtlases`](RingedSpaces/ChartedSpace/CompatibleAtlases.lean) | Full-atlas `ULift` transport and mixed-atlas comparison: both atlases' own regularity and equal maximal atlases, and a smooth identity diffeomorphism for mixed `C^n` transitions. |
+| [`RingedSpaces.ChartedSpace.CompatibleAtlasSheaf`](RingedSpaces/ChartedSpace/CompatibleAtlasSheaf.lean) | Canonical smooth scalar locally ringed-space comparison for two specified smooth-compatible atlases, with forward and inverse section maps, restrictions, constants and germ evaluation. |
 | [`RingedSpaces.ContinuousFunctions.OpenImmersion`](RingedSpaces/ContinuousFunctions/OpenImmersion.lean) | [General-ring open immersions and field restriction](docs/continuous-functions.md#open-embeddings-and-restriction). |
 | [`RingedSpaces.Modules.PresheafChangeOfRings`](RingedSpaces/Modules/PresheafChangeOfRings.lean) | [Tensor presheaf and adjunction](docs/module-change-of-rings.md). |
 | [`RingedSpaces.Modules.SheafChangeOfRings`](RingedSpaces/Modules/SheafChangeOfRings.lean) | [Sheafified tensor adjunction](docs/module-change-of-rings.md#sheaves). |
@@ -275,9 +276,48 @@ the linked guides supply definitions, formulas, hypotheses and clients.
 
 ## References
 
+- Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry*, October 21,
+  2025 draft, Definition 4.3.9 (p. 142), with ringed-space and residue conventions
+  in §§2.2.13, 4.3.1 and 4.3.7. The scalar-preserving reconstruction results are a
+  strengthening motivated by this discussion; the generalized statements and
+  their proofs are developed here, not attributed to Vakil.
+  The same definition motivates the local-ball and holomorphic-function models,
+  fixed-atlas regularity and compatible-atlas comparisons. Their generalized
+  constructions and proofs are project developments using the separately
+  credited Mathlib and Complex Analysis APIs below.
+  Definition 4.3.9 also motivates the real-function local models and
+  finite-regularity constructions; it does not state a general finite-`C^r`
+  theorem. Exercise 7.2.G (p. 206), with conventions 7.2.1 and the affine-induced
+  contrast in Exercise 7.2.F, motivates the full nonlocal ringed-space morphisms.
+  The generalized closed-point constructors and non-affineness results are
+  project developments, not claims about locally ringed-space or scheme maps.
+  Exercise 7.2.D(a)–(f) guides inverse-image factorization, module inverse images,
+  pushforward–pullback adjunctions, composition isomorphisms and push–pull
+  comparisons. Its prerequisites include §2.6.4 / Exercise 2.6.K(a) (p. 92)
+  for tensor presheaves and sheafification, §2.7.2 (p. 93) for the temporary
+  inverse-image presheaf, and §2.7.4 (p. 94) for push–pull.
+  The generalized coefficient-ring constructions, fixed-space tensor symmetry,
+  canonical coherence and arbitrary-square pasting use the project proofs and
+  separately credited Mathlib methods described in
+  [Mathematical sources](NOTICE.md#mathematical-sources).
 - The [pinned mathlib dependency](lakefile.toml), including its
   [sheafed-space gluing](https://github.com/leanprover-community/mathlib4/blob/83abb3e776bdefcbc447a1e44d0debe4010039e5/Mathlib/AlgebraicGeometry/Gluing.lean),
-  sheaf-of-continuous-functions, inverse-image and module APIs.
+  continuous-function presheaves, smooth scalar sheaves, module colimits and
+  sheafification, change-of-rings, charts and smoothness APIs. The
+  [prior-formalization references](NOTICE.md#prior-formalizations) identify
+  the particular methods reused or adapted and their contributors.
+  The continuous-function sheaf proof is supplied by this library.
+  Nicolò Cavalleri and Yury Kudryashov's
+  [Diffeomorph structure and API](https://github.com/leanprover-community/mathlib4/blob/83abb3e776bdefcbc447a1e44d0debe4010039e5/Mathlib/Geometry/Manifold/Diffeomorph.lean)
+  supply the bundled diffeomorphism, differentiability and inverse (`symm`)
+  interfaces reused for local chart balls, mixed-compatible atlases and
+  finite-regularity local balls. These interfaces are distinct from the
+  chart/atlas APIs; the local-ball, mixed-atlas and finite-order proofs remain
+  project developments.
+- Formal Frontier, [Complex Analysis](https://github.com/FormalFrontier/complex-analysis),
+  version `2c0ad1d2ce6d2f815930d64428d66618cb9f122d`:
+  [finite-dimensional complex differentiability and analyticity](https://github.com/FormalFrontier/complex-analysis/blob/2c0ad1d2ce6d2f815930d64428d66618cb9f122d/ComplexAnalysis/Analysis/Complex/FiniteDimensional.lean).
+  The complex regularity results use this prior formalization directly.
 - [Mathematical guides](docs/README.md#current-api-map-beyond-the-historical-snapshot)
   for constructions and current direct imports; the
   [continuous-functions guide](docs/continuous-functions.md) includes the

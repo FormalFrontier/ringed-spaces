@@ -16,6 +16,14 @@ public import Mathlib.CategoryTheory.Adjunction.Basic
 The actual sheafification and coefficient comparison produce a bundled Hom
 equivalence natural in both variables. Its right adjoint pushes modules through
 the actual forgotten commutative-ring sheaf pullback unit.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Exercise 7.2.D(b,e) (p. 205), with the temporary presheaf in §2.7.2
+  (p. 93): the full sheafified inverse-image/forward-image adjunction motivates
+  this result. The natural linear Hom equivalence and coefficient transport
+  are project proofs using Mathlib's sheaf pullback and adjunction APIs.
 -/
 
 @[expose] public section

@@ -15,6 +15,14 @@ public import Mathlib.LinearAlgebra.TensorProduct.Map
 The section tensor is genuinely `M(U) ⊗[A(U)] B(U)`, with the `A(U)` action
 on `B(U)` induced by the component of the ring-presheaf morphism. Tensor
 symmetry transports the `B(U)` action and intertwines all restrictions.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), §2.6.4 and Exercise 2.6.K(a) (p. 92): the tensor presheaf prior to
+  sheafification motivates the right-factor order. The explicit symmetry
+  and arbitrary-site scalar extension are project prerequisites for Exercise
+  7.2.D(b,c,e) (p. 205), not separate results printed there.
 -/
 
 @[expose] public section

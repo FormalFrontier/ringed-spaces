@@ -14,6 +14,14 @@ public import RingedSpaces.Modules.SheafChangeOfRings
 Sheafifying the genuine right-factor tensor presheaf is naturally isomorphic
 to the ordinary sheafified scalar extension. This does not identify sections
 of a sheafification on an arbitrary open with raw tensor products.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), §2.6.4 and Exercise 2.6.K(a) (p. 92): forming a tensor presheaf
+  and then sheafifying motivates the right-factor comparison. The natural
+  symmetry is a project prerequisite for Exercise 7.2.D(b,c,e) (p. 205),
+  not a separate claim in that exercise.
 -/
 
 @[expose] public section

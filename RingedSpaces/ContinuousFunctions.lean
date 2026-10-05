@@ -26,6 +26,22 @@ The sheaf and evaluation constructions are based on the work of Kim Morrison and
 on continuous-function presheaves. The stalk and locally ringed space arguments adapt the
 smooth-manifold construction of Heather Macbeth, and the generic sheaf-of-functions work of
 Adam Topaz and other mathlib contributors.
+
+## References
+
+* Mathlib, `Mathlib/Topology/Sheaves/CommRingCat.lean` (Kim Morrison and Andrew Yang):
+  continuous-function presheaves of commutative rings. The sheaf property of
+  `ContinuousFunctions.sheaf` is proved in this library.
+* Mathlib, `Mathlib/Topology/Sheaves/LocalPredicate.lean` (Johan Commelin, Kim Morrison
+  and Adam Topaz): the separate local-predicate sheaf construction, including the
+  type-valued continuous-function sheaf used in the proof above.
+* Mathlib, `Mathlib/Geometry/Manifold/Sheaf/LocallyRingedSpace.lean` (Heather Macbeth):
+  the stalk-unit and local-ring method adapted to continuous functions.
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Definition 4.3.9 (p. 142): continuous real-function sheaves on local
+  balls motivate the model. Arbitrary topological commutative-ring coefficients
+  and the sheaf proof here are project work; field-valued local stalks require
+  `T1Space`.
 -/
 
 @[expose] public section
@@ -121,7 +137,8 @@ variable (K : Type u) [Field K] [TopologicalSpace K]
   [IsTopologicalDivisionRing K] [T1Space K]
 
 set_option backward.isDefEq.respectTransparency false in
-/-- A continuous germ into a topological field is invertible exactly when its value is nonzero. -/
+/-- A continuous germ into a topological field is invertible exactly when its value is nonzero.
+The local inverse argument adapts Heather Macbeth's smooth-sheaf stalk-unit proof in Mathlib. -/
 theorem isUnit_stalk_iff (x : X) (s : stalk X K x) :
     IsUnit s ↔ eval X K x s ≠ 0 := by
   constructor

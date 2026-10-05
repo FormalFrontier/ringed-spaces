@@ -15,6 +15,14 @@ Given a full natural transformation of commutative-ring presheaves, construct th
 sectionwise tensor presheaf and its extension/restriction adjunction. Restriction
 is obtained as a mate of the semilinear restriction on pure tensors, and does
 not require a topology or a sheaf condition.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), §2.6.4 and Exercise 2.6.K(a) (p. 92): tensor presheaves followed by
+  sheafification motivate scalar extension. This arbitrary-site presheaf
+  adjunction is an enabling project construction for Exercise 7.2.D(b,c,e)
+  (p. 205), not a separately numbered fixed-site theorem there.
 -/
 
 @[expose] public section

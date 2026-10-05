@@ -17,6 +17,17 @@ public import Mathlib.Algebra.Category.Ring.Limits
 The neighborhood-colimit ring acts on the neighborhood-colimit additive presheaf.
 The action and restriction maps are those of the actual pointwise left Kan extensions;
 the underlying additive presheaf is naturally the usual inverse image.
+
+## References
+
+* Mathlib, `Mathlib/Algebra/Category/ModuleCat/Presheaf/ColimitFunctor.lean`
+  (Joël Riou): the varying-ring module-colimit action transported to the
+  neighborhood-colimit pointwise Kan extensions.
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), §2.7.2 (p. 93) and Exercise 7.2.D(b,e) (p. 205): the temporary
+  inverse-image presheaf motivates this prerequisite. The simultaneous
+  coefficient/element colimit construction works even for `RingCat` presheaves
+  of noncommutative rings; it is not the full sheafified pullback requested there.
 -/
 
 @[expose] public section

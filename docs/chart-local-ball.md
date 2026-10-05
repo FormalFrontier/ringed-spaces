@@ -1,5 +1,12 @@
 # Chart coordinates and smooth scalar functions on an entire ball
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+draft), Definition 4.3.9 (p. 142), motivates smooth scalar-function local
+models on entire balls. The indexed boundaryless chart geometry and canonical
+whole smooth scalar locally ringed-space comparison here are project and
+Mathlib constructions, not arbitrary-sheaf recovery or a printed proof in
+that definition.
+
 For a nontrivially normed field `𝕜 : Type u`, a normed space `E : Type v` over
 `𝕜`, a charted space `M : Type w` modeled on `E`, and
 `[IsManifold 𝓘(𝕜, E) n M]`,

@@ -13,6 +13,15 @@ public import Mathlib.RingTheory.Spectrum.Prime.Topology
 A ring map from a local ring to the global sections of any ringed space determines a
 full ringed-space morphism with constant underlying map at the closed point.
 This morphism does not in general preserve local rings at stalks.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Exercise 7.2.G (p. 206), with Definition 7.2.1 (p. 204) and Exercise
+  7.2.F (pp. 205–206) for context: motivation for nonlocal full ringed-space
+  morphisms distinct from affine-induced maps. The arbitrary ringed-source,
+  local-target construction and fixed-base classification here are project proofs,
+  not locally ringed or scheme morphisms asserted by the exercise.
 -/
 
 set_option warningAsError true

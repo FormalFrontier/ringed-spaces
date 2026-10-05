@@ -16,6 +16,14 @@ For a continuous map of spaces, the ordinary inverse-image module-presheaf
 functor is left adjoint to the corresponding pushforward of modules. The
 forward and backward natural transformations identify the actual action on
 sections and expose the unit, counit and natural Hom equivalence.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), §2.7.2 (p. 93) and Exercise 7.2.D(b,e) (p. 205): motivation for the
+  inverse-image presheaf prerequisite to full module pullback. The bundled
+  linear Hom adjunction for `RingCat` presheaves, including noncommutative
+  coefficients, is a project proof, not an asserted sheaf-level result here.
 -/
 
 @[expose] public section

@@ -1,5 +1,11 @@
 # Pushforward through a full morphism of ringed spaces
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+draft), Definition 7.2.1 (p. 204) and Exercise 7.2.D(c,e) (p. 205), request
+pushforward along a **full** ringed-space morphism and its adjunction with
+pullback. The entire structure map supplies the coefficients here; comparison
+with Mathlib's inverse-image and pushforward functors is a project proof.
+
 Import `RingedSpaces.Modules.RingedSpacePushforward` directly or the public
 `RingedSpaces` aggregate. The root-only full-morphism client
 [`RingedSpacesTests/RingedSpaceFullMorphismRoot.lean`](../RingedSpacesTests/RingedSpaceFullMorphismRoot.lean)

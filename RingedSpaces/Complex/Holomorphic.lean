@@ -14,6 +14,19 @@ public import Mathlib.Geometry.Manifold.MFDeriv.FDeriv
 On an open subset of a finite-dimensional complex normed space, complex
 differentiability into a complete complex normed space is equivalent to complex
 `C^∞` regularity. The index `∞` denotes smoothness, not analytic index `ω`.
+
+## References
+
+* Formal Frontier, `ComplexAnalysis/Analysis/Complex/FiniteDimensional.lean`:
+  `DifferentiableOn.analyticOnNhd_of_finiteDimensional`, the
+  finite-dimensional complex differentiability-to-analyticity result used here.
+* Mathlib, `Mathlib/Geometry/Manifold/ContMDiff/NormedSpace.lean`
+  (Sébastien Gouëzel and Floris van Doorn):
+  the model-space differentiability and manifold-regularity comparison.
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (October 21, 2025
+  draft), Definition 4.3.9 (p. 142): motivation for holomorphic local models,
+  not a proof of this finite-dimensional complex-smoothness equivalence or an
+  equivalence with real smoothness.
 -/
 
 @[expose] public section
@@ -23,7 +36,9 @@ open scoped ContDiff Manifold
 universe u v
 
 /-- On an open subset of a finite-dimensional complex normed space, manifold
-smoothness with complete target is equivalent to complex differentiability. -/
+smoothness with complete target is equivalent to complex differentiability.
+The reverse implication uses Formal Frontier's finite-dimensional complex
+analyticity theorem in `ComplexAnalysis.Analysis.Complex.FiniteDimensional`. -/
 theorem contMDiffOn_iff_mdifferentiableOn_complex_of_finiteDimensional
     {E : Type u} {F : Type v} [NormedAddCommGroup E] [NormedSpace ℂ E]
     [FiniteDimensional ℂ E] [NormedAddCommGroup F] [NormedSpace ℂ F]

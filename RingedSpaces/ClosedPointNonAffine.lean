@@ -13,6 +13,15 @@ public import RingedSpaces.ClosedPointHom
 A ring homomorphism from a local ring that sends an element of its maximal ideal to a
 unit induces a constant-closed ringed-space morphism that cannot arise from any
 ring homomorphism between the corresponding affine spectra.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Exercise 7.2.G (p. 206), in the context of Definition 7.2.1 (p. 204)
+  and Exercise 7.2.F (pp. 205–206): motivation for a nonlocal full ringed-space
+  morphism not induced by an affine map. The arbitrary-`beta`, nontrivial-target
+  non-affineness theorem is a project generalization, not a printed proof or a
+  statement about locally ringed or scheme morphisms.
 -/
 
 set_option warningAsError true
@@ -26,7 +35,10 @@ open CategoryTheory Opposite TopologicalSpace TopCat
 universe u
 
 /-- A nonlocal map to a nonzero ring yields a constant-closed ringed morphism
-different from every affine-induced morphism, regardless of the inducing map. -/
+different from every affine-induced morphism, regardless of the inducing map.
+Vakil's *The Rising Sea* (21 October 2025 draft), Exercise 7.2.G (p. 206),
+motivates the contrast; the arbitrary inducing map and nontrivial target here
+are project generalizations, not a locally ringed or scheme-map theorem. -/
 theorem hom_ne_sheafedSpaceMap_of_isUnit
     {R S : Type u} [CommRing R] [IsLocalRing R] [CommRing S] [Nontrivial S]
     (alpha : R →+* S) (r : R) (hr : r ∈ IsLocalRing.maximalIdeal R)

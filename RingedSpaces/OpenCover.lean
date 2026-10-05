@@ -29,6 +29,11 @@ are used here. The comparison proof is adapted from a previously reviewed resear
 
 The present universe boundary is diagonal: the source, target and cover index live in
 `RingedSpace.{u, u}` and `Type u`, respectively.
+
+## References
+
+* Mathlib, `Mathlib/AlgebraicGeometry/Gluing.lean` (Andrew Yang): the generic
+  categorical transition-map construction adapted in the gluing proof.
 -/
 
 @[expose] public section
@@ -543,7 +548,8 @@ theorem hom_ext {Y : RingedSpace.{u, u}} (f g : X ⟶ Y)
   exact (cancel_epi comparison).mp heq
 
 /-- A compatible family of full morphisms on an arbitrary indexed open cover has exactly
-one extension to the original ringed space. -/
+one extension to the original ringed space. The transition-map step adapts Andrew Yang's
+Mathlib gluing construction; the full ringed-space comparison is proved here. -/
 theorem existsUnique_gluing {Y : RingedSpace.{u, u}} (f : ∀ i, C.obj i ⟶ Y)
     (hf : ∀ i j, pullback.fst (C.ι i) (C.ι j) ≫ f i =
       pullback.snd (C.ι i) (C.ι j) ≫ f j) :

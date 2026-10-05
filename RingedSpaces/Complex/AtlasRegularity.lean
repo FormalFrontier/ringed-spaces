@@ -19,6 +19,20 @@ also supplies the differentiability hypothesis.
 The conclusion concerns the atlas on the given charted space; it does not change charts or
 identify any structure sheaf. The boundaryless assumption makes the transition domains open
 in the entire model vector space. No statement about models with arbitrary corners is made.
+
+## References
+
+* Formal Frontier, `ComplexAnalysis/Analysis/Complex/FiniteDimensional.lean`:
+  differentiability of a finite-dimensional complex map on an open set implies
+  local analyticity.
+* Mathlib, `Mathlib/Geometry/Manifold/ContMDiff/Atlas.lean`
+  (Sébastien Gouëzel and Floris van Doorn):
+  `isManifold_of_contDiffOn` on the specified chart transitions.
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (October 21, 2025
+  draft), Definition 4.3.9 (p. 142): motivation for complex chart models,
+  not a proof that differentiable ordered transitions of a specified boundaryless
+  finite-dimensional atlas give analytic `ω` and then smooth `∞` regularity.
+  This does not reconstruct an arbitrary sheaf or treat corners or real differentiability.
 -/
 
 @[expose] public section
@@ -35,7 +49,10 @@ variable {M : Type w} [TopologicalSpace M] [ChartedSpace H M]
 
 /-- Complex differentiability of all ordered transitions in model coordinates makes the
 existing charted space an analytic complex manifold. The domain is exactly the preimage of
-the transition source under `I.symm`, intersected with the range of `I`. -/
+the transition source under `I.symm`, intersected with the range of `I`.
+The implication from complex differentiability to analytic transitions uses
+`DifferentiableOn.analyticOnNhd_of_finiteDimensional` from Formal Frontier's
+`ComplexAnalysis.Analysis.Complex.FiniteDimensional`. -/
 theorem isManifold_omega_of_differentiableOn_chartTransitions
     (h : ∀ e e' : OpenPartialHomeomorph M H,
       e ∈ atlas H M → e' ∈ atlas H M →

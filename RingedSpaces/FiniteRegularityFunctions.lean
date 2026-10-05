@@ -30,6 +30,20 @@ The sheaf and evaluation adapt the construction in mathlib's
 `Mathlib/Geometry/Manifold/Sheaf/Smooth.lean`, and the local-ring argument adapts
 `Mathlib/Geometry/Manifold/Sheaf/LocallyRingedSpace.lean`, both at mathlib commit
 `83abb3e776bdefcbc447a1e44d0debe4010039e5` (Apache-2.0).
+
+## References
+
+* Mathlib, `Mathlib/Geometry/Manifold/Sheaf/Smooth.lean` (Heather Macbeth and Adam
+  Topaz): smooth scalar-function sheaves adapted to finite regularity.
+* Mathlib, `Mathlib/Geometry/Manifold/Sheaf/LocallyRingedSpace.lean` (Heather
+  Macbeth): the stalk-unit criterion adapted to finite regularity.
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Definition 4.3.9 (p. 142): smooth scalar-function sheaves on local
+  balls motivate the model. Finite natural `C^r` orders on chosen charts,
+  including continuously differentiable rather than merely pointwise
+  differentiable `C¹` sections, are project constructions.
+* `RingedSpaces.ContinuousFunctions`: the existing continuous-function sheaf used
+  for the order-zero comparison.
 -/
 
 @[expose] public section
@@ -204,7 +218,9 @@ instance (r : ℕ) (x : M) : Nontrivial ((sheaf IM M r).presheaf.stalk x) :=
   (eval_surjective (IM := IM) (M := M) r x).nontrivial
 
 set_option backward.isDefEq.respectTransparency.types false in
-/-- A scalar germ is invertible exactly when its value at the base point is nonzero. -/
+/-- A scalar germ is invertible exactly when its value at the base point is nonzero.
+The local inverse argument adapts Heather Macbeth's smooth-sheaf stalk-unit proof
+in Mathlib to finite-order sections. -/
 theorem isUnit_stalk_iff (r : ℕ) {x : M}
     (germ : (sheaf IM M r).presheaf.stalk x) :
     IsUnit germ ↔ eval IM M r x germ ≠ 0 := by

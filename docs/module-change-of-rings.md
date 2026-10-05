@@ -1,5 +1,13 @@
 # Same-site change of rings for modules
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+draft), §2.6.4 and Exercise 2.6.K(a) (p. 92), motivate a tensor presheaf
+**followed by sheafification**. Fixed-site scalar extension is an enabling
+project construction for Exercise 7.2.D(b,c,e) (p. 205), not a separately
+numbered theorem there. The presheaf construction and sheaf adjunction below
+use the separately credited Mathlib module APIs; arbitrary sheafified sections
+are not asserted to be raw sectionwise tensors.
+
 This library constructs extension of scalars along a full map of
 commutative-ring presheaves on an arbitrary category, then extends it to
 module sheaves on a site. It uses mathlib's module-category scalar extension,

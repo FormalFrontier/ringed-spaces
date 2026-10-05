@@ -1,5 +1,13 @@
 # Finite-regularity scalar function sheaves
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+draft), Definition 4.3.9 (p. 142), motivates smooth scalar-function sheaves
+on local-ball models. This library supplies the project construction for finite
+natural `C^r` on chosen charts, the induced charts of open subtypes, and entire
+positive-radius boundaryless coordinate balls. Its `C¹` means continuously
+differentiable, not merely pointwise differentiable; the source does not prove
+these finite-order comparisons.
+
 The module [`RingedSpaces.FiniteRegularityFunctions`](../RingedSpaces/FiniteRegularityFunctions.lean)
 constructs, for each finite `r : ℕ`, a sheaf of scalar-valued `C^r` functions
 on a charted space. It also relates its smooth and continuous endpoints to the
@@ -154,3 +162,5 @@ continuous-function sheaf infrastructure credited to Kim Morrison,
 Johan Commelin and other Mathlib contributors. The comparisons use
 Mathlib's `ContMDiff.of_le` and `contMDiff_zero_iff`, and the continuous
 endpoint uses the RingedSpaces [continuous-function construction](continuous-functions.md).
+The adapted Mathlib proofs are in `Mathlib/Geometry/Manifold/Sheaf/Smooth.lean`
+and `Mathlib/Geometry/Manifold/Sheaf/LocallyRingedSpace.lean`.

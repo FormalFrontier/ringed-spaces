@@ -2,6 +2,12 @@
 
 # Ringed-space module square pasting
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+draft), Exercise 7.2.D(f) (p. 205) and §2.7.4 (p. 94), motivate the natural
+push–pull map for any full commutative square, not necessarily Cartesian and
+not necessarily invertible. Horizontal and vertical mate pasting are further
+project/Mathlib results, not a pasting theorem stated by the source.
+
 Import `RingedSpaces` for the public aggregate, or
 `RingedSpaces.Modules.BaseChangePasting` for the narrower leaf. Both expose
 the **actual** `RingedSpaces.Modules.BaseChange.pushPull` comparison for

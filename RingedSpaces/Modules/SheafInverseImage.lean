@@ -17,6 +17,19 @@ public import Mathlib.Topology.Sheaves.Functors
 Sheafify the actual neighborhood-colimit module presheaf, compare the underlying
 additive sheaf with ordinary inverse image, and transport its action across the
 nonidentity comparison with the forgotten commutative-ring inverse-image sheaf.
+
+## References
+
+* Mathlib, `Mathlib/Algebra/Category/ModuleCat/Presheaf/Sheafification.lean`
+  (Joël Riou): the module-sheaf sheafification used after the pointwise-Kan
+  inverse-image construction.
+* `RingedSpaces.Modules.PresheafInverseImage`: the neighborhood-colimit
+  module action built from Mathlib's varying-ring module colimit.
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), §2.7.2 (p. 93) and Exercise 7.2.D(b,e) (p. 205): the temporary
+  inverse-image presheaf and full sheafified pullback motivate this step.
+  The coefficient comparison and actual sheafification are project proofs
+  using the cited Mathlib module-sheaf API.
 -/
 
 @[expose] public section

@@ -2,6 +2,13 @@
 
 # Constant-closed morphisms not induced by any affine ring map
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October
+2025 draft), Exercise 7.2.G (p. 206), in the context of Definition 7.2.1
+(p. 204) and Exercise 7.2.F (pp. 205–206), motivates the contrast between
+nonlocal full ringed-space morphisms and affine-induced maps. The proof here
+for every inducing `beta` and every nontrivial target `S` is a project
+generalization, not a printed Vakil theorem or a scheme-morphism claim.
+
 Import `RingedSpaces.ClosedPointNonAffine` directly, or import the aggregate
 `RingedSpaces`. Both expose the namespace
 `AlgebraicGeometry.RingedSpace.ClosedPointHom` without an incubator dependency.

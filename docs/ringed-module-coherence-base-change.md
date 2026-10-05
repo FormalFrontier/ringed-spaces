@@ -1,5 +1,13 @@
 # Module pullback coherence and push–pull mates
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+draft), Exercise 7.2.D(d,f) (p. 205) and §2.7.4 (p. 94), request a natural
+**isomorphism** for composite pullback functors and a natural push–pull **map**
+for any full commutative ringed-space square. The latter need not be Cartesian
+or invertible. Canonical identity/associativity coherence, oriented identity
+normalization and their Mathlib-mate proofs are additional project theory,
+not printed claims of the exercise.
+
 Import `RingedSpaces` for the public aggregate, or import
 `RingedSpaces.Modules.PullbackCoherence` and
 `RingedSpaces.Modules.BaseChange` directly. The root-only client

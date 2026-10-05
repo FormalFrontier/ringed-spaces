@@ -2,6 +2,13 @@
 
 # Constant-closed full ringed morphisms
 
+Ravi Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October
+2025 draft), Exercise 7.2.G (p. 206), with Definition 7.2.1 (p. 204) and
+Exercise 7.2.F (pp. 205–206) as context, motivates a nonlocal **full**
+ringed-space morphism contrasted with affine-induced maps. The arbitrary
+ringed-source/local-target constructor and fixed-base classification here
+are project proofs, not printed general results or locally ringed/scheme maps.
+
 Import `RingedSpaces` or `RingedSpaces.ClosedPointHom` for the namespace
 `AlgebraicGeometry.RingedSpace.ClosedPointHom`. Fix `R : Type u` with
 `[CommRing R] [IsLocalRing R]` and any `X : RingedSpace.{u}`. Given an arbitrary

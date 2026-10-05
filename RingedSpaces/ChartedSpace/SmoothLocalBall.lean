@@ -21,6 +21,17 @@ carrier in one universe, whereas the underlying `ChartLocalBall` geometry permit
 three independent universes. This comparison runs from the restricted ambient
 canonical smooth scalar locally ringed space to the entire-ball canonical one;
 it asserts neither an analytic identification nor a converse for arbitrary sheaves.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (October 21, 2025
+  draft), Definition 4.3.9 (p. 142): motivation for local smooth-function ball models,
+  not a proof of this whole canonical smooth scalar locally ringed space comparison or a
+  reconstruction of an arbitrary structure sheaf.
+* Mathlib, `Mathlib/Geometry/Manifold/Sheaf/Smooth.lean` (Heather Macbeth and
+  Adam Topaz) and `Mathlib/Geometry/Manifold/Sheaf/LocallyRingedSpace.lean`
+  (Heather Macbeth): the canonical scalar sheaf and locally ringed space
+  compared using the project chart-ball geometry.
 -/
 
 @[expose] public section

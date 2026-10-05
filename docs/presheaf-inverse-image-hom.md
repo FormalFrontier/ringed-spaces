@@ -1,5 +1,11 @@
 # Hom adjunction for inverse-image module presheaves
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+draft), §2.7.2 (p. 93) and Exercise 7.2.D(b,e) (p. 205), motivate the
+temporary inverse-image presheaf. The natural linear Hom adjunction here is
+an additional project proof for `RingCat` presheaves, including noncommutative
+coefficients, prior to the full sheafified module adjunction.
+
 Import `RingedSpaces.Modules.PresheafInverseImageHom` (or `RingedSpaces`). All
 new declarations are in `RingedSpaces.Modules.PresheafInverseImage`. This is a
 presheaf-of-modules construction, not a sheaf or stalk construction.

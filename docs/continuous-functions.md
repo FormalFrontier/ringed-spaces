@@ -1,5 +1,12 @@
 # Continuous functions as ringed and locally ringed spaces
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+draft), Definition 4.3.9 (p. 142), motivates continuous real-function sheaves
+on local-ball models. This library proves the sheaf and open-immersion results
+for arbitrary topological commutative-ring coefficients; field-valued stalk
+and locally ringed-space claims require `T1Space`. The source is model
+motivation, not a published proof of these broader constructions.
+
 The modules [`RingedSpaces.ContinuousFunctions`](../RingedSpaces/ContinuousFunctions.lean)
 and [`RingedSpaces.ContinuousFunctions.OpenImmersion`](../RingedSpaces/ContinuousFunctions/OpenImmersion.lean)
 give a sheaf of continuous ring-valued functions, evaluation of its germs,
@@ -208,3 +215,12 @@ locality and restriction comparison adapt Heather Macbeth's sheaf and
 open-subtype methods; the generic sheaf-of-functions infrastructure includes
 work by Adam Topaz and other mathlib contributors. See the retained notices in
 the Lean modules and [`NOTICE.md`](../NOTICE.md) for roles and license details.
+
+The specific upstream Mathlib modules are `Mathlib/Topology/Sheaves/CommRingCat.lean`
+for continuous-function **presheaves** of commutative rings (Kim Morrison and
+Andrew Yang), and `Mathlib/Topology/Sheaves/LocalPredicate.lean` for the separate
+local-predicate machinery and type-valued continuous-function sheaf (Johan
+Commelin, Kim Morrison and Adam Topaz). This library proves the sheaf property
+of `ContinuousFunctions.sheaf` using the commutative-ring presheaf, Mathlib's
+forgetful sheaf criterion and that type-valued sheaf. The adapted stalk-unit and
+open-subtype methods come from `Mathlib/Geometry/Manifold/Sheaf/LocallyRingedSpace.lean`.

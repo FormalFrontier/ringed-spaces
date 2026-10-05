@@ -21,6 +21,14 @@ universes and does not require nonempty spaces, nonzero rings or local rings.
 
 This standalone construction uses the native inverse-image sheaf and the adjunction
 unit. It factors full ringed-space morphisms without a source-repository dependency.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Definition 7.2.1 (p. 204) and Exercise 7.2.D(a) (p. 205): the requested
+  full ringed-space factorization motivates this construction, not a categorical
+  fiber product. Its sheaf adjunction and diagonal-universe implementation use
+  Mathlib's native inverse-image sheaf.
 -/
 
 @[expose] public section
@@ -141,7 +149,10 @@ theorem toInverseImage_c_app_eq (U : (Opens X.carrier)ᵒᵖ) :
   rw [toInverseImage_c_app]
   rfl
 
-/-- The two full morphisms compose to the original full morphism, including its sheaf map. -/
+/-- The two full morphisms compose to the original full morphism, including its sheaf map.
+This realizes the full factorization requested in Vakil's *The Rising Sea*
+(21 October 2025 draft), Exercise 7.2.D(a) (p. 205), using Mathlib's sheaf
+inverse-image adjunction; it is not a categorical fiber product. -/
 theorem toInverseImage_ofInverseImage :
     toInverseImage f ≫ ofInverseImage Y f.hom.base = f := by
   apply InducedCategory.hom_ext

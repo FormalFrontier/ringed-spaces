@@ -1,5 +1,12 @@
 # Sheaf inverse image of modules
 
+Vakil's *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+draft), Exercise 7.2.D(b,e) (p. 205), motivates full sheafified module inverse
+image and its adjunction; §2.7.2 (p. 93) motivates the temporary presheaf.
+The actual coefficient transport, sheafification and natural linear Hom
+equivalence below are project proofs using the separately credited Mathlib
+module-sheaf API, not raw tensor-section identities.
+
 Import `RingedSpaces` for the complete API, or import
 `RingedSpaces.Modules.SheafInverseImageHom` directly; the narrower
 `RingedSpaces.Modules.SheafInverseImage` provides the functor and comparison.

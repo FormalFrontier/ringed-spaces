@@ -12,6 +12,19 @@ public import Mathlib.Geometry.Manifold.Diffeomorph
 Mixed transitions compare two *specified* charted-space structures on the same carrier and
 topology. In particular, neither structure is assumed to have its own structure groupoid.
 The smooth identity comparison uses the same model with corners in both directions.
+
+## References
+
+* Mathlib, `Mathlib/Geometry/Manifold/StructureGroupoid.lean` and
+  `Mathlib/Geometry/Manifold/ChartedSpace.lean` (Sébastien Gouëzel):
+  structure-groupoid compatibility and the maximal-atlas formalization.
+* Mathlib, `Mathlib/Geometry/Manifold/Diffeomorph.lean` (Nicolò Cavalleri and
+  Yury Kudryashov): the diffeomorphism structure, differentiability fields and
+  inverse API used for the identity comparison.
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (October 21, 2025
+  draft), Definition 4.3.9 (p. 142): motivation for comparing local models,
+  not a proof of mixed compatibility or maximal-atlas equality for two
+  explicitly specified atlases, nor a comparison with an arbitrary sheaf.
 -/
 
 @[expose] public section

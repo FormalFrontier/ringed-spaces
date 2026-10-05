@@ -20,6 +20,14 @@ corresponding statement for arbitrary topological open embeddings requires
 compatibility with the chosen charts. The construction parallels the smooth
 open-subtype comparison in mathlib's manifold locally ringed spaces and uses the
 existing open-immersion restriction API.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Definition 4.3.9 (p. 142): intrinsic versus restricted scalar functions
+  on a local model ball motivate the comparison. Finite natural regularity and
+  canonically induced open-subtype charts are project constructions, not an
+  arbitrary-chart open-embedding theorem from the source.
 -/
 
 @[expose] public section

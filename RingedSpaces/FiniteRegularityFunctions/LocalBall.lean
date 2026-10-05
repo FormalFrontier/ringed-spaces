@@ -17,6 +17,17 @@ functions and the comparison between an open subtype and a restricted space.
 
 The model-with-corners structure is the self model. A chart at a boundary point for
 a general model with corners need not contain any ambient open ball.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Definition 4.3.9 (p. 142): scalar-function sheaves on entire model
+  balls motivate the result. Positive-radius, boundaryless chart balls and their
+  finite natural `C^r` scalar locally ringed-space isomorphisms are project and
+  Mathlib constructions, not a general-corners theorem from the source.
+* Mathlib, `Mathlib/Geometry/Manifold/Diffeomorph.lean` (Nicolò Cavalleri and
+  Yury Kudryashov): the diffeomorphism structure, inverse and differentiability
+  API used in the scalar-space isomorphism.
 -/
 
 @[expose] public section

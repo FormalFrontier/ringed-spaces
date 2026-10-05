@@ -24,6 +24,18 @@ For a map of commutative-ring sheaves on one site, sheafify the sectionwise
 tensor presheaf. The resulting adjunction is to restriction along the whole
 map of ring sheaves. Sections of the sheafification are not asserted to be
 sectionwise tensors.
+
+## References
+
+* Mathlib, `Mathlib/Algebra/Category/ModuleCat/Presheaf/Sheafification.lean` and
+  `Mathlib/Algebra/Category/ModuleCat/Sheaf/ChangeOfRings.lean` (Joël Riou):
+  sheafification of module presheaves and restriction of scalars along a
+  morphism of ring sheaves, used in this extension-of-scalars construction.
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), §2.6.4 and Exercise 2.6.K(a) (p. 92): sectionwise tensor presheaf
+  followed by sheafification. This arbitrary-site adjunction enables Exercise
+  7.2.D(b,c,e) (p. 205), but is not a separately numbered theorem there;
+  sheafified sections are not identified with raw tensors.
 -/
 
 @[expose] public section

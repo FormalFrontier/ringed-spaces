@@ -13,6 +13,14 @@ public import Mathlib.CategoryTheory.Adjunction.Mates
 For any full commutative square, this module constructs the actual mate of
 direct-image composition. No Cartesian, flatness, or invertibility hypothesis
 is imposed on the square or on the comparison.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Exercise 7.2.D(f) (p. 205) and §2.7.4 (p. 94): motivate the
+  natural push–pull map for any full commutative ringed-space square.
+  Mathlib's mates construct the actual comparison; neither a Cartesian
+  square nor an invertible comparison is claimed.
 -/
 
 set_option maxRecDepth 2048
@@ -36,7 +44,10 @@ noncomputable def pushforwardSquare (bottom : W ⟶ X) (left : W ⟶ Y)
   pushforwardComp bottom top ≪≫ eqToIso (congrArg R commutes) ≪≫
     (pushforwardComp left right).symm
 
-/-- The square's push–pull transformation is the mate of its direct-image comparison. -/
+/-- The square's push–pull transformation is the mate of its direct-image comparison.
+Vakil's *The Rising Sea* (21 October 2025 draft), Exercise 7.2.D(f)
+(p. 205), requests a natural map for a full commutative square;
+the mate is not asserted to be invertible or to require a Cartesian square. -/
 noncomputable def pushPull (bottom : W ⟶ X) (left : W ⟶ Y)
     (top : X ⟶ Z) (right : Y ⟶ Z) (commutes : bottom ≫ top = left ≫ right) :
     R top ⋙ L right ⟶ L bottom ⋙ R left :=

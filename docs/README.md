@@ -46,6 +46,7 @@ Direct imports and their guides give narrower dependencies:
 | [`RingedSpaces.ChartedSpace.SmoothLocalBall`](../RingedSpaces/ChartedSpace/SmoothLocalBall.lean) | `ChartLocalBall.smoothIso`, whole-arrow and full-composite evaluation laws | [`chart-local-ball.md`](chart-local-ball.md) |
 | [`RingedSpaces.ChartedSpace.SmoothScalarReconstruction`](../RingedSpaces/ChartedSpace/SmoothScalarReconstruction.lean) | `PreservesSmoothScalars`, `PreservesSmoothScalars.apply`, `PreservesSmoothScalars.eq_of_base_eq`, `PreservesSmoothScalars.eq_locallyRingedSpaceMap_of_contMDiff`, `PreservesSmoothScalars.contMDiff_base`, `PreservesSmoothScalars.eq_locallyRingedSpaceMap`, `preservesSmoothScalars_real` | [`README.md`](../README.md#headline-results) |
 | [`RingedSpaces.ChartedSpace.CompatibleAtlases`](../RingedSpaces/ChartedSpace/CompatibleAtlases.lean) | Both atlases' own regularity and equal maximal atlases from mixed groupoid transitions; for mixed `C^n` transitions, a point-preserving `C^n` diffeomorphism to a typed copy retaining the entire second atlas | [`README.md`](../README.md#headline-results) |
+| [`RingedSpaces.ChartedSpace.CompatibleAtlasSheaf`](../RingedSpaces/ChartedSpace/CompatibleAtlasSheaf.lean) | Canonical smooth scalar locally ringed-space comparison for two specified smooth-compatible atlases; forward and inverse section comparisons, restrictions, scalar constants and germ evaluation | [`README.md`](../README.md#headline-results) |
 | [`RingedSpaces.Complex.Holomorphic`](../RingedSpaces/Complex/Holomorphic.lean) | Complex smoothness and differentiability on finite-dimensional complex open subsets with complete targets | [`README.md`](../README.md) |
 | [`RingedSpaces.Complex.AtlasRegularity`](../RingedSpaces/Complex/AtlasRegularity.lean) | `isManifold_omega_of_differentiableOn_chartTransitions`, `isManifold_infty_of_differentiableOn_chartTransitions`, `isManifold_omega_of_isManifold_one`: analytic or smooth regularity for the existing boundaryless complex atlas with a finite-dimensional model, from differentiable transitions or order-one regularity | [`README.md`](../README.md#headline-results) |
 | [`RingedSpaces.ChartedSpace.HolomorphicSections`](../RingedSpaces/ChartedSpace/HolomorphicSections.lean) | `ComplexManifold.ofHolomorphic`, restriction, germ evaluation and precomposition on inverse-image opens through full maps; `ComplexLine` specializations | [`README.md`](../README.md) |
@@ -71,7 +72,10 @@ the [smooth chart-ball](../RingedSpacesTests/ChartedSpaceSmoothLocalBall.lean),
 clients likewise exercise the public root. The
 [compatible-atlas client](../RingedSpacesTests/CompatibleAtlases.lean) covers
 nonlinear and nonpreferred charts, full-atlas transport, and empty and
-zero-dimensional boundaries. The default build includes the shipped tests,
+zero-dimensional boundaries. It also exercises the canonical smooth scalar
+comparison on nonconstant sections over proper and nested opens in both
+directions, with restrictions, scalar constants and germ evaluation, including
+complex translation examples. The default build includes the shipped tests,
 library aggregate and examples. The historical
 generated API snapshot and manifest remain unchanged and cover none of the
 new leaves.

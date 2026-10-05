@@ -13,6 +13,14 @@ For arbitrary commutative squares of full ringed-space morphisms, the mate of
 the outer square equals the composite of the mates of the two inner squares.
 The functor comparisons are the canonical composition isomorphisms of the
 actual sheafified inverse image and full direct image.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Exercise 7.2.D(f) (p. 205) and §2.7.4 (p. 94): the underlying
+  natural push–pull map for any full commutative square. Horizontal and
+  vertical pasting of such mates use further project/Mathlib theory; the
+  exercise does not state a pasting theorem or invertibility.
 -/
 
 set_option maxRecDepth 2048

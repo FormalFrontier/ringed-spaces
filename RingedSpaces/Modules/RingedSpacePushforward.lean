@@ -17,6 +17,14 @@ The actual continuous inverse-image adjunction unit, followed by scalar restrict
 along the inverse-image coefficient map, agrees with the complete structure map of
 the original ringed-space morphism after forgetting commutativity. Consequently
 the two corresponding pushforwards of module sheaves are naturally isomorphic.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (21 October 2025
+  draft), Definition 7.2.1 (p. 204) and Exercise 7.2.D(c,e) (p. 205):
+  full-morphism pushforward and adjunction are requested there. The whole
+  structure-sheaf map supplies coefficients; agreement with the Mathlib
+  pushforward through the inverse-image adjunction is a project proof.
 -/
 
 @[expose] public section
@@ -49,7 +57,10 @@ noncomputable def structureMap :
       (Y := (TopCat.Sheaf.pushforward CommRingCat.{u} f.hom.base).obj X.sheaf)).symm
         f.hom.c)
 
-/-- Native pushforward of module sheaves through the original full morphism. -/
+/-- Native pushforward of module sheaves through the original full morphism.
+Vakil's *The Rising Sea* (21 October 2025 draft), Exercise 7.2.D(c)
+(p. 205), requests the full-morphism functor; the construction uses
+Mathlib's module-sheaf pushforward and the complete structure map. -/
 noncomputable def pushforwardFunctor :
     SheafOfModules.{u} (ringSheaf X) ⥤ SheafOfModules.{u} (ringSheaf Y) :=
   SheafOfModules.pushforward (structureMap f)

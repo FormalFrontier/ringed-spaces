@@ -19,6 +19,18 @@ The chartwise comparison assumes a smooth manifold structure; it does not
 upgrade a merely holomorphic atlas. The scalar sheaf uses the common-universe
 convention of `smoothSheafCommRing`, while the pure differentiability helpers
 permit independent source and target universes without sheaf-specific hypotheses.
+
+## References
+
+* Formal Frontier, `ComplexAnalysis/Analysis/Complex/FiniteDimensional.lean`:
+  finite-dimensional complex analyticity, used through the smoothness bridge
+  in `RingedSpaces.Complex.Holomorphic`.
+* Mathlib, `Mathlib/Geometry/Manifold/Sheaf/Smooth.lean` (Heather Macbeth and
+  Adam Topaz): the existing smooth scalar-function sheaf used for holomorphic sections.
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (October 21, 2025
+  draft), Definition 4.3.9 (p. 142): motivation for holomorphic local-function
+  models, not a proof of this own- and nested-open section identification with
+  the canonical complex-smooth scalar sheaf or an arbitrary-sheaf reconstruction.
 -/
 
 @[expose] public section

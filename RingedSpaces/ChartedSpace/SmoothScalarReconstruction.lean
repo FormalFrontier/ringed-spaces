@@ -17,6 +17,9 @@ morphism unique for a given base map. For an open finite-dimensional target,
 this also recovers smoothness of the base map and the entire induced morphism.
 For real scalars the constant-preservation condition is automatic, whereas it
 remains an explicit hypothesis over general fields, including the complex field.
+The extra scalar-preservation condition and the unit-contradiction and
+finite-coordinate arguments are developed here, motivated by Vakil's discussion
+of locally ringed spaces rather than stated or proved there.
 
 ## Implementation notes
 
@@ -24,6 +27,18 @@ The scalar field and manifold carriers share a universe in the existing smooth
 sheaf construction. The source model spaces need not share that universe. The smoothness
 converse concerns open subspaces of finite-dimensional normed models; the
 evaluation statement has no completeness or dimensionality requirements.
+
+## References
+
+* Ravi Vakil, *The Rising Sea: Foundations of Algebraic Geometry* (October 21,
+  2025 draft), §4.3.9 (p. 142), with §§2.2.13, 4.3.1 and 4.3.7 for ringed-space
+  and residue-field context: motivation, not a statement or proof of the
+  scalar-preserving reconstruction proved here.
+* Mathlib, `Mathlib/Geometry/Manifold/Sheaf/Smooth.lean` (Heather Macbeth and
+  Adam Topaz): the smooth scalar sheaf and its stalk evaluation.
+* Mathlib, `Mathlib/Geometry/Manifold/Sheaf/LocallyRingedSpace.lean` (Heather
+  Macbeth): the stalk-unit/local-ring criterion and full smooth morphism used
+  in the reconstruction and its comparison to the induced morphism.
 -/
 
 @[expose] public section
