@@ -144,7 +144,7 @@ theorem restrictLocallyRingedSpaceIso_hom_ofRestrict (A : Opens X) :
     (restrictLocallyRingedSpaceIso X K A).hom ≫
         locallyRingedSpaceMap A K X Subtype.val A.isOpenEmbedding'.continuous =
       (locallyRingedSpace X K).ofRestrict A.isOpenEmbedding := by
-  haveI : LocallyRingedSpace.IsOpenImmersion
+  have : LocallyRingedSpace.IsOpenImmersion
       (locallyRingedSpaceMap A K X Subtype.val A.isOpenEmbedding'.continuous) :=
     locallyRingedSpaceMap_isOpenImmersion A X K Subtype.val A.isOpenEmbedding'
   exact LocallyRingedSpace.IsOpenImmersion.isoRestrict_inv_ofRestrict
@@ -156,7 +156,7 @@ theorem restrictLocallyRingedSpaceIso_inv_ofRestrict (A : Opens X) :
     (restrictLocallyRingedSpaceIso X K A).inv ≫
         (locallyRingedSpace X K).ofRestrict A.isOpenEmbedding =
       locallyRingedSpaceMap A K X Subtype.val A.isOpenEmbedding'.continuous := by
-  haveI : LocallyRingedSpace.IsOpenImmersion
+  have : LocallyRingedSpace.IsOpenImmersion
       (locallyRingedSpaceMap A K X Subtype.val A.isOpenEmbedding'.continuous) :=
     locallyRingedSpaceMap_isOpenImmersion A X K Subtype.val A.isOpenEmbedding'
   exact LocallyRingedSpace.IsOpenImmersion.isoRestrict_hom_ofRestrict

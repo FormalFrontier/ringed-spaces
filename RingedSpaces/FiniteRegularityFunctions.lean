@@ -429,7 +429,7 @@ def continuousToZero (U : Opens M) :
   map_add' := by intros; apply Subtype.ext; rfl
 
 /-- The zero-order-to-continuous conversion preserves pointwise values. -/
-@[simp] theorem zeroToContinuous_apply (U : Opens M)
+theorem zeroToContinuous_apply (U : Opens M)
     (f : (sheaf IM M 0).presheaf.obj (op U)) (point : U) :
     zeroToContinuous (IM := IM) (M := M) U f point = f point := by
   rfl

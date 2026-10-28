@@ -200,7 +200,7 @@ def holomorphicSheafHom [CompleteSpace F]
   (holomorphic_contMDiff f hf).smoothSheafCommRingHom 𝓘(ℂ, F) G f
 
 /-- The induced sheaf morphism evaluates by precomposition. -/
-@[simp] theorem holomorphicSheafHom_app_apply [CompleteSpace F]
+theorem holomorphicSheafHom_app_apply [CompleteSpace F]
     {D : Opens E} {G : Opens F} (f : D → G)
     (hf : MDifferentiable 𝓘(ℂ, E) 𝓘(ℂ, F) f) (V : Opens G)
     (representativeSection : (smoothSheafCommRing 𝓘(ℂ, F) 𝓘(ℂ) G ℂ).presheaf.obj (op V))
@@ -257,7 +257,7 @@ theorem holomorphicLocallyRingedSpaceMap_c [CompleteSpace F]
     (holomorphicLocallyRingedSpaceMap f hf).c = (holomorphicSheafHom f hf).hom := rfl
 
 /-- The full map's sheaf component evaluates by precomposition. -/
-@[simp] theorem holomorphicLocallyRingedSpaceMap_c_app_apply
+theorem holomorphicLocallyRingedSpaceMap_c_app_apply
     [CompleteSpace F]
     {D : Opens E} {G : Opens F} (f : D → G)
     (hf : MDifferentiable 𝓘(ℂ, E) 𝓘(ℂ, F) f) (V : Opens G)
@@ -368,7 +368,7 @@ def holomorphicSheafHom {D E : Opens ℂ} (f : D → E)
 
 /-- The sheaf map induced by a holomorphic map evaluates by precomposition on
 the inverse image of an open set. -/
-@[simp] theorem holomorphicSheafHom_app_apply {D E : Opens ℂ} (f : D → E)
+theorem holomorphicSheafHom_app_apply {D E : Opens ℂ} (f : D → E)
     (hf : MDifferentiable 𝓘(ℂ) 𝓘(ℂ) f) (V : Opens E)
     (representativeSection : (smoothSheafCommRing 𝓘(ℂ) 𝓘(ℂ) E ℂ).presheaf.obj (op V))
     (point : (Opens.map (TopCat.ofHom ⟨f, (holomorphic_contMDiff f hf).continuous⟩)).obj V) :
@@ -435,7 +435,7 @@ theorem holomorphicLocallyRingedSpaceMap_c {D E : Opens ℂ} (f : D → E)
 
 /-- The sheaf component of the full locally ringed-space map precomposes
 sections on inverse-image opens. -/
-@[simp] theorem holomorphicLocallyRingedSpaceMap_c_app_apply {D E : Opens ℂ} (f : D → E)
+theorem holomorphicLocallyRingedSpaceMap_c_app_apply {D E : Opens ℂ} (f : D → E)
     (hf : MDifferentiable 𝓘(ℂ) 𝓘(ℂ) f) (V : Opens E)
     (representativeSection : (smoothSheafCommRing 𝓘(ℂ) 𝓘(ℂ) E ℂ).presheaf.obj (op V))
     (point : (Opens.map (TopCat.ofHom ⟨f, (holomorphic_contMDiff f hf).continuous⟩)).obj V) :

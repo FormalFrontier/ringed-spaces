@@ -59,7 +59,8 @@ instance moduleSheafCategory (R : X.Sheaf RingCat.{v}) :
 noncomputable def ringIso (S : Y.Sheaf CommRingCat.{v}) :
     targetRing f S ≅ sheafifiedRing f S :=
   RingedSpaces.Modules.SheafInverseImage.comparison f S ≪≫
-    (RingedSpaces.Modules.PresheafInverseImage.inverseImageSheafRingComparison f (sourceRing S)).symm
+    (RingedSpaces.Modules.PresheafInverseImage.inverseImageSheafRingComparison f
+      (sourceRing S)).symm
 
 /-- The actual commutative-ring inverse-image unit, forgotten to ring sheaves. -/
 noncomputable def actualUnit (S : Y.Sheaf CommRingCat.{v}) :
@@ -68,6 +69,7 @@ noncomputable def actualUnit (S : Y.Sheaf CommRingCat.{v}) :
     ((TopCat.Sheaf.pullbackPushforwardAdjunction CommRingCat.{v} f).unit.app S)
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates evaluating the composite ring comparison on the inverse-image unit.
 theorem ringUnit_full (S : Y.Sheaf CommRingCat.{v})
     (V : (Opens Y)ᵒᵖ) (r : (sourceRing S).obj.obj V) :
     (ringIso f S).hom.hom.app ((Opens.map f).op.obj V)
@@ -77,7 +79,8 @@ theorem ringUnit_full (S : Y.Sheaf CommRingCat.{v})
       (((Opens.map f).op.pointwiseLeftKanExtensionUnit (sourceRing S).obj).app V r) := by
   have hc := RingedSpaces.Modules.SheafInverseImage.comparison_unit_app f S V
   have hd := RingedSpaces.Modules.SheafInverseImage.ringUnit_pointwise f (sourceRing S) V r
-  change (RingedSpaces.Modules.PresheafInverseImage.inverseImageSheafRingComparison f (sourceRing S)).inv.hom.app
+  change (RingedSpaces.Modules.PresheafInverseImage.inverseImageSheafRingComparison f
+    (sourceRing S)).inv.hom.app
       ((Opens.map f).op.obj V)
       ((RingedSpaces.Modules.SheafInverseImage.comparison f S).hom.hom.app
         ((Opens.map f).op.obj V) ((actualUnit f S).hom.app V r)) = _
@@ -90,6 +93,7 @@ theorem ringUnit_full (S : Y.Sheaf CommRingCat.{v})
   exact hd
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates passing from sectionwise unit identities to ring sheaf morphisms.
 /-- The complete ring-map identity, not merely an equality of underlying additive maps. -/
 theorem ringUnit_iso (S : Y.Sheaf CommRingCat.{v}) :
     actualUnit f S ≫
@@ -318,7 +322,8 @@ noncomputable def homEquiv (S : Y.Sheaf CommRingCat.{v})
       (M ⟶ (pushforwardFunctor f S).obj N) :=
   (transportHomEquiv f S
       ((PresheafOfModules.sheafification (coefficientSheafUnit f S)).obj
-        ((RingedSpaces.Modules.PresheafInverseImage.inverseImageFunctor f (sourceRing S).obj).obj M.val)) N).trans
+        ((RingedSpaces.Modules.PresheafInverseImage.inverseImageFunctor f
+          (sourceRing S).obj).obj M.val)) N).trans
     ((PresheafOfModules.sheafificationHomEquiv (coefficientSheafUnit f S)).trans
       ((RingedSpaces.Modules.PresheafInverseImage.homEquiv f (sourceRing S).obj M.val
         ((PresheafOfModules.restrictScalars (coefficientSheafUnit f S)).obj
@@ -361,6 +366,7 @@ theorem homEquiv_naturality_right (S : Y.Sheaf CommRingCat.{v})
   rw [forward_apply f S g V m]
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates composing adjunction-unit and additive-comparison naturality.
 set_option backward.isDefEq.respectTransparency false in
 theorem additiveUnit_naturality (S : Y.Sheaf CommRingCat.{v})
     {M M' : SheafOfModules.{v} (sourceRing S)} (h : M ⟶ M') :
@@ -537,6 +543,7 @@ theorem forward_underlying (S : Y.Sheaf CommRingCat.{v})
   exact forward_apply f S g V m
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates unfolding the additive adjunction transpose and module unit.
 set_option backward.isDefEq.respectTransparency false in
 /-- Ordinary additive sheaf adjunction transpose of the module map after
 the existing coherence isomorphism, for the full underlying sheaf morphism. -/

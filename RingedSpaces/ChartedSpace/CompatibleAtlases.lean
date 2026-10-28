@@ -142,7 +142,6 @@ theorem liftedChartedSpace_chartAt (C : ChartedSpace H M) (x : ULift.{v} M) :
       (Homeomorph.ulift : ULift.{v} M ≃ₜ M).toOpenPartialHomeomorph ≫ₕ C.chartAt x.down :=
   rfl
 
-@[simp]
 theorem liftedChartedSpace_chartAt_apply (C : ChartedSpace H M) (x y : M) :
     (@chartAt H _ (ULift.{v} M) _ (liftedChartedSpace C) (ULift.up x)) (ULift.up y) =
       C.chartAt x y := by
@@ -205,7 +204,6 @@ theorem identityDiffeomorph_apply (C₀ C₁ : ChartedSpace H M)
     identityDiffeomorph I n C₀ C₁ h x = ULift.up x :=
   rfl
 
-@[simp]
 theorem identityDiffeomorph_apply_down (C₀ C₁ : ChartedSpace H M)
     (h : ∀ e ∈ C₀.atlas, ∀ f ∈ C₁.atlas,
       e.symm ≫ₕ f ∈ contDiffGroupoid n I) (x : ULift.{v} M) :

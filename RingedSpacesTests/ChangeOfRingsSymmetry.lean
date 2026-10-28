@@ -142,7 +142,7 @@ private theorem twoObjectArrowClient (A B : (Fin 2)ᵒᵖ ⥤ CommRingCat.{u}) (
 
 /-- The tensor comparison exists on a site with no objects. -/
 noncomputable def emptySiteComparison
-    (A : (Discrete (PEmpty.{u+1}))ᵒᵖ ⥤ CommRingCat.{u}) :
+    (A : (Discrete (PEmpty.{u + 1}))ᵒᵖ ⥤ CommRingCat.{u}) :
     rightPresheafFunctor A A (𝟙 A) ≅ tensorPresheafFunctor A A (𝟙 A) :=
   rightPresheafNatIso A A (𝟙 A)
 
@@ -179,5 +179,3 @@ theorem sheafificationComparisonSquare :
   rightSheafificationUnit_naturality A B theta M
 
 end Test.ChangeOfRingsSymmetry
-
-#lint-

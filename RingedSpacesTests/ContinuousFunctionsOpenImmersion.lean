@@ -25,13 +25,14 @@ variable (U X R : Type u) [TopologicalSpace U] [TopologicalSpace X]
 example (j : U → X) (hj : IsOpenEmbedding j) (V : Opens U) :
     IsIso ((ContinuousFunctions.ringedSpaceMap U R X j hj.continuous).hom.c.app
       (Opposite.op ((show IsOpenEmbedding
-        (ContinuousFunctions.ringedSpaceMap U R X j hj.continuous).hom.base from hj).functor.obj V))) :=
+        (ContinuousFunctions.ringedSpaceMap U R X j hj.continuous).hom.base from
+          hj).functor.obj V))) :=
   ContinuousFunctions.ringedSpaceMap_c_iso U X R j hj V
 
 example (j : U → X) (hj : IsOpenEmbedding j) :
     SheafedSpace.IsOpenImmersion
       (ContinuousFunctions.ringedSpaceMap U R X j hj.continuous) := by
-  letI := ContinuousFunctions.ringedSpaceMap_isOpenImmersion U X R j hj
+  let := ContinuousFunctions.ringedSpaceMap_isOpenImmersion U X R j hj
   infer_instance
 
 noncomputable example (A : Opens X) :
@@ -51,7 +52,7 @@ example (A : Opens X) :
           (ContinuousFunctions.ringedSpace X R).ofRestrict A.isOpenEmbedding =
         ContinuousFunctions.ringedSpaceMap A R X Subtype.val
           A.isOpenEmbedding'.continuous) := by
-  letI := ContinuousFunctions.ringedSpaceMap_isOpenImmersion
+  let := ContinuousFunctions.ringedSpaceMap_isOpenImmersion
     A X R Subtype.val A.isOpenEmbedding'
   exact SheafedSpace.IsOpenImmersion.isoRestrict_hom_ofRestrict
     (ContinuousFunctions.ringedSpaceMap A R X Subtype.val A.isOpenEmbedding'.continuous)
@@ -65,7 +66,7 @@ example (A : Opens X) :
           ContinuousFunctions.ringedSpaceMap A R X Subtype.val
             A.isOpenEmbedding'.continuous =
         (ContinuousFunctions.ringedSpace X R).ofRestrict A.isOpenEmbedding) := by
-  letI := ContinuousFunctions.ringedSpaceMap_isOpenImmersion
+  let := ContinuousFunctions.ringedSpaceMap_isOpenImmersion
     A X R Subtype.val A.isOpenEmbedding'
   exact SheafedSpace.IsOpenImmersion.isoRestrict_inv_ofRestrict
     (ContinuousFunctions.ringedSpaceMap A R X Subtype.val A.isOpenEmbedding'.continuous)
@@ -104,7 +105,7 @@ variable (K : Type u) [Field K] [TopologicalSpace K]
 example (j : U → X) (hj : IsOpenEmbedding j) :
     LocallyRingedSpace.IsOpenImmersion
       (ContinuousFunctions.locallyRingedSpaceMap U K X j hj.continuous) := by
-  haveI := ContinuousFunctions.locallyRingedSpaceMap_isOpenImmersion U X K j hj
+  have := ContinuousFunctions.locallyRingedSpaceMap_isOpenImmersion U X K j hj
   infer_instance
 
 noncomputable example (A : Opens X) :

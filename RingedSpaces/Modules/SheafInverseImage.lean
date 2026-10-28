@@ -199,7 +199,8 @@ abbrev sheafForget (T : TopCat.{v}) :=
   sheafCompose (Opens.grothendieckTopology T) (forget₂ CommRingCat.{v} RingCat.{v})
 
 set_option maxHeartbeats 1000000 in
-theorem chosenUnitFac (A : Type (v+1)) [Category.{v} A]
+-- The local budget accommodates comparing units for the two sheaf pullback adjunctions.
+theorem chosenUnitFac (A : Type (v + 1)) [Category.{v} A]
     {FA : A → A → Type*} {CA : A → Type v}
     [∀ B C, FunLike (FA B C) (CA B) (CA C)] [ConcreteCategory.{v} A FA]
     [HasColimits A] [HasLimits A] [PreservesLimits (forget A)]
@@ -217,8 +218,9 @@ theorem chosenUnitFac (A : Type (v+1)) [Category.{v} A]
       (Opens.grothendieckTopology Y) (Opens.grothendieckTopology X)) S
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates unfolding the Kan-extension and sheafification adjunction.
 set_option backward.isDefEq.respectTransparency false in
-theorem constructedUnitFac (A : Type (v+1)) [Category.{v} A]
+theorem constructedUnitFac (A : Type (v + 1)) [Category.{v} A]
     {FA : A → A → Type*} {CA : A → Type v}
     [∀ B C, FunLike (FA B C) (CA B) (CA C)] [ConcreteCategory.{v} A FA]
     [HasColimits A] [HasLimits A] [PreservesLimits (forget A)]
@@ -253,6 +255,8 @@ theorem pointwiseToPullbackFac (C : Type (v + 1)) [Category.{v} C]
         (β := (Opens.map f).op.leftKanExtensionUnit P))
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates elaborating the pointwise Kan-extension comparisons
+-- across the forgetful functor from commutative rings to rings.
 set_option backward.isDefEq.respectTransparency false in
 theorem presheafComparisonFacApp (P : Y.Presheaf CommRingCat.{v})
     (V : (Opens Y)ᵒᵖ) :
@@ -276,12 +280,16 @@ theorem presheafComparisonFacApp (P : Y.Presheaf CommRingCat.{v})
     forget P (Opens.map f).op V
   calc
     forget.map (((Opens.map f).op.leftKanExtensionUnit P).app V) ≫
-        (Functor.whiskerRight (PresheafInverseImage.pointwiseToPullback f CommRingCat.{v} P).symm.hom forget).app ((Opens.map f).op.obj V) ≫
+        (Functor.whiskerRight
+          (PresheafInverseImage.pointwiseToPullback f CommRingCat.{v} P).symm.hom forget).app
+            ((Opens.map f).op.obj V) ≫
         (PresheafInverseImage.commRingPointwiseComparison f P).hom.app ((Opens.map f).op.obj V) ≫
-        (PresheafInverseImage.pointwiseToPullback f RingCat.{v} (P ⋙ forget)).hom.app ((Opens.map f).op.obj V)
+        (PresheafInverseImage.pointwiseToPullback f RingCat.{v} (P ⋙ forget)).hom.app
+          ((Opens.map f).op.obj V)
       = forget.map (((Opens.map f).op.pointwiseLeftKanExtensionUnit P).app V) ≫
         (PresheafInverseImage.commRingPointwiseComparison f P).hom.app ((Opens.map f).op.obj V) ≫
-        (PresheafInverseImage.pointwiseToPullback f RingCat.{v} (P ⋙ forget)).hom.app ((Opens.map f).op.obj V) := by
+        (PresheafInverseImage.pointwiseToPullback f RingCat.{v} (P ⋙ forget)).hom.app
+          ((Opens.map f).op.obj V) := by
           simp only [Functor.whiskerRight_app, Iso.symm_hom]
           simp only [← Functor.map_comp, ← Category.assoc]
           rw [← hC]
@@ -289,12 +297,15 @@ theorem presheafComparisonFacApp (P : Y.Presheaf CommRingCat.{v})
     _ = _ := by
       rw [← Category.assoc]
       change (forget.map (((Opens.map f).op.pointwiseLeftKanExtensionUnit P).app V) ≫
-        (forget.pointwiseLeftKanExtensionCompIsoOfPreserves P (Opens.map f).op).hom.app ((Opens.map f).op.obj V)) ≫
-        (PresheafInverseImage.pointwiseToPullback f RingCat.{v} (P ⋙ forget)).hom.app ((Opens.map f).op.obj V) = _
+        (forget.pointwiseLeftKanExtensionCompIsoOfPreserves P (Opens.map f).op).hom.app
+          ((Opens.map f).op.obj V)) ≫
+        (PresheafInverseImage.pointwiseToPullback f RingCat.{v} (P ⋙ forget)).hom.app
+          ((Opens.map f).op.obj V) = _
       rw [hP]
       exact hR
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates lifting the componentwise Kan-extension identity to natural maps.
 set_option backward.isDefEq.respectTransparency false in
 theorem presheafComparisonFac (P : Y.Presheaf CommRingCat.{v}) :
     Functor.whiskerRight ((Opens.map f).op.leftKanExtensionUnit P)
@@ -341,6 +352,7 @@ noncomputable def comparison (S : Y.Sheaf CommRingCat.{v}) :
     ((TopCat.Sheaf.pullbackIso RingCat.{v} f).app ((sheafForget Y).obj S)).symm
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates unfolding the sheafification comparison and its unit factorization.
 set_option backward.isDefEq.respectTransparency false in
 theorem constructedComparison_sheafUnit (S : Y.Sheaf CommRingCat.{v}) :
     Functor.whiskerRight
@@ -368,6 +380,7 @@ theorem constructedComparison_sheafUnit (S : Y.Sheaf CommRingCat.{v}) :
     (PresheafInverseImage.commRingPullbackComparison f S.obj).hom).symm
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates combining the Kan-extension and sheafification unit comparisons.
 set_option backward.isDefEq.respectTransparency false in
 theorem constructedComparison_unit (S : Y.Sheaf CommRingCat.{v}) :
     (sheafForget Y).map
@@ -410,6 +423,7 @@ theorem pushforwardForget_map {A B : X.Sheaf CommRingCat.{v}} (t : A ⟶ B) :
   rfl
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates transporting the unit through the chosen pullback isomorphisms.
 set_option backward.isDefEq.respectTransparency false in
 theorem comparison_unit (S : Y.Sheaf CommRingCat.{v}) :
     (sheafForget Y).map
@@ -475,6 +489,7 @@ theorem comparison_unit_inv (S : Y.Sheaf CommRingCat.{v}) :
       rfl
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates the adjunction hom-equivalence argument for comparison naturality.
 set_option backward.isDefEq.respectTransparency false in
 theorem comparison_naturality {S T : Y.Sheaf CommRingCat.{v}} (t : S ⟶ T) :
     (sheafForget X).map ((TopCat.Sheaf.pullback CommRingCat.{v} f).map t) ≫
@@ -694,6 +709,7 @@ theorem moduleUnit_pointwise (S : Y.Sheaf CommRingCat.{v})
   rfl
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates the scalar action through both ring and module units.
 theorem moduleUnit_smul (S : Y.Sheaf CommRingCat.{v})
     (M : SheafOfModules.{v} ((sheafForget Y).obj S)) (V : Opens Y)
     (r : ((sheafForget Y).obj S).obj.obj (op V))
@@ -707,7 +723,8 @@ theorem moduleUnit_smul (S : Y.Sheaf CommRingCat.{v})
   let α := toSheafify (Opens.grothendieckTopology X) R₀
   let φ := toSheafify (Opens.grothendieckTopology X) N₀.presheaf
   let W : (Opens X)ᵒᵖ := (Opens.map f).op.obj (op V)
-  let r₀ := ((Opens.map f).op.pointwiseLeftKanExtensionUnit ((sheafForget Y).obj S).obj).app (op V) r
+  let r₀ := ((Opens.map f).op.pointwiseLeftKanExtensionUnit
+    ((sheafForget Y).obj S).obj).app (op V) r
   let m₀ := ((Opens.map f).op.pointwiseLeftKanExtensionUnit M.val.presheaf).app (op V) m
   have hh := ((PresheafOfModules.toSheafify α φ).app W).hom.map_smul r₀ m₀
   have hRing :
@@ -743,7 +760,8 @@ theorem moduleUnit_smul (S : Y.Sheaf CommRingCat.{v})
   rw [← hRing]
   rfl
 
-/-- The sheaf-module morphism functor assembled from native sheafification and scalar restriction. -/
+/-- The sheaf-module morphism functor assembled from sheafification
+and scalar restriction. -/
 noncomputable def moduleFunctor (S : Y.Sheaf CommRingCat.{v}) :
     SheafOfModules.{v} ((sheafForget Y).obj S) ⥤
       SheafOfModules.{v} ((sheafForget X).obj
@@ -765,6 +783,7 @@ theorem moduleFunctor_obj (S : Y.Sheaf CommRingCat.{v})
   rfl
 
 set_option maxHeartbeats 1000000 in
+-- The local budget accommodates sheafified comparison maps in additive inverse-image naturality.
 set_option backward.isDefEq.respectTransparency false in
 /-- Natural additive ordinary inverse-image isomorphism for the transported module functor. -/
 noncomputable def moduleUnderlyingNatIso (S : Y.Sheaf CommRingCat.{v}) :
@@ -781,7 +800,8 @@ noncomputable def moduleUnderlyingNatIso (S : Y.Sheaf CommRingCat.{v}) :
       Iso.trans_hom, Functor.mapIso_hom]
     have hs := congrArg
       (fun t => (presheafToSheaf (Opens.grothendieckTopology X) AddCommGrpCat.{v}).map t)
-      ((PresheafInverseImage.underlyingComparison f ((sheafForget Y).obj S).obj).hom.naturality g.val)
+      ((PresheafInverseImage.underlyingComparison f
+        ((sheafForget Y).obj S).obj).hom.naturality g.val)
     simp only [Functor.map_comp] at hs
     have hi := (TopCat.Sheaf.pullbackIso AddCommGrpCat.{v} f).inv.naturality
       ((SheafOfModules.toSheaf ((sheafForget Y).obj S)).map g)

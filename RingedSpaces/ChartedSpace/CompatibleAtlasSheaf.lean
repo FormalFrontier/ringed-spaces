@@ -147,19 +147,19 @@ theorem compatibleAtlasLocallyRingedSpaceIso_inv (C₀ C₁ : ChartedSpace H M)
     (compatibleAtlasLocallyRingedSpaceIso I C₀ C₁ h).inv.base = 𝟙 (TopCat.of M) := rfl
 
 /-- The forward isomorphism is the identity on the original topological carrier. -/
-@[simp] theorem compatibleAtlasLocallyRingedSpaceIso_hom_base (C₀ C₁ : ChartedSpace H M)
+theorem compatibleAtlasLocallyRingedSpaceIso_hom_base (C₀ C₁ : ChartedSpace H M)
     (h : ∀ e ∈ C₀.atlas, ∀ f ∈ C₁.atlas,
       e.symm ≫ₕ f ∈ contDiffGroupoid ∞ I) (point : M) :
     (compatibleAtlasLocallyRingedSpaceIso I C₀ C₁ h).hom.base point = point := rfl
 
 /-- The inverse isomorphism is the identity on the original topological carrier. -/
-@[simp] theorem compatibleAtlasLocallyRingedSpaceIso_inv_base (C₀ C₁ : ChartedSpace H M)
+theorem compatibleAtlasLocallyRingedSpaceIso_inv_base (C₀ C₁ : ChartedSpace H M)
     (h : ∀ e ∈ C₀.atlas, ∀ f ∈ C₁.atlas,
       e.symm ≫ₕ f ∈ contDiffGroupoid ∞ I) (point : M) :
     (compatibleAtlasLocallyRingedSpaceIso I C₀ C₁ h).inv.base point = point := rfl
 
 /-- On every open, the full forward sheaf component preserves each function value. -/
-@[simp] theorem compatibleAtlasLocallyRingedSpaceIso_hom_apply (C₀ C₁ : ChartedSpace H M)
+theorem compatibleAtlasLocallyRingedSpaceIso_hom_apply (C₀ C₁ : ChartedSpace H M)
     (h : ∀ e ∈ C₀.atlas, ∀ f ∈ C₁.atlas,
       e.symm ≫ₕ f ∈ contDiffGroupoid ∞ I) (U : Opens M)
     (representative : (smoothScalarLocallyRingedSpace I C₁).presheaf.obj (op U)) (point : U) :
@@ -167,7 +167,7 @@ theorem compatibleAtlasLocallyRingedSpaceIso_inv (C₀ C₁ : ChartedSpace H M)
         point = representative.1 point := rfl
 
 /-- On every open, the full inverse sheaf component preserves each function value. -/
-@[simp] theorem compatibleAtlasLocallyRingedSpaceIso_inv_apply (C₀ C₁ : ChartedSpace H M)
+theorem compatibleAtlasLocallyRingedSpaceIso_inv_apply (C₀ C₁ : ChartedSpace H M)
     (h : ∀ e ∈ C₀.atlas, ∀ f ∈ C₁.atlas,
       e.symm ≫ₕ f ∈ contDiffGroupoid ∞ I) (U : Opens M)
     (representative : (smoothScalarLocallyRingedSpace I C₀).presheaf.obj (op U)) (point : U) :

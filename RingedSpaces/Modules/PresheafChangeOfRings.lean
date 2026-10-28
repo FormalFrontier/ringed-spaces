@@ -442,6 +442,7 @@ theorem tensorPresheafAdjunction_unit (theta : A ⟶ B) (M : Presheaves A)
 
 set_option backward.isDefEq.respectTransparency false in
 set_option maxHeartbeats 500000 in
+-- The local budget accommodates the sectionwise tensor-restriction counit and scalar action.
 /-- The adjunction counit sends `b ⊗ n` to `b • n` on every section. -/
 theorem tensorPresheafAdjunction_counit (theta : A ⟶ B) (N : Presheaves B)
     (U : Cᵒᵖ) (b : B.obj U)

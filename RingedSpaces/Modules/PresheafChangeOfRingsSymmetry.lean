@@ -515,5 +515,3 @@ noncomputable def rightPresheafNatIso :
       Category.comp_id])
 
 end RingedSpaces.Modules
-
-#lint-

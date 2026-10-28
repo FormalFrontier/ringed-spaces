@@ -219,11 +219,9 @@ theorem nonemptyProperOpenUnitSquare :
 
 /-- Sheaf symmetry also exists over the empty topological space. -/
 noncomputable def emptySpaceComparison
-    (A B : TopCat.Sheaf CommRingCat.{u} (TopCat.of (PEmpty.{u+1})))
+    (A B : TopCat.Sheaf CommRingCat.{u} (TopCat.of (PEmpty.{u + 1})))
     (theta : A ⟶ B) :
     rightSheafFunctor A B theta ≅ tensorSheafFunctor A B theta :=
   opensRightSheafNatIso A B theta
 
 end Test.ChangeOfRingsSymmetryRoot
-
-#lint-

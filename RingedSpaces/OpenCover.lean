@@ -163,6 +163,7 @@ private theorem gluedι_fromGlued (i : C.J) : C.gluedι i ≫ C.fromGlued = C.ι
 local notation "topGlueData" =>
   C.glueData.toPresheafedSpaceGlueData.toTopGlueData.toGlueData
 
+-- Open transition maps supply the cospan-preservation instances required by `gluedIso`.
 set_option linter.style.haveILetI false in
 private noncomputable def isoCarrier :
     C.glued.carrier ≅ (topGlueData).glued := by
@@ -596,5 +597,3 @@ theorem existsUnique_gluing_of_intersection {Y : RingedSpace.{u, u}}
 
 end OpenCover
 end AlgebraicGeometry.RingedSpace
-
-#lint-

@@ -183,5 +183,3 @@ private theorem nontrivialTwoCoefficientRestriction_original (M : Presheaves con
   nontrivialTwoCoefficientRestriction M m
 
 end Test.ChangeOfRingsSymmetryFixture
-
-#lint-

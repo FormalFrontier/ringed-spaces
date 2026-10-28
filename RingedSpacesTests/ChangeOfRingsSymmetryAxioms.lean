@@ -53,12 +53,14 @@ run_cmd do
       logInfo m!"AXIOMS '{declaration}' = {axioms.toList}"
       if declaration.toString.endsWith "Test.ChangeOfRingsSymmetry.twoObjectArrowClient" then
         if printedTwoObject then throwError "duplicate private twoObjectArrowClient"
-        logInfo m!"PRINT Test.ChangeOfRingsSymmetry.twoObjectArrowClient -> {declaration}: {axioms.toList}"
+        logInfo m!"PRINT Test.ChangeOfRingsSymmetry.twoObjectArrowClient -> \
+          {declaration}: {axioms.toList}"
         printedTwoObject := true
       if declaration.toString.endsWith
           "Test.ChangeOfRingsSymmetryFixture.varyingRestrictionOnTwo" then
         if printedVaryingRestriction then throwError "duplicate private varyingRestrictionOnTwo"
-        logInfo m!"PRINT Test.ChangeOfRingsSymmetryFixture.varyingRestrictionOnTwo -> {declaration}: {axioms.toList}"
+        logInfo m!"PRINT Test.ChangeOfRingsSymmetryFixture.varyingRestrictionOnTwo -> \
+          {declaration}: {axioms.toList}"
         printedVaryingRestriction := true
   unless printedTwoObject && printedVaryingRestriction do
     throwError "missing private named symmetry result in full-origin axiom audit"
@@ -171,5 +173,3 @@ run_cmd do
         foundAxiom != `Classical.choice && foundAxiom != `Quot.sound) then
       throwError "unapproved axiom in {declaration}: {axioms}"
     logInfo m!"AXIOMS '{declaration}' = {axioms.toList}"
-
-#lint-

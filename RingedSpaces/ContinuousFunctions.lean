@@ -222,7 +222,6 @@ def precompose (f : X → Y) (hf : Continuous f) (U : Opens Y) :
   map_add' := fun _ _ => rfl
 
 /-- Pulling back a section evaluates it after applying the base-space map. -/
-@[simp]
 theorem precompose_apply (f : X → Y) (hf : Continuous f) (U : Opens Y)
     (s : (sheaf Y R).presheaf.obj (op U)) (point : inverseImage X Y f hf U) :
     precompose X R Y f hf U s point = s ⟨f point.1, point.2⟩ :=

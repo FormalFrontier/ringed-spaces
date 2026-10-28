@@ -72,5 +72,3 @@ noncomputable def opensRightSheafNatIso {X : TopCat.{u}}
   exact rightSheafNatIso A B theta
 
 end RingedSpaces.Modules
-
-#lint-

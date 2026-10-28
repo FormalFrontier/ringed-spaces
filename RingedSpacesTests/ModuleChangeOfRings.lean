@@ -133,7 +133,7 @@ private theorem zeroRingArrow (M : RingedSpaces.Modules.Presheaves (zeroRingPres
 
 /-- The presheaf adjunction also exists when the indexing category is empty. -/
 noncomputable def emptySiteAdjunction
-    (A : (Discrete (PEmpty.{u+1}))ᵒᵖ ⥤ CommRingCat.{u}) :
+    (A : (Discrete (PEmpty.{u + 1}))ᵒᵖ ⥤ CommRingCat.{u}) :
     RingedSpaces.Modules.tensorPresheafFunctor A A (𝟙 A) ⊣
       PresheafOfModules.restrictScalars (RingedSpaces.Modules.ringMap A A (𝟙 A)) :=
   RingedSpaces.Modules.tensorPresheafAdjunction A A (𝟙 A)
@@ -246,7 +246,7 @@ theorem sheafAdjunctionCounitNaturality
 
 /-- The topological adjunction does not require points in the underlying space. -/
 noncomputable def emptySpaceAdjunction
-    (A B : TopCat.Sheaf CommRingCat.{u} (TopCat.of (PEmpty.{u+1}))) (theta : A ⟶ B) :
+    (A B : TopCat.Sheaf CommRingCat.{u} (TopCat.of (PEmpty.{u + 1}))) (theta : A ⟶ B) :
     RingedSpaces.Modules.tensorSheafFunctor A B theta ⊣
       SheafOfModules.restrictScalars (RingedSpaces.Modules.ringSheafMap A B theta) :=
   RingedSpaces.Modules.opensTensorSheafAdjunction A B theta

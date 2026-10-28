@@ -52,11 +52,14 @@ def chartBall (x : M) (radius : ℝ) : Opens E :=
 
 /-- An open neighborhood with coordinates covering an entire model ball. -/
 structure ChartLocalBall (n : ℕ∞ω) (x : M) where
+  /-- The open neighborhood of `x` serving as the coordinate domain. -/
   neighborhood : Opens M
   mem_neighborhood : x ∈ neighborhood
   neighborhood_subset_source : (neighborhood : Set M) ⊆ (chartAt E x).source
+  /-- The radius of the ball centered at the chart coordinate of `x`. -/
   radius : ℝ
   radius_pos : 0 < radius
+  /-- The diffeomorphism from the neighborhood onto the chart-centered ball. -/
   coord : neighborhood ≃ₘ^n⟮𝓘(𝕜, E), 𝓘(𝕜, E)⟯ chartBall (E := E) x radius
   coord_apply (point : neighborhood) :
     (coord point : E) = (chartAt E x) point.1
@@ -72,11 +75,11 @@ variable {n : ℕ∞ω} {x : M} (b : ChartLocalBall (𝕜 := 𝕜) (E := E) n x)
 /-- The full ball targeted by the coordinate diffeomorphism. -/
 abbrev ball : Opens E := chartBall (E := E) x b.radius
 
-@[simp] theorem mem_ball (point : E) :
+theorem mem_ball (point : E) :
     point ∈ b.ball ↔ dist point ((chartAt E x) x) < b.radius :=
   mem_chartBall x b.radius point
 
-@[simp] theorem center_mem_ball : (chartAt E x) x ∈ b.ball := by
+theorem center_mem_ball : (chartAt E x) x ∈ b.ball := by
   exact (b.mem_ball _).2 (by simpa using b.radius_pos)
 
 /-- The chart center as a point of the entire coordinate ball. -/

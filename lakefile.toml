@@ -1,5 +1,6 @@
 name = "ringed-spaces"
 version = "0.1.0"
+lintDriver = "batteries/runLinter"
 defaultTargets = [
   "RingedSpaces", "RingedSpacesExamples",
   "RingedSpacesTests.Axioms", "RingedSpacesTests.ChangeOfRingsSymmetry", "RingedSpacesTests.ChangeOfRingsSymmetryAxioms",
@@ -54,6 +55,9 @@ name = "RingedSpaces"
 
 [[lean_lib]]
 name = "RingedSpacesTests"
+
+[lean_lib.leanOptions]
+weak.linter.privateModule = false
 
 [[lean_lib]]
 name = "RingedSpacesExamples"

@@ -87,7 +87,7 @@ theorem restrict_smoothIso_hom :
   simp only [b.smoothIso_hom, Iso.inv_hom_id_assoc]
 
 /-- The full composite has the chart-coordinate map as its base map. -/
-@[simp] theorem restrict_smoothIso_hom_base (point : b.neighborhood) :
+theorem restrict_smoothIso_hom_base (point : b.neighborhood) :
     ((restrictLocallyRingedSpaceIso (IM := 𝓘(𝕜, E)) (M := M)
       b.neighborhood).inv ≫ b.smoothIso.hom).base point = b.coord point := by
   rw [b.restrict_smoothIso_hom]
