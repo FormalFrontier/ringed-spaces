@@ -16,6 +16,9 @@ maps**, not just their maps of underlying spaces.
   glue uniquely to a full morphism `X ⟶ Y`, also when `J` and `X` are empty;
   [`OpenCover.existsUnique_gluing_of_intersection`](RingedSpaces/OpenCover.lean)
   accepts literal-intersection compatibility.
+  To compare morphisms glued on different covers, the
+  [cross-cover guide](docs/open-cover-comparison.md) applies the existing
+  restriction, gluing and full-morphism extensionality equations.
 - **Inverse-image factorization.** For `Y : RingedSpace.{u, u}` and a continuous
   map `g : T ⟶ Y.carrier`, `T : TopCat.{u}`,
   [`RingedSpace.inverseImage`](RingedSpaces/InverseImage.lean) has literal
@@ -185,6 +188,11 @@ The [root-only examples](RingedSpacesTests/ContinuousFunctions.lean) and
 [open-immersion clients](RingedSpacesTests/ContinuousFunctionsOpenImmersion.lean) show the
 general-ring and field-specific continuous-function imports and local
 open-immersion-instance recipe.
+
+For maps assembled on two different covers, compare their full restrictions
+on every cross-intersection. The [cross-cover guide](docs/open-cover-comparison.md)
+explains the common-cover argument, including empty covers and the precise
+universe bounds.
 
 ## Building
 
